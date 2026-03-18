@@ -798,7 +798,7 @@
       <div class="testimonial-submit fade-in">
         <h3>Worked with Zaal?</h3>
         <p>Leave a testimonial. Submissions are reviewed before going live.</p>
-        <form id="testimonialForm">
+        <form id="testimonialForm" action="https://formspree.io/f/mqeywpvw" method="POST">
           <div class="field">
             <label for="t-name">Your Name</label>
             <input type="text" id="t-name" name="name" placeholder="Your name" required>
@@ -831,7 +831,7 @@
         <h2 class="section-title fade-in">Let's build something.</h2>
         <p class="contact-sub fade-in">Or reach out directly at <a href="mailto:zaalp99@gmail.com">zaalp99@gmail.com</a></p>
 
-        <form id="contactForm" class="fade-in">
+        <form id="contactForm" class="fade-in" action="https://formspree.io/f/mjgajyqe" method="POST">
           <div class="field">
             <label for="c-name">Your Name</label>
             <input type="text" id="c-name" name="name" placeholder="Your name" required>
@@ -889,18 +889,30 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // Form handlers
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      this.style.display = 'none';
-      document.getElementById('contactSuccess').classList.add('show');
-    });
+    // Form handler
+    function handleForm(form, successEl) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        }).then(res => {
+          if (res.ok) {
+            form.style.display = 'none';
+            successEl.classList.add('show');
+          } else {
+            alert('Something went wrong. Try emailing zaalp99@gmail.com directly.');
+          }
+        }).catch(() => {
+          alert('Something went wrong. Try emailing zaalp99@gmail.com directly.');
+        });
+      });
+    }
 
-    document.getElementById('testimonialForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      this.style.display = 'none';
-      document.getElementById('testimonialSuccess').classList.add('show');
-    });
+    handleForm(document.getElementById('contactForm'), document.getElementById('contactSuccess'));
+    handleForm(document.getElementById('testimonialForm'), document.getElementById('testimonialSuccess'));
   </script>
 
 </body>
