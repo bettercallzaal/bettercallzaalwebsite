@@ -97,7 +97,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 4rem 1.5rem;
+      padding: clamp(2rem, 6vh, 4rem) 1.5rem;
       position: relative;
     }
 
@@ -107,19 +107,19 @@
       top: -30%;
       left: 50%;
       transform: translateX(-50%);
-      width: 800px;
-      height: 800px;
+      width: clamp(320px, 80vw, 800px);
+      height: clamp(320px, 80vw, 800px);
       background: radial-gradient(circle, rgba(255, 107, 53, 0.06) 0%, rgba(0, 229, 255, 0.03) 40%, transparent 70%);
       pointer-events: none;
     }
 
     .hero-label {
-      font-size: 0.8rem;
+      font-size: clamp(0.65rem, 1.8vw, 0.8rem);
       font-weight: 500;
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: var(--text-muted);
-      margin-bottom: 2rem;
+      margin-bottom: clamp(1rem, 3vh, 2rem);
       opacity: 0;
       animation: fadeUp 0.7s ease forwards 0.1s;
     }
@@ -127,9 +127,9 @@
     .hero h1 {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
-      font-size: clamp(2.6rem, 7.5vw, 5.5rem);
-      line-height: 1.08;
-      margin-bottom: 1.5rem;
+      font-size: clamp(2rem, 7.5vw, 5.5rem);
+      line-height: 1.1;
+      margin-bottom: clamp(0.75rem, 2vh, 1.5rem);
       opacity: 0;
       animation: fadeUp 0.7s ease forwards 0.3s;
     }
@@ -148,23 +148,26 @@
     }
 
     .hero-sub {
-      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-size: clamp(0.95rem, 2vw, 1.2rem);
       color: var(--text-muted);
       max-width: 520px;
-      margin-bottom: 2.5rem;
+      margin-bottom: clamp(1.5rem, 4vh, 2.5rem);
       font-weight: 300;
       opacity: 0;
       animation: fadeUp 0.7s ease forwards 0.5s;
     }
 
     .hero-cta {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 1rem 2.5rem;
+      min-height: 48px;
       border: 1.5px solid var(--orange);
       color: var(--orange);
       font-family: 'Outfit', sans-serif;
       font-weight: 600;
-      font-size: 0.85rem;
+      font-size: clamp(0.8rem, 1.5vw, 0.85rem);
       letter-spacing: 0.15em;
       text-transform: uppercase;
       border-radius: var(--radius);
@@ -186,14 +189,12 @@
       z-index: 0;
     }
 
-    .hero-cta:hover { color: var(--bg); }
-    .hero-cta:hover::before { transform: scaleX(1); }
     .hero-cta span { position: relative; z-index: 1; }
 
     .hero-socials {
       display: flex;
-      gap: 1.25rem;
-      margin-top: 3rem;
+      gap: 0.5rem;
+      margin-top: clamp(1.5rem, 4vh, 3rem);
       opacity: 0;
       animation: fadeUp 0.7s ease forwards 0.8s;
     }
@@ -203,9 +204,10 @@
       transition: color 0.3s ease;
       display: flex;
       align-items: center;
+      justify-content: center;
+      padding: 12px;
+      border-radius: var(--radius);
     }
-
-    .hero-socials a:hover { color: var(--text); }
 
     .hero-socials svg {
       width: 20px;
@@ -215,7 +217,7 @@
 
     /* ─── Section shared ─── */
     .section {
-      padding: 7rem 1.5rem;
+      padding: clamp(4rem, 8vh, 7rem) 1.5rem;
       position: relative;
     }
 
@@ -231,13 +233,13 @@
     .section-title {
       font-family: 'Syne', sans-serif;
       font-weight: 700;
-      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-size: clamp(1.8rem, 4.5vw, 3rem);
       margin-bottom: 1.5rem;
     }
 
     /* ─── About ─── */
     .about-text {
-      font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
       color: var(--text-muted);
       max-width: 680px;
       line-height: 1.75;
@@ -256,19 +258,14 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 2rem 1.5rem;
+      padding: clamp(1.25rem, 3vw, 2rem) clamp(1rem, 2.5vw, 1.5rem);
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .path-card:hover {
-      border-color: var(--border-hover);
-      box-shadow: 0 0 40px rgba(255, 107, 53, 0.04);
     }
 
     .path-card h3 {
       font-family: 'Syne', sans-serif;
       font-weight: 700;
-      font-size: 1.15rem;
+      font-size: clamp(1rem, 2vw, 1.15rem);
       margin-bottom: 0.75rem;
     }
 
@@ -280,7 +277,7 @@
     }
 
     .path-card p {
-      font-size: 0.9rem;
+      font-size: clamp(0.85rem, 1.5vw, 0.9rem);
       color: var(--text-muted);
       line-height: 1.6;
       font-weight: 300;
@@ -296,10 +293,10 @@
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
+      padding: 0.5rem 0;
+      min-height: 44px;
       transition: gap 0.3s ease;
     }
-
-    .path-link:hover { gap: 0.7rem; }
 
     .path-link svg {
       width: 14px;
@@ -323,7 +320,7 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1.75rem 1.5rem;
+      padding: clamp(1.25rem, 2.5vw, 1.75rem) clamp(1rem, 2vw, 1.5rem);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -331,20 +328,15 @@
       transition: border-color 0.3s ease, transform 0.2s ease;
     }
 
-    .eco-card:hover {
-      border-color: var(--border-hover);
-      transform: translateY(-2px);
-    }
-
     .eco-card h3 {
       font-family: 'Syne', sans-serif;
       font-weight: 700;
-      font-size: 1.05rem;
+      font-size: clamp(0.95rem, 1.5vw, 1.05rem);
       margin-bottom: 0.5rem;
     }
 
     .eco-card p {
-      font-size: 0.85rem;
+      font-size: clamp(0.8rem, 1.3vw, 0.85rem);
       color: var(--text-muted);
       font-weight: 300;
       line-height: 1.5;
@@ -353,20 +345,20 @@
 
     .eco-link {
       margin-top: 1rem;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       font-weight: 500;
       color: var(--text-dim);
       display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 0.4rem;
+      padding: 0.5rem 0;
+      min-height: 44px;
       transition: color 0.3s ease;
     }
 
-    .eco-card:hover .eco-link { color: var(--cyan); }
-
     .eco-link svg {
-      width: 12px;
-      height: 12px;
+      width: 14px;
+      height: 14px;
       fill: none;
       stroke: currentColor;
       stroke-width: 2;
@@ -386,23 +378,23 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 2rem;
+      padding: clamp(1.25rem, 3vw, 2rem);
       position: relative;
     }
 
     .testimonial-card::before {
       content: '\201C';
       font-family: 'Syne', sans-serif;
-      font-size: 4rem;
+      font-size: clamp(2.5rem, 8vw, 4rem);
       line-height: 1;
       color: var(--text-dim);
       position: absolute;
       top: 0.75rem;
-      left: 1.25rem;
+      left: clamp(0.75rem, 2vw, 1.25rem);
     }
 
     .testimonial-quote {
-      font-size: 0.95rem;
+      font-size: clamp(0.88rem, 1.4vw, 0.95rem);
       color: var(--text-muted);
       font-weight: 300;
       line-height: 1.7;
@@ -425,9 +417,8 @@
       font-size: 0.75rem;
       color: var(--text-dim);
       transition: color 0.3s ease;
+      padding: 0.25rem 0;
     }
-
-    .testimonial-author-link:hover { color: var(--cyan); }
 
     .testimonial-submit {
       margin-top: 4rem;
@@ -455,7 +446,7 @@
 
     .field label {
       display: block;
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.15em;
       text-transform: uppercase;
@@ -470,7 +461,7 @@
       border: 1px solid var(--border);
       color: var(--text);
       font-family: 'Outfit', sans-serif;
-      font-size: 0.95rem;
+      font-size: 1rem;
       font-weight: 400;
       padding: 0.85rem 1rem;
       border-radius: var(--radius);
@@ -503,7 +494,8 @@
       font-size: 0.8rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      padding: 0.9rem 2rem;
+      padding: 1rem 2rem;
+      min-height: 48px;
       cursor: pointer;
       border-radius: var(--radius);
       position: relative;
@@ -523,8 +515,6 @@
       z-index: 0;
     }
 
-    .btn-submit:hover { color: var(--bg); }
-    .btn-submit:hover::before { transform: scaleX(1); }
     .btn-submit span { position: relative; z-index: 1; }
 
     .form-success {
@@ -575,17 +565,29 @@
       gap: 0.5rem;
       margin-top: 1.5rem;
       font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      transition: color 0.3s ease;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.75rem 0;
+      min-height: 44px;
+      transition: color 0.3s ease, gap 0.3s ease;
     }
 
-    .book-call-link:hover { color: var(--gold); }
+    .book-call-link svg {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
 
     /* ─── Divider ─── */
     .section-divider {
       width: 1px;
-      height: 80px;
+      height: clamp(40px, 8vh, 80px);
       background: linear-gradient(to bottom, transparent, var(--border), transparent);
       margin: 0 auto;
     }
@@ -611,7 +613,7 @@
     .footer-socials {
       display: flex;
       justify-content: center;
-      gap: 1.25rem;
+      gap: 0.5rem;
       margin-bottom: 1rem;
     }
 
@@ -619,9 +621,11 @@
       color: var(--text-dim);
       transition: color 0.3s ease;
       display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      border-radius: var(--radius);
     }
-
-    .footer-socials a:hover { color: var(--text); }
 
     .footer-socials svg {
       width: 18px;
@@ -643,17 +647,65 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* ─── Hover — only for pointer devices ─── */
+    @media (hover: hover) and (pointer: fine) {
+      .hero-cta:hover { color: var(--bg); }
+      .hero-cta:hover::before { transform: scaleX(1); }
+      .hero-socials a:hover { color: var(--text); }
+      .path-card:hover {
+        border-color: var(--border-hover);
+        box-shadow: 0 0 40px rgba(255, 107, 53, 0.04);
+      }
+      .path-link:hover { gap: 0.7rem; }
+      .eco-card:hover {
+        border-color: var(--border-hover);
+        transform: translateY(-2px);
+      }
+      .eco-card:hover .eco-link { color: var(--cyan); }
+      .testimonial-author-link:hover { color: var(--cyan); }
+      .btn-submit:hover { color: var(--bg); }
+      .btn-submit:hover::before { transform: scaleX(1); }
+      .book-call-link:hover { gap: 0.75rem; }
+      .footer-socials a:hover { color: var(--text); }
+    }
+
+    /* ─── Touch active states ─── */
+    @media (hover: none) and (pointer: coarse) {
+      .hero-cta:active { color: var(--bg); background: var(--orange); }
+      .path-card:active { border-color: var(--border-hover); }
+      .eco-card:active { border-color: var(--border-hover); }
+      .eco-card:active .eco-link { color: var(--cyan); }
+      .btn-submit:active { color: var(--bg); background: var(--orange); }
+    }
+
+    /* ─── Focus states for accessibility ─── */
+    .hero-cta:focus-visible,
+    .path-card:focus-visible,
+    .eco-card:focus-visible,
+    .btn-submit:focus-visible,
+    .book-call-link:focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 2px;
+    }
+
     /* ─── Responsive ─── */
     @media (max-width: 768px) {
-      .section { padding: 5rem 1.5rem; }
       .about-paths { grid-template-columns: 1fr; }
       .eco-grid { grid-template-columns: 1fr; }
+      .eco-card { min-height: auto; }
       .testimonial-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 480px) {
-      .hero { padding: 3rem 1.25rem; }
-      .section { padding: 4rem 1.25rem; }
+      .container { padding: 0 1.25rem; }
+      .field { margin-bottom: 1.5rem; }
+      .field label { font-size: 0.8rem; }
+      .btn-submit { width: 100%; }
+    }
+
+    @media (max-width: 375px) {
+      .hero-label { letter-spacing: 0.15em; }
+      .container { padding: 0 1rem; }
     }
   </style>
 </head>
@@ -851,7 +903,7 @@
           <p>I'll be in touch soon.</p>
         </div>
 
-        <a href="#" class="book-call-link fade-in">Book a call &mdash; coming soon</a>
+        <a href="https://calendly.com/zaalp99/30minmeeting" target="_blank" rel="noopener" class="book-call-link fade-in">Book a call <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
       </div>
     </div>
   </section>
