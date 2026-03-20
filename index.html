@@ -127,11 +127,13 @@
     .hero h1 {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
-      font-size: clamp(2rem, 7.5vw, 5.5rem);
+      font-size: clamp(1.75rem, 7.5vw, 5.5rem);
       line-height: 1.1;
       margin-bottom: clamp(0.75rem, 2vh, 1.5rem);
       opacity: 0;
       animation: fadeUp 0.7s ease forwards 0.3s;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
 
     .hero h1 .line-1 {
@@ -704,6 +706,7 @@
     }
 
     @media (max-width: 375px) {
+      .hero h1 { font-size: clamp(1.5rem, 6.5vw, 2rem); }
       .hero-label { letter-spacing: 0.15em; }
       .container { padding: 0 1rem; }
     }
@@ -820,7 +823,15 @@
       <p class="section-label fade-in">Testimonials</p>
       <h2 class="section-title fade-in">What people are saying</h2>
 
-      <!-- Testimonial cards will appear here as they're approved -->
+      <div class="testimonial-grid fade-in">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Zaal helped build and scale WaveWarZ to over $60k+ in volume with a completely new music model, over 1.2k followers on X in a few months, and organized and hosted our first in real life WaveWarZ battle. Without Zaal WaveWarZ would not be dominating Web 3 Music the way it is now. This is your GUY.</p>
+          <div class="testimonial-author">
+            <span class="testimonial-author-name">Hurric4n3Ike</span>
+            <a class="testimonial-author-link" href="https://x.com/hurric4n3ike" target="_blank" rel="noopener">@hurric4n3ike</a>
+          </div>
+        </div>
+      </div>
 
       <!-- Testimonial submission -->
       <div class="testimonial-submit fade-in">
