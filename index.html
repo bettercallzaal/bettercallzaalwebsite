@@ -136,8 +136,7 @@
       margin-bottom: clamp(0.75rem, 2vh, 1.5rem);
       opacity: 0;
       animation: fadeUp 0.7s ease forwards 0.3s;
-      overflow-wrap: break-word;
-      word-break: break-word;
+      overflow-wrap: normal;
     }
 
     .hero h1 .line-1 {
@@ -703,6 +702,8 @@
     }
 
     @media (max-width: 480px) {
+      .hero h1 { font-size: clamp(1.5rem, 7vw, 2.5rem); }
+      .hero h1 .line-2 { white-space: nowrap; }
       .container { padding: 0 1.25rem; }
       .field { margin-bottom: 1.5rem; }
       .field label { font-size: 0.8rem; }
@@ -710,7 +711,7 @@
     }
 
     @media (max-width: 375px) {
-      .hero h1 { font-size: clamp(1.5rem, 6.5vw, 2rem); }
+      .hero h1 { font-size: clamp(1.4rem, 6.5vw, 2rem); }
       .hero-label { letter-spacing: 0.15em; }
       .container { padding: 0 1rem; }
     }
