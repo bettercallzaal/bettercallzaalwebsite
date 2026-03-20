@@ -1,0 +1,21 @@
+{
+  "accountAssociation": {
+    "header": "REPLACE_WITH_HEADER_FROM_WARPCAST_DEV_TOOLS",
+    "payload": "REPLACE_WITH_PAYLOAD_FROM_WARPCAST_DEV_TOOLS",
+    "signature": "REPLACE_WITH_SIGNATURE_FROM_WARPCAST_DEV_TOOLS"
+  },
+  "frame": {
+    "version": "1",
+    "name": "BetterCallZaal",
+    "homeUrl": "https://bettercallzaal.com",
+    "iconUrl": "https://bettercallzaal.com/assets/icon.png",
+    "splashImageUrl": "https://bettercallzaal.com/assets/icon.png",
+    "splashBackgroundColor": "#0a0a1a",
+    "subtitle": "The Connector",
+    "description": "Got a problem? BetterCallZaal. I connect you with the right people to build, grow, and ship.",
+    "primaryCategory": "social",
+    "tags": ["connector", "web3", "music", "builder"],
+    "heroImageUrl": "https://bettercallzaal.com/assets/icon.png",
+    "tagline": "The Connector"
+  }
+}

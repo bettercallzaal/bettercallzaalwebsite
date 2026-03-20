@@ -8,6 +8,10 @@
   <meta property="og:title" content="BetterCallZaal — The Connector">
   <meta property="og:description" content="Engineer. Builder. Connector. Tell me your challenge and I'll put you in a room with the right people to make it happen.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://bettercallzaal.com/assets/icon.png">
+  <meta property="og:url" content="https://bettercallzaal.com">
+  <meta name="fc:miniapp" content='{"version":"1","imageUrl":"https://bettercallzaal.com/assets/icon.png","button":{"title":"Open BetterCallZaal","action":{"type":"launch_frame","name":"BetterCallZaal","url":"https://bettercallzaal.com","splashImageUrl":"https://bettercallzaal.com/assets/icon.png","splashBackgroundColor":"#0a0a1a"}}}'>
+  <link rel="preconnect" href="https://auth.farcaster.xyz">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -959,6 +963,16 @@
 
     handleForm(document.getElementById('contactForm'), document.getElementById('contactSuccess'));
     handleForm(document.getElementById('testimonialForm'), document.getElementById('testimonialSuccess'));
+  </script>
+
+  <!-- Farcaster Mini App SDK -->
+  <script type="module">
+    import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk';
+
+    // Only initialize if running inside a Farcaster client
+    if (sdk.context) {
+      sdk.actions.ready();
+    }
   </script>
 
 </body>
