@@ -105,6 +105,31 @@
 
 ---
 
+## Design Ideas to Adopt for BetterCallZaal
+
+### 1. Announcement/Status Bar
+Ritzy uses a top banner to promote current offerings ("Real Talk AI workshop starts March 21"). BetterCallZaal could add a slim bar above the hero to highlight current projects, upcoming events, or Farcaster frame drops. Just a styled `div` — no architecture change needed.
+
+### 2. Clearer Service Segmentation
+Ritzy splits her audience explicitly: Organizations vs Solopreneurs, each with a distinct path. BetterCallZaal's two path cards ("Need something built" / "Need the right people") could be made more concrete with specific CTAs and clearer outcomes.
+
+### 3. Client/Partner Logo Row
+Ritzy displays client logos (Supercell, Live Nation, Land Rover) as social proof. A compact row of project logos, partner communities, or builder ecosystems would add credibility for new visitors — especially from Farcaster mini app.
+
+### 4. Prominent Discovery Call CTA
+Ritzy's "20-minute discovery call" states a specific, low-commitment time. BetterCallZaal's "Book a call" could be more prominent with a stated time commitment.
+
+### 5. More Whitespace Between Sections
+Ritzy's layout uses generous breathing room. Adding more vertical padding between BetterCallZaal sections would let each one land harder.
+
+### What NOT to take
+- **Squarespace bloat** — pure HTML stays faster
+- **Generic typography** — Syne + Outfit has more personality
+- **Light/neutral aesthetic** — dark theme with orange/cyan/gold is more distinctive
+- **Separate blog subdomain** — single page is a strength
+
+---
+
 ## Sources
 
 - [Ritzy Periwinkle — Homepage](https://www.ritzyperiwinkle.com/)
