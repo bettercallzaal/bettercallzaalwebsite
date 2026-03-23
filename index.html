@@ -256,6 +256,81 @@
       font-weight: 300;
     }
 
+    .about-text strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* ─── Stats Row ─── */
+    .stats-row {
+      display: flex;
+      gap: clamp(1.5rem, 4vw, 3rem);
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      max-width: 680px;
+    }
+
+    .stat-item { text-align: center; }
+
+    .stat-number {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      color: var(--cyan);
+    }
+
+    .stat-label {
+      font-size: clamp(0.65rem, 1.2vw, 0.75rem);
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 0.25rem;
+      font-weight: 400;
+    }
+
+    /* ─── Timeline ─── */
+    .journey-timeline {
+      position: relative;
+      max-width: 680px;
+      margin-top: 0.5rem;
+    }
+
+    .tl-item {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-left: 1.25rem;
+      border-left: 2px solid rgba(255, 107, 53, 0.25);
+    }
+
+    .tl-item:last-child { margin-bottom: 0; }
+
+    .tl-year {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      color: var(--orange);
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+      padding-top: 0.1rem;
+    }
+
+    .tl-content h4 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: clamp(0.9rem, 1.4vw, 1rem);
+      color: var(--text);
+      margin: 0 0 0.2rem;
+    }
+
+    .tl-content p {
+      color: var(--text-muted);
+      font-size: clamp(0.8rem, 1.3vw, 0.88rem);
+      margin: 0;
+      font-weight: 300;
+      font-style: italic;
+    }
+
     .about-paths {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -761,6 +836,7 @@
       .field { margin-bottom: 1.5rem; }
       .field label { font-size: 0.8rem; }
       .btn-submit { width: 100%; }
+      .tl-item { grid-template-columns: 60px 1fr; gap: 1rem; }
     }
 
     @media (max-width: 375px) {
@@ -804,7 +880,67 @@
     <div class="container">
       <p class="section-label fade-in">About</p>
       <h2 class="section-title fade-in">The Connector</h2>
-      <p class="about-text fade-in">I'm Zaal. Engineer turned web3 builder, based in Maine. I built The ZAO &mdash; a creator infrastructure ecosystem helping independent artists own their work, their audience, and their revenue. If you're an artist or creator, join the ZAO and connect with the community. If you've got a specific challenge, get the Zaal Connector Treatment &mdash; I'll listen to your problem, connect you with the right people, and push toward a real collaboration with a clear goal.</p>
+      <p class="about-text fade-in">I'm Zaal. Electrical engineer turned regen-focused web3 builder, based in Maine. I'm excited about what blockchain technology brings to <strong>data sovereignty for the individual</strong> &mdash; portable identity, provable ownership, transparent splits, and systems that create value instead of extracting it. I entered crypto during the bear market &mdash; <strong>the people still building were serious.</strong> That's when I saw the real problem: artists create all the value but own none of the infrastructure. Labels take 80-85% of revenue. Platforms own the audience. When they change the algorithm, artists lose everything. <strong>The ZAO exists to close that gap.</strong></p>
+
+      <div class="stats-row fade-in">
+        <div class="stat-item">
+          <div class="stat-number">300+</div>
+          <div class="stat-label">Newsletters</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">90+</div>
+          <div class="stat-label">Governance<br>Meetings</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">$50K+</div>
+          <div class="stat-label">On-chain<br>Volume</div>
+        </div>
+      </div>
+
+      <div class="journey-timeline">
+        <div class="tl-item fade-in stagger-1">
+          <div class="tl-year">2022</div>
+          <div class="tl-content">
+            <h4>BS Electrical Engineering, RIT</h4>
+            <p>Led $1.5M robotics project &mdash; 7x throughput</p>
+          </div>
+        </div>
+        <div class="tl-item fade-in stagger-2">
+          <div class="tl-year">2022</div>
+          <div class="tl-content">
+            <h4>Entered Web3 in the bear market</h4>
+            <p>&ldquo;The people still building were serious&rdquo;</p>
+          </div>
+        </div>
+        <div class="tl-item fade-in stagger-3">
+          <div class="tl-year">2023</div>
+          <div class="tl-content">
+            <h4>Founded The ZAO</h4>
+            <p>Creator infrastructure for independent artists</p>
+          </div>
+        </div>
+        <div class="tl-item fade-in stagger-4">
+          <div class="tl-year">2024</div>
+          <div class="tl-content">
+            <h4>ZAO-Palooza &amp; ZAO-Chella</h4>
+            <p>22 artists. Live on-chain music battles</p>
+          </div>
+        </div>
+        <div class="tl-item fade-in stagger-5">
+          <div class="tl-year">2025</div>
+          <div class="tl-content">
+            <h4>300+ newsletters. WaveWarZ $50K+</h4>
+            <p>90+ fractal governance meetings</p>
+          </div>
+        </div>
+        <div class="tl-item fade-in">
+          <div class="tl-year">2026</div>
+          <div class="tl-content">
+            <h4>ZAO OS + ZAO Stock</h4>
+            <p>Festival planned for Ellsworth, Maine</p>
+          </div>
+        </div>
+      </div>
 
       <div class="about-paths fade-in">
         <a href="https://www.thezao.com/about" target="_blank" rel="noopener" class="path-card">
