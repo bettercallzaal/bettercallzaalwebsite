@@ -411,43 +411,68 @@
       stroke-linejoin: round;
     }
 
-    /* ─── Ecosystem ─── */
-    .eco-grid {
+    /* ─── Portfolio ─── */
+    .portfolio-hero {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-top: 2.5rem;
-    }
-
-    .eco-card {
+      grid-template-columns: auto 1fr;
+      gap: clamp(1.5rem, 4vw, 2.5rem);
+      align-items: center;
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: clamp(1.25rem, 2.5vw, 1.75rem) clamp(1rem, 2vw, 1.5rem);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 160px;
-      transition: border-color 0.3s ease, transform 0.2s ease;
+      padding: clamp(1.5rem, 3vw, 2.5rem);
+      margin-top: 2.5rem;
+      margin-bottom: 2rem;
+      transition: border-color 0.3s ease;
     }
 
-    .eco-card h3 {
+    .portfolio-hero-logo {
+      width: clamp(80px, 15vw, 120px);
+      height: clamp(80px, 15vw, 120px);
+      border-radius: var(--radius);
+      object-fit: contain;
+    }
+
+    .portfolio-hero h3 {
       font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+      font-weight: 800;
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
       margin-bottom: 0.5rem;
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
-    .eco-card p {
-      font-size: clamp(0.8rem, 1.3vw, 0.85rem);
+    .portfolio-hero p {
+      font-size: clamp(0.88rem, 1.4vw, 0.95rem);
       color: var(--text-muted);
       font-weight: 300;
-      line-height: 1.5;
-      flex-grow: 1;
+      line-height: 1.65;
+      margin-bottom: 1rem;
+      max-width: 520px;
     }
 
-    .eco-link {
-      margin-top: 1rem;
+    .portfolio-hero-stats {
+      display: flex;
+      gap: clamp(1rem, 3vw, 2rem);
+      margin-bottom: 1rem;
+    }
+
+    .portfolio-hero-stat {
+      font-size: clamp(0.7rem, 1.2vw, 0.78rem);
+      color: var(--text-muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .portfolio-hero-stat strong {
+      color: var(--cyan);
+      font-weight: 700;
+    }
+
+    .portfolio-link {
       font-size: 0.8rem;
       font-weight: 500;
       color: var(--text-dim);
@@ -459,7 +484,7 @@
       transition: color 0.3s ease;
     }
 
-    .eco-link svg {
+    .portfolio-link svg {
       width: 14px;
       height: 14px;
       fill: none;
@@ -467,6 +492,48 @@
       stroke-width: 2;
       stroke-linecap: round;
       stroke-linejoin: round;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .portfolio-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: clamp(1.25rem, 2.5vw, 1.75rem) clamp(1rem, 2vw, 1.5rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 160px;
+      transition: border-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .portfolio-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .portfolio-card p {
+      font-size: clamp(0.8rem, 1.3vw, 0.85rem);
+      color: var(--text-muted);
+      font-weight: 300;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    .portfolio-card .stat-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--cyan);
+      letter-spacing: 0.5px;
+      margin-top: 0.5rem;
     }
 
     /* ─── Testimonials ─── */
@@ -760,11 +827,13 @@
         box-shadow: 0 0 40px rgba(255, 107, 53, 0.04);
       }
       .path-link:hover { gap: 0.7rem; }
-      .eco-card:hover {
+      .portfolio-hero:hover { border-color: var(--border-hover); }
+      .portfolio-card:hover {
         border-color: var(--border-hover);
         transform: translateY(-2px);
       }
-      .eco-card:hover .eco-link { color: var(--cyan); }
+      .portfolio-card:hover .portfolio-link { color: var(--cyan); }
+      .portfolio-hero:hover .portfolio-link { color: var(--cyan); }
       .testimonial-author-link:hover { color: var(--cyan); }
       .btn-submit:hover { color: var(--bg); }
       .btn-submit:hover::before { transform: scaleX(1); }
@@ -776,15 +845,16 @@
     @media (hover: none) and (pointer: coarse) {
       .hero-cta:active { color: var(--bg); background: var(--orange); }
       .path-card:active { border-color: var(--border-hover); }
-      .eco-card:active { border-color: var(--border-hover); }
-      .eco-card:active .eco-link { color: var(--cyan); }
+      .portfolio-hero:active { border-color: var(--border-hover); }
+      .portfolio-card:active { border-color: var(--border-hover); }
+      .portfolio-card:active .portfolio-link { color: var(--cyan); }
       .btn-submit:active { color: var(--bg); background: var(--orange); }
     }
 
     /* ─── Focus states for accessibility ─── */
     .hero-cta:focus-visible,
     .path-card:focus-visible,
-    .eco-card:focus-visible,
+    .portfolio-hero:focus-visible, .portfolio-card:focus-visible,
     .btn-submit:focus-visible,
     .book-call-link:focus-visible {
       outline: 2px solid var(--orange);
@@ -842,8 +912,11 @@
     /* ─── Responsive ─── */
     @media (max-width: 768px) {
       .about-paths { grid-template-columns: 1fr; }
-      .eco-grid { grid-template-columns: 1fr; }
-      .eco-card { min-height: auto; }
+      .portfolio-hero { grid-template-columns: 1fr; text-align: center; }
+      .portfolio-hero-logo { margin: 0 auto; }
+      .portfolio-hero-stats { justify-content: center; flex-wrap: wrap; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .portfolio-card { min-height: auto; }
       .testimonial-grid { grid-template-columns: 1fr; }
     }
 
@@ -1014,51 +1087,67 @@
 
   <div class="section-divider"></div>
 
-  <!-- ─── Ecosystem ─── -->
-  <section class="section" id="ecosystem">
+<!-- ─── Portfolio ─── -->
+  <section class="section" id="portfolio">
     <div class="container">
-      <p class="section-label fade-in">Ecosystem</p>
-      <h2 class="section-title fade-in">The Network</h2>
+      <p class="section-label fade-in">Portfolio</p>
+      <h2 class="section-title fade-in">The Work</h2>
 
-      <div class="eco-grid">
-        <a href="https://www.thezao.com/" target="_blank" rel="noopener" class="eco-card fade-in stagger-1">
-          <div>
-            <h3>The ZAO</h3>
-            <p>Creator infrastructure ecosystem for independent artists.</p>
+      <a href="https://www.thezao.com/" target="_blank" rel="noopener" class="portfolio-hero fade-in">
+        <img src="assets/zao-logo.png" alt="The ZAO" class="portfolio-hero-logo" width="120" height="120" loading="lazy">
+        <div>
+          <h3>The ZAO</h3>
+          <p>Impact organization bringing ownership back to independent artists. Community infrastructure, fractal governance, creator tools &mdash; all open source.</p>
+          <div class="portfolio-hero-stats">
+            <span class="portfolio-hero-stat"><strong>1,000+</strong> participants</span>
+            <span class="portfolio-hero-stat"><strong>90+</strong> governance meetings</span>
+            <span class="portfolio-hero-stat"><strong>MIT</strong> licensed</span>
           </div>
-          <span class="eco-link">thezao.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          <span class="portfolio-link">thezao.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        </div>
+      </a>
+
+      <div class="portfolio-grid">
+        <a href="https://zaoos.com" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-1">
+          <div>
+            <h3>ZAO OS</h3>
+            <p>Farcaster social client for music communities. Encrypted messaging, 9-platform music player, governance tools.</p>
+          </div>
+          <span class="portfolio-link">zaoos.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
 
-        <a href="https://www.wavewarz.com/" target="_blank" rel="noopener" class="eco-card fade-in stagger-2">
+        <a href="https://www.wavewarz.com/" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-2">
           <div>
             <h3>WaveWarZ</h3>
-            <p>Live traded music battles on Solana.</p>
+            <p>Onchain music prediction market on Solana. Artists battle, fans trade.</p>
+            <span class="stat-badge">$50K+ volume</span>
           </div>
-          <span class="eco-link">wavewarz.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          <span class="portfolio-link">wavewarz.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
 
-        <a href="https://zaofestivals.com/" target="_blank" rel="noopener" class="eco-card fade-in stagger-3">
+        <a href="https://zaofestivals.com/" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-3">
           <div>
             <h3>ZAO Festivals</h3>
-            <p>Side events at crypto conferences + flagship festivals.</p>
+            <p>IRL events at crypto conferences. ZAO-Palooza (NYC), ZAO-Chella (Miami).</p>
+            <span class="stat-badge">2 festivals &middot; 22 artists</span>
           </div>
-          <span class="eco-link">zaofestivals.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          <span class="portfolio-link">zaofestivals.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
 
-        <a href="https://pods.media/lets-talk-about-web3/" target="_blank" rel="noopener" class="eco-card fade-in stagger-4">
+        <a href="https://pods.media/lets-talk-about-web3/" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-4">
           <div>
             <h3>Let's Talk About Ethereum</h3>
-            <p>Weekly podcast on Ethereum ecosystem impact.</p>
+            <p>Weekly podcast on the Ethereum ecosystem.</p>
           </div>
-          <span class="eco-link">pods.media <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          <span class="portfolio-link">pods.media <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
 
-        <a href="https://paragraph.com/@thezao" target="_blank" rel="noopener" class="eco-card fade-in stagger-5">
+        <a href="https://paragraph.com/@thezao" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-5">
           <div>
             <h3>Daily Newsletter</h3>
-            <p>Build-in-public documentation on Paragraph.</p>
+            <p>400+ editions of build-in-public documentation.</p>
           </div>
-          <span class="eco-link">paragraph.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          <span class="portfolio-link">paragraph.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
       </div>
     </div>
