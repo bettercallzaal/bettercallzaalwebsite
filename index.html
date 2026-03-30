@@ -20,6 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://bettercallzaal.com">
   <style>
     *, *::before, *::after {
       margin: 0;
@@ -844,13 +845,29 @@
       .hero-label { letter-spacing: 0.15em; }
       .container { padding: 0 1rem; }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      .hero-label,
+      .hero h1,
+      .hero-sub,
+      .hero-cta,
+      .hero-socials {
+        opacity: 1;
+        animation: none;
+      }
+    }
   </style>
 </head>
 <body>
 
   <!-- ─── Hero ─── -->
   <section class="hero">
-    <p class="hero-label">Engineer &middot; Builder &middot; Connector</p>
+    <p class="hero-label">Engineer &middot; Builder &middot; Connector &middot; Ecosystem Architect</p>
     <h1>
       <span class="line-1">Got a problem?</span>
       <span class="line-2">BetterCallZaal.</span>
