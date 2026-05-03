@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — BetterCallZaal Strategies LLC</title>
+  <meta name="description" content="Terms of Service for BetterCallZaal Strategies LLC.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://bettercallzaal.com/terms.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #070709;
+      --surface: #111115;
+      --orange: #ff6b35;
+      --cyan: #00e5ff;
+      --gold: #f5c842;
+      --gradient-main: linear-gradient(135deg, #ff6b35, #ff3d6e, #00e5ff);
+      --text: #e4e2dd;
+      --text-muted: #6b6976;
+      --text-dim: #3e3c47;
+      --border: #1f1e26;
+      --border-hover: #2f2d3a;
+      --radius: 6px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      z-index: 9999;
+    }
+
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { color: var(--orange); }
+
+    .container { max-width: 780px; margin: 0 auto; padding: 0 1.5rem; }
+
+    .nav {
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-back {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .nav-back:hover { color: var(--text); }
+
+    .doc {
+      padding: 4rem 0 5rem;
+    }
+
+    .doc-eyebrow {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1rem;
+    }
+
+    .doc-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .doc-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .doc h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--text);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .doc h3 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text);
+      margin-top: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .doc p, .doc li {
+      color: var(--text);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .doc ul, .doc ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .doc li { margin-bottom: 0.5rem; }
+
+    .doc strong { color: var(--text); font-weight: 600; }
+
+    .doc .uppercase {
+      text-transform: uppercase;
+      font-size: 0.95rem;
+    }
+
+    .callout {
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--orange);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius);
+      background: var(--surface);
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+
+    .footer a { color: var(--text-muted); margin: 0 0.5rem; }
+    .footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">BetterCallZaal</a>
+      <a href="/" class="nav-back">Back to home</a>
+    </div>
+  </nav>
+
+  <main class="container doc">
+    <div class="doc-eyebrow">Legal</div>
+    <h1 class="doc-title">Terms of Service</h1>
+    <div class="doc-meta">
+      BetterCallZaal Strategies LLC &middot; Effective May 3, 2026
+    </div>
+
+    <p>These Terms of Service ("Terms") form a binding agreement between you ("you" or "User") and BetterCallZaal Strategies LLC, a Delaware limited liability company ("BetterCallZaal Strategies", "we", "us", or "our"), governing your access to and use of <a href="https://bettercallzaal.com">bettercallzaal.com</a> and any related services we provide, including token and cryptocurrency purchases processed through our payment partner Coinflow Labs, Inc. ("Coinflow") (collectively, the "Services").</p>
+
+    <div class="callout">
+      <strong>Please read these Terms carefully.</strong> They include a binding arbitration clause and class-action waiver in Section 13 that affect your legal rights. They also include important risk disclosures regarding cryptocurrency in Section 5.
+    </div>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing or using the Services, you agree to be bound by these Terms and by our <a href="/privacy.html">Privacy Policy</a>. If you do not agree, do not use the Services. If you use the Services on behalf of an organization, you represent that you have authority to bind that organization to these Terms.</p>
+
+    <h2>2. Eligibility</h2>
+    <p>You must be at least 18 years old and capable of forming a binding contract under applicable law to use the Services. You represent and warrant that:</p>
+    <ul>
+      <li>You are not located in, ordinarily resident in, or organized under the laws of any country or region subject to comprehensive U.S. sanctions (including, without limitation, Cuba, Iran, North Korea, Syria, and the Crimea, Donetsk, and Luhansk regions of Ukraine);</li>
+      <li>You are not a person identified on any U.S. Treasury Department Office of Foreign Assets Control ("OFAC") sanctions list or any equivalent list maintained by another government;</li>
+      <li>You are not otherwise prohibited from using the Services under applicable U.S. or local law; and</li>
+      <li>You will comply with all applicable laws and regulations in your use of the Services.</li>
+    </ul>
+
+    <h2>3. The Services</h2>
+    <p>The Services allow eligible Users to purchase tokens or cryptocurrencies offered by us through the Site, with payments processed by Coinflow. Specific tokens, prices, supported payment methods, supported blockchains, and limits are described at the point of purchase and may change without notice.</p>
+
+    <h2>4. Payment Processing by Coinflow</h2>
+    <p>All fiat-to-crypto and card-based transactions are processed by Coinflow as our payment partner. By initiating a purchase, you also agree to Coinflow's terms of service and privacy policy, which are incorporated by reference. Coinflow may require you to complete identity verification (KYC) and may decline, suspend, or reverse transactions in its sole discretion in accordance with its policies and applicable law. We are not responsible for actions or decisions made by Coinflow.</p>
+
+    <h3>4.1 Fees and Taxes</h3>
+    <p>Prices, network fees, and any service fees are disclosed at the time of purchase. You are solely responsible for any taxes, duties, or similar charges associated with your transactions.</p>
+
+    <h3>4.2 Wallet Address Accuracy</h3>
+    <p>You are solely responsible for providing the correct destination wallet address and selecting the correct blockchain network. Tokens sent to an incorrect address or wrong network may be permanently lost. We cannot reverse blockchain transactions.</p>
+
+    <h3>4.3 No Refunds</h3>
+    <p>Except where required by applicable law or expressly stated in writing by us, all sales are final and non-refundable once a transaction has been confirmed on the relevant blockchain. Chargeback or payment-reversal disputes initiated outside this Section may result in suspension of the Services and recovery of associated costs.</p>
+
+    <h2>5. Cryptocurrency Risk Disclosures</h2>
+    <p class="uppercase"><strong>You acknowledge and accept the following risks before using the Services:</strong></p>
+    <ul>
+      <li><strong>Volatility.</strong> Cryptocurrency and token prices can fluctuate significantly and may result in partial or total loss of value.</li>
+      <li><strong>Regulatory uncertainty.</strong> The legal and regulatory treatment of digital assets varies by jurisdiction and is rapidly evolving. Future laws or regulations may adversely affect the value, transferability, or utility of any token.</li>
+      <li><strong>Technology risk.</strong> Blockchain protocols, smart contracts, wallets, and bridges may contain bugs, exploits, or other defects that result in loss of funds. Network congestion, forks, and chain reorganizations may delay or prevent transactions.</li>
+      <li><strong>Irreversibility.</strong> Blockchain transactions are generally irreversible. Lost or stolen private keys cannot be recovered by us.</li>
+      <li><strong>No insurance.</strong> Digital assets are not deposits and are not protected by FDIC, SIPC, or any similar insurance scheme.</li>
+      <li><strong>Liquidity.</strong> A token you purchase may not have an active secondary market, and you may not be able to resell it.</li>
+    </ul>
+
+    <h2>6. No Investment, Legal, or Tax Advice</h2>
+    <p>Information provided through the Services is for general informational purposes only and is not investment, financial, legal, tax, or accounting advice. We are not your broker, dealer, investment adviser, or fiduciary. You should consult your own qualified professionals before making any decision involving digital assets.</p>
+
+    <h2>7. Acceptable Use</h2>
+    <p>You agree not to, and not to enable any third party to:</p>
+    <ul>
+      <li>Use the Services for any unlawful purpose or in violation of any applicable law, including securities, commodities, AML, sanctions, tax, or consumer-protection laws;</li>
+      <li>Engage in market manipulation, wash trading, fraud, or money laundering;</li>
+      <li>Use the Services on behalf of any person or jurisdiction prohibited under Section 2;</li>
+      <li>Attempt to gain unauthorized access to the Services, related systems, or other Users' accounts;</li>
+      <li>Interfere with, disrupt, or impose unreasonable load on the Services, including via bots, scrapers, or denial-of-service attacks;</li>
+      <li>Reverse engineer, decompile, or attempt to derive the source code of any part of the Services, except as expressly permitted by law;</li>
+      <li>Use the Services to violate the intellectual-property, privacy, or other rights of any third party; or</li>
+      <li>Misrepresent your identity, affiliation, or the source of any payment.</li>
+    </ul>
+
+    <h2>8. Intellectual Property</h2>
+    <p>The Services, including the Site's design, code, text, graphics, logos, and trademarks, are owned by BetterCallZaal Strategies or its licensors and are protected by intellectual-property laws. We grant you a limited, non-exclusive, non-transferable, revocable license to access and use the Services for their intended purposes. Nothing in these Terms transfers ownership of any intellectual-property right to you.</p>
+
+    <h2>9. Third-Party Services</h2>
+    <p>The Services may interoperate with or link to third-party platforms, including Coinflow, Farcaster, blockchain networks, wallet providers, and analytics tools. We do not control and are not responsible for any third-party service. Your use of any third-party service is subject to that provider's terms and policies.</p>
+
+    <h2>10. Disclaimers</h2>
+    <p class="uppercase"><strong>The Services are provided "as is" and "as available" without warranties of any kind, whether express, implied, or statutory. To the maximum extent permitted by law, we disclaim all warranties, including implied warranties of merchantability, fitness for a particular purpose, title, and non-infringement, and any warranties arising from course of dealing or usage of trade.</strong></p>
+    <p>We do not warrant that the Services will be uninterrupted, error-free, secure, or free of viruses or other harmful components, or that any token will achieve any particular price, utility, or outcome.</p>
+
+    <h2>11. Limitation of Liability</h2>
+    <p class="uppercase"><strong>To the maximum extent permitted by law, in no event will BetterCallZaal Strategies, its affiliates, or their respective officers, directors, employees, or agents be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, or for any loss of profits, revenue, data, goodwill, or digital assets, arising out of or related to your use of the Services, whether based on warranty, contract, tort (including negligence), statute, or any other legal theory, and whether or not we have been advised of the possibility of such damages.</strong></p>
+    <p class="uppercase"><strong>Our total cumulative liability arising out of or related to these Terms or the Services will not exceed the greater of (a) the amount of fees you paid to us in the twelve (12) months preceding the event giving rise to the claim, or (b) one hundred U.S. dollars (US$100).</strong></p>
+    <p>Some jurisdictions do not allow the exclusion or limitation of certain damages, so some of the above may not apply to you.</p>
+
+    <h2>12. Indemnification</h2>
+    <p>You agree to defend, indemnify, and hold harmless BetterCallZaal Strategies, its affiliates, and their respective officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys' fees) arising out of or related to: (a) your use of the Services; (b) your breach of these Terms; (c) your violation of any law or third-party right; or (d) any content or information you submit to us.</p>
+
+    <h2>13. Governing Law; Dispute Resolution</h2>
+    <p>These Terms are governed by the laws of the State of Delaware, United States, without regard to its conflict-of-laws rules. The United Nations Convention on Contracts for the International Sale of Goods does not apply.</p>
+
+    <h3>13.1 Informal Resolution</h3>
+    <p>Before filing any formal claim, you agree to first contact us at <a href="mailto:zaal@thezao.com">zaal@thezao.com</a> and attempt to resolve the dispute informally for at least sixty (60) days.</p>
+
+    <h3>13.2 Binding Arbitration</h3>
+    <p class="uppercase"><strong>Any dispute, claim, or controversy arising out of or relating to these Terms or the Services that is not resolved informally will be resolved by final and binding arbitration administered by JAMS under its Comprehensive Arbitration Rules and Procedures, before a single arbitrator. The seat of arbitration will be Wilmington, Delaware, and the arbitration will be conducted in English. Judgment on the award may be entered in any court of competent jurisdiction.</strong></p>
+
+    <h3>13.3 Class-Action Waiver</h3>
+    <p class="uppercase"><strong>You and BetterCallZaal Strategies agree that each may bring claims against the other only in your or its individual capacity, and not as a plaintiff or class member in any purported class, collective, or representative proceeding. Unless we both agree otherwise, the arbitrator may not consolidate more than one person's claims and may not preside over any form of representative or class proceeding.</strong></p>
+
+    <h3>13.4 Exceptions</h3>
+    <p>Either party may seek injunctive or other equitable relief in a court of competent jurisdiction located in Delaware to protect its intellectual-property rights pending arbitration, and may bring an individual action in small-claims court for qualifying disputes.</p>
+
+    <h2>14. Suspension and Termination</h2>
+    <p>We may suspend, restrict, or terminate your access to the Services at any time, with or without notice, if we reasonably believe you have violated these Terms or applicable law, or if necessary to protect the Services or other Users. Sections that by their nature should survive termination (including Sections 5, 6, 8, 10, 11, 12, 13, and 16) will survive.</p>
+
+    <h2>15. Changes to These Terms</h2>
+    <p>We may update these Terms from time to time. When we do, we will revise the "Effective" date above and post the updated Terms on the Site. Material changes will be communicated through the Site or by other reasonable means. Your continued use of the Services after the effective date constitutes acceptance of the updated Terms.</p>
+
+    <h2>16. Miscellaneous</h2>
+    <ul>
+      <li><strong>Entire agreement.</strong> These Terms and the Privacy Policy are the entire agreement between you and us regarding the Services.</li>
+      <li><strong>Severability.</strong> If any provision is found unenforceable, the remaining provisions will remain in full force and effect.</li>
+      <li><strong>No waiver.</strong> Our failure to enforce any provision is not a waiver of that provision.</li>
+      <li><strong>Assignment.</strong> You may not assign these Terms without our prior written consent. We may assign these Terms in connection with a merger, acquisition, or sale of assets.</li>
+      <li><strong>No agency.</strong> Nothing in these Terms creates a partnership, joint venture, employment, or agency relationship between the parties.</li>
+      <li><strong>Notices.</strong> Notices to us must be sent to <a href="mailto:zaal@thezao.com">zaal@thezao.com</a>.</li>
+    </ul>
+
+    <h2>17. Contact</h2>
+    <p>BetterCallZaal Strategies LLC<br>
+    Delaware, United States<br>
+    Email: <a href="mailto:zaal@thezao.com">zaal@thezao.com</a></p>
+  </main>
+
+  <footer class="footer">
+    <div>&copy; 2026 BetterCallZaal Strategies LLC</div>
+    <div style="margin-top: 0.5rem;">
+      <a href="/">Home</a> &middot;
+      <a href="/privacy.html">Privacy</a> &middot;
+      <a href="/terms.html">Terms</a>
+    </div>
+  </footer>
+
+</body>
+</html>
