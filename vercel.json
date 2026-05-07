@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/nexus.html",
+      "destination": "https://nexus.thezao.com/ecosystem",
+      "permanent": true
+    },
+    {
+      "source": "/nexus",
+      "destination": "https://nexus.thezao.com/ecosystem",
+      "permanent": true
+    }
+  ]
+}
