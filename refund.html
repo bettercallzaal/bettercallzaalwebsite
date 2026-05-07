@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refund Policy — BetterCallZaal Strategies LLC</title>
+  <meta name="description" content="Refund and cancellation policy for BetterCallZaal Strategies LLC, covering consulting fees, deposits, retainers, and digital-asset purchases (including those processed by Coinflow Labs, Inc. and Stripe, Inc.).">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://bettercallzaal.com/refund.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #070709;
+      --surface: #111115;
+      --orange: #ff6b35;
+      --cyan: #00e5ff;
+      --gold: #f5c842;
+      --gradient-main: linear-gradient(135deg, #ff6b35, #ff3d6e, #00e5ff);
+      --text: #e4e2dd;
+      --text-muted: #6b6976;
+      --text-dim: #3e3c47;
+      --border: #1f1e26;
+      --border-hover: #2f2d3a;
+      --radius: 6px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      z-index: 9999;
+    }
+
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { color: var(--orange); }
+
+    .container { max-width: 780px; margin: 0 auto; padding: 0 1.5rem; }
+
+    .nav {
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-back {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .nav-back:hover { color: var(--text); }
+
+    .doc { padding: 4rem 0 5rem; }
+
+    .doc-eyebrow {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1rem;
+    }
+
+    .doc-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .doc-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .doc h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--text);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .doc h3 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text);
+      margin-top: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .doc p, .doc li { color: var(--text); font-size: 1rem; margin-bottom: 1rem; }
+    .doc ul, .doc ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    .doc li { margin-bottom: 0.5rem; }
+    .doc strong { color: var(--text); font-weight: 600; }
+
+    .doc .uppercase { text-transform: uppercase; font-size: 0.95rem; }
+
+    .callout {
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--orange);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius);
+      background: var(--surface);
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+
+    .footer a { color: var(--text-muted); margin: 0 0.5rem; }
+    .footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">BetterCallZaal</a>
+      <a href="/" class="nav-back">Back to home</a>
+    </div>
+  </nav>
+
+  <main class="container doc">
+    <div class="doc-eyebrow">Legal</div>
+    <h1 class="doc-title">Refund Policy</h1>
+    <div class="doc-meta">
+      BetterCallZaal Strategies LLC &middot; Effective May 7, 2026
+    </div>
+
+    <div class="callout">
+      This Refund Policy is incorporated by reference into our <a href="/terms.html">Terms of Service</a>. Capitalized terms used but not defined here have the meanings given in the Terms. If there is a direct conflict between this Policy and a written engagement letter, statement of work, or other agreement signed by both parties (an "Engagement Agreement"), the Engagement Agreement controls for that engagement.
+    </div>
+
+    <h2>1. Who We Are</h2>
+    <p>This Refund Policy is issued by <strong>BetterCallZaal Strategies LLC</strong>, a Delaware limited liability company ("BetterCallZaal Strategies", "we", "us", or "our"), with a registered agent located at 131 Continental Drive, Suite 305, Newark, New Castle County, Delaware 19713, United States. You can reach us at <a href="mailto:zaal@thezao.com">zaal@thezao.com</a>.</p>
+
+    <h2>2. Scope</h2>
+    <p>This Policy describes the rules for refunds, cancellations, and chargebacks for all amounts you pay to us through the Services, including:</p>
+    <ul>
+      <li>Consulting fees, deposits, and retainers paid by card or ACH (processed by <strong>Stripe, Inc.</strong>);</li>
+      <li>Token, cryptocurrency, and other digital-asset purchases paid by card or ACH and settled in digital assets (processed by <strong>Coinflow Labs, Inc.</strong> ("Coinflow") as our primary fiat-to-crypto payment partner, or by other processors we may add over time);</li>
+      <li>Wallet-to-wallet, on-chain payments made directly from your wallet to a wallet address we designate; and</li>
+      <li>Tickets, sponsorships, paid content, or other one-off purchases offered through the Services.</li>
+    </ul>
+
+    <h2>3. Consulting Fees, Deposits, and Retainers (Stripe)</h2>
+
+    <h3>3.1 Deposits</h3>
+    <p>Unless an Engagement Agreement says otherwise, deposits paid to reserve consulting, advisory, fractional, connector, or similar work are <strong>non-refundable</strong> once we have begun preparing for, scheduling, or performing the engagement. Deposits secure our time and capacity, including time we decline from other clients, and are earned upon receipt.</p>
+
+    <h3>3.2 Retainers and Recurring Fees</h3>
+    <p>Monthly or other recurring retainer fees are billed in advance for the upcoming period and are <strong>non-refundable</strong> once that period has begun. Either party may cancel a recurring engagement on the notice period stated in the Engagement Agreement (and if none is stated, on at least fifteen (15) days' written notice before the next billing date). Cancellation stops future billing; it does not refund the current period.</p>
+
+    <h3>3.3 Hourly or Project Fees</h3>
+    <p>Fees billed against time already worked or deliverables already produced are <strong>non-refundable</strong>. If you cancel a project before scheduled work has been performed, we will refund any unearned, prepaid amounts in excess of (a) work already performed, (b) third-party costs already incurred on your behalf, and (c) any non-refundable deposit.</p>
+
+    <h3>3.4 Rescheduling and No-Shows</h3>
+    <p>For paid calls, workshops, or sessions, you may reschedule once at no charge with at least twenty-four (24) hours' written notice. Cancellations with less than twenty-four (24) hours' notice, and no-shows, are billed in full and are non-refundable.</p>
+
+    <h3>3.5 Service Failure</h3>
+    <p>If we materially fail to deliver agreed services and cannot remedy the failure within a reasonable period after written notice from you, your sole remedy is a pro-rata refund of any prepaid, unearned fees attributable to the unperformed work. This Policy does not limit any non-waivable rights you have under applicable consumer-protection law.</p>
+
+    <h3>3.6 How to Request a Stripe Refund</h3>
+    <p>Email <a href="mailto:zaal@thezao.com">zaal@thezao.com</a> with the subject line <em>"Refund request - [your name / engagement]"</em>, the original Stripe receipt or invoice number, the amount requested, and a brief description of the reason. We will acknowledge requests within five (5) business days and, where a refund is approved, process it back to the original Stripe payment method within ten (10) business days. Bank or card-network posting times are outside our control.</p>
+
+    <h2>4. Token, Cryptocurrency, and Digital-Asset Purchases</h2>
+
+    <h3>4.1 General Rule: Final Sales</h3>
+    <p class="uppercase"><strong>All sales of tokens, cryptocurrencies, and other digital assets are final and non-refundable once the underlying transaction has been confirmed on the relevant blockchain or otherwise delivered, except where required by applicable law or expressly stated in writing by us.</strong></p>
+
+    <h3>4.2 Fiat-to-Crypto Purchases (Coinflow)</h3>
+    <p>Where you pay fiat by card or ACH for a digital-asset purchase, the fiat leg of the transaction is processed by Coinflow Labs, Inc. ("Coinflow") as our primary payment partner. Coinflow's terms of service, privacy policy, and refund and chargeback rules apply to that fiat leg in addition to this Policy. Coinflow may require identity verification (KYC) and may decline, suspend, hold, or reverse a transaction in its sole discretion in accordance with its policies and applicable law.</p>
+    <p>If a fiat payment is approved and processed by Coinflow but the corresponding digital asset has <strong>not yet been delivered to your wallet</strong>, contact us at <a href="mailto:zaal@thezao.com">zaal@thezao.com</a> within seventy-two (72) hours of payment. We will work with Coinflow in good faith to either complete delivery or, where delivery is not possible due to a failure on our side, request that Coinflow refund the fiat amount, less any non-refundable network or processor fees, to the original payment method.</p>
+    <p>Once the digital asset has been delivered to the wallet you provided, the sale is final and is not eligible for refund under this Policy. Where chargebacks are initiated through Coinflow or your card issuer after delivery of the digital asset, see Section 6.</p>
+
+    <h3>4.3 Wallet-to-Wallet (On-Chain) Purchases</h3>
+    <p>For payments sent on-chain directly from your wallet to a wallet address we designate, the transaction is irreversible at the protocol level. <strong>We cannot reverse, recall, or refund on-chain transactions.</strong> You are solely responsible for sending the correct amount, to the correct address, on the correct network, at the correct time. Tokens sent to an incorrect address, on the wrong network, or in excess of the agreed amount may be permanently lost.</p>
+    <p>If you believe you have sent funds in error, contact us promptly at <a href="mailto:zaal@thezao.com">zaal@thezao.com</a>. We will, where feasible and at our sole discretion, attempt to identify the destination and assist; we make no guarantee of recovery and are not obligated to return funds we have not received or that have been forwarded to a third party.</p>
+
+    <h3>4.4 Chain or Protocol Failures</h3>
+    <p>If a confirmed digital-asset purchase cannot be delivered due to a verifiable failure of the underlying blockchain, smart contract, or bridge that prevents us from delivering the agreed asset, we will, at our discretion and where commercially reasonable, either (a) re-attempt delivery, (b) deliver an equivalent asset on a different supported chain, or (c) refund the purchase price (in fiat where the original payment was fiat through Coinflow, or in a stablecoin where the original payment was on-chain), less any non-refundable network or processor fees. This is your sole remedy for chain-level delivery failures.</p>
+
+    <h2>5. Tickets, Sponsorships, and Other One-Off Purchases</h2>
+    <p>Tickets to events, sponsorship slots, paid content, and similar one-off purchases are <strong>non-refundable</strong> unless (a) we cancel the underlying event or product, in which case we will refund the purchase price to the original payment method, or (b) a refund is required by applicable consumer-protection law. Where an event is rescheduled, your existing ticket or sponsorship transfers automatically to the new date.</p>
+
+    <h2>6. Chargebacks and Payment-Reversal Disputes</h2>
+    <p>If you believe a charge is incorrect, we strongly prefer that you contact us first at <a href="mailto:zaal@thezao.com">zaal@thezao.com</a> so we can investigate and resolve the issue directly under this Policy.</p>
+    <p>Chargebacks or payment-reversal disputes initiated through your card issuer, bank, or a payment processor outside the process described in this Policy may, at our discretion, result in:</p>
+    <ul>
+      <li>Suspension or termination of your access to the Services;</li>
+      <li>Recovery of associated chargeback fees, processor fees, and reasonable costs of collection;</li>
+      <li>Reversal of any digital-asset delivery to the extent technically feasible, or an offsetting claim for the value of any digital asset already delivered to you; and</li>
+      <li>Forfeiture of any remaining service credits, deposits, or retainers.</li>
+    </ul>
+    <p>Nothing in this Section limits your right to dispute a charge where required by law or by your card-network rules.</p>
+
+    <h2>7. Anti-Abuse</h2>
+    <p>Refunds are provided in good faith. We reserve the right to deny refund requests that are fraudulent, abusive, or made in bad faith, including repeated refund requests after substantial use of paid services or where we reasonably believe a request is being used to circumvent our pricing.</p>
+
+    <h2>8. Taxes and Processor Fees</h2>
+    <p>Where a refund is issued, we will refund the principal amount actually received by us. Non-refundable third-party fees (including card-network, ACH, processor, and blockchain network fees) and applicable taxes already remitted to a taxing authority are not within our control and may not be refundable. Where Coinflow, Stripe, or another processor retains a fee on the original transaction, that fee is deducted from any refund unless the processor returns it to us.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Refund Policy from time to time. When we do, we will revise the "Effective" date above and post the updated Policy at <a href="https://bettercallzaal.com/refund.html">bettercallzaal.com/refund.html</a>. The version in effect on the date of your purchase governs that purchase, except where a later version is more favorable to you or is required by applicable law.</p>
+
+    <h2>10. Contact</h2>
+    <p><strong>BetterCallZaal Strategies LLC</strong><br>
+    A Delaware limited liability company<br>
+    c/o Registered Agent<br>
+    131 Continental Drive, Suite 305<br>
+    Newark, New Castle County, Delaware 19713<br>
+    United States<br>
+    Email: <a href="mailto:zaal@thezao.com">zaal@thezao.com</a><br>
+    Website: <a href="https://bettercallzaal.com">bettercallzaal.com</a></p>
+  </main>
+
+  <footer class="footer">
+    <div>&copy; 2026 BetterCallZaal Strategies LLC</div>
+    <div style="margin-top: 0.5rem;">
+      <a href="/">Home</a> &middot;
+      <a href="/privacy.html">Privacy</a> &middot;
+      <a href="/terms.html">Terms</a> &middot;
+      <a href="/refund.html">Refund</a>
+    </div>
+  </footer>
+
+</body>
+</html>
