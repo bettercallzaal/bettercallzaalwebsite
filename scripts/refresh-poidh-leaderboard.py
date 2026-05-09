@@ -11,8 +11,9 @@ Writes:
     poidh-leaderboard.json  - Empire Builder API-Sourced feed [{address, score}]
     poidh-audit.json        - audit trail (bounty + claims)
 
-Score = number of claims submitted by that address. Issuer is excluded
-(PoidhV3 enforces issuer != claimant on-chain anyway).
+Score = 1 per unique submitter wallet (no double-count even if a wallet
+submits multiple claims). Issuer is excluded (PoidhV3 enforces issuer !=
+claimant on-chain anyway).
 
 To switch to album-wide, edit MODE below to "album" and set ALBUM.
 """
@@ -22,7 +23,6 @@ import json
 import sys
 import urllib.parse
 import urllib.request
-from collections import Counter
 from pathlib import Path
 
 DEFAULT_BOUNTY_ID = 1151
@@ -60,11 +60,14 @@ def main() -> int:
     )
     items = claims_resp["items"]
 
-    score: Counter[str] = Counter()
+    seen: set[str] = set()
+    unique_order: list[str] = []
     audit_claims: list[dict] = []
     for c in items:
         addr = c["issuer"].lower()
-        score[addr] += 1
+        if addr != issuer and addr not in seen:
+            seen.add(addr)
+            unique_order.append(addr)
         audit_claims.append({
             "claim_id": c["id"],
             "issuer": addr,
@@ -72,7 +75,7 @@ def main() -> int:
             "accepted": bool(c.get("isAccepted")),
         })
 
-    leaderboard = [{"address": a, "score": s} for a, s in score.most_common() if a != issuer]
+    leaderboard = [{"address": a, "score": 1} for a in unique_order]
 
     feed_path = REPO_ROOT / "poidh-leaderboard.json"
     audit_path = REPO_ROOT / "poidh-audit.json"

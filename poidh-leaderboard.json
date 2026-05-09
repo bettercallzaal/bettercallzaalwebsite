@@ -1,9 +1,5 @@
 [
   {
-    "address": "0x34da767a377a77aca15f77ab4e8114cd79c0a7e9",
-    "score": 2
-  },
-  {
     "address": "0x5dc697f2799bd232cad2d479c379ff305b699f9b",
     "score": 1
   },
@@ -25,6 +21,10 @@
   },
   {
     "address": "0x21422b215c1a9e5038c56d67a57f7bf2569b49cf",
+    "score": 1
+  },
+  {
+    "address": "0x34da767a377a77aca15f77ab4e8114cd79c0a7e9",
     "score": 1
   },
   {

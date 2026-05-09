@@ -464,7 +464,7 @@
       <div class="hero-eyebrow">POIDH x ZAO x ZABAL</div>
       <h1>POIDH Leaderboard</h1>
       <p class="hero-sub">
-        Submit to <strong>BCZ YapZ Ep 17</strong> on POIDH, climb the leaderboard, earn <strong>ZABAL</strong> via the Empire Builder API hook below. Live data scraped from poidh.xyz - one submission = one point.
+        Submit to <strong>BCZ YapZ Ep 17</strong> on POIDH, land on the leaderboard, earn <strong>ZABAL</strong> via the Empire Builder API hook below. Live data scraped from poidh.xyz - one wallet = one point, no matter how many clips you post.
       </p>
     </section>
 
@@ -501,7 +501,7 @@
         Submit your clip on POIDH ->
       </a>
       <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem; font-weight: 300">
-        How to enter: watch <a href="https://youtu.be/hw-6IHaziV0" target="_blank" rel="noopener">the episode</a>, pull the clip that hit hardest, post it on X / Instagram / YouTube with your honest take, tag <a href="https://farcaster.xyz/bettercallzaal" target="_blank" rel="noopener">@bettercallzaal</a>, and submit your post URL on POIDH. Multiple submissions allowed - each one = one point on this leaderboard.
+        How to enter: watch <a href="https://youtu.be/hw-6IHaziV0" target="_blank" rel="noopener">the episode</a>, pull the clip that hit hardest, post it on X / Instagram / YouTube with your honest take, tag <a href="https://farcaster.xyz/bettercallzaal" target="_blank" rel="noopener">@bettercallzaal</a>, and submit your post URL on POIDH. Submit as many as you want - the leaderboard counts unique wallets only.
       </p>
     </section>
 
@@ -530,10 +530,10 @@
         <div style="height: 1rem"></div>
         <p>Sample response:</p>
         <pre class="api-sample" id="api-sample">[
-  { "address": "0x34da...a7e9", "score": 2 },
   { "address": "0x5dc6...9f9b", "score": 1 },
   { "address": "0x388e...24ff", "score": 1 },
-  ... 7 more entries
+  { "address": "0x6dce...6953", "score": 1 },
+  ... 7 more entries (10 total, all score 1)
 ]</pre>
       </div>
 
@@ -672,7 +672,7 @@ Reputation Boosters: ON</pre>
 
   https://bettercallzaal.com/poidh-leaderboard.json
 
-Format: [{address, score}] - matches Empire Builder v3 spec exactly. Pulled live from poidh.xyz tRPC for bounty 1151 (BCZ YapZ Ep 17 clip task on Base). 11 claims, 10 unique submitters so far, 0.0105 ETH escrow.
+Format: [{address, score}] - matches Empire Builder v3 spec exactly. Pulled live from poidh.xyz tRPC for bounty 1151 (BCZ YapZ Ep 17 clip task on Base). Unique wallets only - score=1 per submitter, no double-count even on multiple claims. 11 claims from 10 unique wallets so far, 0.0105 ETH escrow.
 
 Config to add on \\$ZABAL Empire:
   Name:        BCZ YapZ Submitters
