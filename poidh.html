@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POIDH Leaderboard - ZAO bounty submitters - BetterCallZaal</title>
+  <meta name="description" content="ZAO POIDH bounty submitter leaderboard. Live JSON feed for Empire Builder API-sourced leaderboards. Submit to ZAO bounties on poidh.xyz to earn ZABAL.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://bettercallzaal.com/poidh.html">
+  <meta property="og:title" content="ZAO POIDH Leaderboard">
+  <meta property="og:description" content="Submit to ZAO POIDH bounties, climb the leaderboard, earn ZABAL.">
+  <meta property="og:url" content="https://bettercallzaal.com/poidh.html">
+  <meta property="og:image" content="https://bettercallzaal.com/assets/icon.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="/assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #070709;
+      --surface: #111115;
+      --surface-2: #16161c;
+      --orange: #ff6b35;
+      --cyan: #00e5ff;
+      --gold: #f5c842;
+      --pink: #ff3d6e;
+      --poidh-blue: #2a81d5;
+      --gradient-main: linear-gradient(135deg, #ff6b35, #ff3d6e, #00e5ff);
+      --gradient-poidh: linear-gradient(135deg, #2a81d5, #00e5ff);
+      --text: #e4e2dd;
+      --text-muted: #8a8895;
+      --text-dim: #4e4c57;
+      --border: #1f1e26;
+      --border-hover: #2f2d3a;
+      --radius: 8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 800px 600px at 15% -10%, rgba(42,129,213,0.14), transparent 60%),
+        radial-gradient(ellipse 700px 500px at 90% 10%, rgba(0,229,255,0.10), transparent 60%),
+        radial-gradient(ellipse 600px 400px at 50% 100%, rgba(255,107,53,0.08), transparent 60%);
+      z-index: -1;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      z-index: 9999;
+    }
+
+    a { color: var(--cyan); text-decoration: none; transition: color 0.15s; }
+    a:hover { color: var(--orange); }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* ---- nav ---- */
+    .nav { padding: 1.5rem; border-bottom: 1px solid var(--border); }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .nav-brand {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .nav-links { display: flex; gap: 1.25rem; align-items: center; }
+    .nav-links a { font-size: 0.85rem; color: var(--text-muted); }
+    .nav-links a:hover { color: var(--text); }
+
+    /* ---- hero ---- */
+    .hero { padding: 4rem 0 2rem; text-align: center; }
+    .hero-eyebrow {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--poidh-blue);
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 1.6vw, 1.1rem);
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+    .hero-sub strong { color: var(--text); font-weight: 500; }
+
+    /* ---- stats row ---- */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 3rem 0 2rem;
+    }
+    @media (max-width: 700px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+      transition: border-color 0.2s ease;
+    }
+    .stat-card:hover { border-color: var(--border-hover); }
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      color: var(--cyan);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-top: 0.5rem;
+      font-weight: 500;
+    }
+
+    /* ---- featured bounty ---- */
+    .featured {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin: 2rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .featured::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gradient-poidh);
+    }
+    .featured-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--poidh-blue);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .featured h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+      margin-bottom: 0.75rem;
+      color: var(--text);
+      line-height: 1.3;
+    }
+    .featured-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .featured-meta span strong {
+      color: var(--gold);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+    }
+    .featured-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.25rem;
+      background: transparent;
+      border: 1.5px solid var(--poidh-blue);
+      color: var(--poidh-blue);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+      transition: all 0.2s ease;
+    }
+    .featured-cta:hover {
+      background: var(--poidh-blue);
+      color: var(--bg);
+    }
+
+    /* ---- section ---- */
+    .section { padding: 2rem 0 3rem; }
+    .section-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--orange);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    /* ---- leaderboard ---- */
+    .lb-table {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .lb-row {
+      display: grid;
+      grid-template-columns: 60px 1fr 100px 100px;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .lb-row:last-child { border-bottom: none; }
+    .lb-row.lb-head {
+      background: var(--surface-2);
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .lb-row.lb-entry { transition: background 0.15s ease; }
+    .lb-row.lb-entry:hover { background: var(--surface-2); }
+
+    .lb-rank {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--gold);
+    }
+    .lb-rank.top-3 { color: var(--orange); }
+    .lb-addr {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--text);
+      word-break: break-all;
+    }
+    .lb-handle {
+      display: block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+    .lb-handle a { color: var(--cyan); }
+    .lb-score {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--cyan);
+      text-align: right;
+    }
+    .lb-zabal {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--gold);
+      text-align: right;
+    }
+    @media (max-width: 700px) {
+      .lb-row { grid-template-columns: 40px 1fr 70px; gap: 0.75rem; padding: 0.75rem; font-size: 0.85rem; }
+      .lb-zabal { display: none; }
+      .lb-row.lb-head .lb-zabal { display: none; }
+    }
+
+    /* ---- API hook card ---- */
+    .api-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .api-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    .api-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; font-weight: 300; }
+    .api-endpoint {
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem 1rem;
+      color: var(--cyan);
+      word-break: break-all;
+      margin-bottom: 0.75rem;
+    }
+    .api-sample {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem 1rem;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      overflow-x: auto;
+      white-space: pre;
+      line-height: 1.5;
+    }
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 0.85rem;
+      background: transparent;
+      border: 1px solid var(--border-hover);
+      color: var(--text-muted);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      letter-spacing: 0.05em;
+    }
+    .copy-btn:hover { border-color: var(--cyan); color: var(--cyan); }
+    .copy-btn.copied { border-color: var(--gold); color: var(--gold); }
+
+    /* ---- about / how-it-works ---- */
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+    @media (max-width: 800px) { .how-grid { grid-template-columns: 1fr; } }
+    .how-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+    }
+    .how-num {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.6rem;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .how-card h4 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+    .how-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      line-height: 1.55;
+    }
+
+    /* ---- footer ---- */
+    .footer {
+      padding: 2.5rem 0 3rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+    .footer a { color: var(--text-muted); }
+    .footer a:hover { color: var(--cyan); }
+
+    /* ---- skeleton ---- */
+    .skeleton {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--surface) 0%, var(--surface-2) 50%, var(--surface) 100%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+      border-radius: 4px;
+      height: 1em;
+      width: 6rem;
+      vertical-align: middle;
+    }
+    @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+    .empty {
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">BetterCallZaal</a>
+      <div class="nav-links">
+        <a href="/nexus.html">Nexus</a>
+        <a href="https://poidh.xyz/a/thezao" target="_blank" rel="noopener">ZAO Album</a>
+        <a href="/">Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-eyebrow">POIDH x ZAO x ZABAL</div>
+      <h1>POIDH Leaderboard</h1>
+      <p class="hero-sub">
+        Submit to <strong>ZAO POIDH bounties</strong>, claim a spot on the leaderboard, and earn <strong>ZABAL</strong> via the Empire Builder API hook below. The data feed is public so any project can plug it into their own Empire.
+      </p>
+    </section>
+
+    <section class="stats">
+      <div class="stat-card">
+        <div class="stat-num" id="stat-submitters">-</div>
+        <div class="stat-label">Unique Submitters</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="stat-submissions">-</div>
+        <div class="stat-label">Total Submissions</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Active Bounty</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">0.0105</div>
+        <div class="stat-label">ETH In Escrow</div>
+      </div>
+    </section>
+
+    <section class="featured">
+      <div class="featured-tag">Featured Bounty</div>
+      <h2>BCZ YapZ Ep 17 (Hannah / Farm Drop) - find a clip + post it with commentary on X, Instagram, or YouTube</h2>
+      <div class="featured-meta">
+        <span>Reward <strong>0.0105 ETH</strong></span>
+        <span>Chain <strong>Base</strong></span>
+        <span>Bounty <strong>#1151</strong></span>
+        <span>Status <strong>Active</strong></span>
+      </div>
+      <a href="https://poidh.xyz/base/bounty/1151" target="_blank" rel="noopener" class="featured-cta">
+        Open on POIDH ->
+      </a>
+    </section>
+
+    <section class="section">
+      <div class="section-eyebrow">Standings</div>
+      <h2 class="section-title">Submitter Leaderboard</h2>
+      <div class="lb-table" id="lb-table">
+        <div class="lb-row lb-head">
+          <div>Rank</div>
+          <div>Address / Farcaster</div>
+          <div style="text-align:right">Score</div>
+          <div style="text-align:right" class="lb-zabal-head">ZABAL boost</div>
+        </div>
+        <div class="empty" id="lb-loading">Loading leaderboard...</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-eyebrow">For Empire Builder Integration</div>
+      <h2 class="section-title">API Hook</h2>
+      <div class="api-card">
+        <h3>Public JSON feed for API-sourced leaderboards</h3>
+        <p>Compatible with Empire Builder's <code>POST /api/leaderboards/apiLeaderboards</code> endpoint. Configure an API leaderboard on the $ZABAL Empire pointing to this URL and ZABAL boosts will apply automatically when the leaderboard refreshes.</p>
+        <code class="api-endpoint" id="api-url">https://bettercallzaal.com/poidh-leaderboard.json</code>
+        <button class="copy-btn" id="copy-url-btn" type="button">Copy URL</button>
+        <div style="height: 1rem"></div>
+        <p>Sample response:</p>
+        <pre class="api-sample" id="api-sample">[
+  { "address": "0x7234...e9af", "score": 1 },
+  { "address": "0x4200...a5b4", "score": 1 }
+]</pre>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-eyebrow">How It Works</div>
+      <h2 class="section-title">Submit. Climb. Earn ZABAL.</h2>
+      <div class="how-grid">
+        <div class="how-card">
+          <div class="how-num">1</div>
+          <h4>Submit to a ZAO bounty</h4>
+          <p>Open a bounty in the <a href="https://poidh.xyz/a/thezao" target="_blank" rel="noopener">ZAO album on POIDH</a>, follow the proof requirement, submit your photo or clip with a Base wallet.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-num">2</div>
+          <h4>Land on the leaderboard</h4>
+          <p>Your submitting wallet is indexed here automatically. Each accepted submission counts as 1 score. The feed refreshes for every new bounty in the ZAO album.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-num">3</div>
+          <h4>Earn ZABAL via Empire Builder</h4>
+          <p>The $ZABAL Empire reads this leaderboard and bulk-distributes ZABAL to submitters proportional to score. No claim transaction needed - tokens land in your wallet on the next refresh.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>BCZ x ZAO x ZABAL - leaderboard data is public. Bounty data sourced from <a href="https://poidh.xyz/a/thezao" target="_blank" rel="noopener">poidh.xyz/a/thezao</a>. Empire Builder integration via <a href="https://empirebuilder.world" target="_blank" rel="noopener">empirebuilder.world</a>.</p>
+      <p style="margin-top: 0.5rem"><a href="/">BetterCallZaal home</a> &middot; <a href="/nexus.html">ZABAL Nexus</a></p>
+    </footer>
+  </main>
+
+  <script>
+    (async function () {
+      const tableEl = document.getElementById('lb-table');
+      const loadingEl = document.getElementById('lb-loading');
+      const submittersEl = document.getElementById('stat-submitters');
+      const submissionsEl = document.getElementById('stat-submissions');
+
+      function shortAddr(addr) {
+        if (!addr || addr.length < 10) return addr || '';
+        return addr.slice(0, 6) + '...' + addr.slice(-4);
+      }
+
+      function rankColor(rank) {
+        return rank <= 3 ? 'lb-rank top-3' : 'lb-rank';
+      }
+
+      function renderTable(entries) {
+        loadingEl.remove();
+        if (!entries.length) {
+          const empty = document.createElement('div');
+          empty.className = 'empty';
+          empty.textContent = 'No submissions yet. Be the first.';
+          tableEl.appendChild(empty);
+          return;
+        }
+        const sorted = entries.slice().sort((a, b) => b.score - a.score);
+        sorted.forEach((entry, i) => {
+          const rank = i + 1;
+          const row = document.createElement('div');
+          row.className = 'lb-row lb-entry';
+          const zabalNote = '~' + (entry.score * 100) + ' ZABAL';
+          row.innerHTML = `
+            <div class="${rankColor(rank)}">#${rank}</div>
+            <div>
+              <div class="lb-addr">${shortAddr(entry.address)}</div>
+              <span class="lb-handle">
+                <a href="https://farcaster.xyz/~/profile?address=${entry.address}" target="_blank" rel="noopener">view on Farcaster</a>
+                &middot;
+                <a href="https://basescan.org/address/${entry.address}" target="_blank" rel="noopener">basescan</a>
+              </span>
+            </div>
+            <div class="lb-score">${entry.score}</div>
+            <div class="lb-zabal">${zabalNote}</div>
+          `;
+          tableEl.appendChild(row);
+        });
+
+        submittersEl.textContent = sorted.length;
+        submissionsEl.textContent = sorted.reduce((sum, e) => sum + e.score, 0);
+      }
+
+      try {
+        const res = await fetch('/poidh-leaderboard.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error('Feed unavailable: ' + res.status);
+        const data = await res.json();
+        renderTable(Array.isArray(data) ? data : []);
+      } catch (err) {
+        loadingEl.textContent = 'Could not load leaderboard data: ' + err.message;
+      }
+    })();
+
+    document.getElementById('copy-url-btn').addEventListener('click', async function () {
+      const url = document.getElementById('api-url').textContent.trim();
+      try {
+        await navigator.clipboard.writeText(url);
+        this.textContent = 'Copied';
+        this.classList.add('copied');
+        setTimeout(() => {
+          this.textContent = 'Copy URL';
+          this.classList.remove('copied');
+        }, 1600);
+      } catch (e) {
+        this.textContent = 'Press Cmd+C';
+      }
+    });
+  </script>
+</body>
+</html>
