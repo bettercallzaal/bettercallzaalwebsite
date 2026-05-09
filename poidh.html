@@ -464,7 +464,7 @@
       <div class="hero-eyebrow">POIDH x ZAO x ZABAL</div>
       <h1>POIDH Leaderboard</h1>
       <p class="hero-sub">
-        Submit to <strong>ZAO POIDH bounties</strong>, claim a spot on the leaderboard, and earn <strong>ZABAL</strong> via the Empire Builder API hook below. The data feed is public so any project can plug it into their own Empire.
+        Submit to <strong>We The Media POIDH bounties</strong>, climb the leaderboard, and earn <strong>ZABAL</strong> via the Empire Builder API hook below. Live data from the <a href="https://poidh.xyz/a/wethemmedia" target="_blank" rel="noopener">wethemmedia</a> album on poidh.xyz.
       </p>
     </section>
 
@@ -478,11 +478,11 @@
         <div class="stat-label">Total Submissions</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">1</div>
-        <div class="stat-label">Active Bounty</div>
+        <div class="stat-num">6 / 12</div>
+        <div class="stat-label">Open / Total Bounties</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">0.0105</div>
+        <div class="stat-num">0.32</div>
         <div class="stat-label">ETH In Escrow</div>
       </div>
     </section>
@@ -495,10 +495,14 @@
         <span>Chain <strong>Base</strong></span>
         <span>Bounty <strong>#1151</strong></span>
         <span>Status <strong>Active</strong></span>
+        <span>Claims <strong>11</strong></span>
       </div>
       <a href="https://poidh.xyz/base/bounty/1151" target="_blank" rel="noopener" class="featured-cta">
         Open on POIDH ->
       </a>
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem; font-weight: 300">
+        Plus 11 more bounties in the album: 5 We The Media street interviews, 5 video / clipping / reporter audition bounties, and the "Find Someone Who Remembers" history quest. <a href="https://poidh.xyz/a/wethemmedia" target="_blank" rel="noopener">See full album.</a>
+      </p>
     </section>
 
     <section class="section">
@@ -526,8 +530,10 @@
         <div style="height: 1rem"></div>
         <p>Sample response:</p>
         <pre class="api-sample" id="api-sample">[
-  { "address": "0x7234...e9af", "score": 1 },
-  { "address": "0x4200...a5b4", "score": 1 }
+  { "address": "0x849e...6421", "score": 7 },
+  { "address": "0x602b...eebd", "score": 6 },
+  { "address": "0xe419...39f6", "score": 5 },
+  ... 34 more entries
 ]</pre>
       </div>
 
@@ -535,7 +541,7 @@
         <h3>Submission package - paste into Add New Leaderboard modal</h3>
         <p>Hand this to <a href="https://farcaster.xyz/yerbearserker" target="_blank" rel="noopener">@yerbearserker</a> (Empire Builder co-founder) and Adrian (lead engineer). They paste these values into the <em>Add New Leaderboard -> API Configuration</em> form on $ZABAL Empire.</p>
         <pre class="api-sample" id="submission-pkg">Leaderboard Name:    POIDH Submitters
-Description:         Submit to ZAO POIDH bounties to climb. ZABAL distributed by score.
+Description:         Submit to We The Media POIDH bounties to climb leaderboard.
 Upload Icon:         https://bettercallzaal.com/assets/icon.png
 API Endpoint URL:    https://bettercallzaal.com/poidh-leaderboard.json
 Token Boosters:      ON
@@ -662,19 +668,19 @@ Reputation Boosters: ON</pre>
     bindCopy('copy-url-btn', () => document.getElementById('api-url').textContent.trim(), 'Copy URL');
     bindCopy('copy-pkg-btn', () => document.getElementById('submission-pkg').textContent.trim(), 'Copy Submission Package');
 
-    const dmTemplate = `Hey @yerbearserker (cc Adrian) - shipped a POIDH submitter leaderboard on bettercallzaal.com/poidh.html. Public JSON feed ready for ZABAL Empire apiLeaderboard:
+    const dmTemplate = `Hey @yerbearserker (cc Adrian) - shipped a POIDH submitter leaderboard on bettercallzaal.com/poidh.html. Public JSON feed for ZABAL Empire apiLeaderboard:
 
   https://bettercallzaal.com/poidh-leaderboard.json
 
-Format: [{address, score}] - matches Empire Builder spec exactly. Phase 1 = manual updates as bounties land winners; Phase 2 = on-chain PoidhV3 event scrape via CF Worker.
+Format: [{address, score}] - matches Empire Builder v3 spec exactly. Pulled live from poidh.xyz tRPC across the wethemmedia album: 12 bounties, 68 claims, 37 unique submitters as of today. 0.32 ETH total in escrow across Base + Arbitrum.
 
-Suggested config:
+Config to add on \\$ZABAL Empire:
   Name:        POIDH Submitters
-  Description: Submit to ZAO POIDH bounties to climb. ZABAL distributed by score.
+  Description: Submit to We The Media POIDH bounties to climb leaderboard.
   Token + Reputation Boosters: both ON
   Icon: bettercallzaal.com/assets/icon.png
 
-Add it to $ZABAL Empire and we're live. Bounty 1151 has 2 submitters seeded; new POIDH bounties will land more. ZAO Stock Oct 3 will be the bigger pulse.`;
+Add it and we're live. Holler with the leaderboard UUID and I'll wire poidh.html to read live points + ZABAL distribution amounts via GET /api/leaderboards/<uuid>.`;
 
     bindCopy('copy-dm-btn', () => dmTemplate, 'Copy DM Template');
   </script>
