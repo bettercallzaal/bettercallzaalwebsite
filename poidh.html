@@ -229,25 +229,6 @@
       <div class="hero-meta" id="hero-meta">Last refresh: <span class="skeleton" style="width:10rem"></span></div>
     </section>
 
-    <section class="stats">
-      <div class="stat-card">
-        <div class="stat-num" id="stat-submitters">-</div>
-        <div class="stat-label">Unique Submitters</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num" id="stat-claims">-</div>
-        <div class="stat-label">Total Submissions</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num zabal" id="stat-zabal">-</div>
-        <div class="stat-label">ZABAL Distributed</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num gold" id="stat-eth">-</div>
-        <div class="stat-label">ETH In Escrow</div>
-      </div>
-    </section>
-
     <section class="bounty-strip">
       <div class="bounty-card won">
         <div class="bounty-tag won">Round 1 · Won</div>
@@ -308,7 +289,8 @@
     </section>
 
     <footer class="footer">
-      <p>BCZ x ZAO x ZABAL Empire on Empire Builder. POIDH bounty data sourced live from <a href="https://poidh.xyz/a/wethemmedia" target="_blank" rel="noopener">poidh.xyz/a/wethemmedia</a>. Distribution via <a href="https://empirebuilder.world/empire/0xbB48f19B0494Ff7C1fE5Dc2032aeEE14312f0b07" target="_blank" rel="noopener">empirebuilder.world</a>.</p>
+      <p id="footer-totals">Lifetime ZABAL distributed: <span class="skeleton" style="width:4rem"></span> · <span id="footer-submitters">-</span> unique submitters across <span id="footer-bounties">-</span> BCZ bounties</p>
+      <p style="margin-top: 0.6rem">BCZ x ZAO x ZABAL Empire on Empire Builder. POIDH data live from <a href="https://poidh.xyz/a/wethemmedia" target="_blank" rel="noopener">poidh.xyz/a/wethemmedia</a>. Distribution via <a href="https://empirebuilder.world/empire/0xbB48f19B0494Ff7C1fE5Dc2032aeEE14312f0b07" target="_blank" rel="noopener">empirebuilder.world</a>.</p>
       <p style="margin-top: 0.5rem"><a href="/">BetterCallZaal home</a> · <a href="/nexus.html">ZABAL Nexus</a></p>
     </footer>
   </main>
@@ -416,14 +398,13 @@
     function renderStats(data) {
       const t = data.totals || {};
       const empire = data.empire || {};
-      document.getElementById('stat-submitters').textContent = t.unique_submitters ?? '0';
-      document.getElementById('stat-claims').textContent = t.claims ?? '0';
-      document.getElementById('stat-zabal').textContent = fmtZabal(t.total_zabal_distributed);
-      document.getElementById('stat-eth').textContent = (t.total_eth_escrow ?? 0).toFixed(4);
       const meta = document.getElementById('hero-meta');
       const ebRefresh = empire.last_eb_refresh ? relTime(empire.last_eb_refresh) : 'unknown';
       const generated = data.generated_at ? relTime(data.generated_at) : 'unknown';
       meta.textContent = `Last EB refresh: ${ebRefresh} · Page data: ${generated}`;
+
+      const totalsEl = document.getElementById('footer-totals');
+      totalsEl.innerHTML = `Lifetime ZABAL distributed: <strong>${fmtZabal(t.total_zabal_distributed)}</strong> · <strong>${t.unique_submitters ?? 0}</strong> unique submitters across <strong>${t.bounties ?? 0}</strong> BCZ bounties`;
     }
 
     (async function () {
