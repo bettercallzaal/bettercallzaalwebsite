@@ -1,15 +1,22 @@
 {
-  "bounty_ids": [
-    1151,
-    1166
-  ],
-  "chainId": 8453,
-  "issuers": [
-    "0x7234c36a71ec237c2ae7698e8916e0735001e9af"
-  ],
-  "total_claims": 11,
-  "submitter_count": 10,
-  "total_eth_escrow": 0.0165,
+  "generated_at": "2026-05-09T23:15:29Z",
+  "empire": {
+    "token_address": "0xbB48f19B0494Ff7C1fE5Dc2032aeEE14312f0b07",
+    "leaderboard_uuid": "7b8e8dfa-529d-48ad-8c9b-bdb45cc35187",
+    "leaderboard_name": "POIDH Submitters",
+    "leaderboard_url": "https://empirebuilder.world/empire/0xbB48f19B0494Ff7C1fE5Dc2032aeEE14312f0b07",
+    "last_eb_refresh": "2026-05-09T21:25:28.564+00:00",
+    "apply_boosters": false,
+    "apply_reputation_boosters": false,
+    "apply_staking_boosters": false
+  },
+  "totals": {
+    "bounties": 2,
+    "claims": 11,
+    "unique_submitters": 10,
+    "total_eth_escrow": 0.0165,
+    "total_zabal_distributed": 13.3509
+  },
   "bounties": [
     {
       "id": 1151,
@@ -36,6 +43,148 @@
       "is_voting": false,
       "is_canceled": false,
       "claims_count": 0
+    }
+  ],
+  "leaderboard": [
+    {
+      "address": "0x5dc697f2799bd232cad2d479c379ff305b699f9b",
+      "score": 1,
+      "rank": 1,
+      "farcaster_username": "pascaline",
+      "displayName": "Caline",
+      "avatar": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/80d1d058-fdd6-4573-24e2-637df5431700/original",
+      "twitter_handle": "pascaline7933",
+      "twitter_url": "https://x.com/pascaline7933",
+      "fid": 1119246,
+      "boost": 1,
+      "totalRewards": 4.254089648089822,
+      "follower": 1776
+    },
+    {
+      "address": "0x388e3daf94fab496f01b78aac25305d715aa24ff",
+      "score": 1,
+      "rank": 2,
+      "farcaster_username": "noniwontmiss",
+      "displayName": "0xNoni \ud80c\udcf5",
+      "avatar": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/7753bf7f-ed73-4ee6-ca5e-daeb740a8200/original",
+      "twitter_handle": "0xnoni",
+      "twitter_url": "https://x.com/0xnoni",
+      "fid": 1076895,
+      "boost": 1,
+      "totalRewards": 1.0040896480898218,
+      "follower": 57
+    },
+    {
+      "address": "0x6dce11cc9bba17d3c1ef60c26f0958300bb06953",
+      "score": 1,
+      "rank": 3,
+      "farcaster_username": "joeyofdeus",
+      "displayName": "Monksage",
+      "avatar": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/92463511-27d0-49a3-622d-58953de93e00/original",
+      "twitter_handle": "joey_of_deus",
+      "twitter_url": "https://x.com/joey_of_deus",
+      "fid": 1049417,
+      "boost": 1,
+      "totalRewards": 1.0040896480898218,
+      "follower": 31
+    },
+    {
+      "address": "0xaa2483130cb248c3e679c404a3dccdd5b03dea00",
+      "score": 1,
+      "rank": 4,
+      "farcaster_username": "0xcollinxweb3",
+      "displayName": "0xcollinxweb3",
+      "avatar": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/40a6d011-4ace-4cc9-a0b3-7c2609e61800/original",
+      "twitter_handle": "c0llinxweb3",
+      "twitter_url": "https://x.com/c0llinxweb3",
+      "fid": 1352459,
+      "boost": 1,
+      "totalRewards": 1.0640896480898219,
+      "follower": 25
+    },
+    {
+      "address": "0xa34514c2150029afa4d37577daee301166105355",
+      "score": 1,
+      "rank": 5,
+      "farcaster_username": "cryptfi-mariano",
+      "displayName": "J'Mariano",
+      "avatar": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/eea0fa61-57c8-40b4-502f-a576e55e5500/rectcrop3",
+      "twitter_handle": "cryptfi_mariano",
+      "twitter_url": "https://x.com/cryptfi_mariano",
+      "fid": 872568,
+      "boost": 1,
+      "totalRewards": 1.0040896480898218,
+      "follower": 1718
+    },
+    {
+      "address": "0x21422b215c1a9e5038c56d67a57f7bf2569b49cf",
+      "score": 1,
+      "rank": 6,
+      "farcaster_username": "junyboy.eth",
+      "displayName": "Juny ",
+      "avatar": "https://dlmlsggyvmkhaenuzfsh.supabase.co/storage/v1/object/public/avatars/D742468E-4A0F-4448-8E00-5BE660E898F1/avatar.jpg",
+      "twitter_handle": "0xjuny",
+      "twitter_url": "https://x.com/0xjuny",
+      "fid": 1102924,
+      "boost": 1,
+      "totalRewards": 1.0040896480898218,
+      "follower": 1627
+    },
+    {
+      "address": "0x34da767a377a77aca15f77ab4e8114cd79c0a7e9",
+      "score": 1,
+      "rank": 7,
+      "farcaster_username": "cheeka",
+      "displayName": "Pepperoni\ud83e\uded1",
+      "avatar": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/8f828324-f656-4065-5603-743cebf1c100/original",
+      "twitter_handle": "chxkaodi",
+      "twitter_url": "https://x.com/chxkaodi",
+      "fid": 1103525,
+      "boost": 1,
+      "totalRewards": 1.0040896480898218,
+      "follower": 2343
+    },
+    {
+      "address": "0x94652ec29ff18fc06ca4802c76d40b0f86e3eaf6",
+      "score": 1,
+      "rank": 8,
+      "farcaster_username": "megajayar.eth",
+      "displayName": "megajayar",
+      "avatar": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/c94232f9-b752-4176-70ec-30ed71057e00/original",
+      "twitter_handle": "megajayar",
+      "twitter_url": "https://x.com/megajayar",
+      "fid": 291971,
+      "boost": 1,
+      "totalRewards": 1.0040896480898218,
+      "follower": 3836
+    },
+    {
+      "address": "0xc4ba3884dbe6a9dab4ec2a6c3b6366d962f2d25c",
+      "score": 1,
+      "rank": 9,
+      "farcaster_username": "tashin",
+      "displayName": "T.ETH\ud83c\udfa9",
+      "avatar": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/cfced400-f20c-4ca5-3036-c7fd87804900/original",
+      "twitter_handle": "msayeco",
+      "twitter_url": "https://x.com/msayeco",
+      "fid": 428968,
+      "boost": 1,
+      "totalRewards": 1.0040896480898218,
+      "follower": 319
+    },
+    {
+      "address": "0x0fbf06edddfab0946f146c0b0832943265ef25bc",
+      "score": 1,
+      "rank": 10,
+      "farcaster_username": "watchcoin",
+      "displayName": "Watchcoin",
+      "avatar": "https://res.cloudinary.com/base-app/image/upload/f_auto/v1776631583/93c6bc9d-e2de-4335-b8c8-188fe302a45f.jpg",
+      "twitter_handle": "onlybased_god",
+      "twitter_url": "https://x.com/onlybased_god",
+      "fid": 250575,
+      "boost": 1,
+      "totalRewards": 1.0040896480898218,
+      "follower": 2968
     }
   ],
   "claims": [
