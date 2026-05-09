@@ -575,108 +575,6 @@ Reputation Boosters: ON</pre>
     </section>
 
     <section class="section">
-      <div class="section-eyebrow">Round 1 Wrap-Up</div>
-      <h2 class="section-title">Winner announcement template</h2>
-      <div class="api-card">
-        <h3>Cast / X copy (paste-ready)</h3>
-        <p>Modeled on <a href="https://farcaster.xyz/kenny/0xbd415099" target="_blank" rel="noopener">@kenny's template</a>: confirm on app -> screenshot -> announce on social. Posts well in /poidh + /zao + X.</p>
-        <pre class="api-sample" id="winner-cast">a winner is in on the BCZ YapZ Ep 17 (Hannah / Farm Drop) bounty 🌾
-
-congrats, @cryptfi-mariano 🥳
-
-his clip + writeup landed exactly where the brief lived: thoughtful, on-narrative, focused on the food-system fix - not the hype. the kind of POIDH submission that turns a clip into a story that travels.
-
-11 claims, 10 unique submitters, full leaderboard live at bettercallzaal.com/poidh.html
-
-next round drops with @kenny from poidh on BCZ YapZ Ep 19 - stay tuned 📸
-
-@bettercallzaal</pre>
-        <button class="copy-btn" id="copy-winner-btn" type="button">Copy Winner Cast</button>
-      </div>
-      <div class="api-card" style="margin-top: 1.25rem">
-        <h3>Posting checklist</h3>
-        <ol style="padding-left: 1.25rem; color: var(--text-muted); font-size: 0.9rem; line-height: 1.8">
-          <li>Open <a href="https://poidh.xyz/base/bounty/1151" target="_blank" rel="noopener">bounty 1151 on POIDH</a> in the issuer wallet (<code>0x7234...e9af</code>)</li>
-          <li>Find <a href="https://farcaster.xyz/cryptfi-mariano" target="_blank" rel="noopener">@cryptfi-mariano</a>'s claim 6368 ("This Startup Is Fixing Our Broken Food S...") and tap <strong>Accept</strong> - protocol auto-pays 0.0105 ETH minus 2.5% fee, mints the claim NFT to you</li>
-          <li>Screenshot the accepted state of the claim card</li>
-          <li>Cast on /poidh + /zao + post on X using the template above with the screenshot attached</li>
-          <li>Tag <a href="https://farcaster.xyz/cryptfi-mariano" target="_blank" rel="noopener">@cryptfi-mariano</a>, <a href="https://farcaster.xyz/kenny" target="_blank" rel="noopener">@kenny</a>, link to <a href="https://poidh.xyz/base/bounty/1151" target="_blank" rel="noopener">poidh.xyz/base/bounty/1151</a></li>
-          <li>Refresh the leaderboard JSON (<code>python3 scripts/refresh-poidh-leaderboard.py</code>) once the claim is marked accepted - the audit log will reflect <code>accepted: true</code></li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-eyebrow">Round 2 Draft</div>
-      <h2 class="section-title">Best POIDH ad clip - BCZ YapZ Ep 19 w/ Kenny</h2>
-      <div class="api-card">
-        <h3>Bounty title (75 chars)</h3>
-        <pre class="api-sample" id="r2-title">Clip the best 45-60s ad for POIDH from BCZ YapZ Ep 19 with Kenny - 1 winner</pre>
-        <button class="copy-btn" id="copy-r2-title-btn" type="button">Copy Title</button>
-      </div>
-      <div class="api-card" style="margin-top: 1.25rem">
-        <h3>Bounty description (paste-ready, applies POIDH framework)</h3>
-        <pre class="api-sample" id="r2-desc" style="max-height: 480px; overflow-y: auto">Make the best 45-60 second edited clip from BCZ YapZ Ep 19 (with Kenny from POIDH) that works as an ad for POIDH itself.
-
-Watch the episode: https://www.youtube.com/watch?v=IFG_34K7Vig
-
-PRECISE
-- 45 to 60 seconds. Hard floor + ceiling.
-- Edited (not a raw screen-capture). Cuts, captions, hook in the first 3 seconds.
-- Lands ONE clear takeaway about why POIDH matters. Not a clip dump.
-
-OBSERVABLE
-Submission must include:
-- Public link to the clip on X AND Farcaster (both, not either)
-- Tags in the post: @bettercallzaal @kennyiscoding @poidhxyz on X / @zaal @kenny @poidh on Farcaster
-- A one-line caption stating what the ad is selling about POIDH (permissionless coordination, real-world bounties, escrow trust, etc.)
-- Submit the post URLs on POIDH at the bounty page
-
-IMPACTFUL
-The winning clip will be reused as POIDH's pinned ad on @bettercallzaal channels and may be shared by Kenny / @poidhxyz. Goal: bring the next 100 bounty creators to POIDH.
-
-DOABLE
-The episode runs 28 minutes; the strongest beats are between 5:05 (origin), 8:40 (permissionless flows), 17:35 (May meta-bounty demo), and 22:30 (bounty writing as creative muscle). Pick one beat or stitch two - resources you need: any phone or laptop editor.
-
-HORIZONED
-Bounty runs 7 days from posting. Deadline: TBD by Zaal at create time. One winner. Chosen by me. Quality of the ad-as-an-ad is the only metric (hook, clarity, payoff).
-
-THE REWARD
-One winner takes the full pot. Pot grows in real time as others contribute. Track live on POIDH and on bettercallzaal.com/poidh.html.
-
-NICE TO HAVE (not required)
-- Captions for sound-off scrolling
-- POIDH wordmark or logo in the lower third
-- A clear call to action at the end ("post your bounty at poidh.xyz")</pre>
-        <button class="copy-btn" id="copy-r2-desc-btn" type="button">Copy Description</button>
-      </div>
-
-      <div class="api-card" style="margin-top: 1.25rem">
-        <h3>How the draft maps to Kenny's POIDH framework</h3>
-        <div style="display: grid; grid-template-columns: auto 1fr; gap: 0.5rem 1rem; font-size: 0.88rem; line-height: 1.55">
-          <div style="color: var(--gold); font-weight: 700">P</div><div><strong>Precise</strong> - 45-60s, edited, single takeaway. No "make a clip" ambiguity.</div>
-          <div style="color: var(--gold); font-weight: 700">O</div><div><strong>Observable</strong> - public X + Farcaster URLs, specific tags, caption stating the angle. Verifiable from outside the wallet.</div>
-          <div style="color: var(--gold); font-weight: 700">I</div><div><strong>Impactful</strong> - the winning clip becomes POIDH's pinned ad. Real downstream value, not just a participation reward.</div>
-          <div style="color: var(--gold); font-weight: 700">D</div><div><strong>Doable</strong> - 28-min episode, specific timecodes called out, any editor works. Realistic in a weekend.</div>
-          <div style="color: var(--gold); font-weight: 700">H</div><div><strong>Horizoned</strong> - 7-day window with a stated deadline at create time. Kills "I'll do it later" drift.</div>
-        </div>
-      </div>
-
-      <div class="api-card" style="margin-top: 1.25rem">
-        <h3>Improvements over Round 1</h3>
-        <ul style="padding-left: 1.25rem; color: var(--text-muted); font-size: 0.9rem; line-height: 1.7">
-          <li><strong>Single observable target.</strong> Round 1 said "find a clip + post + tag" - Round 2 names exact lengths, exact platforms (X AND Farcaster, not either), exact tags.</li>
-          <li><strong>Specific timecodes.</strong> Reduces "where do I even start" friction - 4 candidate beats called out.</li>
-          <li><strong>Three-tag rule.</strong> @bettercallzaal + @kenny + @poidh tagged on every submission widens distribution.</li>
-          <li><strong>Hook-quality bar.</strong> "Best ad for POIDH" beats "your favorite clip" - judging is on craft, not just preference.</li>
-          <li><strong>Reuse promise.</strong> Winning clip gets pinned + shared by Kenny - a real prize beyond the ETH.</li>
-          <li><strong>Multi-stage rollout.</strong> Round 1 ran solo. Round 2 chains: clip bounty -> winner gets featured -> Round 3 could be "best agent-built bounty for POIDH" tying back to Kenny's 24:20 chapter on agent-built bounty writers.</li>
-          <li><strong>POIDH framework header.</strong> Use the framework in the bounty TEXT itself - signals to submitters that craft matters and double-serves as a tutorial.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section">
       <div class="section-eyebrow">How It Works</div>
       <h2 class="section-title">Submit. Climb. Earn ZABAL.</h2>
       <div class="how-grid">
@@ -786,9 +684,6 @@ NICE TO HAVE (not required)
 
     bindCopy('copy-url-btn', () => document.getElementById('api-url').textContent.trim(), 'Copy URL');
     bindCopy('copy-pkg-btn', () => document.getElementById('submission-pkg').textContent.trim(), 'Copy Submission Package');
-    bindCopy('copy-winner-btn', () => document.getElementById('winner-cast').textContent.trim(), 'Copy Winner Cast');
-    bindCopy('copy-r2-title-btn', () => document.getElementById('r2-title').textContent.trim(), 'Copy Title');
-    bindCopy('copy-r2-desc-btn', () => document.getElementById('r2-desc').textContent.trim(), 'Copy Description');
 
     const dmTemplate = `Hey @yerbearserker (cc Adrian) - shipped a POIDH submitter leaderboard on bettercallzaal.com/poidh.html. Public JSON feed for ZABAL Empire apiLeaderboard:
 
