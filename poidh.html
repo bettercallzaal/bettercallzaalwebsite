@@ -519,8 +519,8 @@
       <div class="section-eyebrow">For Empire Builder Integration</div>
       <h2 class="section-title">API Hook</h2>
       <div class="api-card">
-        <h3>Public JSON feed for API-sourced leaderboards</h3>
-        <p>Compatible with Empire Builder's <code>POST /api/leaderboards/apiLeaderboards</code> endpoint. Configure an API leaderboard on the $ZABAL Empire pointing to this URL and ZABAL boosts will apply automatically when the leaderboard refreshes.</p>
+        <h3>Public JSON feed for Empire Builder API-Sourced leaderboards</h3>
+        <p>Compatible with Empire Builder's <code>POST /api/leaderboards/apiLeaderboards</code> endpoint. The $ZABAL Empire guardian (yerbearserker / Adrian) configures an API leaderboard pointing to this URL once - ZABAL distributes automatically on every refresh, with Token Boosters and Reputation Boosters stacking on top.</p>
         <code class="api-endpoint" id="api-url">https://bettercallzaal.com/poidh-leaderboard.json</code>
         <button class="copy-btn" id="copy-url-btn" type="button">Copy URL</button>
         <div style="height: 1rem"></div>
@@ -529,6 +529,25 @@
   { "address": "0x7234...e9af", "score": 1 },
   { "address": "0x4200...a5b4", "score": 1 }
 ]</pre>
+      </div>
+
+      <div class="api-card" style="margin-top: 1.25rem">
+        <h3>Submission package - paste into Add New Leaderboard modal</h3>
+        <p>Hand this to <a href="https://farcaster.xyz/yerbearserker" target="_blank" rel="noopener">@yerbearserker</a> (Empire Builder co-founder) and Adrian (lead engineer). They paste these values into the <em>Add New Leaderboard -> API Configuration</em> form on $ZABAL Empire.</p>
+        <pre class="api-sample" id="submission-pkg">Leaderboard Name:    POIDH Submitters
+Description:         Submit to ZAO POIDH bounties to climb. ZABAL distributed by score.
+Upload Icon:         https://bettercallzaal.com/assets/icon.png
+API Endpoint URL:    https://bettercallzaal.com/poidh-leaderboard.json
+Token Boosters:      ON
+Reputation Boosters: ON</pre>
+        <button class="copy-btn" id="copy-pkg-btn" type="button">Copy Submission Package</button>
+        <button class="copy-btn" id="copy-dm-btn" type="button" style="margin-left: 0.5rem">Copy DM Template</button>
+      </div>
+
+      <div class="api-card" style="margin-top: 1.25rem">
+        <h3>How the boosters stack</h3>
+        <p style="margin-bottom: 0.5rem"><strong style="color: var(--gold)">Token Boosters</strong> - reward submitters who also hold ZABAL, SANG, ZORO, or any partner ERC-20 / NFT configured on the $ZABAL Empire. Multiplies points without changing the raw POIDH submission count.</p>
+        <p><strong style="color: var(--pink)">Reputation Boosters</strong> - reward submitters above configured reputation thresholds (Talent Protocol, Phi, etc). Stacks additively with token boosters and the staking booster (capped at +5x).</p>
       </div>
     </section>
 
@@ -621,20 +640,43 @@
       }
     })();
 
-    document.getElementById('copy-url-btn').addEventListener('click', async function () {
-      const url = document.getElementById('api-url').textContent.trim();
-      try {
-        await navigator.clipboard.writeText(url);
-        this.textContent = 'Copied';
-        this.classList.add('copied');
-        setTimeout(() => {
-          this.textContent = 'Copy URL';
-          this.classList.remove('copied');
-        }, 1600);
-      } catch (e) {
-        this.textContent = 'Press Cmd+C';
-      }
-    });
+    function bindCopy(btnId, getText, defaultLabel) {
+      const btn = document.getElementById(btnId);
+      if (!btn) return;
+      btn.addEventListener('click', async function () {
+        const text = getText();
+        try {
+          await navigator.clipboard.writeText(text);
+          this.textContent = 'Copied';
+          this.classList.add('copied');
+          setTimeout(() => {
+            this.textContent = defaultLabel;
+            this.classList.remove('copied');
+          }, 1600);
+        } catch (e) {
+          this.textContent = 'Press Cmd+C';
+        }
+      });
+    }
+
+    bindCopy('copy-url-btn', () => document.getElementById('api-url').textContent.trim(), 'Copy URL');
+    bindCopy('copy-pkg-btn', () => document.getElementById('submission-pkg').textContent.trim(), 'Copy Submission Package');
+
+    const dmTemplate = `Hey @yerbearserker (cc Adrian) - shipped a POIDH submitter leaderboard on bettercallzaal.com/poidh.html. Public JSON feed ready for ZABAL Empire apiLeaderboard:
+
+  https://bettercallzaal.com/poidh-leaderboard.json
+
+Format: [{address, score}] - matches Empire Builder spec exactly. Phase 1 = manual updates as bounties land winners; Phase 2 = on-chain PoidhV3 event scrape via CF Worker.
+
+Suggested config:
+  Name:        POIDH Submitters
+  Description: Submit to ZAO POIDH bounties to climb. ZABAL distributed by score.
+  Token + Reputation Boosters: both ON
+  Icon: bettercallzaal.com/assets/icon.png
+
+Add it to $ZABAL Empire and we're live. Bounty 1151 has 2 submitters seeded; new POIDH bounties will land more. ZAO Stock Oct 3 will be the bigger pulse.`;
+
+    bindCopy('copy-dm-btn', () => dmTemplate, 'Copy DM Template');
   </script>
 </body>
 </html>
