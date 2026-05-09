@@ -1,21 +1,20 @@
 #!/usr/bin/env python3
 """
-Refresh poidh-leaderboard.json by scraping poidh.xyz tRPC for a single
-POIDH bounty's claim submitters. Currently scoped to bounty 1151
-(BCZ YapZ Ep 17, Base chain).
+Refresh poidh-leaderboard.json by scraping poidh.xyz tRPC across one or
+more BCZ-issued POIDH bounties. Defaults aggregate Round 1 (bounty 1151,
+BCZ YapZ Ep 17) + Round 2 (bounty 1166, BCZ YapZ Ep 19 w/ Kenny) on Base.
 
     python3 scripts/refresh-poidh-leaderboard.py
-    python3 scripts/refresh-poidh-leaderboard.py --bounty 1151 --chain 8453
+    python3 scripts/refresh-poidh-leaderboard.py --bounty 1151 --bounty 1166 --chain 8453
 
 Writes:
     poidh-leaderboard.json  - Empire Builder API-Sourced feed [{address, score}]
-    poidh-audit.json        - audit trail (bounty + claims)
+    poidh-audit.json        - audit trail (bounty + claims) across all bounties
 
-Score = 1 per unique submitter wallet (no double-count even if a wallet
-submits multiple claims). Issuer is excluded (PoidhV3 enforces issuer !=
-claimant on-chain anyway).
-
-To switch to album-wide, edit MODE below to "album" and set ALBUM.
+Score = 1 per unique submitter wallet across the whole bounty set. No
+double-count if a wallet submits multiple claims OR submits to multiple
+bounties. Issuer wallets are excluded (PoidhV3 enforces issuer != claimant
+on-chain anyway).
 """
 
 import argparse
@@ -25,7 +24,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-DEFAULT_BOUNTY_ID = 1151
+DEFAULT_BOUNTY_IDS = [1151, 1166]
 DEFAULT_CHAIN_ID = 8453
 BASE = "https://poidh.xyz/api/trpc"
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -41,38 +40,67 @@ def trpc(proc: str, payload: dict, timeout: int = 20) -> dict:
 
 def main() -> int:
     p = argparse.ArgumentParser()
-    p.add_argument("--bounty", type=int, default=DEFAULT_BOUNTY_ID)
+    p.add_argument("--bounty", type=int, action="append", default=None)
     p.add_argument("--chain", type=int, default=DEFAULT_CHAIN_ID)
     args = p.parse_args()
 
-    b = trpc("bounties.fetch", {"id": args.bounty, "chainId": args.chain})
-    issuer = b["issuer"].lower()
-    amount_eth = int(b.get("amount", "0") or 0) / 1e18
-    print(f"Bounty {args.bounty} on chain {args.chain}")
-    print(f"  title:  {b['title'][:80]}")
-    print(f"  issuer: {issuer} (excluded)")
-    print(f"  amount: {amount_eth:.6f} ETH")
-    print(f"  album:  {b.get('extra', {}).get('album')}")
+    bounty_ids = args.bounty if args.bounty else DEFAULT_BOUNTY_IDS
 
-    claims_resp = trpc(
-        "claims.fetchBountyClaims",
-        {"bountyId": args.bounty, "chainId": args.chain, "limit": 100},
-    )
-    items = claims_resp["items"]
-
+    issuers: set[str] = set()
     seen: set[str] = set()
     unique_order: list[str] = []
-    audit_claims: list[dict] = []
-    for c in items:
-        addr = c["issuer"].lower()
-        if addr != issuer and addr not in seen:
-            seen.add(addr)
-            unique_order.append(addr)
-        audit_claims.append({
-            "claim_id": c["id"],
-            "issuer": addr,
-            "title": (c.get("title") or "")[:80],
-            "accepted": bool(c.get("isAccepted")),
+    bounty_meta: list[dict] = []
+    all_claims: list[dict] = []
+    total_eth = 0.0
+    total_claims = 0
+
+    for bid in bounty_ids:
+        b = trpc("bounties.fetch", {"id": bid, "chainId": args.chain})
+        issuer = b["issuer"].lower()
+        issuers.add(issuer)
+        amount_eth = int(b.get("amount", "0") or 0) / 1e18
+        total_eth += amount_eth
+
+        claims_resp = trpc(
+            "claims.fetchBountyClaims",
+            {"bountyId": bid, "chainId": args.chain, "limit": 100},
+        )
+        items = claims_resp["items"]
+        total_claims += len(items)
+
+        print(f"Bounty {bid} on chain {args.chain}")
+        print(f"  title:  {b['title'][:80]}")
+        print(f"  issuer: {issuer}")
+        print(f"  amount: {amount_eth:.6f} ETH")
+        print(f"  album:  {b.get('extra', {}).get('album')}")
+        print(f"  claims: {len(items)}")
+
+        claim_count_for_bounty = 0
+        for c in items:
+            addr = c["issuer"].lower()
+            if addr != issuer and addr not in seen:
+                seen.add(addr)
+                unique_order.append(addr)
+            claim_count_for_bounty += 1
+            all_claims.append({
+                "bounty_id": bid,
+                "claim_id": c["id"],
+                "issuer": addr,
+                "title": (c.get("title") or "")[:80],
+                "accepted": bool(c.get("isAccepted")),
+            })
+
+        bounty_meta.append({
+            "id": bid,
+            "chainId": args.chain,
+            "title": b["title"],
+            "issuer": issuer,
+            "album": b.get("extra", {}).get("album"),
+            "amount_eth": amount_eth,
+            "in_progress": bool(b.get("inProgress")),
+            "is_voting": bool(b.get("isVoting")),
+            "is_canceled": bool(b.get("isCanceled")),
+            "claims_count": claim_count_for_bounty,
         })
 
     leaderboard = [{"address": a, "score": 1} for a in unique_order]
@@ -82,20 +110,20 @@ def main() -> int:
 
     feed_path.write_text(json.dumps(leaderboard, indent=2) + "\n")
     audit_path.write_text(json.dumps({
-        "bounty_id": args.bounty,
+        "bounty_ids": bounty_ids,
         "chainId": args.chain,
-        "title": b["title"],
-        "issuer": issuer,
-        "album": b.get("extra", {}).get("album"),
-        "amount_eth": amount_eth,
-        "claim_count": len(items),
+        "issuers": sorted(issuers),
+        "total_claims": total_claims,
         "submitter_count": len(leaderboard),
-        "claims": audit_claims,
+        "total_eth_escrow": round(total_eth, 6),
+        "bounties": bounty_meta,
+        "claims": all_claims,
     }, indent=2) + "\n")
 
     print()
-    print(f"Wrote {feed_path.relative_to(REPO_ROOT)}: {len(leaderboard)} submitters, {len(items)} claims")
-    print(f"Wrote {audit_path.relative_to(REPO_ROOT)}: audit trail")
+    print(f"Wrote {feed_path.relative_to(REPO_ROOT)}: {len(leaderboard)} unique submitters across {len(bounty_ids)} bounties")
+    print(f"Wrote {audit_path.relative_to(REPO_ROOT)}: full audit trail")
+    print(f"Total escrow: {total_eth:.6f} ETH, {total_claims} claims")
     return 0
 
 
