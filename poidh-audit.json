@@ -1,599 +1,76 @@
 {
-  "album": "wethemmedia",
-  "bounty_count": 12,
-  "claim_count": 68,
-  "submitter_count": 37,
-  "total_eth_escrow": 0.3232,
-  "issuers": [
-    "0x4200ac338555e25b20c8fe82ac02a5c8d4e5a5b4",
-    "0x7234c36a71ec237c2ae7698e8916e0735001e9af",
-    "0x7cccff608dda05bde58a28b6910ebc78aea1d4a3"
-  ],
-  "bounties": [
-    {
-      "id": 1151,
-      "chainId": 8453,
-      "title": "Find your favorite clip from BCZ YapZ Ep 17 (Hannah / Farm Drop) and post it to either X, Instagram, or YouTube with a written comment about what it says to you.",
-      "issuer": "0x7234c36a71ec237c2ae7698e8916e0735001e9af",
-      "amount_wei": "10500000000000000",
-      "amount_eth": 0.0105,
-      "claims_count": 11
-    },
-    {
-      "id": 284,
-      "chainId": 42161,
-      "title": "\ud83d\udd6f\ufe0f Lights Out Nigeria \u2014 We Them Media Testimony Bounty",
-      "issuer": "0x7cccff608dda05bde58a28b6910ebc78aea1d4a3",
-      "amount_wei": "5500000000000000",
-      "amount_eth": 0.0055,
-      "claims_count": 3
-    },
-    {
-      "id": 283,
-      "chainId": 42161,
-      "title": "On The Ground \u2014 We Them Media Cultural Scout Bounty",
-      "issuer": "0x7cccff608dda05bde58a28b6910ebc78aea1d4a3",
-      "amount_wei": "3500000000000000",
-      "amount_eth": 0.0035,
-      "claims_count": 3
-    },
-    {
-      "id": 282,
-      "chainId": 42161,
-      "title": "\ud83c\udf8e Jingle Bounty \u2014 One Month",
-      "issuer": "0x7cccff608dda05bde58a28b6910ebc78aea1d4a3",
-      "amount_wei": "3500000000000000",
-      "amount_eth": 0.0035,
-      "claims_count": 3
-    },
-    {
-      "id": 281,
-      "chainId": 42161,
-      "title": "\ud83c\udfac We Them Media Clipping Bounty",
-      "issuer": "0x7cccff608dda05bde58a28b6910ebc78aea1d4a3",
-      "amount_wei": "3500000000000000",
-      "amount_eth": 0.0035,
-      "claims_count": 5
-    },
-    {
-      "id": 279,
-      "chainId": 42161,
-      "title": "Open Reporter Audition",
-      "issuer": "0x7cccff608dda05bde58a28b6910ebc78aea1d4a3",
-      "amount_wei": "3500000000000000",
-      "amount_eth": 0.0035,
-      "claims_count": 1
-    },
-    {
-      "id": 1131,
-      "chainId": 8453,
-      "title": "Find Someone Who Remembers",
-      "issuer": "0x7cccff608dda05bde58a28b6910ebc78aea1d4a3",
-      "amount_wei": "26400000000000000",
-      "amount_eth": 0.0264,
-      "claims_count": 2
-    },
-    {
-      "id": 278,
-      "chainId": 42161,
-      "title": "\"What's Your Take on the USA Today?\u201d Street Interview",
-      "issuer": "0x4200ac338555e25b20c8fe82ac02a5c8d4e5a5b4",
-      "amount_wei": "51000000000000000",
-      "amount_eth": 0.051,
-      "claims_count": 8
-    },
-    {
-      "id": 247,
-      "chainId": 42161,
-      "title": "\"What's Made You Smile Today?\u201d Street Interview",
-      "issuer": "0x4200ac338555e25b20c8fe82ac02a5c8d4e5a5b4",
-      "amount_wei": "53500000000000000",
-      "amount_eth": 0.0535,
-      "claims_count": 6
-    },
-    {
-      "id": 240,
-      "chainId": 42161,
-      "title": "\"What Is the Most Important Global Issue Today?\u201d \ud83c\udfa4",
-      "issuer": "0x4200ac338555e25b20c8fe82ac02a5c8d4e5a5b4",
-      "amount_wei": "49800000000000000",
-      "amount_eth": 0.0498,
-      "claims_count": 8
-    },
-    {
-      "id": 231,
-      "chainId": 42161,
-      "title": "\"What is Ethereum?\" Street Interview \ud83c\udfa4",
-      "issuer": "0x4200ac338555e25b20c8fe82ac02a5c8d4e5a5b4",
-      "amount_wei": "57500000000000000",
-      "amount_eth": 0.0575,
-      "claims_count": 6
-    },
-    {
-      "id": 229,
-      "chainId": 42161,
-      "title": "Is the Internet Spreading Truth or Misinformation?",
-      "issuer": "0x4200ac338555e25b20c8fe82ac02a5c8d4e5a5b4",
-      "amount_wei": "55000000000000000",
-      "amount_eth": 0.055,
-      "claims_count": 12
-    }
-  ],
+  "bounty_id": 1151,
+  "chainId": 8453,
+  "title": "Find your favorite clip from BCZ YapZ Ep 17 (Hannah / Farm Drop) and post it to either X, Instagram, or YouTube with a written comment about what it says to you.",
+  "issuer": "0x7234c36a71ec237c2ae7698e8916e0735001e9af",
+  "amount_eth": 0.0105,
+  "claim_count": 11,
+  "submitter_count": 10,
   "claims": [
     {
-      "bounty_id": 1151,
       "claim_id": 6419,
       "issuer": "0x5dc697f2799bd232cad2d479c379ff305b699f9b",
       "title": "I watched this more than twice because I loved the story and every bit of the co",
       "accepted": false
     },
     {
-      "bounty_id": 1151,
       "claim_id": 6382,
       "issuer": "0x388e3daf94fab496f01b78aac25305d715aa24ff",
       "title": "Farm drop Clip from BCZ YapZ Ep17 ",
       "accepted": false
     },
     {
-      "bounty_id": 1151,
       "claim_id": 6371,
       "issuer": "0x6dce11cc9bba17d3c1ef60c26f0958300bb06953",
       "title": "BCZ YapZ Ep 17",
       "accepted": false
     },
     {
-      "bounty_id": 1151,
       "claim_id": 6370,
       "issuer": "0xaa2483130cb248c3e679c404a3dccdd5b03dea00",
       "title": "My favorite clip on ep 17 bcz yapz",
       "accepted": false
     },
     {
-      "bounty_id": 1151,
       "claim_id": 6368,
       "issuer": "0xa34514c2150029afa4d37577daee301166105355",
       "title": "This Startup Is Fixing Our Broken Food System\u2026 The Story, The Impact, The Future",
       "accepted": false
     },
     {
-      "bounty_id": 1151,
       "claim_id": 6365,
       "issuer": "0x21422b215c1a9e5038c56d67a57f7bf2569b49cf",
       "title": "Farm drop interview ",
       "accepted": false
     },
     {
-      "bounty_id": 1151,
       "claim_id": 6326,
       "issuer": "0x34da767a377a77aca15f77ab4e8114cd79c0a7e9",
       "title": "Farm drop review",
       "accepted": false
     },
     {
-      "bounty_id": 1151,
       "claim_id": 6325,
       "issuer": "0x94652ec29ff18fc06ca4802c76d40b0f86e3eaf6",
       "title": "added some edits to the clip",
       "accepted": false
     },
     {
-      "bounty_id": 1151,
       "claim_id": 6322,
       "issuer": "0x34da767a377a77aca15f77ab4e8114cd79c0a7e9",
       "title": "Farm drop review",
       "accepted": false
     },
     {
-      "bounty_id": 1151,
       "claim_id": 6317,
       "issuer": "0xc4ba3884dbe6a9dab4ec2a6c3b6366d962f2d25c",
       "title": "CLAIM",
       "accepted": false
     },
     {
-      "bounty_id": 1151,
       "claim_id": 6316,
       "issuer": "0x0fbf06edddfab0946f146c0b0832943265ef25bc",
       "title": "Farm Drop's Local Food Revolution: Unusual Finds & Sustainable Practices",
-      "accepted": false
-    },
-    {
-      "bounty_id": 284,
-      "claim_id": 924,
-      "issuer": "0xe4195e1ff5b46904115481aca37ccd7cc15339f6",
-      "title": "Lites out",
-      "accepted": false
-    },
-    {
-      "bounty_id": 284,
-      "claim_id": 900,
-      "issuer": "0x301d9e9f8e266c7af5ffc1848b8929669798d823",
-      "title": "Lights Out Nigeria ",
-      "accepted": false
-    },
-    {
-      "bounty_id": 284,
-      "claim_id": 836,
-      "issuer": "0x0c3caa9461ec242313d014db343446c1a2095cb5",
-      "title": "Power supply outage in Ilorin Nigeria",
-      "accepted": false
-    },
-    {
-      "bounty_id": 283,
-      "claim_id": 919,
-      "issuer": "0x301d9e9f8e266c7af5ffc1848b8929669798d823",
-      "title": "We Them Media Cultural Scout Bounty",
-      "accepted": false
-    },
-    {
-      "bounty_id": 283,
-      "claim_id": 918,
-      "issuer": "0x301d9e9f8e266c7af5ffc1848b8929669798d823",
-      "title": "We Them Media Cultural Scout Bounty",
-      "accepted": false
-    },
-    {
-      "bounty_id": 283,
-      "claim_id": 902,
-      "issuer": "0x301d9e9f8e266c7af5ffc1848b8929669798d823",
-      "title": "On The Ground - We Them Media Cultural Scout Bounty",
-      "accepted": false
-    },
-    {
-      "bounty_id": 282,
-      "claim_id": 842,
-      "issuer": "0xe4195e1ff5b46904115481aca37ccd7cc15339f6",
-      "title": "Jingle",
-      "accepted": false
-    },
-    {
-      "bounty_id": 282,
-      "claim_id": 841,
-      "issuer": "0xe4195e1ff5b46904115481aca37ccd7cc15339f6",
-      "title": "Jingle",
-      "accepted": false
-    },
-    {
-      "bounty_id": 282,
-      "claim_id": 825,
-      "issuer": "0xd6a3ea6213c3337a75768863628ad7b72f5f34e8",
-      "title": "My Entry for the We them media contest, I couldn\u2019t attach the video idk why tho ",
-      "accepted": false
-    },
-    {
-      "bounty_id": 281,
-      "claim_id": 927,
-      "issuer": "0xbc028925c3bdc6b3c6f5c26d9bfc1eb16cdd2a50",
-      "title": "Klipguy entry ",
-      "accepted": false
-    },
-    {
-      "bounty_id": 281,
-      "claim_id": 925,
-      "issuer": "0xd34f235a15aaddb8432090ecb26eedbb9ce7b2a1",
-      "title": "My entry for the challenge",
-      "accepted": false
-    },
-    {
-      "bounty_id": 281,
-      "claim_id": 922,
-      "issuer": "0xd34f235a15aaddb8432090ecb26eedbb9ce7b2a1",
-      "title": "https://x.com/i/status/2051278167315185979",
-      "accepted": false
-    },
-    {
-      "bounty_id": 281,
-      "claim_id": 921,
-      "issuer": "0xd34f235a15aaddb8432090ecb26eedbb9ce7b2a1",
-      "title": "clip from wethemmedia YT",
-      "accepted": false
-    },
-    {
-      "bounty_id": 281,
-      "claim_id": 815,
-      "issuer": "0x6dce11cc9bba17d3c1ef60c26f0958300bb06953",
-      "title": "In this episode of \u201cLet\u2019s Talk About ETH Around the World\" clip ",
-      "accepted": false
-    },
-    {
-      "bounty_id": 279,
-      "claim_id": 904,
-      "issuer": "0x301d9e9f8e266c7af5ffc1848b8929669798d823",
-      "title": "Open Reporter Audition.",
-      "accepted": false
-    },
-    {
-      "bounty_id": 1131,
-      "claim_id": 6530,
-      "issuer": "0x1d81bc80f8b6bbd7ca123fd8cee9cecb3f263472",
-      "title": "Pa Darren talks about Life has really changed!",
-      "accepted": false
-    },
-    {
-      "bounty_id": 1131,
-      "claim_id": 6308,
-      "issuer": "0x602b266c542fe43c55d39bed3dbc55e6bdaceebd",
-      "title": "How has the world changed in your lifetime, and how has it changed you?",
-      "accepted": false
-    },
-    {
-      "bounty_id": 278,
-      "claim_id": 853,
-      "issuer": "0x7171477f255e82901e716bea4f9898c2540cca8c",
-      "title": " \u201cWhat's your take on the USA today?\u201d",
-      "accepted": true
-    },
-    {
-      "bounty_id": 278,
-      "claim_id": 860,
-      "issuer": "0x602b266c542fe43c55d39bed3dbc55e6bdaceebd",
-      "title": "What is your opinion about the USA today?",
-      "accepted": false
-    },
-    {
-      "bounty_id": 278,
-      "claim_id": 859,
-      "issuer": "0xc5412b7a321f4b459b534257cc6c1c3c03e18ead",
-      "title": "My interview on: what is your take on USA today",
-      "accepted": false
-    },
-    {
-      "bounty_id": 278,
-      "claim_id": 856,
-      "issuer": "0x602b266c542fe43c55d39bed3dbc55e6bdaceebd",
-      "title": "What's you take on the usa today?",
-      "accepted": false
-    },
-    {
-      "bounty_id": 278,
-      "claim_id": 855,
-      "issuer": "0x171718d134ea16d5be3906fc5422fa1450fc0bff",
-      "title": "My Submission ",
-      "accepted": false
-    },
-    {
-      "bounty_id": 278,
-      "claim_id": 854,
-      "issuer": "0x171718d134ea16d5be3906fc5422fa1450fc0bff",
-      "title": "What's Your Take on the USA Today?",
-      "accepted": false
-    },
-    {
-      "bounty_id": 278,
-      "claim_id": 830,
-      "issuer": "0xe4195e1ff5b46904115481aca37ccd7cc15339f6",
-      "title": "USA 2day",
-      "accepted": false
-    },
-    {
-      "bounty_id": 278,
-      "claim_id": 809,
-      "issuer": "0x59b4f414c9e50fd8c61d0508e7644657f7744591",
-      "title": "What\u2019s your take on the USA Today? Street interview ",
-      "accepted": false
-    },
-    {
-      "bounty_id": 247,
-      "claim_id": 724,
-      "issuer": "0xacb10c106b9ccc38c0e036b5e1a1c591cefa57e6",
-      "title": "AE-FUNAI Chapter",
-      "accepted": true
-    },
-    {
-      "bounty_id": 247,
-      "claim_id": 766,
-      "issuer": "0x602b266c542fe43c55d39bed3dbc55e6bdaceebd",
-      "title": "What made you smile, Street interview ",
-      "accepted": false
-    },
-    {
-      "bounty_id": 247,
-      "claim_id": 751,
-      "issuer": "0x8d2a253a5885806aa14e583c80c8833a904fb252",
-      "title": "Day 55 Skateboarding Across Africa \ud83c\uddfa\ud83c\uddec\u27a1\ufe0f\ud83c\uddff\ud83c\udde6 POIDH & WeThemMedia Interview",
-      "accepted": false
-    },
-    {
-      "bounty_id": 247,
-      "claim_id": 750,
-      "issuer": "0x165f1e8884a25aa7a34df8f04baff8d8c151e4f4",
-      "title": "What genuinely made you smile today?",
-      "accepted": false
-    },
-    {
-      "bounty_id": 247,
-      "claim_id": 727,
-      "issuer": "0x59b4f414c9e50fd8c61d0508e7644657f7744591",
-      "title": "What made you smile street interview ",
-      "accepted": false
-    },
-    {
-      "bounty_id": 247,
-      "claim_id": 709,
-      "issuer": "0xe4195e1ff5b46904115481aca37ccd7cc15339f6",
-      "title": "Smile",
-      "accepted": false
-    },
-    {
-      "bounty_id": 240,
-      "claim_id": 686,
-      "issuer": "0x602b266c542fe43c55d39bed3dbc55e6bdaceebd",
-      "title": "Interview about the most important global issue",
-      "accepted": true
-    },
-    {
-      "bounty_id": 240,
-      "claim_id": 695,
-      "issuer": "0x849e1c0b2460979d2f7c77b87b90c65c70406421",
-      "title": "One Question. Many Voices. Nairobi Answers",
-      "accepted": false
-    },
-    {
-      "bounty_id": 240,
-      "claim_id": 694,
-      "issuer": "0x849e1c0b2460979d2f7c77b87b90c65c70406421",
-      "title": "Young Change Maker on the Most Important Global Issue Today",
-      "accepted": false
-    },
-    {
-      "bounty_id": 240,
-      "claim_id": 691,
-      "issuer": "0x849e1c0b2460979d2f7c77b87b90c65c70406421",
-      "title": "Street Interview: What's the Most Important Global Issue Today?",
-      "accepted": false
-    },
-    {
-      "bounty_id": 240,
-      "claim_id": 690,
-      "issuer": "0x171718d134ea16d5be3906fc5422fa1450fc0bff",
-      "title": "The Global Issue.",
-      "accepted": false
-    },
-    {
-      "bounty_id": 240,
-      "claim_id": 689,
-      "issuer": "0x4d16fce1bd6e327ae31398ce9a2c4e12c077ecb1",
-      "title": "Xtatic Productions : \"What is the most important global issue today?\"",
-      "accepted": false
-    },
-    {
-      "bounty_id": 240,
-      "claim_id": 676,
-      "issuer": "0xacb10c106b9ccc38c0e036b5e1a1c591cefa57e6",
-      "title": "Students Chapter in Funai",
-      "accepted": false
-    },
-    {
-      "bounty_id": 240,
-      "claim_id": 663,
-      "issuer": "0xa5afd834f3ee86ca48e1850c2706604348729a63",
-      "title": "Global Issue Bounty",
-      "accepted": false
-    },
-    {
-      "bounty_id": 231,
-      "claim_id": 659,
-      "issuer": "0x7171477f255e82901e716bea4f9898c2540cca8c",
-      "title": "What is Ethereum?",
-      "accepted": true
-    },
-    {
-      "bounty_id": 231,
-      "claim_id": 660,
-      "issuer": "0x1e932c220e7ffa25ddb2d40298d86b491f71e4f9",
-      "title": "What is ethereum ft ethmumbai",
-      "accepted": false
-    },
-    {
-      "bounty_id": 231,
-      "claim_id": 658,
-      "issuer": "0x602b266c542fe43c55d39bed3dbc55e6bdaceebd",
-      "title": "Interviewing people on what they know about Ethereum ",
-      "accepted": false
-    },
-    {
-      "bounty_id": 231,
-      "claim_id": 657,
-      "issuer": "0x1d8659278c6439187bfdcc7aa17cbe0dbaeab21c",
-      "title": "What is Ethereum?",
-      "accepted": false
-    },
-    {
-      "bounty_id": 231,
-      "claim_id": 656,
-      "issuer": "0xab2759ef5c399a0a704183f5146ec9f13ae442c3",
-      "title": "NAIROBI ; What is Ethereum ?",
-      "accepted": false
-    },
-    {
-      "bounty_id": 231,
-      "claim_id": 640,
-      "issuer": "0xb463c9c823a88b3bb5e4961c03598462e5aade17",
-      "title": "What is Ethereum ",
-      "accepted": false
-    },
-    {
-      "bounty_id": 229,
-      "claim_id": 588,
-      "issuer": "0x849e1c0b2460979d2f7c77b87b90c65c70406421",
-      "title": "Is the Internet Spreading Truth or Misinformation?",
-      "accepted": true
-    },
-    {
-      "bounty_id": 229,
-      "claim_id": 612,
-      "issuer": "0x354e03bb5b2be6772e49ee9798607c89c1ead61b",
-      "title": "Internet as a tool for spreading truth or misinformation ",
-      "accepted": false
-    },
-    {
-      "bounty_id": 229,
-      "claim_id": 611,
-      "issuer": "0x354e03bb5b2be6772e49ee9798607c89c1ead61b",
-      "title": "Internet as a tool for spreading truth or misinformation ",
-      "accepted": false
-    },
-    {
-      "bounty_id": 229,
-      "claim_id": 605,
-      "issuer": "0x5581257f73340df05c210aeb646d6fe0fb78d2b1",
-      "title": "Can you handle the truth?",
-      "accepted": false
-    },
-    {
-      "bounty_id": 229,
-      "claim_id": 594,
-      "issuer": "0x849e1c0b2460979d2f7c77b87b90c65c70406421",
-      "title": " Is the internet making information or misinformation more accesible?",
-      "accepted": false
-    },
-    {
-      "bounty_id": 229,
-      "claim_id": 593,
-      "issuer": "0x849e1c0b2460979d2f7c77b87b90c65c70406421",
-      "title": " Is the internet making information or misinformation more accesible?",
-      "accepted": false
-    },
-    {
-      "bounty_id": 229,
-      "claim_id": 592,
-      "issuer": "0x849e1c0b2460979d2f7c77b87b90c65c70406421",
-      "title": " Is the internet making information or misinformation more accesible?",
-      "accepted": false
-    },
-    {
-      "bounty_id": 229,
-      "claim_id": 591,
-      "issuer": "0x9a6c3498bdc8d02c9d8946af8e0be34263c6eaae",
-      "title": "A youths take on the internet Truth v Misinformation\u2026",
-      "accepted": false
-    },
-    {
-      "bounty_id": 229,
-      "claim_id": 589,
-      "issuer": "0xa5afd834f3ee86ca48e1850c2706604348729a63",
-      "title": "Internet as a tool of truth or chaos",
-      "accepted": false
-    },
-    {
-      "bounty_id": 229,
-      "claim_id": 586,
-      "issuer": "0xfadab41e246336265a5c36919a5b70090a660102",
-      "title": "Is the Internet Spreading Truth or Misinformation?",
-      "accepted": false
-    },
-    {
-      "bounty_id": 229,
-      "claim_id": 585,
-      "issuer": "0xfadab41e246336265a5c36919a5b70090a660102",
-      "title": "Is the Internet Spreading Truth or Misinformation?",
-      "accepted": false
-    },
-    {
-      "bounty_id": 229,
-      "claim_id": 580,
-      "issuer": "0xaa7c772884b3affee229bae16e3f69760aa4527e",
-      "title": "Truth or Misinformation ",
       "accepted": false
     }
   ]

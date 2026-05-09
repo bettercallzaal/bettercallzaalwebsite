@@ -464,7 +464,7 @@
       <div class="hero-eyebrow">POIDH x ZAO x ZABAL</div>
       <h1>POIDH Leaderboard</h1>
       <p class="hero-sub">
-        Submit to <strong>We The Media POIDH bounties</strong>, climb the leaderboard, and earn <strong>ZABAL</strong> via the Empire Builder API hook below. Live data from the <a href="https://poidh.xyz/a/wethemmedia" target="_blank" rel="noopener">wethemmedia</a> album on poidh.xyz.
+        Submit to <strong>BCZ YapZ Ep 17</strong> on POIDH, climb the leaderboard, earn <strong>ZABAL</strong> via the Empire Builder API hook below. Live data scraped from poidh.xyz - one submission = one point.
       </p>
     </section>
 
@@ -478,30 +478,30 @@
         <div class="stat-label">Total Submissions</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">6 / 12</div>
-        <div class="stat-label">Open / Total Bounties</div>
+        <div class="stat-num">Active</div>
+        <div class="stat-label">Bounty Status</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">0.32</div>
+        <div class="stat-num">0.0105</div>
         <div class="stat-label">ETH In Escrow</div>
       </div>
     </section>
 
     <section class="featured">
-      <div class="featured-tag">Featured Bounty</div>
+      <div class="featured-tag">The Bounty</div>
       <h2>BCZ YapZ Ep 17 (Hannah / Farm Drop) - find a clip + post it with commentary on X, Instagram, or YouTube</h2>
       <div class="featured-meta">
         <span>Reward <strong>0.0105 ETH</strong></span>
         <span>Chain <strong>Base</strong></span>
         <span>Bounty <strong>#1151</strong></span>
         <span>Status <strong>Active</strong></span>
-        <span>Claims <strong>11</strong></span>
+        <span>Claims so far <strong>11</strong></span>
       </div>
       <a href="https://poidh.xyz/base/bounty/1151" target="_blank" rel="noopener" class="featured-cta">
-        Open on POIDH ->
+        Submit your clip on POIDH ->
       </a>
       <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem; font-weight: 300">
-        Plus 11 more bounties in the album: 5 We The Media street interviews, 5 video / clipping / reporter audition bounties, and the "Find Someone Who Remembers" history quest. <a href="https://poidh.xyz/a/wethemmedia" target="_blank" rel="noopener">See full album.</a>
+        How to enter: watch <a href="https://youtu.be/hw-6IHaziV0" target="_blank" rel="noopener">the episode</a>, pull the clip that hit hardest, post it on X / Instagram / YouTube with your honest take, tag <a href="https://farcaster.xyz/bettercallzaal" target="_blank" rel="noopener">@bettercallzaal</a>, and submit your post URL on POIDH. Multiple submissions allowed - each one = one point on this leaderboard.
       </p>
     </section>
 
@@ -530,18 +530,18 @@
         <div style="height: 1rem"></div>
         <p>Sample response:</p>
         <pre class="api-sample" id="api-sample">[
-  { "address": "0x849e...6421", "score": 7 },
-  { "address": "0x602b...eebd", "score": 6 },
-  { "address": "0xe419...39f6", "score": 5 },
-  ... 34 more entries
+  { "address": "0x34da...a7e9", "score": 2 },
+  { "address": "0x5dc6...9f9b", "score": 1 },
+  { "address": "0x388e...24ff", "score": 1 },
+  ... 7 more entries
 ]</pre>
       </div>
 
       <div class="api-card" style="margin-top: 1.25rem">
         <h3>Submission package - paste into Add New Leaderboard modal</h3>
         <p>Hand this to <a href="https://farcaster.xyz/yerbearserker" target="_blank" rel="noopener">@yerbearserker</a> (Empire Builder co-founder) and Adrian (lead engineer). They paste these values into the <em>Add New Leaderboard -> API Configuration</em> form on $ZABAL Empire.</p>
-        <pre class="api-sample" id="submission-pkg">Leaderboard Name:    POIDH Submitters
-Description:         Submit to We The Media POIDH bounties to climb leaderboard.
+        <pre class="api-sample" id="submission-pkg">Leaderboard Name:    BCZ YapZ Submitters
+Description:         Submit a clip from BCZ YapZ Ep 17 on POIDH to earn ZABAL.
 Upload Icon:         https://bettercallzaal.com/assets/icon.png
 API Endpoint URL:    https://bettercallzaal.com/poidh-leaderboard.json
 Token Boosters:      ON
@@ -672,11 +672,11 @@ Reputation Boosters: ON</pre>
 
   https://bettercallzaal.com/poidh-leaderboard.json
 
-Format: [{address, score}] - matches Empire Builder v3 spec exactly. Pulled live from poidh.xyz tRPC across the wethemmedia album: 12 bounties, 68 claims, 37 unique submitters as of today. 0.32 ETH total in escrow across Base + Arbitrum.
+Format: [{address, score}] - matches Empire Builder v3 spec exactly. Pulled live from poidh.xyz tRPC for bounty 1151 (BCZ YapZ Ep 17 clip task on Base). 11 claims, 10 unique submitters so far, 0.0105 ETH escrow.
 
 Config to add on \\$ZABAL Empire:
-  Name:        POIDH Submitters
-  Description: Submit to We The Media POIDH bounties to climb leaderboard.
+  Name:        BCZ YapZ Submitters
+  Description: Submit a clip from BCZ YapZ Ep 17 on POIDH to earn ZABAL.
   Token + Reputation Boosters: both ON
   Icon: bettercallzaal.com/assets/icon.png
 

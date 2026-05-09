@@ -1,24 +1,23 @@
 #!/usr/bin/env python3
 """
-Refresh poidh-leaderboard.json by scraping poidh.xyz tRPC for the
-We The Media album. Run from repo root:
+Refresh poidh-leaderboard.json by scraping poidh.xyz tRPC for a single
+POIDH bounty's claim submitters. Currently scoped to bounty 1151
+(BCZ YapZ Ep 17, Base chain).
 
     python3 scripts/refresh-poidh-leaderboard.py
+    python3 scripts/refresh-poidh-leaderboard.py --bounty 1151 --chain 8453
 
 Writes:
     poidh-leaderboard.json  - Empire Builder API-Sourced feed [{address, score}]
-    poidh-audit.json        - audit trail of bounties + claims
+    poidh-audit.json        - audit trail (bounty + claims)
 
-Source: poidh.xyz uses tRPC over /api/trpc. No API key needed for reads.
-Procedures used:
-    bounties.fetchByAlbum    - list bounties in an album by status
-    claims.fetchBountyClaims - list claims for a bounty (paginated)
+Score = number of claims submitted by that address. Issuer is excluded
+(PoidhV3 enforces issuer != claimant on-chain anyway).
 
-Album verified 2026-05-09 via bounty 1151 extra.album field = "wethemmedia".
-Issuers are excluded (PoidhV3 enforces issuer != claimant on-chain anyway).
-Score = number of claims submitted by that address across the album.
+To switch to album-wide, edit MODE below to "album" and set ALBUM.
 """
 
+import argparse
 import json
 import sys
 import urllib.parse
@@ -26,7 +25,8 @@ import urllib.request
 from collections import Counter
 from pathlib import Path
 
-ALBUM = "wethemmedia"
+DEFAULT_BOUNTY_ID = 1151
+DEFAULT_CHAIN_ID = 8453
 BASE = "https://poidh.xyz/api/trpc"
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -40,69 +40,59 @@ def trpc(proc: str, payload: dict, timeout: int = 20) -> dict:
 
 
 def main() -> int:
-    bounties: list[dict] = []
-    for status in ("open", "progress", "past"):
-        d = trpc("bounties.fetchByAlbum", {"album": ALBUM, "status": status, "limit": 100})
-        bounties.extend(d["items"])
-        print(f"[{status}] {len(d['items'])} bounties")
+    p = argparse.ArgumentParser()
+    p.add_argument("--bounty", type=int, default=DEFAULT_BOUNTY_ID)
+    p.add_argument("--chain", type=int, default=DEFAULT_CHAIN_ID)
+    args = p.parse_args()
 
-    issuers = {b["issuer"].lower() for b in bounties}
+    b = trpc("bounties.fetch", {"id": args.bounty, "chainId": args.chain})
+    issuer = b["issuer"].lower()
+    amount_eth = int(b.get("amount", "0") or 0) / 1e18
+    print(f"Bounty {args.bounty} on chain {args.chain}")
+    print(f"  title:  {b['title'][:80]}")
+    print(f"  issuer: {issuer} (excluded)")
+    print(f"  amount: {amount_eth:.6f} ETH")
+    print(f"  album:  {b.get('extra', {}).get('album')}")
+
+    claims_resp = trpc(
+        "claims.fetchBountyClaims",
+        {"bountyId": args.bounty, "chainId": args.chain, "limit": 100},
+    )
+    items = claims_resp["items"]
+
     score: Counter[str] = Counter()
-    all_claims: list[dict] = []
-    bounty_meta: list[dict] = []
-
-    for b in bounties:
-        d = trpc(
-            "claims.fetchBountyClaims",
-            {"bountyId": b["id"], "chainId": b["chainId"], "limit": 100},
-        )
-        items = d["items"]
-        print(f"  bounty {b['id']} ch={b['chainId']}: {len(items)} claims")
-
-        amount_wei = int(b.get("amount", "0") or 0) if str(b.get("amount", "0")).isdigit() else 0
-        bounty_meta.append({
-            "id": b["id"],
-            "chainId": b["chainId"],
-            "title": b["title"],
-            "issuer": b["issuer"],
-            "amount_wei": str(amount_wei),
-            "amount_eth": amount_wei / 1e18,
-            "claims_count": len(items),
+    audit_claims: list[dict] = []
+    for c in items:
+        addr = c["issuer"].lower()
+        score[addr] += 1
+        audit_claims.append({
+            "claim_id": c["id"],
+            "issuer": addr,
+            "title": (c.get("title") or "")[:80],
+            "accepted": bool(c.get("isAccepted")),
         })
 
-        for c in items:
-            addr = c["issuer"].lower()
-            score[addr] += 1
-            all_claims.append({
-                "bounty_id": b["id"],
-                "claim_id": c["id"],
-                "issuer": addr,
-                "title": (c.get("title") or "")[:80],
-                "accepted": bool(c.get("isAccepted")),
-            })
-
-    leaderboard = [{"address": a, "score": s} for a, s in score.most_common() if a not in issuers]
-    total_eth = sum(b["amount_eth"] for b in bounty_meta)
+    leaderboard = [{"address": a, "score": s} for a, s in score.most_common() if a != issuer]
 
     feed_path = REPO_ROOT / "poidh-leaderboard.json"
     audit_path = REPO_ROOT / "poidh-audit.json"
 
     feed_path.write_text(json.dumps(leaderboard, indent=2) + "\n")
     audit_path.write_text(json.dumps({
-        "album": ALBUM,
-        "bounty_count": len(bounty_meta),
-        "claim_count": len(all_claims),
+        "bounty_id": args.bounty,
+        "chainId": args.chain,
+        "title": b["title"],
+        "issuer": issuer,
+        "album": b.get("extra", {}).get("album"),
+        "amount_eth": amount_eth,
+        "claim_count": len(items),
         "submitter_count": len(leaderboard),
-        "total_eth_escrow": round(total_eth, 6),
-        "issuers": sorted(issuers),
-        "bounties": bounty_meta,
-        "claims": all_claims,
+        "claims": audit_claims,
     }, indent=2) + "\n")
 
     print()
-    print(f"Wrote {feed_path.relative_to(REPO_ROOT)}: {len(leaderboard)} submitters")
+    print(f"Wrote {feed_path.relative_to(REPO_ROOT)}: {len(leaderboard)} submitters, {len(items)} claims")
     print(f"Wrote {audit_path.relative_to(REPO_ROOT)}: audit trail")
-    print(f"Total escrow: {total_eth:.6f} ETH across {len(bounty_meta)} bounties")
     return 0
 
 
