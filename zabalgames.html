@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZABAL Games v0 - 8-player Claude Code hackathon - BetterCallZaal</title>
-  <meta name="description" content="ZABAL Games v0: 8 builders, same prompt, 24h to build, 24h to promote. ZABAL token holders pick the winners. June 27-30, 2026.">
+  <title>ZABAL Games v0 - the Farcaster Build-in-Public Challenge - BetterCallZaal</title>
+  <meta name="description" content="ZABAL Games v0: 8 Farcaster digital creators. Same Claude Code prompt. 24h to build, 24h to promote, 24h ZABAL-holder vote. ZAO amplifies all 8. June 27-30, 2026.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://bettercallzaal.com/zabalgames.html">
-  <meta property="og:title" content="ZABAL Games v0 - the inaugural Claude Code hackathon for ZAO">
-  <meta property="og:description" content="8 players. Same prompt. 24h to build. 24h to promote. ZABAL holders pick the winners. June 27-30, 2026.">
+  <meta property="og:title" content="ZABAL Games v0 - the Farcaster Build-in-Public Challenge">
+  <meta property="og:description" content="Looking for 8 Farcaster digital creators willing to build in public on Twitch with Claude Code. ZAO amplifies all 8. ZABAL holders pick winners. Win-win-win.">
   <meta property="og:url" content="https://bettercallzaal.com/zabalgames.html">
   <meta property="og:image" content="https://bettercallzaal.com/assets/icon.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -242,18 +242,18 @@
 
   <header class="hero">
     <div class="container">
-      <div class="hero-eyebrow">Inaugural v0 - June 27-30, 2026</div>
+      <div class="hero-eyebrow">A Farcaster Challenge - Inaugural v0 - June 27-30, 2026</div>
       <h1>ZABAL <span class="accent">GAMES</span></h1>
       <p class="hero-sub">
-        8 builders. Same prompt. <strong>24 hours to build</strong>, <strong>24 hours to promote</strong>.
-        ZABAL token holders pick the winners. <strong>$500 USDC</strong> on the line for the top 3.
+        Looking for <strong>8 Farcasters</strong> - ideally digital creators willing to <strong>build in public on Twitch</strong>.
+        Same Claude Code prompt. 24h to build. 24h to promote. ZABAL holders vote.
       </p>
       <p class="hero-sub" style="margin-top: 0.5rem;">
-        Powered by Claude Code. Built in public on Twitch. Open-source by mandate.
+        ZAO amplifies all 8 of you. <strong>You bring the build, we bring the distribution.</strong> Win-win-win.
       </p>
       <div class="hero-cta">
         <a href="#apply" class="btn btn-primary">Apply to Compete</a>
-        <a href="#format" class="btn btn-ghost">How It Works</a>
+        <a href="#why" class="btn btn-ghost">Why This Is Win-Win-Win</a>
       </div>
       <p class="hero-meta">PROMPT DROPS 2026-06-27 12:00 PT - LIVE RESULTS REVEAL 2026-06-30 12:00 PT</p>
     </div>
@@ -277,6 +277,34 @@
         <div class="stat-card">
           <div class="stat-num orange">24h</div>
           <div class="stat-label">Promote Window</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="alt">
+    <div class="container">
+      <div class="section-eyebrow">Why this works</div>
+      <h2 class="section-title">Win-Win-Win</h2>
+      <p class="section-sub">
+        Most challenges are zero-sum. ZABAL Games is built so every party gets something real out of the weekend - the players, the ZAO ecosystem, and the viewers tuning in.
+      </p>
+
+      <div class="options-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="option-card">
+          <div class="option-letter" style="color: var(--gold);">For You (Farcaster Creators)</div>
+          <h3>Distribution + Cash + Portfolio</h3>
+          <p>$50-250 USDC if you place top 3. ZAO accounts boost your stream + casts during the promote window so your audience grows whether you win or not. Open-source GitHub repo as a portfolio piece. 24h of Claude Code live-coding footage you can repurpose forever. Permanent onchain collectible proving you shipped at v0.</p>
+        </div>
+        <div class="option-card">
+          <div class="option-letter" style="color: var(--cyan);">For ZAO Ecosystem</div>
+          <h3>8 New Builders + Real Tools</h3>
+          <p>8 ecosystem-aligned builds shipped in 48 hours. Every prompt option ties to existing rails (Empire Builder, Farcaster, Hats, Bonfire, EAS, Coinflow). The Twitch streams feed the ZAO content engine - 30+ hours of live content turns into 150+ short clips. Onchain ZABAL holder vote becomes a community engagement event.</p>
+        </div>
+        <div class="option-card">
+          <div class="option-letter" style="color: var(--zabal);">For Viewers + Holders</div>
+          <h3>Drama, Tips, Voting Power</h3>
+          <p>24h of live-coding drama across 8 streams - pick a player, switch around, compare approaches. Tip your favorites via Coinflow during the promote window. ZABAL holders cast onchain votes that actually decide who wins. Your token isn't just sitting there - it does real work this weekend.</p>
         </div>
       </div>
     </div>
@@ -440,7 +468,7 @@
       <div class="section-eyebrow">Applications Open</div>
       <h2 class="section-title">Apply to Compete</h2>
       <p class="section-sub">
-        8 spots + 4 waitlist. Hybrid gate: open public, bonus weight if you have ZAO Respect or member status. Solo only for v0. Applications close 2026-06-13.
+        Looking for 8 Farcasters - ideally digital creators (artists, devs, podcasters, video editors, writers, anyone who already ships in public). Must be willing to stream the full build on Twitch. Solo only for v0. 8 spots + 4 waitlist. Applications close 2026-06-13.
       </p>
 
       <div class="form-wrapper">
@@ -513,9 +541,43 @@
           </div>
 
           <div>
+            <label for="creator_type">What kind of digital creator are you?</label>
+            <select id="creator_type" name="creator_type" required>
+              <option value="">Pick the closest fit</option>
+              <option value="dev">Developer / engineer</option>
+              <option value="designer">Designer / artist</option>
+              <option value="writer">Writer / journalist / newsletter</option>
+              <option value="video">Video editor / YouTuber</option>
+              <option value="streamer">Streamer / podcaster</option>
+              <option value="musician">Musician / audio creator</option>
+              <option value="multi">Multi-disciplinary - I do a few of these</option>
+              <option value="other">Other - I'll explain below</option>
+            </select>
+            <p class="form-help">Doesn't have to be your day job. We care more about whether you ship in public.</p>
+          </div>
+
+          <div>
+            <label for="streaming_comfort">How comfortable are you streaming the build live?</label>
+            <select id="streaming_comfort" name="streaming_comfort" required>
+              <option value="">Pick one</option>
+              <option value="experienced">I stream regularly - this is normal for me</option>
+              <option value="some">I've streamed before but it's not weekly</option>
+              <option value="new_willing">New to streaming but excited to learn</option>
+              <option value="hesitant">Not comfortable - might not be the right fit</option>
+            </select>
+            <p class="form-help">Honest answers help us pair you with the right onboarding support.</p>
+          </div>
+
+          <div>
+            <label for="creator_links">Links to your work (Farcaster cast, Twitch, GitHub, portfolio - 1-3 links)</label>
+            <textarea id="creator_links" name="creator_links" placeholder="https://... &#10;https://..." style="min-height: 70px;"></textarea>
+            <p class="form-help">Show us what you ship. One favorite cast, your stream, a repo, anything.</p>
+          </div>
+
+          <div>
             <label for="why">Why do you want to do this?</label>
-            <textarea id="why" name="why" required placeholder="Short answer - 2-4 sentences. What draws you to ZABAL Games specifically? What do you want to build? What track record can we look at?"></textarea>
-            <p class="form-help">Don't sell us. Tell us. Links to past work welcome.</p>
+            <textarea id="why" name="why" required placeholder="Short answer - 2-4 sentences. What draws you to ZABAL Games specifically? What do you want to build? What's your relationship with ZAO / Farcaster?"></textarea>
+            <p class="form-help">Don't sell us. Tell us.</p>
           </div>
 
           <div>
@@ -544,6 +606,16 @@
     <div class="container">
       <div class="section-eyebrow">FAQ</div>
       <h2 class="section-title">Common Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">Who is this for? <span style="color: var(--text-dim);">+</span></div>
+        <div class="faq-answer">8 Farcasters - ideally digital creators (devs, designers, writers, video editors, musicians, streamers, podcasters, anyone who already ships in public). You don't need to be a senior engineer - Claude Code closes a lot of skill gaps. You DO need to be comfortable streaming yourself building, because the whole format is build-in-public.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What does ZAO actually do for me as a creator? <span style="color: var(--text-dim);">+</span></div>
+        <div class="faq-answer">Three things. First, distribution - ZAO accounts (BCZ Farcaster, /zao channel, COC Concertz, ZAO OS) amplify all 8 of you during the promote window so your audience grows whether you place or not. Second, infrastructure - we cover your Claude Pro for the month, set up your Twitch/StreamElements onboarding, give you a pre-funded Privy wallet, and provide an Empire Builder API key. Third, content engine - the streaming flywheel auto-clips your build into shorts for TikTok/Reels/YouTube/Farcaster, so 24h of streaming becomes ~20 pieces of content you can use forever.</div>
+      </div>
 
       <div class="faq-item">
         <div class="faq-question">What if I don't have Claude Pro? <span style="color: var(--text-dim);">+</span></div>
