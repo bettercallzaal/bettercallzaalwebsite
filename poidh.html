@@ -202,6 +202,15 @@
 
     .empty { padding: 2rem; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
 
+    details.collapse { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); margin-top: 1.5rem; overflow: hidden; }
+    details.collapse summary { padding: 1rem 1.25rem; cursor: pointer; font-size: 0.85rem; color: var(--text-muted); list-style: none; display: flex; align-items: center; gap: 0.6rem; user-select: none; transition: color 0.15s; }
+    details.collapse summary::-webkit-details-marker { display: none; }
+    details.collapse summary:hover { color: var(--text); }
+    details.collapse summary::after { content: '+'; margin-left: auto; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--text-dim); transition: transform 0.2s; }
+    details.collapse[open] summary::after { content: '-'; }
+    details.collapse summary strong { color: var(--text); font-weight: 600; }
+    details.collapse .collapse-body { padding: 0 1.25rem 1.25rem; border-top: 1px solid var(--border); padding-top: 1.25rem; }
+
     .skeleton { display: inline-block; background: linear-gradient(90deg, var(--surface) 0%, var(--surface-2) 50%, var(--surface) 100%); background-size: 200% 100%; animation: shimmer 1.4s infinite; border-radius: 4px; height: 1em; width: 6rem; vertical-align: middle; }
     @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
   </style>
@@ -222,9 +231,9 @@
   <main class="container">
     <section class="hero">
       <div class="hero-eyebrow">$ZABAL Empire · POIDH Submitters · Slot 8</div>
-      <h1>Make POIDH's next ad.<br>Win ETH. Earn ZABAL.</h1>
+      <h1>Make POIDH's next ad - earn ETH + ZABAL.</h1>
       <p class="hero-sub">
-        Clip a 45-60s ad from <a href="https://www.youtube.com/watch?v=IFG_34K7Vig" target="_blank" rel="noopener">BCZ YapZ Ep 19 with @kenny</a>. One winner takes the pot. Every submitter lands on the leaderboard and earns <strong>ZABAL</strong> via the $ZABAL Empire on Empire Builder.
+        Clip 45-60s from <a href="https://www.youtube.com/watch?v=IFG_34K7Vig" target="_blank" rel="noopener">BCZ YapZ Ep 19 with @kenny</a>. Closes Fri May 22.
       </p>
       <div style="margin-top: 1.5rem">
         <a href="https://poidh.xyz/base/bounty/1166" target="_blank" rel="noopener" class="bounty-cta cyan" style="font-size: 0.85rem; padding: 0.85rem 1.6rem">Submit your clip on POIDH ->_</a>
@@ -232,7 +241,7 @@
       <div class="hero-meta" id="hero-meta">Last refresh: <span class="skeleton" style="width:10rem"></span></div>
     </section>
 
-    <section class="bounty-card live" style="margin-bottom: 1rem">
+    <section class="bounty-card live" style="margin-bottom: 2rem">
       <div class="bounty-tag live">Round 2 · Live now</div>
       <h3>Best 60s POIDH ad from Ep 19 w/ Kenny</h3>
       <div class="bounty-meta">
@@ -245,18 +254,6 @@
         <strong style="color: var(--text)">Floor:</strong> post a 45-60s edited clip on X tagging <a href="https://x.com/bettercallzaal" target="_blank" rel="noopener">@bettercallzaal</a> + submit the URL on POIDH. <strong style="color: var(--text)">Ceiling:</strong> rubric of distribution / craft / substance bonuses (full text on POIDH). One wallet = one leaderboard slot, no matter how many clips you post.
       </p>
       <a href="https://poidh.xyz/base/bounty/1166" target="_blank" rel="noopener" class="bounty-cta cyan">Submit on POIDH ->_</a>
-    </section>
-
-    <section class="bounty-card won" style="margin-bottom: 2rem">
-      <div class="bounty-tag won">Round 1 · Judging</div>
-      <h3>BCZ YapZ Ep 17 (Hannah / Farm Drop)</h3>
-      <div class="bounty-meta">
-        <span>Pot <strong>0.0105 ETH</strong></span>
-        <span>Bounty <strong>#1151</strong></span>
-        <span>Picked <strong><a href="https://farcaster.xyz/cryptfi-mariano" target="_blank" rel="noopener">@cryptfi-mariano</a></strong></span>
-        <span>Winner cast <strong>pending acceptance</strong></span>
-      </div>
-      <a href="https://poidh.xyz/base/bounty/1151" target="_blank" rel="noopener" class="bounty-cta gold">See all 11 claims ->_</a>
     </section>
 
     <section class="section">
@@ -276,12 +273,22 @@
     </section>
 
     <section class="section">
-      <div class="section-eyebrow">Submissions Gallery</div>
-      <h2 class="section-title">Every claim, with proof</h2>
-      <p class="section-sub">Every accepted POIDH claim from BCZ-issued bounties. Click an image to see the full claim on POIDH; click a submitter to see their Farcaster profile.</p>
-      <div class="gallery" id="gallery">
-        <div class="empty" id="gallery-loading">Loading submissions...</div>
+      <div class="section-eyebrow">Round 2 Submissions</div>
+      <h2 class="section-title">Live as they roll in</h2>
+      <p class="section-sub">Every Round 2 claim posts here once submitted on POIDH. Click an image to see the full claim; click a submitter to see their Farcaster profile.</p>
+      <div class="gallery" id="gallery-r2">
+        <div class="empty" id="gallery-r2-loading">Loading...</div>
       </div>
+
+      <details class="collapse">
+        <summary>Round 1 submissions <strong>(11 claims, 10 submitters)</strong> - BCZ YapZ Ep 17 / Farm Drop</summary>
+        <div class="collapse-body">
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; font-weight: 300">
+            Pot was 0.0105 ETH · Picked <a href="https://farcaster.xyz/cryptfi-mariano" target="_blank" rel="noopener"><strong>@cryptfi-mariano</strong></a> · Winner cast pending claim acceptance · <a href="https://poidh.xyz/base/bounty/1151" target="_blank" rel="noopener">See on POIDH</a>
+          </p>
+          <div class="gallery" id="gallery-r1"></div>
+        </div>
+      </details>
     </section>
 
     <section class="section">
@@ -358,48 +365,62 @@
       });
     }
 
-    function renderGallery(data) {
-      const grid = document.getElementById('gallery');
-      const loading = document.getElementById('gallery-loading');
-      if (loading) loading.remove();
+    function buildClaimCard(c, profiles) {
+      const prof = profiles[c.issuer.toLowerCase()] || {};
+      const handle = prof.farcaster_username;
+      const fcUrl = handle ? `https://farcaster.xyz/${handle}` : null;
+      const xUrl = prof.twitter_url || (prof.twitter_handle ? `https://x.com/${prof.twitter_handle}` : null);
+      const avatar = prof.avatar || `https://api.dicebear.com/7.x/identicon/svg?seed=${c.issuer}`;
+      const displayName = prof.displayName || handle || shortAddr(c.issuer);
+      const externalLink = (c.description || '').match(/https?:\/\/[^\s]+/)?.[0] || null;
+      const card = document.createElement('div');
+      card.className = 'claim-card' + (c.accepted ? ' accepted' : '');
+      card.innerHTML = `
+        <a href="https://poidh.xyz/base/bounty/${c.bounty_id}/claim/${c.claim_id}" target="_blank" rel="noopener" class="claim-img-wrap">
+          <img class="claim-img" src="${escHtml(c.image_url)}" alt="" loading="lazy" onerror="this.style.display='none'" />
+          ${c.accepted ? '<span class="claim-badge">Winner</span>' : ''}
+          <span class="claim-bounty">#${c.bounty_id}</span>
+        </a>
+        <div class="claim-body">
+          <div class="claim-title">${escHtml(c.title || '(untitled claim)')}</div>
+          <div class="claim-by">
+            <img class="claim-by-avatar" src="${escHtml(avatar)}" alt="" loading="lazy" onerror="this.src='https://api.dicebear.com/7.x/identicon/svg?seed=${c.issuer}'" />
+            <div class="claim-by-name">${fcUrl ? `<a href="${fcUrl}" target="_blank" rel="noopener"><strong>${escHtml(displayName)}</strong></a>` : `<strong>${escHtml(displayName)}</strong>`}</div>
+            <div class="claim-links">
+              ${externalLink ? `<a href="${escHtml(externalLink)}" target="_blank" rel="noopener" title="Original post">post</a>` : ''}
+              <a href="https://poidh.xyz/base/bounty/${c.bounty_id}/claim/${c.claim_id}" target="_blank" rel="noopener">claim</a>
+            </div>
+          </div>
+        </div>
+      `;
+      return card;
+    }
+
+    function renderGalleries(data) {
+      const r2Grid = document.getElementById('gallery-r2');
+      const r2Loading = document.getElementById('gallery-r2-loading');
+      const r1Grid = document.getElementById('gallery-r1');
+      if (r2Loading) r2Loading.remove();
+
       const claims = data.claims || [];
       const profiles = {};
       (data.leaderboard || []).forEach(e => { profiles[e.address.toLowerCase()] = e; });
-      if (!claims.length) {
-        const e = document.createElement('div'); e.className = 'empty'; e.textContent = 'No claims yet.';
-        grid.appendChild(e); return;
+
+      const sortFn = (a, b) => (b.accepted ? 1 : 0) - (a.accepted ? 1 : 0) || b.claim_id - a.claim_id;
+      const r2 = claims.filter(c => c.bounty_id === 1166).sort(sortFn);
+      const r1 = claims.filter(c => c.bounty_id === 1151).sort(sortFn);
+
+      if (!r2.length) {
+        const e = document.createElement('div');
+        e.className = 'empty';
+        e.style.gridColumn = '1 / -1';
+        e.innerHTML = 'No Round 2 submissions yet. <a href="https://poidh.xyz/base/bounty/1166" target="_blank" rel="noopener" style="color: var(--cyan)">Be the first ->_</a>';
+        r2Grid.appendChild(e);
+      } else {
+        r2.forEach(c => r2Grid.appendChild(buildClaimCard(c, profiles)));
       }
-      claims.sort((a, b) => (b.accepted ? 1 : 0) - (a.accepted ? 1 : 0) || b.claim_id - a.claim_id);
-      claims.forEach(c => {
-        const prof = profiles[c.issuer.toLowerCase()] || {};
-        const handle = prof.farcaster_username;
-        const fcUrl = handle ? `https://farcaster.xyz/${handle}` : null;
-        const xUrl = prof.twitter_url || (prof.twitter_handle ? `https://x.com/${prof.twitter_handle}` : null);
-        const avatar = prof.avatar || `https://api.dicebear.com/7.x/identicon/svg?seed=${c.issuer}`;
-        const displayName = prof.displayName || handle || shortAddr(c.issuer);
-        const externalLink = (c.description || '').match(/https?:\/\/[^\s]+/)?.[0] || null;
-        const card = document.createElement('div');
-        card.className = 'claim-card' + (c.accepted ? ' accepted' : '');
-        card.innerHTML = `
-          <a href="https://poidh.xyz/base/bounty/${c.bounty_id}/claim/${c.claim_id}" target="_blank" rel="noopener" class="claim-img-wrap">
-            <img class="claim-img" src="${escHtml(c.image_url)}" alt="" loading="lazy" onerror="this.style.display='none'" />
-            ${c.accepted ? '<span class="claim-badge">Winner</span>' : ''}
-            <span class="claim-bounty">#${c.bounty_id}</span>
-          </a>
-          <div class="claim-body">
-            <div class="claim-title">${escHtml(c.title || '(untitled claim)')}</div>
-            <div class="claim-by">
-              <img class="claim-by-avatar" src="${escHtml(avatar)}" alt="" loading="lazy" onerror="this.src='https://api.dicebear.com/7.x/identicon/svg?seed=${c.issuer}'" />
-              <div class="claim-by-name">${fcUrl ? `<a href="${fcUrl}" target="_blank" rel="noopener"><strong>${escHtml(displayName)}</strong></a>` : `<strong>${escHtml(displayName)}</strong>`}</div>
-              <div class="claim-links">
-                ${externalLink ? `<a href="${escHtml(externalLink)}" target="_blank" rel="noopener" title="Original post">post</a>` : ''}
-                <a href="https://poidh.xyz/base/bounty/${c.bounty_id}/claim/${c.claim_id}" target="_blank" rel="noopener">claim</a>
-              </div>
-            </div>
-          </div>
-        `;
-        grid.appendChild(card);
-      });
+
+      r1.forEach(c => r1Grid.appendChild(buildClaimCard(c, profiles)));
     }
 
     function renderStats(data) {
@@ -421,10 +442,12 @@
         const data = await r.json();
         renderStats(data);
         renderLeaderboard(data);
-        renderGallery(data);
+        renderGalleries(data);
       } catch (err) {
-        document.getElementById('lb-loading').textContent = 'Could not load: ' + err.message;
-        document.getElementById('gallery-loading').textContent = 'Could not load: ' + err.message;
+        const lbLoading = document.getElementById('lb-loading');
+        const gLoading = document.getElementById('gallery-r2-loading');
+        if (lbLoading) lbLoading.textContent = 'Could not load: ' + err.message;
+        if (gLoading) gLoading.textContent = 'Could not load: ' + err.message;
       }
     })();
 
