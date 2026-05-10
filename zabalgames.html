@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZABAL Games v0 - 8-player Claude Code hackathon - BetterCallZaal</title>
+  <meta name="description" content="ZABAL Games v0: 8 builders, same prompt, 24h to build, 24h to promote. ZABAL token holders pick the winners. June 27-30, 2026.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://bettercallzaal.com/zabalgames.html">
+  <meta property="og:title" content="ZABAL Games v0 - the inaugural Claude Code hackathon for ZAO">
+  <meta property="og:description" content="8 players. Same prompt. 24h to build. 24h to promote. ZABAL holders pick the winners. June 27-30, 2026.">
+  <meta property="og:url" content="https://bettercallzaal.com/zabalgames.html">
+  <meta property="og:image" content="https://bettercallzaal.com/assets/icon.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="/assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #070709;
+      --surface: #111115;
+      --surface-2: #16161c;
+      --orange: #ff6b35;
+      --cyan: #00e5ff;
+      --gold: #f5c842;
+      --pink: #ff3d6e;
+      --zabal: #a78bfa;
+      --gradient-main: linear-gradient(135deg, #ff6b35, #ff3d6e, #00e5ff);
+      --gradient-zabal: linear-gradient(135deg, #a78bfa, #00e5ff);
+      --gradient-prize: linear-gradient(135deg, #f5c842, #ff6b35);
+      --text: #e4e2dd;
+      --text-muted: #8a8895;
+      --text-dim: #4e4c57;
+      --border: #1f1e26;
+      --border-hover: #2f2d3a;
+      --radius: 8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 800px 600px at 15% -10%, rgba(167,139,250,0.14), transparent 60%),
+        radial-gradient(ellipse 700px 500px at 90% 10%, rgba(0,229,255,0.10), transparent 60%),
+        radial-gradient(ellipse 600px 400px at 50% 100%, rgba(255,107,53,0.08), transparent 60%);
+      z-index: -1;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.02;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      z-index: 9999;
+    }
+
+    a { color: var(--cyan); text-decoration: none; transition: color 0.15s; }
+    a:hover { color: var(--orange); }
+
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
+
+    .nav { padding: 1.5rem; border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .nav-brand {
+      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem;
+      background: var(--gradient-main);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .nav-links { display: flex; gap: 1.25rem; align-items: center; }
+    .nav-links a { font-size: 0.85rem; color: var(--text-muted); }
+    .nav-links a:hover { color: var(--text); }
+
+    .hero { padding: 3rem 0 1.5rem; text-align: center; }
+    .hero-eyebrow {
+      font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--zabal); font-weight: 600; margin-bottom: 0.8rem;
+    }
+    .hero h1 {
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.05;
+      letter-spacing: -0.02em; margin-bottom: 0.8rem;
+      color: var(--text);
+    }
+    .hero h1 .accent { background: var(--gradient-zabal); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-sub { font-size: clamp(0.95rem, 1.6vw, 1.1rem); color: var(--text-muted); max-width: 640px; margin: 0 auto 1.2rem; font-weight: 300; }
+    .hero-sub strong { color: var(--text); font-weight: 500; }
+    .hero-meta { margin-top: 1rem; font-size: 0.75rem; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; }
+    .hero-cta { margin-top: 1.5rem; display: inline-flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; }
+    .btn {
+      display: inline-block; padding: 0.85rem 1.5rem;
+      font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.85rem;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      border-radius: var(--radius); border: 1px solid transparent;
+      transition: transform 0.15s, border-color 0.15s, background 0.15s, color 0.15s;
+      cursor: pointer;
+    }
+    .btn-primary { background: var(--gradient-main); color: #0b0b10; border: none; }
+    .btn-primary:hover { transform: translateY(-2px); color: #0b0b10; }
+    .btn-ghost { background: transparent; color: var(--text); border-color: var(--border-hover); }
+    .btn-ghost:hover { border-color: var(--cyan); color: var(--cyan); }
+
+    .countdown { display: inline-flex; gap: 0.6rem; margin: 1rem auto 0; padding: 0.6rem 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; }
+    .countdown span { color: var(--gold); font-weight: 500; }
+    .countdown small { color: var(--text-dim); margin-left: 0.3rem; font-size: 0.7rem; }
+
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin: 2.5rem 0 2.5rem; }
+    @media (max-width: 720px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+    .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; text-align: center; transition: border-color 0.2s; }
+    .stat-card:hover { border-color: var(--border-hover); }
+    .stat-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.4rem, 2.8vw, 2rem); color: var(--cyan); line-height: 1; }
+    .stat-num.gold { color: var(--gold); }
+    .stat-num.zabal { color: var(--zabal); }
+    .stat-num.orange { color: var(--orange); }
+    .stat-label { font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; margin-top: 0.5rem; font-weight: 500; }
+
+    section { padding: 2.5rem 0; }
+    section.alt { background: linear-gradient(180deg, transparent, rgba(17,17,21,0.4), transparent); }
+
+    .section-title {
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: clamp(1.4rem, 2.8vw, 2rem); margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    .section-eyebrow { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--zabal); font-weight: 600; margin-bottom: 0.4rem; }
+    .section-sub { color: var(--text-muted); font-size: 0.95rem; max-width: 720px; margin-bottom: 1.5rem; }
+
+    .timeline { display: grid; gap: 0.75rem; }
+    .timeline-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; display: grid; grid-template-columns: 110px 1fr; gap: 1rem; align-items: start; transition: border-color 0.2s; }
+    .timeline-item:hover { border-color: var(--border-hover); }
+    .timeline-time { font-family: 'JetBrains Mono', monospace; color: var(--gold); font-size: 0.75rem; font-weight: 500; padding-top: 0.15rem; }
+    .timeline-body strong { color: var(--text); font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 0.2rem; }
+    .timeline-body small { color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; }
+    @media (max-width: 600px) {
+      .timeline-item { grid-template-columns: 1fr; gap: 0.4rem; }
+    }
+
+    .prize-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-bottom: 1rem; }
+    @media (max-width: 720px) { .prize-grid { grid-template-columns: 1fr; } }
+    .prize-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; text-align: center; position: relative; overflow: hidden; }
+    .prize-card.first { border-color: rgba(245,200,66,0.4); background: linear-gradient(180deg, rgba(245,200,66,0.06), var(--surface)); }
+    .prize-card.second { border-color: rgba(167,139,250,0.3); }
+    .prize-card.third { border-color: rgba(0,229,255,0.3); }
+    .prize-place { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; }
+    .prize-card.first .prize-place { color: var(--gold); }
+    .prize-card.second .prize-place { color: var(--zabal); }
+    .prize-card.third .prize-place { color: var(--cyan); }
+    .prize-amount { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 2.2rem; line-height: 1; margin-bottom: 0.3rem; background: var(--gradient-prize); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .prize-card.second .prize-amount { background: var(--gradient-zabal); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .prize-card.third .prize-amount { background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .prize-detail { font-size: 0.78rem; color: var(--text-muted); }
+
+    .prize-floor { background: var(--surface); border: 1px dashed var(--border-hover); border-radius: var(--radius); padding: 1.25rem; text-align: center; }
+    .prize-floor strong { color: var(--text); font-family: 'Syne', sans-serif; font-weight: 700; }
+    .prize-floor small { color: var(--text-muted); font-size: 0.85rem; display: block; margin-top: 0.3rem; }
+
+    .options-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+    @media (max-width: 720px) { .options-grid { grid-template-columns: 1fr; } }
+    .option-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; transition: border-color 0.2s, transform 0.2s; }
+    .option-card:hover { border-color: var(--border-hover); }
+    .option-letter { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.7rem; letter-spacing: 0.2em; color: var(--orange); text-transform: uppercase; margin-bottom: 0.4rem; }
+    .option-card h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; color: var(--text); }
+    .option-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+
+    .judging-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-top: 1rem; }
+    .judging-card strong { color: var(--text); font-family: 'Syne', sans-serif; font-weight: 700; display: block; margin-bottom: 0.4rem; }
+    .judging-card p { font-size: 0.9rem; color: var(--text-muted); }
+
+    .form-wrapper { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; margin-top: 1rem; }
+    .form-grid { display: grid; gap: 1rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+    label { display: block; font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.4rem; font-weight: 500; }
+    input, select, textarea {
+      width: 100%; padding: 0.75rem 0.9rem;
+      background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+      color: var(--text); font-family: 'Outfit', sans-serif; font-size: 0.9rem;
+      transition: border-color 0.15s;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none; border-color: var(--cyan);
+    }
+    textarea { min-height: 100px; resize: vertical; }
+    .form-help { font-size: 0.75rem; color: var(--text-dim); margin-top: 0.3rem; }
+    .form-checkbox { display: flex; gap: 0.5rem; align-items: flex-start; padding: 0.75rem; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; }
+    .form-checkbox input { width: auto; margin-top: 0.2rem; }
+    .form-checkbox label { margin: 0; text-transform: none; letter-spacing: normal; font-size: 0.85rem; color: var(--text-muted); font-weight: 400; }
+
+    .submit-btn {
+      width: 100%; padding: 1rem;
+      background: var(--gradient-main); color: #0b0b10;
+      border: none; border-radius: var(--radius);
+      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.95rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      cursor: pointer; transition: transform 0.15s;
+    }
+    .submit-btn:hover { transform: translateY(-2px); }
+
+    .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 0.5rem; overflow: hidden; }
+    .faq-question { padding: 1rem 1.25rem; cursor: pointer; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; display: flex; justify-content: space-between; align-items: center; }
+    .faq-question:hover { background: var(--surface-2); }
+    .faq-answer { padding: 0 1.25rem 1.25rem; color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
+
+    .footer { padding: 2.5rem 0; border-top: 1px solid var(--border); margin-top: 3rem; text-align: center; color: var(--text-dim); font-size: 0.85rem; }
+    .footer a { color: var(--text-muted); margin: 0 0.5rem; }
+
+    .badge { display: inline-block; padding: 0.2rem 0.6rem; background: rgba(167,139,250,0.12); border: 1px solid rgba(167,139,250,0.3); border-radius: 999px; font-size: 0.7rem; color: var(--zabal); letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; }
+    .badge.gold { background: rgba(245,200,66,0.1); border-color: rgba(245,200,66,0.3); color: var(--gold); }
+    .badge.cyan { background: rgba(0,229,255,0.1); border-color: rgba(0,229,255,0.3); color: var(--cyan); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">BetterCallZaal</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/poidh.html">POIDH</a>
+        <a href="#apply">Apply</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-eyebrow">Inaugural v0 - June 27-30, 2026</div>
+      <h1>ZABAL <span class="accent">GAMES</span></h1>
+      <p class="hero-sub">
+        8 builders. Same prompt. <strong>24 hours to build</strong>, <strong>24 hours to promote</strong>.
+        ZABAL token holders pick the winners. <strong>$500 USDC</strong> on the line for the top 3.
+      </p>
+      <p class="hero-sub" style="margin-top: 0.5rem;">
+        Powered by Claude Code. Built in public on Twitch. Open-source by mandate.
+      </p>
+      <div class="hero-cta">
+        <a href="#apply" class="btn btn-primary">Apply to Compete</a>
+        <a href="#format" class="btn btn-ghost">How It Works</a>
+      </div>
+      <p class="hero-meta">PROMPT DROPS 2026-06-27 12:00 PT - LIVE RESULTS REVEAL 2026-06-30 12:00 PT</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-num gold">$500</div>
+          <div class="stat-label">USDC Prize Pool</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num zabal">8</div>
+          <div class="stat-label">Players</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">24h</div>
+          <div class="stat-label">Build Window</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num orange">24h</div>
+          <div class="stat-label">Promote Window</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="format" class="alt">
+    <div class="container">
+      <div class="section-eyebrow">The Format</div>
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub">
+        Every player gets the same prompt at the same time. Pick one of 5 ZAO-aligned ideas (or remix). Build for 24 hours streaming live on Twitch. Then 24 hours to promote what you shipped. Then ZABAL token holders vote onchain to pick the top 3.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">T-3 DAYS<br><small style="font-size: 0.65rem; color: var(--text-dim);">Jun 24</small></div>
+          <div class="timeline-body">
+            <strong>Onboarding Call</strong>
+            <small>90-min call. Rules, infra setup, wallet linkage, voting mechanism walkthrough. Mandatory or forfeit.</small>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">T+0<br><small style="font-size: 0.65rem; color: var(--text-dim);">Sat Jun 27<br>12:00 PT</small></div>
+          <div class="timeline-body">
+            <strong>Prompt Drops</strong>
+            <small>8 sealed tweets fire simultaneously. Each player gets the same prompt bundle: context, 5 idea options, starter kit, rules. Streams must start within 30 minutes. ZABAL voter eligibility snapshotted now.</small>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">T+0 to T+24h<br><small style="font-size: 0.65rem; color: var(--text-dim);">Sat-Sun</small></div>
+          <div class="timeline-body">
+            <strong>Build Window</strong>
+            <small>Code in Claude Code. Stream on Twitch. ZAO restreams all 8 to one /zabalgames hub. Build in public. Open repos. No pre-built code allowed (empty git log mandated).</small>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">T+24h<br><small style="font-size: 0.65rem; color: var(--text-dim);">Sun Jun 28<br>12:00 PT</small></div>
+          <div class="timeline-body">
+            <strong>Ship Deadline</strong>
+            <small>Submit: live URL + open-source GitHub repo + 60-second demo video + ship cast on /zabalgames. Miss any one = no submission.</small>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">T+24h to T+48h<br><small style="font-size: 0.65rem; color: var(--text-dim);">Sun-Mon</small></div>
+          <div class="timeline-body">
+            <strong>Promote Window</strong>
+            <small>Cast it. Post it. Demo it. Get viewers, GitHub stars, and tips. ZAO accounts amplify all 8.</small>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">T+48h to T+72h<br><small style="font-size: 0.65rem; color: var(--text-dim);">Mon-Tue</small></div>
+          <div class="timeline-body">
+            <strong>ZABAL Voting Window</strong>
+            <small>Onchain Snapshot vote opens. ZABAL holders (snapshotted at T+0) cast votes weighted by holdings. Live tally on /zabalgames page.</small>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">T+72h<br><small style="font-size: 0.65rem; color: var(--text-dim);">Tue Jun 30<br>12:00 PT</small></div>
+          <div class="timeline-body">
+            <strong>Live Results Reveal</strong>
+            <small>1-hour stream. Top 3 announced. USDC distributed onchain LIVE via 0xSplits. Participation collectibles minted to all finishers.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prize">
+    <div class="container">
+      <div class="section-eyebrow">Prizes</div>
+      <h2 class="section-title">$500 USDC + Collectibles</h2>
+      <p class="section-sub">
+        Top 3 split a tiered USDC pool. Every finisher gets a participation collectible (onchain proof you shipped at v0). Plus ZAO covers your $20 Claude Pro for the month if you don't have it.
+      </p>
+
+      <div class="prize-grid">
+        <div class="prize-card first">
+          <div class="prize-place">1st Place</div>
+          <div class="prize-amount">$250</div>
+          <div class="prize-detail">USDC + collectible + Hall of Fame</div>
+        </div>
+        <div class="prize-card second">
+          <div class="prize-place">2nd Place</div>
+          <div class="prize-amount">$150</div>
+          <div class="prize-detail">USDC + collectible + Hall of Fame</div>
+        </div>
+        <div class="prize-card third">
+          <div class="prize-place">3rd Place</div>
+          <div class="prize-amount">$100</div>
+          <div class="prize-detail">USDC + collectible + Hall of Fame</div>
+        </div>
+      </div>
+
+      <div class="prize-floor">
+        <strong>Every finisher gets a participation collectible</strong>
+        <small>Permanent onchain proof you shipped at the inaugural ZABAL Games. Hall of Fame entry on /zabalgames. The real challenge is submitting at all - keep your git log clean and ship by T+48h.</small>
+      </div>
+    </div>
+  </section>
+
+  <section id="judging" class="alt">
+    <div class="container">
+      <div class="section-eyebrow">Who Decides</div>
+      <h2 class="section-title">ZABAL Token Holders Vote Onchain</h2>
+      <p class="section-sub">
+        No closed human judge panel. The community whose ecosystem these builds plug into picks who wins. Every vote is onchain via Snapshot, weighted by ZABAL holdings. The decision is yours, transparent, and final.
+      </p>
+
+      <div class="judging-card">
+        <strong>How voting works</strong>
+        <p>Voters allocate ZABAL weight across submitted builds. Vote-for-1 mechanism for v0. Eligible voters = ZABAL holders snapshotted at T+0 (no flash-buying allowed) plus a verified Farcaster address. Top 3 by vote weight take the prizes. Reveal stream T+72h shows the live tally.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ideas">
+    <div class="container">
+      <div class="section-eyebrow">The Prompt</div>
+      <h2 class="section-title">5 Idea Options + Wildcard</h2>
+      <p class="section-sub">
+        Every player picks one option from the prompt bundle (or proposes a wildcard at onboarding). Each ties to existing ZAO ecosystem rails: Empire Builder, Farcaster, Hats, Bonfire, EAS, Hypersub, Coinflow.
+      </p>
+
+      <div class="options-grid">
+        <div class="option-card">
+          <div class="option-letter">Option A</div>
+          <h3>ZABAL Empire Booster Workshop</h3>
+          <p>Web tool for proposing, simulating, and submitting custom booster rules to the $ZABAL Empire. Connect wallet, define rule, simulate against current leaderboard, generate ready-to-deploy config.</p>
+        </div>
+        <div class="option-card">
+          <div class="option-letter">Option B</div>
+          <h3>Twitch -> Empire Stream Feed</h3>
+          <p>StreamElements WebSocket subscriber that scores tip/follow/sub/cheer events and mirrors to a public JSON feed Empire Builder can pull. Demo with your own Twitch channel.</p>
+        </div>
+        <div class="option-card">
+          <div class="option-letter">Option C</div>
+          <h3>ZAO Farcaster Mini App</h3>
+          <p>Pick a surface: stream-tracker, member directory with ZABAL holdings, music polling, ZABAL portfolio dashboard, or governance vote UI. Build the one you'd actually use.</p>
+        </div>
+        <div class="option-card">
+          <div class="option-letter">Option D</div>
+          <h3>New ZOE Skill</h3>
+          <p>A Claude skill that does one job for ZAO. Examples: auto-summarize a Twitch VOD into a Farcaster cast, generate per-platform captions, track Empire leaderboard moves and cast updates.</p>
+        </div>
+        <div class="option-card">
+          <div class="option-letter">Option E</div>
+          <h3>Bonfire / Hats Automation</h3>
+          <p>Auto-mint Hats role NFTs when Bonfire signals hit thresholds. Or build a co-sign widget where ZAO members attest to other members' contributions. Onchain reputation that does something.</p>
+        </div>
+        <div class="option-card">
+          <div class="option-letter">Option F</div>
+          <h3>Wildcard - Build Your Own</h3>
+          <p>Propose your build at the onboarding call. Must integrate at least 2 of: ZABAL Empire, Farcaster verified address, Hats, Bonfire, EAS, Hypersub, Coinflow. Surprise us.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="apply" class="alt">
+    <div class="container">
+      <div class="section-eyebrow">Applications Open</div>
+      <h2 class="section-title">Apply to Compete</h2>
+      <p class="section-sub">
+        8 spots + 4 waitlist. Hybrid gate: open public, bonus weight if you have ZAO Respect or member status. Solo only for v0. Applications close 2026-06-13.
+      </p>
+
+      <div class="form-wrapper">
+        <!-- TODO Zaal: replace YOUR_FORMSPREE_ID with a real Formspree endpoint for ZABAL Games -->
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="form-grid">
+          <input type="hidden" name="_subject" value="ZABAL Games v0 Application">
+          <input type="hidden" name="form_type" value="zabalgames_v0_application">
+
+          <div class="form-row">
+            <div>
+              <label for="name">Name or Handle</label>
+              <input type="text" id="name" name="name" required placeholder="What do we call you">
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="you@email.com">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="farcaster">Farcaster handle</label>
+              <input type="text" id="farcaster" name="farcaster" required placeholder="@yourhandle">
+            </div>
+            <div>
+              <label for="twitch">Twitch handle</label>
+              <input type="text" id="twitch" name="twitch" required placeholder="twitch.tv/you">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="github">GitHub handle</label>
+              <input type="text" id="github" name="github" required placeholder="@yourgithub">
+            </div>
+            <div>
+              <label for="wallet">Verified wallet (Base)</label>
+              <input type="text" id="wallet" name="wallet" required placeholder="0x..." pattern="0x[a-fA-F0-9]{40}">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="timezone">Timezone</label>
+              <input type="text" id="timezone" name="timezone" required placeholder="PT / ET / GMT / etc">
+            </div>
+            <div>
+              <label for="claude_pro">Claude Pro status</label>
+              <select id="claude_pro" name="claude_pro" required>
+                <option value="">Choose one</option>
+                <option value="active">I have Claude Pro active</option>
+                <option value="need_subsidy">I need ZAO to cover the $20 month</option>
+                <option value="not_sure">Not sure - help me figure it out</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="idea_pref">Which idea option are you leaning toward?</label>
+            <select id="idea_pref" name="idea_pref">
+              <option value="">Pick or leave blank</option>
+              <option value="A">A - ZABAL Empire Booster Workshop</option>
+              <option value="B">B - Twitch to Empire Stream Feed</option>
+              <option value="C">C - ZAO Farcaster Mini App</option>
+              <option value="D">D - New ZOE Skill</option>
+              <option value="E">E - Bonfire / Hats Automation</option>
+              <option value="F">F - Wildcard (I have my own idea)</option>
+              <option value="undecided">Undecided - I'll pick at T+0</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="why">Why do you want to do this?</label>
+            <textarea id="why" name="why" required placeholder="Short answer - 2-4 sentences. What draws you to ZABAL Games specifically? What do you want to build? What track record can we look at?"></textarea>
+            <p class="form-help">Don't sell us. Tell us. Links to past work welcome.</p>
+          </div>
+
+          <div>
+            <label for="zao_relationship">Existing relationship with ZAO ecosystem (optional)</label>
+            <input type="text" id="zao_relationship" name="zao_relationship" placeholder="ZAO member? COC promoter? FISHBOWLZ? POIDH submitter? Brand new? All good">
+            <p class="form-help">Bonus weight if you're already in the ecosystem. Required: nothing - new builders welcome.</p>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" id="conduct" name="conduct" required>
+            <label for="conduct">I agree to the code of conduct: ship in 24h with empty git log at T+0, open-source my repo (MIT or similar), respect fellow players, and accept the ZABAL holder vote as final.</label>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" id="streaming" name="streaming" required>
+            <label for="streaming">I understand the build is streamed publicly on Twitch and clips will be archived as part of ZAO's content engine.</label>
+          </div>
+
+          <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-eyebrow">FAQ</div>
+      <h2 class="section-title">Common Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">What if I don't have Claude Pro? <span style="color: var(--text-dim);">+</span></div>
+        <div class="faq-answer">If you're accepted and you don't already have Claude Pro, ZAO covers your $20 month so cost is not a blocker. We send you an Anthropic gift link 24 hours before the prompt drops. Tick the relevant box on the application form.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do I have to stream the entire 24h build? <span style="color: var(--text-dim);">+</span></div>
+        <div class="faq-answer">Cadence is open-call for v0. Recommendation: stream most of it. We spot-check streams to verify nothing was pre-built. You can take breaks - sleep, eat, walk. But the work itself happens visibly.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can I work as a team? <span style="color: var(--text-dim);">+</span></div>
+        <div class="faq-answer">Solo only for v0. Teams of 2 considered for v1. The point is to see what one builder can ship with Claude Code in 24 hours.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Who picks the winners? <span style="color: var(--text-dim);">+</span></div>
+        <div class="faq-answer">ZABAL token holders. Onchain vote via Snapshot, weighted by holdings. Eligible voters are snapshotted at T+0 (start of the games) so no one can flash-buy ZABAL just to vote. Plus voters need a verified Farcaster address. The community decides, transparently, onchain.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What if my time zone is bad for PT? <span style="color: var(--text-dim);">+</span></div>
+        <div class="faq-answer">v0 is anchored to Pacific Time. We know this disadvantages EU/Asia. v1 may run regional variants. For v0: if you're up for coding through your night, you're up for it. Otherwise wait for v1.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Who owns the code I ship? <span style="color: var(--text-dim);">+</span></div>
+        <div class="faq-answer">You do. Open-source mandate (MIT or similar permissive license) is a submission requirement. ZAO doesn't claim IP. We can fork or extend per the license, but ownership stays with you.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What happens after the games? <span style="color: var(--text-dim);">+</span></div>
+        <div class="faq-answer">All 8 builds live on as open-source repos in the /zabalgames Hall of Fame. Some get organically picked up by ZAO ecosystem brands. Some die. Some you keep evolving. No obligation either way - you finished, you got the collectible, you're an alumnus.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can I read the full spec? <span style="color: var(--text-dim);">+</span></div>
+        <div class="faq-answer">Yes - <a href="https://github.com/bettercallzaal/ZAOOS/blob/ws/zabal-games-v0-final/research/events/630-zabal-games-claude-code-hackathon-v0/README.md" target="_blank" rel="noopener">Doc 630 in the ZAO research library</a> covers everything: format, prompt design, judging, prize, infra, risks, and strategic considerations. This page is the marketing summary; the doc is the source of truth.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <a href="/">Home</a> -
+        <a href="/poidh.html">POIDH</a> -
+        <a href="https://github.com/bettercallzaal/ZAOOS/blob/ws/zabal-games-v0-final/research/events/630-zabal-games-claude-code-hackathon-v0/README.md" target="_blank" rel="noopener">Full Spec</a> -
+        <a href="https://farcaster.xyz/~/channel/zabalgames" target="_blank" rel="noopener">Farcaster /zabalgames</a>
+      </p>
+      <p style="margin-top: 0.6rem;">ZABAL Games v0 - inaugural Claude Code hackathon for ZAO ecosystem - 2026-06-27 12:00 PT</p>
+    </div>
+  </footer>
+
+</body>
+</html>
