@@ -242,7 +242,7 @@
 
   <header class="hero">
     <div class="container">
-      <div class="hero-eyebrow">A Farcaster Vibe-Coding Challenge - Inaugural v0 - June 27-30, 2026 - Private cohort, invite-only</div>
+      <div class="hero-eyebrow">A Farcaster Vibe-Coding Challenge - Inaugural v0 - June 27-30, 2026 - Open call for builders</div>
       <h1>ZABAL <span class="accent">GAMES</span></h1>
       <p class="hero-sub">
         Looking for <strong>8 Farcasters</strong> - ideally digital creators willing to <strong>build in public</strong>.
@@ -377,7 +377,7 @@
       <div class="section-eyebrow">Prizes</div>
       <h2 class="section-title">$500 USDC - Everyone Selected Gets Paid</h2>
       <p class="section-sub">
-        All 8 selected players who hit the submission bar get USDC. Tiered top-heavy so winning still means something, but no goose eggs - if you ship, you get paid. Plus everyone gets a participation collectible (permanent onchain proof you shipped at the inaugural Games) and ZAO covers up to $20/mo for your vibe-coding tool of choice.
+        All 8 selected players who hit the submission bar get USDC. Tiered top-heavy so winning still means something, but no goose eggs - if you ship, you get paid. Every finisher also receives a participation collectible (permanent onchain proof you shipped at the inaugural Games) plus Respect earned during the event itself.
       </p>
 
       <div class="prize-grid">
@@ -410,12 +410,12 @@
       <div class="section-eyebrow">Who Decides</div>
       <h2 class="section-title">The ZAO DAO Votes</h2>
       <p class="section-sub">
-        Not just any ZABAL holder - the people who have earned their vote in the DAO over the past 3 years. Long-tenure ZAO contributors. The community that knows what "good" looks like for the ecosystem because they've been building it. No closed judge panel, but a curated voter set with skin in the game.
+        ZAO members who have earned Respect by contributing through fractals are the judging body. Not whoever holds the most tokens. Not a closed panel. The community that's been showing up + earning peer-validated reputation gets to pick which builds serve the ecosystem best.
       </p>
 
       <div class="judging-card">
         <strong>How voting works</strong>
-        <p>Eligible voters = ZAO DAO members who have earned their vote over the past 3 years (Respect score + tenure based). Snapshotted at T+0 so the voter set is locked before the Games start. Vote-for-1 mechanism for v0. Placement determined by total weighted vote. Reveal stream at T+72h announces the placements + distributes USDC + mints collectibles live onchain.</p>
+        <p>Eligible voters = ZAO members with Respect above a threshold. Respect is ZAO's soulbound peer-validated reputation - it's earned in weekly fractals over time. So the voter set naturally skews toward long-tenure contributors without needing a separate tenure rule. Voter eligibility is snapshotted at T+0 so the set is locked before the Games start. 1-person-1-vote mechanism for v0. Placement by total votes. Reveal stream at T+72h announces placements + distributes USDC + mints collectibles live onchain.</p>
       </div>
     </div>
   </section>
@@ -561,14 +561,14 @@
               <input type="text" id="timezone" name="timezone" required placeholder="PT / ET / GMT / etc">
             </div>
             <div>
-              <label for="tooling_subsidy">Vibe-coding tool subsidy</label>
-              <select id="tooling_subsidy" name="tooling_subsidy" required>
+              <label for="timezone_confirm">Are you available for the full window (Jun 27-30 PT)?</label>
+              <select id="timezone_confirm" name="timezone_confirm" required>
                 <option value="">Choose one</option>
-                <option value="have_it">I have my tool subscription active</option>
-                <option value="need_subsidy">I need ZAO to cover up to $20 for my tool of choice</option>
-                <option value="not_sure">Not sure yet - I'll figure it out</option>
+                <option value="yes_full">Yes - I'm locked in for the full window</option>
+                <option value="mostly">Mostly - have to flex around a few small commitments</option>
+                <option value="conflict">I have a conflict but I'd still apply if there's flex</option>
               </select>
-              <p class="form-help">If accepted and need help, ZAO covers up to $20/mo for whatever harness you want (Claude Pro, Cursor Pro, Windsurf Pro, etc.).</p>
+              <p class="form-help">The build window is anchored to Pacific Time. EU/Asia applicants will be coding through their night.</p>
             </div>
           </div>
 
@@ -691,17 +691,12 @@
 
       <div class="faq-item">
         <div class="faq-question">What does ZAO actually do for me as a creator? <span style="color: var(--text-dim);">+</span></div>
-        <div class="faq-answer">Three things. First, distribution - ZAO accounts (BCZ Farcaster, /zao channel, COC Concertz, ZAO OS) amplify all 8 of you during the promote window so your audience grows whether you place or not. Second, infrastructure - we cover your Claude Pro for the month, set up your Twitch/StreamElements onboarding, give you a pre-funded Privy wallet, and provide an Empire Builder API key. Third, content engine - the streaming flywheel auto-clips your build into shorts for TikTok/Reels/YouTube/Farcaster, so 24h of streaming becomes ~20 pieces of content you can use forever.</div>
+        <div class="faq-answer">Three things. First, distribution - ZAO accounts (BCZ Farcaster, /zao channel, COC Concertz, ZAO OS) amplify all 8 of you during the promote window so your audience grows whether you place or not. Second, infrastructure - we set up your Twitch/StreamElements onboarding, give you a pre-funded Privy wallet, and provide an Empire Builder API key. Third, content engine - the streaming flywheel auto-clips your build into shorts for TikTok/Reels/YouTube/Farcaster, so 24h of streaming becomes ~20 pieces of content you can use forever.</div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question">Do I have to use Claude Code? <span style="color: var(--text-dim);">+</span></div>
         <div class="faq-answer">No. Use whatever vibe-coding harness you want - Claude Code, Cursor, Windsurf, Aider, Cline, Bolt, v0, Lovable, even hand-roll your own pipeline. The constraint is "show your work" not "use this specific tool." Pick one of the 4 visibility modes (live stream, recorded sessions, public prompt logs, or frequent build casts) and ship publicly.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">What if I need to pay for my tool? <span style="color: var(--text-dim);">+</span></div>
-        <div class="faq-answer">If accepted and your tool subscription is the blocker, ZAO covers up to $20/mo for the tool of your choice (Claude Pro, Cursor Pro $20/mo, Windsurf Pro $15/mo, etc.). Tick the relevant box on the application form. We sort it 24h before the prompt drops.</div>
       </div>
 
       <div class="faq-item">
@@ -716,7 +711,7 @@
 
       <div class="faq-item">
         <div class="faq-question">Who picks the winners? <span style="color: var(--text-dim);">+</span></div>
-        <div class="faq-answer">The ZAO DAO - specifically members who have earned their vote in the DAO over the past 3 years. Long-tenure ZAO contributors with Respect + history in the ecosystem. Voter set is snapshotted at T+0 so it's locked before the Games begin. This is a curated voter set, not open ZABAL holder voting - the people deciding are the people who built ZAO over the last 3 years and know what's worth building next.</div>
+        <div class="faq-answer">ZAO members who have earned Respect through fractal participation. Respect is ZAO's soulbound, peer-validated reputation - it's earned in weekly fractal sessions over time. So the eligible voter set naturally skews toward long-tenure contributors. Voter set is snapshotted at T+0 so it's locked before the Games begin. 1-person-1-vote mechanism. Not open ZABAL holder voting - the people deciding are the people who've actually built ZAO and know what's worth building next.</div>
       </div>
 
       <div class="faq-item">
