@@ -461,43 +461,13 @@
   <section id="ideas">
     <div class="container">
       <div class="section-eyebrow">The Prompt</div>
-      <h2 class="section-title">5 Idea Options + Wildcard</h2>
+      <h2 class="section-title">Sealed Until T+0</h2>
       <p class="section-sub">
-        Every player picks one option from the prompt bundle (or proposes a wildcard at onboarding). Each ties to existing ZAO ecosystem rails: Empire Builder, Farcaster, Hats, Bonfire, EAS, Hypersub, Coinflow.
+        The exact prompt - including the build options you'll pick from - drops to all 8 selected players simultaneously at <strong>2026-06-27 12:00 PT</strong>. Everything before that stays sealed so every player starts on the same footing.
       </p>
-
-      <div class="options-grid">
-        <div class="option-card">
-          <div class="option-letter">Option A</div>
-          <h3>ZABAL Empire Booster Workshop</h3>
-          <p>Web tool for proposing, simulating, and submitting custom booster rules to the $ZABAL Empire. Connect wallet, define rule, simulate against current leaderboard, generate ready-to-deploy config.</p>
-        </div>
-        <div class="option-card">
-          <div class="option-letter">Option B</div>
-          <h3>Twitch -> Empire Stream Feed</h3>
-          <p>StreamElements WebSocket subscriber that scores tip/follow/sub/cheer events and mirrors to a public JSON feed Empire Builder can pull. Demo with your own Twitch channel.</p>
-        </div>
-        <div class="option-card">
-          <div class="option-letter">Option C</div>
-          <h3>ZAO Farcaster Mini App</h3>
-          <p>Pick a surface: stream-tracker, member directory with ZABAL holdings, music polling, ZABAL portfolio dashboard, or governance vote UI. Build the one you'd actually use.</p>
-        </div>
-        <div class="option-card">
-          <div class="option-letter">Option D</div>
-          <h3>New ZOE Skill</h3>
-          <p>A Claude skill that does one job for ZAO. Examples: auto-summarize a Twitch VOD into a Farcaster cast, generate per-platform captions, track Empire leaderboard moves and cast updates.</p>
-        </div>
-        <div class="option-card">
-          <div class="option-letter">Option E</div>
-          <h3>Bonfire / Hats Automation</h3>
-          <p>Auto-mint Hats role NFTs when Bonfire signals hit thresholds. Or build a co-sign widget where ZAO members attest to other members' contributions. Onchain reputation that does something.</p>
-        </div>
-        <div class="option-card">
-          <div class="option-letter">Option F</div>
-          <h3>Wildcard - Build Your Own</h3>
-          <p>Propose your build at the onboarding call. Must integrate at least 2 of: ZABAL Empire, Farcaster verified address, Hats, Bonfire, EAS, Hypersub, Coinflow. Surprise us.</p>
-        </div>
-      </div>
+      <p class="section-sub" style="margin-top: 0.8rem;">
+        What we can tell you now: it will be 3-5 idea options + a wildcard slot. Every option ties to existing ZAO ecosystem rails (Empire Builder, Farcaster mini apps, Hats, Bonfire, EAS, Hypersub, Coinflow). All options are achievable in 24h with a vibe-coding harness. You don't need to be a senior engineer.
+      </p>
     </div>
   </section>
 
@@ -516,7 +486,8 @@
         <!-- 3. Set email notifications to zaalp99@gmail.com (default) -->
         <!-- 4. Replace YOUR_FORMSPREE_ID below with the new form's hash ID -->
         <!-- Result: every application will fire an email to your inbox immediately -->
-        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="form-grid">
+        <div id="form-error" role="alert" style="display:none;background:rgba(255,61,110,0.12);border:1px solid rgba(255,61,110,0.5);color:#ff8aa6;padding:0.85rem 1rem;border-radius:8px;margin-bottom:1rem;font-size:0.9rem;"></div>
+        <form id="zg-apply" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="form-grid" novalidate>
           <input type="hidden" name="_subject" value="ZABAL Games v0 Application">
           <input type="hidden" name="form_type" value="zabalgames_v0_application">
           <input type="hidden" name="_replyto" value="">
@@ -550,8 +521,8 @@
               <input type="text" id="github" name="github" required placeholder="@yourgithub">
             </div>
             <div>
-              <label for="wallet">Verified wallet (Base)</label>
-              <input type="text" id="wallet" name="wallet" required placeholder="0x..." pattern="0x[a-fA-F0-9]{40}">
+              <label for="wallet">Verified wallet or ENS (Base)</label>
+              <input type="text" id="wallet" name="wallet" required placeholder="0x... or name.eth" pattern="^(0x[a-fA-F0-9]{40}|[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.eth)$" title="Paste 0x address (Base) or ENS name ending in .eth (e.g. zaal.eth, you.base.eth)">
             </div>
           </div>
 
@@ -601,20 +572,6 @@
               <option value="combo">Combination - I'll lean on multiple modes</option>
             </select>
             <p class="form-help">Required: at least one primary mode + ongoing /zabalgames casts throughout.</p>
-          </div>
-
-          <div>
-            <label for="idea_pref">Which idea option are you leaning toward?</label>
-            <select id="idea_pref" name="idea_pref">
-              <option value="">Pick or leave blank</option>
-              <option value="A">A - ZABAL Empire Booster Workshop</option>
-              <option value="B">B - Twitch to Empire Stream Feed</option>
-              <option value="C">C - ZAO Farcaster Mini App</option>
-              <option value="D">D - New ZOE Skill</option>
-              <option value="E">E - Bonfire / Hats Automation</option>
-              <option value="F">F - Wildcard (I have my own idea)</option>
-              <option value="undecided">Undecided - I'll pick at T+0</option>
-            </select>
           </div>
 
           <div>
@@ -747,6 +704,48 @@
       <p style="margin-top: 0.6rem;">ZABAL Games v0 - inaugural Claude Code hackathon for ZAO ecosystem - 2026-06-27 12:00 PT</p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById('zg-apply');
+      var box = document.getElementById('form-error');
+      if (!form || !box) return;
+      var labelOf = function (el) {
+        if (el.labels && el.labels[0]) return el.labels[0].textContent.trim();
+        return el.name || el.id || 'this field';
+      };
+      var prettyReason = function (el) {
+        var v = el.validity;
+        if (v.valueMissing) return 'is required';
+        if (v.patternMismatch && el.name === 'wallet') return 'must be a 0x address or ENS name (.eth)';
+        if (v.patternMismatch) return 'is in wrong format';
+        if (v.typeMismatch && el.type === 'email') return 'must be a valid email';
+        return 'is invalid';
+      };
+      form.addEventListener('submit', function (e) {
+        var invalids = form.querySelectorAll(':invalid');
+        if (invalids.length === 0) {
+          box.style.display = 'none';
+          return;
+        }
+        e.preventDefault();
+        var first = invalids[0];
+        var msgs = [];
+        for (var i = 0; i < invalids.length; i++) {
+          msgs.push('- ' + labelOf(invalids[i]) + ' ' + prettyReason(invalids[i]));
+        }
+        box.innerHTML = '<strong>Fix these before submitting:</strong><br>' + msgs.join('<br>');
+        box.style.display = 'block';
+        first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        try { first.focus({ preventScroll: true }); } catch (err) { first.focus(); }
+      });
+      form.addEventListener('input', function () {
+        if (box.style.display === 'block' && form.querySelectorAll(':invalid').length === 0) {
+          box.style.display = 'none';
+        }
+      });
+    })();
+  </script>
 
 </body>
 </html>
