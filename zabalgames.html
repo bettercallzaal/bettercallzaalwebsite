@@ -251,8 +251,8 @@
       <a href="/" class="nav-brand">BetterCallZaal</a>
       <div class="nav-links">
         <a href="/">Home</a>
-        <a href="/poidh.html">POIDH</a>
         <a href="#mentors">Mentors</a>
+        <a href="#starters">Starters</a>
         <a href="#apply">Submit</a>
         <a href="#submissions">Board</a>
       </div>
@@ -643,6 +643,12 @@
             <p class="form-help">A public cast in /zabalgames channel announcing your build. The cast IS your application visibility.</p>
           </div>
 
+          <div>
+            <label for="built_on">Built on a starter project? (optional)</label>
+            <input type="text" id="built_on" name="built_on" placeholder="Name of the starter you forked - or leave blank if you started fresh">
+            <p class="form-help">Building on a starter is just as valid as from scratch. Just credit which one.</p>
+          </div>
+
           <div class="form-row">
             <div>
               <label for="timezone">Timezone</label>
@@ -756,7 +762,19 @@
     </div>
   </section>
 
-  <section id="submissions">
+  <section id="starters">
+    <div class="container">
+      <div class="section-eyebrow">Starting Points</div>
+      <h2 class="section-title">Starter Projects</h2>
+      <p class="section-sub">
+        Don't want to start from a blank repo? These are seeded starting points - fork one, make it yours, ship it as your Phase 1 build. Building on a starter is just as valid as building from scratch. Note which one you extended on your submission.
+      </p>
+      <div id="starters-status" style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1rem;">Loading starter projects...</div>
+      <div id="starters-grid" class="options-grid"></div>
+    </div>
+  </section>
+
+  <section id="submissions" class="alt">
     <div class="container">
       <div class="section-eyebrow">Phase 1 Submissions</div>
       <h2 class="section-title">The Build-a-Thon Board</h2>
@@ -924,7 +942,8 @@
             creator_links: val('creator_links') || null,
             why: val('why_apply'),
             zao_relationship: val('zao_relationship') || null,
-            availability_pref: val('availability_pref')
+            availability_pref: val('availability_pref'),
+            built_on: val('built_on') || null
           };
 
           sb.from('zabalgames_submissions').insert(row).then(function (res) {
@@ -953,10 +972,12 @@
       }
 
       // -----------------------------------------------------------------------
-      // Public submissions gallery
+      // Public boards - starter projects + submissions
       // -----------------------------------------------------------------------
-      var grid = document.getElementById('submissions-grid');
-      var statusEl = document.getElementById('submissions-status');
+      var subGrid = document.getElementById('submissions-grid');
+      var subStatus = document.getElementById('submissions-status');
+      var startGrid = document.getElementById('starters-grid');
+      var startStatus = document.getElementById('starters-status');
 
       var esc = function (s) {
         if (s == null) return '';
@@ -965,51 +986,89 @@
         });
       };
 
-      var renderCard = function (s) {
+      var linkRow = function (s) {
+        return '<div style="display:flex;gap:0.6rem;flex-wrap:wrap;font-size:0.8rem;">' +
+          (s.phase1_url  ? '<a href="' + esc(s.phase1_url)  + '" target="_blank" rel="noopener">build</a>' : '') +
+          (s.phase1_repo ? '<a href="' + esc(s.phase1_repo) + '" target="_blank" rel="noopener">repo</a>' : '') +
+          (s.phase1_demo ? '<a href="' + esc(s.phase1_demo) + '" target="_blank" rel="noopener">demo</a>' : '') +
+          (s.phase1_cast ? '<a href="' + esc(s.phase1_cast) + '" target="_blank" rel="noopener">cast</a>' : '') +
+        '</div>';
+      };
+
+      var renderSubmissionCard = function (s) {
         var claimed = s.status === 'claimed' || s.status === 'finalist';
         var badge = claimed
           ? '<div class="badge gold" style="margin-bottom:0.5rem;">' + esc(s.status) + (s.claimed_by ? ' by ' + esc(s.claimed_by) : '') + '</div>'
           : '<div class="badge cyan" style="margin-bottom:0.5rem;">open</div>';
+        var builtOn = s.built_on
+          ? '<p style="font-size:0.72rem;color:var(--text-dim);margin-bottom:0.4rem;">built on: ' + esc(s.built_on) + '</p>'
+          : '';
         return '' +
           '<div class="option-card">' +
             badge +
             '<h3>' + esc(s.name) + '</h3>' +
             '<p style="margin-bottom:0.6rem;">' + esc((s.why || '').slice(0, 160)) + ((s.why || '').length > 160 ? '...' : '') + '</p>' +
+            builtOn +
             '<p style="font-size:0.78rem;color:var(--text-dim);margin-bottom:0.5rem;">' +
               esc(s.farcaster) + (s.creator_type ? ' &middot; ' + esc(s.creator_type) : '') + (s.harness ? ' &middot; ' + esc(s.harness) : '') +
             '</p>' +
-            '<div style="display:flex;gap:0.6rem;flex-wrap:wrap;font-size:0.8rem;">' +
-              (s.phase1_url  ? '<a href="' + esc(s.phase1_url)  + '" target="_blank" rel="noopener">build</a>' : '') +
-              (s.phase1_repo ? '<a href="' + esc(s.phase1_repo) + '" target="_blank" rel="noopener">repo</a>' : '') +
-              (s.phase1_demo ? '<a href="' + esc(s.phase1_demo) + '" target="_blank" rel="noopener">demo</a>' : '') +
-              (s.phase1_cast ? '<a href="' + esc(s.phase1_cast) + '" target="_blank" rel="noopener">cast</a>' : '') +
-            '</div>' +
+            linkRow(s) +
           '</div>';
       };
 
+      var renderStarterCard = function (s) {
+        return '' +
+          '<div class="option-card">' +
+            '<div class="badge" style="margin-bottom:0.5rem;">starter - fork it</div>' +
+            '<h3>' + esc(s.name) + '</h3>' +
+            '<p style="margin-bottom:0.6rem;">' + esc((s.why || '').slice(0, 200)) + ((s.why || '').length > 200 ? '...' : '') + '</p>' +
+            linkRow(s) +
+          '</div>';
+      };
+
+      var SELECT_COLS = 'id,created_at,name,farcaster,twitch,github,phase1_url,phase1_repo,phase1_demo,phase1_cast,harness,creator_type,why,status,claimed_by,kind,built_on';
+
       var loadSubmissions = function () {
-        if (!grid || !statusEl) return;
         if (!CONFIGURED) {
-          statusEl.textContent = 'Submissions board goes live once the build-a-thon opens.';
+          if (subStatus) subStatus.textContent = 'Board goes live once the build-a-thon opens.';
+          if (startStatus) startStatus.textContent = 'Starter projects appear here once the build-a-thon opens.';
           return;
         }
-        statusEl.textContent = 'Loading submissions...';
+        if (subStatus) subStatus.textContent = 'Loading submissions...';
+        if (startStatus) startStatus.textContent = 'Loading starter projects...';
         sb.from('zabalgames_submissions')
-          .select('id,created_at,name,farcaster,twitch,github,phase1_url,phase1_repo,phase1_demo,phase1_cast,harness,creator_type,why,status,claimed_by')
+          .select(SELECT_COLS)
           .order('created_at', { ascending: false })
           .then(function (res) {
             if (res.error) {
-              statusEl.textContent = 'Could not load submissions: ' + (res.error.message || 'error');
+              var msg = 'Could not load: ' + (res.error.message || 'error');
+              if (subStatus) subStatus.textContent = msg;
+              if (startStatus) startStatus.textContent = msg;
               return;
             }
             var rows = res.data || [];
-            if (rows.length === 0) {
-              statusEl.textContent = 'No submissions yet. Be the first to ship.';
-              grid.innerHTML = '';
-              return;
+            var starters = rows.filter(function (r) { return r.kind === 'starter'; });
+            var subs = rows.filter(function (r) { return r.kind !== 'starter'; });
+
+            if (startGrid && startStatus) {
+              if (starters.length === 0) {
+                startStatus.textContent = 'No starter projects seeded yet.';
+                startGrid.innerHTML = '';
+              } else {
+                startStatus.textContent = starters.length + ' starter project' + (starters.length === 1 ? '' : 's') + ' - fork one or start fresh';
+                startGrid.innerHTML = starters.map(renderStarterCard).join('');
+              }
             }
-            statusEl.textContent = rows.length + ' submission' + (rows.length === 1 ? '' : 's') + ' on the board';
-            grid.innerHTML = rows.map(renderCard).join('');
+
+            if (subGrid && subStatus) {
+              if (subs.length === 0) {
+                subStatus.textContent = 'No submissions yet. Be the first to ship.';
+                subGrid.innerHTML = '';
+              } else {
+                subStatus.textContent = subs.length + ' submission' + (subs.length === 1 ? '' : 's') + ' on the board';
+                subGrid.innerHTML = subs.map(renderSubmissionCard).join('');
+              }
+            }
           });
       };
 

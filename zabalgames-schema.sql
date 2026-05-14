@@ -38,10 +38,33 @@ create table if not exists zabalgames_submissions (
   zao_relationship text,
   availability_pref text,
 
+  -- entry kind
+  kind            text not null default 'submission',  -- 'submission' (applicant) | 'starter' (Zaal-seeded starting point)
+  built_on        text,                                -- optional: which starter this build extends (free text / starter name)
+
   -- lifecycle - mentors update this as they claim champions
   status          text not null default 'submitted',  -- submitted | claimed | finalist
   claimed_by      text                                 -- mentor handle who claimed, null until claimed
 );
+
+-- ---------------------------------------------------------------------------
+-- SEEDING STARTER PROJECTS (Zaal)
+-- ---------------------------------------------------------------------------
+-- Starter projects are GitHub starting points applicants can fork + build on
+-- top of. To seed one:
+--   Option A (form): submit via the page form like a normal entry, then in the
+--     Supabase Table Editor flip its `kind` from 'submission' to 'starter'.
+--   Option B (SQL): insert directly, e.g.
+--     insert into zabalgames_submissions
+--       (name, farcaster, github, wallet, phase1_url, phase1_repo,
+--        phase1_demo, phase1_cast, why, kind)
+--     values
+--       ('ZAO Empire Leaderboard starter', '@bettercallzaal', '@bettercallzaal',
+--        'zaal.eth', 'https://...', 'https://github.com/...', 'https://...',
+--        'https://farcaster.xyz/...', 'A starting point for building on the
+--        ZABAL Empire leaderboard API.', 'starter');
+-- The page renders kind='starter' rows in their own "Starter Projects" section,
+-- and kind='submission' rows in the "Build-a-Thon Board".
 
 -- Index for the gallery's default sort (newest first)
 create index if not exists zabalgames_submissions_created_idx
