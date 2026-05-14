@@ -106,6 +106,39 @@
     .nav-links a { font-size: 0.85rem; color: var(--text-muted); }
     .nav-links a:hover { color: var(--text); }
 
+    .subnav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(7,7,9,0.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.65rem 1.5rem;
+    }
+    .subnav-inner {
+      max-width: 1080px; margin: 0 auto;
+      display: flex; gap: 0.4rem; align-items: center;
+      overflow-x: auto; scrollbar-width: none;
+    }
+    .subnav-inner::-webkit-scrollbar { display: none; }
+    .subnav a {
+      font-size: 0.72rem; color: var(--text-muted);
+      white-space: nowrap; padding: 0.35rem 0.7rem;
+      border-radius: 6px; transition: background 0.15s, color 0.15s;
+      font-weight: 500; letter-spacing: 0.02em;
+    }
+    .subnav a:hover { background: var(--surface); color: var(--text); }
+    .subnav a.cta { background: var(--gradient-main); color: #0b0b10; font-weight: 700; }
+    .subnav a.cta:hover { color: #0b0b10; opacity: 0.9; }
+
+    .lockgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 720px) { .lockgrid { grid-template-columns: 1fr; } }
+    .lockcol { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; }
+    .lockcol h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 0.75rem; }
+    .lockcol.locked h3 { color: var(--cyan); }
+    .lockcol.tbd h3 { color: var(--gold); }
+    .lockcol ul { list-style: none; }
+    .lockcol li { font-size: 0.85rem; color: var(--text-muted); padding: 0.35rem 0; border-bottom: 1px solid var(--border); line-height: 1.5; }
+    .lockcol li:last-child { border-bottom: none; }
+    .lockcol li strong { color: var(--text); font-weight: 500; }
+
     .hero { padding: 3rem 0 1.5rem; text-align: center; }
     .hero-eyebrow {
       font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
@@ -251,11 +284,28 @@
       <a href="/" class="nav-brand">BetterCallZaal</a>
       <div class="nav-links">
         <a href="/">Home</a>
-        <a href="#mentors">Mentors</a>
-        <a href="#starters">Starters</a>
         <a href="#apply">Submit</a>
         <a href="#submissions">Board</a>
       </div>
+    </div>
+  </nav>
+
+  <nav class="subnav">
+    <div class="subnav-inner">
+      <a href="#thesis">Why</a>
+      <a href="#ecosystem">The ZAO</a>
+      <a href="#why">Win-Win-Win</a>
+      <a href="#format">Format</a>
+      <a href="#mentors">Mentors</a>
+      <a href="#prize">Prizes</a>
+      <a href="#judging">Judging</a>
+      <a href="#showwork">Show Your Work</a>
+      <a href="#bigpicture">Bigger Picture</a>
+      <a href="#status">Locked + TBD</a>
+      <a href="#starters">Starters</a>
+      <a href="#submissions">Board</a>
+      <a href="#faq">FAQ</a>
+      <a href="#apply" class="cta">Submit a Build</a>
     </div>
   </nav>
 
@@ -297,6 +347,83 @@
           <div class="stat-label">USDC Pool</div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="thesis">
+    <div class="container">
+      <div class="section-eyebrow">What This Actually Is</div>
+      <h2 class="section-title">The Why</h2>
+      <p class="section-sub">
+        ZABAL Games is not a generic hackathon. It is a Farcaster-creator onboarding event for the ZAO ecosystem - a structured way to bring hungry, Farcaster-active vibe-coders into ZAO by having them build something real, in public, with a ZAO mentor in their corner.
+      </p>
+      <div class="judging-card" style="margin-top: 1rem;">
+        <strong>The core thesis</strong>
+        <p>Bring talented Farcaster builders together. Give them deep context on everything ZAO is building (ZAO OS, WaveWarZ, ZAO Festivals, and the rest). Let them create something that helps the community, with a ZAO mentor as their embedded teammate. Earn governance in the community during the event itself. If they want to keep building with ZAO after - great. If not, they still walked away with a real artifact, a real relationship, and a real onchain credential.</p>
+      </div>
+      <div class="judging-card" style="margin-top: 0.75rem;">
+        <strong>What success looks like</strong>
+        <p>8 new builders who understand ZAO from the inside. 8+ real artifacts shipped for the ecosystem. A recurring format (this is Season 1) that compounds. The competition is in getting selected through Phase 1 - once you are a Finalist, the Finals are a collaboration, and all 8 win.</p>
+      </div>
+      <div class="judging-card" style="margin-top: 0.75rem;">
+        <strong>Focused on the creator, not the thing they create</strong>
+        <p>The builds matter, but the people matter more. This is about who you are as a builder, how you work in public, how you collaborate with a mentor - not just whether the demo is polished. That is why the application is itself a build (Phase 1): we want to see how you actually ship.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ecosystem" class="alt">
+    <div class="container">
+      <div class="section-eyebrow">Context You Will Build For</div>
+      <h2 class="section-title">The ZAO Ecosystem</h2>
+      <p class="section-sub">
+        ZABAL Games is run by ZAO - music infrastructure for independent artists using decentralized tools. When you build for the Games, you build for this ecosystem. Here is the map.
+      </p>
+      <div class="options-grid">
+        <div class="option-card">
+          <div class="option-letter">The Umbrella</div>
+          <h3>The ZAO</h3>
+          <p>A Farcaster-native music + creator community. Mission: bring the profit margin, the data, and the IP rights back to independent artists. Built on Farcaster + Base. Members hold ZABAL, earn Respect, govern through fractals.</p>
+        </div>
+        <div class="option-card">
+          <div class="option-letter">The Platform</div>
+          <h3>ZAO OS</h3>
+          <p>The gated Farcaster client - feed, audio + video spaces, Respect leaderboard, governance, ecosystem integrations. Next.js + Supabase + Neynar.</p>
+        </div>
+        <div class="option-card">
+          <div class="option-letter">The Token</div>
+          <h3>$ZABAL + Empire Builder</h3>
+          <p>ZABAL is the ecosystem token on Base, wrapped in an Empire on Empire Builder - leaderboards, boosters, treasury. Launched via Clanker.</p>
+        </div>
+        <div class="option-card">
+          <div class="option-letter">Prediction Markets</div>
+          <h3>WaveWarZ</h3>
+          <p>Solana-based artist prediction markets. Artists battle head-to-head, wallets bet on outcomes. 40+ artists with real W/L records and SOL volume.</p>
+        </div>
+        <div class="option-card">
+          <div class="option-letter">Festivals</div>
+          <h3>ZAO Festivals + ZAOstock</h3>
+          <p>ZAO's IRL festival arm. ZAOstock is the inaugural festival - a curated, paid, no-pay-to-play indie artist showcase.</p>
+        </div>
+        <div class="option-card">
+          <div class="option-letter">The Label</div>
+          <h3>ZAO Music</h3>
+          <p>The label arm - releases tracks via DistroKid + 0xSplits + BMI, splitting royalties onchain without the major-label tax.</p>
+        </div>
+        <div class="option-card">
+          <div class="option-letter">Concerts</div>
+          <h3>COC Concertz</h3>
+          <p>Virtual concert community - promoters running streamed shows. Part of the ZAO content + events engine.</p>
+        </div>
+        <div class="option-card">
+          <div class="option-letter">Reputation</div>
+          <h3>Respect + Fractals</h3>
+          <p>Respect is ZAO's soulbound, peer-validated reputation - earned in weekly fractal sessions. It is what gives you a vote in ZAO governance, including who wins the Games.</p>
+        </div>
+      </div>
+      <p class="section-sub" style="margin-top: 1.25rem; font-size: 0.85rem;">
+        The full context bundle (everything above plus the rails, SDKs, brand guidelines, and research docs) drops to all Finalists as the Phase 2 prompt. Phase 1 builders get a lighter version when the build-a-thon opens.
+      </p>
     </div>
   </section>
 
@@ -554,6 +681,77 @@
         <strong>The rule: at least one primary visibility mode, plus ongoing /zabalgames casts</strong>
         <small>Voters need to verify you actually built it in 24h with AI tools - that's the only constraint. How you show your work is up to you. Pick the mode that fits your personality and ship.</small>
       </div>
+    </div>
+  </section>
+
+  <section id="bigpicture">
+    <div class="container">
+      <div class="section-eyebrow">Where This Goes</div>
+      <h2 class="section-title">The Bigger Picture</h2>
+      <p class="section-sub">
+        ZABAL Games v0 is Season 1. It is designed to be recurring infrastructure for ZAO, not a one-off event. Here is the longer arc.
+      </p>
+      <div class="options-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="option-card">
+          <div class="option-letter" style="color: var(--gold);">Seasons</div>
+          <h3>This Is Season 1</h3>
+          <p>The format repeats. Mentors carry across Seasons. v0 alumni become eligible to mentor or compete again. Each Season compounds the builder network + the body of shipped work.</p>
+        </div>
+        <div class="option-card">
+          <div class="option-letter" style="color: var(--cyan);">Tokenization</div>
+          <h3>Stream Tied to a Token (Future)</h3>
+          <p>A future layer: players who want it can launch a Clanker token tied to their build + stream. Viewers back builds financially, trade volume becomes a parallel signal next to the DAO vote. Optional, player-driven, not a v0 requirement - but the design space is open.</p>
+        </div>
+        <div class="option-card">
+          <div class="option-letter" style="color: var(--zabal);">The Team</div>
+          <h3>Mentors Are On The Team</h3>
+          <p>Being a ZAO Mentor is a real, persistent role - a Hat NFT, a private channel, cast credit, ongoing ZAO ops involvement. The Games are how ZAO grows its core builder + mentor tier over time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="status" class="alt">
+    <div class="container">
+      <div class="section-eyebrow">Radical Transparency</div>
+      <h2 class="section-title">What's Locked + What's Still TBD</h2>
+      <p class="section-sub">
+        This is v0 and it is being designed in the open. Here is exactly where things stand - what is decided, and what is still being figured out. If you are reading this to decide whether to get involved, you should know both.
+      </p>
+      <div class="lockgrid">
+        <div class="lockcol locked">
+          <h3>Locked</h3>
+          <ul>
+            <li><strong>Two-phase model</strong> - open build-a-thon, then 8-Finalist event</li>
+            <li><strong>8 ZAO mentors</strong> - each picks one champion, embedded as teammate</li>
+            <li><strong>Tool-agnostic</strong> - any vibe-coding harness</li>
+            <li><strong>Show your work</strong> - 4 visibility modes, pick at least one</li>
+            <li><strong>$500 USDC pool</strong> - tiered, but all 8 Finalists get paid + collectible</li>
+            <li><strong>ZAO governance vote</strong> - Respect-earning members, 1-person-1-vote, not token-weighted</li>
+            <li><strong>Applications public</strong> - by default, on the board below</li>
+            <li><strong>Submission bar</strong> - live URL + open-source repo + 60s demo + /zabalgames cast</li>
+            <li><strong>Mentor picks</strong> - first-come-first-served, rolling, as Phase 1 builds ship</li>
+            <li><strong>Season 1 framing</strong> - recurring format, not one-off</li>
+          </ul>
+        </div>
+        <div class="lockcol tbd">
+          <h3>Still TBD</h3>
+          <ul>
+            <li><strong>Dates</strong> - lock once the cohort + mentor availability are known</li>
+            <li><strong>Phase 1 prompt content</strong> - Zaal is writing the full ZAO context bundle</li>
+            <li><strong>Phase 1 duration</strong> - how long the open build-a-thon window runs</li>
+            <li><strong>Per-mentor categories</strong> - each mentor defines their search style before applications open</li>
+            <li><strong>Mentor confirmations</strong> - Eduard confirmed, others in progress</li>
+            <li><strong>Participation collectible spec</strong> - likely a Hats Protocol role NFT</li>
+            <li><strong>Governance earned during event</strong> - exact Respect amount + when</li>
+            <li><strong>Start time</strong> - balancing US-centric with global participation</li>
+            <li><strong>Tokenization layer</strong> - opt-in Clanker tokens, design space open, not a v0 requirement</li>
+          </ul>
+        </div>
+      </div>
+      <p class="section-sub" style="margin-top: 1.25rem; font-size: 0.85rem;">
+        Full working spec lives in the ZAO research library (Doc 630). This page is the shareable summary - the doc is the source of truth + the running log of every decision.
+      </p>
     </div>
   </section>
 
