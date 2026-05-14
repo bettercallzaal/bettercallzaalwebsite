@@ -16,6 +16,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Supabase JS client (submission capture + public gallery) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    // ===========================================================================
+    // SUPABASE CONFIG - ZAAL: fill these two values, then the form + gallery work.
+    // ---------------------------------------------------------------------------
+    // 1. Create a Supabase project at https://supabase.com
+    // 2. Run zabalgames-schema.sql in the SQL editor (creates the table + RLS)
+    // 3. Project Settings -> API -> copy Project URL + anon/public key below
+    // The anon key is SAFE to expose client-side - that is what it is designed for.
+    // RLS policies (in the schema file) are what actually protect the data.
+    // ===========================================================================
+    window.ZG_SUPABASE_URL  = 'YOUR_SUPABASE_PROJECT_URL';   // e.g. https://abcdefgh.supabase.co
+    window.ZG_SUPABASE_ANON = 'YOUR_SUPABASE_ANON_KEY';      // the long anon/public JWT
+  </script>
+
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -235,7 +252,9 @@
       <div class="nav-links">
         <a href="/">Home</a>
         <a href="/poidh.html">POIDH</a>
-        <a href="#apply">Apply</a>
+        <a href="#mentors">Mentors</a>
+        <a href="#apply">Submit</a>
+        <a href="#submissions">Board</a>
       </div>
     </div>
   </nav>
@@ -567,14 +586,11 @@
         <!-- 1. Sign in with zaalp99@gmail.com (already used for BCZ contact + testimonials per CLAUDE.md) -->
         <!-- 2. Create form named "ZABAL Games v0 Applications" -->
         <!-- 3. Set email notifications to zaalp99@gmail.com (default) -->
-        <!-- 4. Replace YOUR_FORMSPREE_ID below with the new form's hash ID -->
-        <!-- Result: every application will fire an email to your inbox immediately -->
+        <!-- Submissions write to Supabase (config block in <head>). -->
+        <!-- The public gallery below reads from the same table. -->
         <div id="form-error" role="alert" style="display:none;background:rgba(255,61,110,0.12);border:1px solid rgba(255,61,110,0.5);color:#ff8aa6;padding:0.85rem 1rem;border-radius:8px;margin-bottom:1rem;font-size:0.9rem;"></div>
-        <form id="zg-apply" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="form-grid" novalidate>
-          <input type="hidden" name="_subject" value="ZABAL Games v0 Application">
-          <input type="hidden" name="form_type" value="zabalgames_v0_application">
-          <input type="hidden" name="_replyto" value="">
-          <input type="hidden" name="_format" value="plain">
+        <div id="form-success" role="status" style="display:none;background:rgba(0,229,255,0.1);border:1px solid rgba(0,229,255,0.45);color:var(--cyan);padding:0.85rem 1rem;border-radius:8px;margin-bottom:1rem;font-size:0.9rem;"></div>
+        <form id="zg-apply" class="form-grid" novalidate>
 
           <div class="form-row">
             <div>
@@ -582,31 +598,26 @@
               <input type="text" id="name" name="name" required placeholder="What do we call you">
             </div>
             <div>
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required placeholder="you@email.com">
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div>
               <label for="farcaster">Farcaster handle</label>
               <input type="text" id="farcaster" name="farcaster" required placeholder="@yourhandle">
             </div>
-            <div>
-              <label for="twitch">Twitch handle</label>
-              <input type="text" id="twitch" name="twitch" required placeholder="twitch.tv/you">
-            </div>
           </div>
 
           <div class="form-row">
+            <div>
+              <label for="twitch">Twitch handle (optional)</label>
+              <input type="text" id="twitch" name="twitch" placeholder="twitch.tv/you">
+            </div>
             <div>
               <label for="github">GitHub handle</label>
               <input type="text" id="github" name="github" required placeholder="@yourgithub">
             </div>
-            <div>
-              <label for="wallet">Verified wallet or ENS (Base)</label>
-              <input type="text" id="wallet" name="wallet" required placeholder="0x... or name.eth" pattern="^(0x[a-fA-F0-9]{40}|[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.eth)$" title="Paste 0x address (Base) or ENS name ending in .eth (e.g. zaal.eth, you.base.eth)">
-            </div>
+          </div>
+
+          <div>
+            <label for="wallet">Verified wallet or ENS (Base)</label>
+            <input type="text" id="wallet" name="wallet" required placeholder="0x... or name.eth" pattern="^(0x[a-fA-F0-9]{40}|[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.eth)$" title="Paste 0x address (Base) or ENS name ending in .eth (e.g. zaal.eth, you.base.eth)">
+            <p class="form-help">Used for prize payout if you make the Finals. Public on your submission.</p>
           </div>
 
           <div>
@@ -738,9 +749,22 @@
             <label for="streaming">I understand the build is streamed publicly on Twitch and clips will be archived as part of ZAO's content engine.</label>
           </div>
 
-          <button type="submit" class="submit-btn">Submit Application</button>
+          <button type="submit" class="submit-btn">Submit Phase 1 Build</button>
+          <p class="form-help" style="text-align:center;margin-top:0.75rem;">Your submission is public. It appears in the gallery below + mentors review it there.</p>
         </form>
       </div>
+    </div>
+  </section>
+
+  <section id="submissions">
+    <div class="container">
+      <div class="section-eyebrow">Phase 1 Submissions</div>
+      <h2 class="section-title">The Build-a-Thon Board</h2>
+      <p class="section-sub">
+        Every Phase 1 build, public. This is what the 8 ZAO mentors review to claim their champions. Ship early, ship well - the board is live.
+      </p>
+      <div id="submissions-status" style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1rem;">Loading submissions...</div>
+      <div id="submissions-grid" class="options-grid"></div>
     </div>
   </section>
 
@@ -820,9 +844,20 @@
 
   <script>
     (function () {
+      var URL_OK  = window.ZG_SUPABASE_URL  && window.ZG_SUPABASE_URL.indexOf('YOUR_') !== 0;
+      var KEY_OK  = window.ZG_SUPABASE_ANON && window.ZG_SUPABASE_ANON.indexOf('YOUR_') !== 0;
+      var CONFIGURED = URL_OK && KEY_OK && window.supabase;
+      var sb = CONFIGURED
+        ? window.supabase.createClient(window.ZG_SUPABASE_URL, window.ZG_SUPABASE_ANON)
+        : null;
+
+      // -----------------------------------------------------------------------
+      // Submission form
+      // -----------------------------------------------------------------------
       var form = document.getElementById('zg-apply');
-      var box = document.getElementById('form-error');
-      if (!form || !box) return;
+      var errBox = document.getElementById('form-error');
+      var okBox = document.getElementById('form-success');
+
       var labelOf = function (el) {
         if (el.labels && el.labels[0]) return el.labels[0].textContent.trim();
         return el.name || el.id || 'this field';
@@ -832,31 +867,153 @@
         if (v.valueMissing) return 'is required';
         if (v.patternMismatch && el.name === 'wallet') return 'must be a 0x address or ENS name (.eth)';
         if (v.patternMismatch) return 'is in wrong format';
-        if (v.typeMismatch && el.type === 'email') return 'must be a valid email';
+        if (v.typeMismatch && el.type === 'url') return 'must be a full URL (https://...)';
         return 'is invalid';
       };
-      form.addEventListener('submit', function (e) {
-        var invalids = form.querySelectorAll(':invalid');
-        if (invalids.length === 0) {
-          box.style.display = 'none';
+      var val = function (id) {
+        var el = document.getElementById(id);
+        return el ? el.value.trim() : null;
+      };
+
+      if (form && errBox) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          errBox.style.display = 'none';
+          if (okBox) okBox.style.display = 'none';
+
+          // client-side validation
+          var invalids = form.querySelectorAll(':invalid');
+          if (invalids.length > 0) {
+            var first = invalids[0];
+            var msgs = [];
+            for (var i = 0; i < invalids.length; i++) {
+              msgs.push('- ' + labelOf(invalids[i]) + ' ' + prettyReason(invalids[i]));
+            }
+            errBox.innerHTML = '<strong>Fix these before submitting:</strong><br>' + msgs.join('<br>');
+            errBox.style.display = 'block';
+            first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            try { first.focus({ preventScroll: true }); } catch (err) { first.focus(); }
+            return;
+          }
+
+          if (!CONFIGURED) {
+            errBox.innerHTML = '<strong>Submissions not live yet.</strong><br>The form is built but Supabase config is still placeholder. Check back shortly, or DM @bettercallzaal on Farcaster.';
+            errBox.style.display = 'block';
+            errBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            return;
+          }
+
+          var btn = form.querySelector('.submit-btn');
+          var btnText = btn ? btn.textContent : '';
+          if (btn) { btn.disabled = true; btn.textContent = 'Submitting...'; }
+
+          var row = {
+            name: val('name'),
+            farcaster: val('farcaster'),
+            twitch: val('twitch') || null,
+            github: val('github'),
+            wallet: val('wallet'),
+            phase1_url: val('phase1_url'),
+            phase1_repo: val('phase1_repo'),
+            phase1_demo: val('phase1_demo'),
+            phase1_cast: val('phase1_cast'),
+            harness: val('harness_pref'),
+            visibility_mode: val('visibility_mode'),
+            creator_type: val('creator_type'),
+            streaming_comfort: val('streaming_comfort'),
+            creator_links: val('creator_links') || null,
+            why: val('why'),
+            zao_relationship: val('zao_relationship') || null,
+            availability_pref: val('availability_pref')
+          };
+
+          sb.from('zabalgames_submissions').insert(row).then(function (res) {
+            if (btn) { btn.disabled = false; btn.textContent = btnText; }
+            if (res.error) {
+              errBox.innerHTML = '<strong>Submission failed.</strong><br>' + (res.error.message || 'Unknown error') + '<br>Try again, or DM @bettercallzaal.';
+              errBox.style.display = 'block';
+              errBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              return;
+            }
+            form.reset();
+            if (okBox) {
+              okBox.innerHTML = '<strong>Submitted.</strong> Your Phase 1 build is on the board below. Mentors review rolling - good luck.';
+              okBox.style.display = 'block';
+              okBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            loadSubmissions();
+          });
+        });
+
+        form.addEventListener('input', function () {
+          if (errBox.style.display === 'block' && form.querySelectorAll(':invalid').length === 0) {
+            errBox.style.display = 'none';
+          }
+        });
+      }
+
+      // -----------------------------------------------------------------------
+      // Public submissions gallery
+      // -----------------------------------------------------------------------
+      var grid = document.getElementById('submissions-grid');
+      var statusEl = document.getElementById('submissions-status');
+
+      var esc = function (s) {
+        if (s == null) return '';
+        return String(s).replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      };
+
+      var renderCard = function (s) {
+        var claimed = s.status === 'claimed' || s.status === 'finalist';
+        var badge = claimed
+          ? '<div class="badge gold" style="margin-bottom:0.5rem;">' + esc(s.status) + (s.claimed_by ? ' by ' + esc(s.claimed_by) : '') + '</div>'
+          : '<div class="badge cyan" style="margin-bottom:0.5rem;">open</div>';
+        return '' +
+          '<div class="option-card">' +
+            badge +
+            '<h3>' + esc(s.name) + '</h3>' +
+            '<p style="margin-bottom:0.6rem;">' + esc((s.why || '').slice(0, 160)) + ((s.why || '').length > 160 ? '...' : '') + '</p>' +
+            '<p style="font-size:0.78rem;color:var(--text-dim);margin-bottom:0.5rem;">' +
+              esc(s.farcaster) + (s.creator_type ? ' &middot; ' + esc(s.creator_type) : '') + (s.harness ? ' &middot; ' + esc(s.harness) : '') +
+            '</p>' +
+            '<div style="display:flex;gap:0.6rem;flex-wrap:wrap;font-size:0.8rem;">' +
+              (s.phase1_url  ? '<a href="' + esc(s.phase1_url)  + '" target="_blank" rel="noopener">build</a>' : '') +
+              (s.phase1_repo ? '<a href="' + esc(s.phase1_repo) + '" target="_blank" rel="noopener">repo</a>' : '') +
+              (s.phase1_demo ? '<a href="' + esc(s.phase1_demo) + '" target="_blank" rel="noopener">demo</a>' : '') +
+              (s.phase1_cast ? '<a href="' + esc(s.phase1_cast) + '" target="_blank" rel="noopener">cast</a>' : '') +
+            '</div>' +
+          '</div>';
+      };
+
+      var loadSubmissions = function () {
+        if (!grid || !statusEl) return;
+        if (!CONFIGURED) {
+          statusEl.textContent = 'Submissions board goes live once the build-a-thon opens.';
           return;
         }
-        e.preventDefault();
-        var first = invalids[0];
-        var msgs = [];
-        for (var i = 0; i < invalids.length; i++) {
-          msgs.push('- ' + labelOf(invalids[i]) + ' ' + prettyReason(invalids[i]));
-        }
-        box.innerHTML = '<strong>Fix these before submitting:</strong><br>' + msgs.join('<br>');
-        box.style.display = 'block';
-        first.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        try { first.focus({ preventScroll: true }); } catch (err) { first.focus(); }
-      });
-      form.addEventListener('input', function () {
-        if (box.style.display === 'block' && form.querySelectorAll(':invalid').length === 0) {
-          box.style.display = 'none';
-        }
-      });
+        statusEl.textContent = 'Loading submissions...';
+        sb.from('zabalgames_submissions')
+          .select('id,created_at,name,farcaster,twitch,github,phase1_url,phase1_repo,phase1_demo,phase1_cast,harness,creator_type,why,status,claimed_by')
+          .order('created_at', { ascending: false })
+          .then(function (res) {
+            if (res.error) {
+              statusEl.textContent = 'Could not load submissions: ' + (res.error.message || 'error');
+              return;
+            }
+            var rows = res.data || [];
+            if (rows.length === 0) {
+              statusEl.textContent = 'No submissions yet. Be the first to ship.';
+              grid.innerHTML = '';
+              return;
+            }
+            statusEl.textContent = rows.length + ' submission' + (rows.length === 1 ? '' : 's') + ' on the board';
+            grid.innerHTML = rows.map(renderCard).join('');
+          });
+      };
+
+      loadSubmissions();
     })();
   </script>
 
