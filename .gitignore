@@ -1,0 +1,14 @@
+.DS_Store
+**/.DS_Store
+node_modules/
+.env
+.env.local
+.serena/
+.superpowers/
+.cache/
+*.log
+
+# Embedded working dirs (not part of the public site)
+Maine/Cameron/riverside-site/
+Maine/FarmDrop/
+Maine/Hotels/
