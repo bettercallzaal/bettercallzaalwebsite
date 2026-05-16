@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streaming - BetterCallZaal</title>
+  <meta name="description" content="Daily Twitch streaming with a co-host. Crypto education for an audience already comfortable with internet money.">
+  <link rel="icon" type="image/png" href="/assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a1a;
+      --surface: #12121f;
+      --border: #2a2a3a;
+      --border-hover: #3a3a4a;
+      --text: #e8e8f0;
+      --text-muted: #9999aa;
+      --text-dim: #6a6a7a;
+      --orange: #ff6b35;
+      --cyan: #4ec3e0;
+      --gold: #ffb347;
+      --accent: var(--cyan);
+      --radius: 0.5rem;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Outfit', sans-serif; font-weight: 300; line-height: 1.6; min-height: 100vh; }
+    .container { max-width: 880px; margin: 0 auto; padding: 0 1.25rem; }
+    nav { position: sticky; top: 0; background: rgba(10,10,26,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); z-index: 50; }
+    nav .container { display: flex; justify-content: space-between; align-items: center; padding-top: 0.85rem; padding-bottom: 0.85rem; }
+    nav a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+    nav a:hover { color: var(--text); }
+    nav .brand { font-family: 'Syne', sans-serif; font-weight: 800; color: var(--text); letter-spacing: 0.02em; }
+    nav .brand .accent { color: var(--accent); }
+    header.hero { padding: 4rem 0 3rem; border-bottom: 1px solid var(--border); }
+    .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--accent); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1rem; }
+    h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.4rem, 6vw, 3.6rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    h1 .accent { color: var(--accent); }
+    .hero-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 640px; }
+    section { padding: 3rem 0; border-bottom: 1px solid var(--border); }
+    section h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.6rem; margin-bottom: 1.25rem; }
+    section h2 .accent { color: var(--accent); }
+    section p { color: var(--text-muted); margin-bottom: 0.8rem; }
+    .stack-grid { display: grid; gap: 0.75rem; margin-top: 1rem; }
+    .stack-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; display: grid; grid-template-columns: 130px 1fr; gap: 1rem; align-items: start; transition: border-color 0.2s; }
+    .stack-item:hover { border-color: var(--border-hover); }
+    .stack-key { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--accent); letter-spacing: 0.05em; text-transform: uppercase; padding-top: 0.15rem; }
+    .stack-body strong { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--text); display: block; margin-bottom: 0.3rem; }
+    .stack-body small { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
+    @media (max-width: 600px) { .stack-item { grid-template-columns: 1fr; gap: 0.3rem; } }
+    .cta { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; background: var(--accent); color: var(--bg); border-radius: var(--radius); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: transform 0.15s, opacity 0.15s; }
+    .cta:hover { transform: translateY(-1px); opacity: 0.9; }
+    .cta-secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+    .cta-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+    footer { padding: 2.5rem 0; color: var(--text-dim); font-size: 0.85rem; text-align: center; }
+    footer a { color: var(--text-muted); text-decoration: none; margin: 0 0.6rem; }
+    footer a:hover { color: var(--text); }
+    .status-pill { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.25rem 0.6rem; background: rgba(78,195,224,0.12); color: var(--accent); border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
+    .status-pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a class="brand" href="/">BetterCall<span class="accent">Zaal</span></a>
+      <a href="/">&larr; Back</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="eyebrow">Live + recorded</div>
+      <h1>Streaming<span class="accent">.</span></h1>
+      <span class="status-pill">In flight</span>
+      <p class="hero-sub">Daily Twitch streaming with a co-host. Crypto education for an audience already comfortable with internet money - Twitch viewers willing to spend, just told the wrong story about web3. We tell the right one.</p>
+      <div class="cta-row">
+        <a class="cta" href="https://twitch.tv/" target="_blank" rel="noopener">Twitch channel <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        <a class="cta cta-secondary" href="/#contact">Get involved</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>What we run</h2>
+      <p>The thesis is simple. Twitch viewers are young, online, comfortable with internet money - they've already bought skins, subs, and bits. They've been told crypto is a scam. We do the work of telling them it's not, every day, on a platform they already trust.</p>
+      <p>My co-host streams daily in a more on-the-ground educational format. I'm interspersed - bringing in interviews, ZAO conversations, and longer-form context drops. We restream highlights and feed them back to Farcaster for the social loop.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>The stack</h2>
+      <div class="stack-grid">
+        <div class="stack-item">
+          <div class="stack-key">Platform</div>
+          <div class="stack-body">
+            <strong>Twitch primary</strong>
+            <small>Restream to YouTube + Kick once it makes sense. Working toward Twitch Affiliate - 50 followers, 500 broadcast min, 7 unique days, 3 avg concurrent viewers (30-day rolling).</small>
+          </div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-key">Capture</div>
+          <div class="stack-body">
+            <strong>OBS Studio</strong>
+            <small>Free, native, low CPU. Single browser source per scene.</small>
+          </div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-key">Overlays</div>
+          <div class="stack-body">
+            <strong>StreamElements</strong>
+            <small>Cloud-rendered overlays + alerts + tip page. JWT auth. Custom CSS over the default tip UI. CPU stays at 3-5% on stream rig.</small>
+          </div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-key">Bots</div>
+          <div class="stack-body">
+            <strong>SE Chatbot + ZOE</strong>
+            <small>StreamElements for Twitch-native commands. ZOE for ZAO-aware replies, scheduling, and on-chain context. !zao, !fid, !bcz, !schedule.</small>
+          </div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-key">Realtime</div>
+          <div class="stack-body">
+            <strong>SE realtime WebSocket</strong>
+            <small>Live tip / follow / sub / cheer / raid feed into the BCZ Farcaster mini app. The mini app shows a live indicator when the stream is running.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Where this plugs into the ZAO ecosystem</h2>
+      <p>Twitch becomes a top-of-funnel for Farcaster. Viewers who engage on Twitch get a frictionless path: scan a snap on stream, vote in a poll, claim a free ZABAL drop. The snap embed at <a style="color: var(--accent);" href="https://lank.online" target="_blank" rel="noopener">lank.online</a> already softens the JFS auth requirement so anon Twitch viewers can interact before signing into Farcaster.</p>
+      <p>Highlights get clipped + posted to Farcaster channels. Best clips earn POIDH bounty distributions via on-chain leaderboard. The audience surfaces itself onto Farcaster organically.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <a href="/">Home</a>
+      &middot;
+      <a href="https://farcaster.xyz/bettercallzaal" target="_blank" rel="noopener">Farcaster</a>
+      &middot;
+      <a href="https://x.com/bettercallzaal" target="_blank" rel="noopener">X</a>
+      &middot;
+      <a href="https://github.com/bettercallzaal" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>

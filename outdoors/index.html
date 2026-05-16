@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outdoors - BetterCallZaal</title>
+  <meta name="description" content="Eagle Scout 2016. National Ski Patroller 2014-present. Outdoor leadership receipts.">
+  <link rel="icon" type="image/png" href="/assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a1a;
+      --surface: #12121f;
+      --border: #2a2a3a;
+      --border-hover: #3a3a4a;
+      --text: #e8e8f0;
+      --text-muted: #9999aa;
+      --text-dim: #6a6a7a;
+      --orange: #ff6b35;
+      --cyan: #4ec3e0;
+      --gold: #ffb347;
+      --accent: #ffb347;
+      --radius: 0.5rem;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Outfit', sans-serif; font-weight: 300; line-height: 1.6; min-height: 100vh; }
+    .container { max-width: 880px; margin: 0 auto; padding: 0 1.25rem; }
+    nav { position: sticky; top: 0; background: rgba(10,10,26,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); z-index: 50; }
+    nav .container { display: flex; justify-content: space-between; align-items: center; padding-top: 0.85rem; padding-bottom: 0.85rem; }
+    nav a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+    nav a:hover { color: var(--text); }
+    nav .brand { font-family: 'Syne', sans-serif; font-weight: 800; color: var(--text); letter-spacing: 0.02em; }
+    nav .brand .accent { color: var(--accent); }
+    header.hero { padding: 4rem 0 3rem; border-bottom: 1px solid var(--border); }
+    .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--accent); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1rem; }
+    h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.4rem, 6vw, 3.6rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    h1 .accent { color: var(--accent); }
+    .hero-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 640px; }
+    section { padding: 3rem 0; border-bottom: 1px solid var(--border); }
+    section h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.6rem; margin-bottom: 1.25rem; }
+    section h2 .accent { color: var(--accent); }
+    section p { color: var(--text-muted); margin-bottom: 0.8rem; }
+    .record { display: grid; gap: 0.75rem; margin-top: 1rem; }
+    .record-row { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; display: grid; grid-template-columns: 130px 1fr; gap: 1rem; align-items: start; transition: border-color 0.2s; }
+    .record-row:hover { border-color: var(--accent); }
+    .record-year { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--accent); letter-spacing: 0.05em; padding-top: 0.15rem; }
+    .record-body strong { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--text); display: block; margin-bottom: 0.3rem; }
+    .record-body small { color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; }
+    @media (max-width: 600px) { .record-row { grid-template-columns: 1fr; gap: 0.3rem; } }
+    .photo-placeholder { background: var(--surface); border: 1px dashed var(--border); border-radius: var(--radius); padding: 2.5rem 1.5rem; text-align: center; color: var(--text-dim); font-size: 0.85rem; margin-top: 1rem; font-family: 'JetBrains Mono', monospace; }
+    footer { padding: 2.5rem 0; color: var(--text-dim); font-size: 0.85rem; text-align: center; }
+    footer a { color: var(--text-muted); text-decoration: none; margin: 0 0.6rem; }
+    footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a class="brand" href="/">BetterCall<span class="accent">Zaal</span></a>
+      <a href="/">&larr; Back</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="eyebrow">Long before the websites</div>
+      <h1>Out<span class="accent">doors</span>.</h1>
+      <p class="hero-sub">Before the engineering degree, before the ZAO, before a single line of code: 10 years on ski patrol and an Eagle Scout rank. Most of what I know about running a team, staying calm under stress, and finishing what I start came from up there - not from any office.</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>Eagle Scout, <span class="accent">2016</span></h2>
+      <p>The rank takes about seven years if you take it seriously. I earned it in 2016 - 21 merit badges including the required Personal Management, Family Life, Communication, Cooking, First Aid, Emergency Preparedness, Environmental Science, and Citizenship in the Community / Nation / World. The Eagle project itself is an exercise in coordinating other people: scope a community problem, build a plan, recruit volunteers, get it shipped, document everything.</p>
+      <p>The skill I keep using from Scouts is the discipline of working with adults as a kid - showing up on time, writing the email, asking for what you need. It's the same skill as running a Farcaster channel or a ZAO governance meeting today, just with more sap on your hands.</p>
+      <div class="photo-placeholder">[ Eagle Scout photos coming - drop into /assets/outdoors/ ]</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>National Ski Patrol - <span class="accent">2014-present</span></h2>
+      <p>Eleven seasons. Three mountains. The job is straightforward: ski the hill, watch the lifts, ski to people who fell, splint or sled them down, write the report. The hard part is what nobody tells you - it is mostly waiting in cold weather, then suddenly executing a high-stress sequence with no rehearsal, then writing it all up. Calmly.</p>
+      <div class="record">
+        <div class="record-row">
+          <div class="record-year">2014-2022</div>
+          <div class="record-body">
+            <strong>Blue Hills, Massachusetts</strong>
+            <small>Original home patrol. Trained up through OEC (Outdoor Emergency Care). Learned how to ski with a 200lb sled behind you in 3 inches of new snow. Worked in the same patrol room as people who had been doing it for 30 years - you absorb a lot just by listening.</small>
+          </div>
+        </div>
+        <div class="record-row">
+          <div class="record-year">2022-2024</div>
+          <div class="record-body">
+            <strong>Mt Hood, Oregon</strong>
+            <small>Two seasons of West Coast snow. Wider terrain, longer days, weather that changes mid-shift. Cross-trained with a much larger patrol team. The Pacific Northwest snow taught me how to read a hill when you can't see the bottom.</small>
+          </div>
+        </div>
+        <div class="record-row">
+          <div class="record-year">2025-present</div>
+          <div class="record-body">
+            <strong>Hermon Mountain, Maine</strong>
+            <small>Current home patrol. Tighter community, smaller hill, but the same job. Back on the East Coast for the rest of the work I do here in Maine.</small>
+          </div>
+        </div>
+      </div>
+      <div class="photo-placeholder">[ Ski patrol photos coming - drop into /assets/outdoors/ ]</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Why this matters for the work</h2>
+      <p>When a client emails at 2am because something broke, or a Farcaster channel I run melts down because of a misconfigured cron, or a co-founder needs me to take over a meeting with 90 seconds notice - the response is the same one I learned in a patrol room. Slow your breathing. Triage. Do the next correct thing. Write it up afterward. That is the whole skill.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <a href="/">Home</a>
+      &middot;
+      <a href="https://farcaster.xyz/bettercallzaal" target="_blank" rel="noopener">Farcaster</a>
+      &middot;
+      <a href="https://www.linkedin.com/in/zaalp" target="_blank" rel="noopener">LinkedIn</a>
+      &middot;
+      <a href="mailto:zaalp99@gmail.com">Email</a>
+    </div>
+  </footer>
+</body>
+</html>

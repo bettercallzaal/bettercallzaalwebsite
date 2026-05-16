@@ -762,6 +762,88 @@
       margin: 0 auto;
     }
 
+    /* ─── Logo strip (trust signal) ─── */
+    .logo-strip {
+      padding: 1.5rem 1.25rem 2.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .logo-strip-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    .logo-strip-marks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem 2rem;
+    }
+    .logo-mark {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      opacity: 0.7;
+      transition: opacity 0.2s, color 0.2s;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .logo-mark:hover {
+      opacity: 1;
+      color: var(--text);
+    }
+    @media (max-width: 600px) {
+      .logo-strip-marks { gap: 0.7rem 1.2rem; }
+      .logo-mark { font-size: 0.82rem; }
+    }
+
+    /* ─── Parallax text breaker ─── */
+    .parallax-text {
+      overflow: hidden;
+      padding: 3rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,107,53,0.02), rgba(78,195,224,0.02));
+    }
+    .parallax-text-track {
+      display: flex;
+      gap: 3rem;
+      white-space: nowrap;
+      animation: parallax-scroll 38s linear infinite;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 6vw, 4.2rem);
+      letter-spacing: -0.02em;
+    }
+    .parallax-text-track span {
+      display: inline-flex;
+      align-items: center;
+      gap: 3rem;
+    }
+    .parallax-text-track .pt-word {
+      color: var(--text);
+      opacity: 0.65;
+    }
+    .parallax-text-track .pt-sep {
+      color: var(--orange);
+      font-size: 0.7em;
+    }
+    .parallax-text-track:hover { animation-play-state: paused; }
+    @keyframes parallax-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .parallax-text-track { animation: none; }
+    }
+
     /* ─── Footer ─── */
     .footer {
       text-align: center;
@@ -999,7 +1081,19 @@
     </div>
   </section>
 
-  <div class="section-divider"></div>
+  <!-- ─── Logo strip (trust signal) ─── -->
+  <div class="logo-strip fade-in">
+    <p class="logo-strip-label">Operating across</p>
+    <div class="logo-strip-marks">
+      <a class="logo-mark" href="https://www.thezao.com/" target="_blank" rel="noopener">THE ZAO</a>
+      <a class="logo-mark" href="https://farcaster.xyz/bettercallzaal" target="_blank" rel="noopener">FARCASTER</a>
+      <a class="logo-mark" href="https://wavewarz.com/" target="_blank" rel="noopener">WAVEWARZ</a>
+      <a class="logo-mark" href="https://clanker.world/" target="_blank" rel="noopener">CLANKER</a>
+      <a class="logo-mark" href="https://www.empirebuilder.world/" target="_blank" rel="noopener">EMPIRE BUILDER</a>
+      <a class="logo-mark" href="https://www.jax.org/" target="_blank" rel="noopener">JAX</a>
+      <a class="logo-mark" href="https://www.pccstructurals.com/" target="_blank" rel="noopener">PCC STRUCTURALS</a>
+    </div>
+  </div>
 
   <!-- ─── About ─── -->
   <section class="section" id="about">
@@ -1110,76 +1204,160 @@
       <p class="section-label fade-in">Portfolio</p>
       <h2 class="section-title fade-in">The Work</h2>
 
-      <a href="https://www.thezao.com/" target="_blank" rel="noopener" class="portfolio-hero fade-in">
-        <img src="assets/zao-logo.png" alt="The ZAO" class="portfolio-hero-logo" width="120" height="120" loading="lazy">
-        <div>
-          <h3>The ZAO</h3>
-          <p>Impact organization bringing ownership back to independent artists. Community infrastructure, fractal governance, creator tools &mdash; all open source.</p>
-          <div class="portfolio-hero-stats">
-            <span class="portfolio-hero-stat"><strong>1,000+</strong> participants</span>
-            <span class="portfolio-hero-stat"><strong>90+</strong> governance meetings</span>
-            <span class="portfolio-hero-stat"><strong>MIT</strong> licensed</span>
+      <p class="section-sub fade-in" style="color: var(--text-muted); font-size: 1rem; max-width: 720px; margin-bottom: 2rem;">Curated current work up top. Full project list (everything I am running, advising, or have shipped) lives in the dropdown below.</p>
+
+      <p class="section-label fade-in" style="margin-top: 0.5rem; color: var(--orange);">Tier 1 - Front Line</p>
+      <div class="portfolio-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        <a href="https://www.thezao.com/" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-1">
+          <div>
+            <h3>The ZAO</h3>
+            <p>The umbrella org I founded. Impact community bringing ownership back to independent artists. 1,000+ participants, 90+ governance meetings, MIT licensed.</p>
+            <span class="stat-badge">Founder</span>
           </div>
           <span class="portfolio-link">thezao.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-        </div>
-      </a>
-
-      <div class="portfolio-grid">
-        <a href="https://zaoos.com" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-1">
-          <div>
-            <h3>ZAO OS</h3>
-            <p>Farcaster social client for music communities. Encrypted messaging, 9-platform music player, governance tools.</p>
-          </div>
-          <span class="portfolio-link">zaoos.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
 
         <a href="https://www.wavewarz.com/" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-2">
           <div>
             <h3>WaveWarZ</h3>
-            <p>Onchain music prediction market on Solana. Artists battle, fans trade.</p>
-            <span class="stat-badge">$50K+ volume</span>
+            <p>Onchain artist prediction markets on Solana. 40+ artists with real W/L records. Artists battle, fans trade.</p>
           </div>
           <span class="portfolio-link">wavewarz.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
 
-        <a href="https://zaofestivals.com/" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-3">
+        <a href="https://bczyapz.com" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-2">
           <div>
-            <h3>ZAO Festivals</h3>
-            <p>IRL events at crypto conferences. ZAO-Palooza (NYC), ZAO-Chella (Miami).</p>
-            <span class="stat-badge">2 festivals &middot; 22 artists</span>
+            <h3>BCZ YapZ</h3>
+            <p>Long-form interviews with builders, artists, and operators across the ZAO + Farcaster ecosystem. Episodes, transcripts, RSS.</p>
           </div>
-          <span class="portfolio-link">zaofestivals.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          <span class="portfolio-link">bczyapz.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
 
-        <a href="https://pods.media/lets-talk-about-web3/" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-4">
+        <a href="https://t.me/ZAOstockTeamBot" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-3">
           <div>
-            <h3>Let's Talk About Ethereum</h3>
-            <p>Weekly podcast on the Ethereum ecosystem.</p>
+            <h3>ZAOstock</h3>
+            <p>The inaugural ZAO festival. Curated, paid, no-pay-to-play indie artist showcase. Telegram-first ops; public site coming.</p>
+            <span class="stat-badge">Pre-public</span>
           </div>
-          <span class="portfolio-link">pods.media <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-        </a>
-
-        <a href="https://paragraph.com/@thezao" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-5">
-          <div>
-            <h3>Daily Newsletter</h3>
-            <p>400+ editions of build-in-public documentation.</p>
-          </div>
-          <span class="portfolio-link">paragraph.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-        </a>
-
-        <a href="/nexus.html" class="portfolio-card fade-in stagger-6">
-          <div>
-            <h3>ZABAL Nexus &rarr;</h3>
-            <p>Every brand, site, social, repo, and contract across the ZAO ecosystem in one place.</p>
-            <span class="stat-badge">Hub</span>
-          </div>
-          <span class="portfolio-link">bettercallzaal.com/nexus <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          <span class="portfolio-link">t.me/ZAOstockTeamBot <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
       </div>
+
+      <p class="section-label fade-in" style="margin: 2.5rem 0 1rem; color: var(--cyan);">Tier 2 - Also Building</p>
+      <div class="portfolio-grid">
+        <a href="/streaming/" class="portfolio-card fade-in stagger-4">
+          <div>
+            <h3>Streaming + Twitch</h3>
+            <p>Daily Twitch streaming with a co-host - crypto education for an audience already comfortable with internet money. Interviews + onboarding.</p>
+            <span class="stat-badge">In flight</span>
+          </div>
+          <span class="portfolio-link">More <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        </a>
+
+        <a href="/maine/" class="portfolio-card fade-in stagger-5">
+          <div>
+            <h3>Maine Work</h3>
+            <p>Local project management + builds for Maine clients. Cameron / Riverside Group construction PM, FarmDrop, hospitality websites.</p>
+            <span class="stat-badge">Client work</span>
+          </div>
+          <span class="portfolio-link">More <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/zaalp" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-6">
+          <div>
+            <h3>Engineering Past</h3>
+            <p>BS Electrical Engineering (RIT 2022). Led a $1.5M robotics project at PCC Structurals (7x throughput gain). Current: Building Automation at The Jackson Laboratory.</p>
+          </div>
+          <span class="portfolio-link">linkedin.com/in/zaalp <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        </a>
+      </div>
+
+      <details class="fade-in" style="margin-top: 2.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem;">
+        <summary style="cursor: pointer; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; color: var(--text); letter-spacing: 0.02em;">More work + ecosystem hubs</summary>
+        <div class="portfolio-grid" style="margin-top: 1rem;">
+          <a href="https://www.thezao.com/" target="_blank" rel="noopener" class="portfolio-card">
+            <div>
+              <h3>The ZAO</h3>
+              <p>The umbrella org. Impact community bringing ownership back to independent artists. 1,000+ participants, 90+ governance meetings, MIT licensed.</p>
+            </div>
+            <span class="portfolio-link">thezao.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          </a>
+
+          <a href="https://zaoos.com" target="_blank" rel="noopener" class="portfolio-card">
+            <div>
+              <h3>ZAO OS</h3>
+              <p>Farcaster social client for music communities. Encrypted messaging, 9-platform music player, governance tools.</p>
+            </div>
+            <span class="portfolio-link">zaoos.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          </a>
+
+          <a href="/zabalgames.html" class="portfolio-card">
+            <div>
+              <h3>ZABAL Games</h3>
+              <p>Farcaster Vibe-Coding Challenge - Season 1. June prep / July ship / August finals. Open build-a-thon onboarding builders into ZAO.</p>
+            </div>
+            <span class="portfolio-link">bettercallzaal.com/zabalgames <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          </a>
+
+          <a href="https://zaofestivals.com/" target="_blank" rel="noopener" class="portfolio-card">
+            <div>
+              <h3>ZAO Festivals</h3>
+              <p>IRL events at crypto conferences. ZAO-Palooza (NYC), ZAO-Chella (Miami). 22 artists across 2 festivals.</p>
+            </div>
+            <span class="portfolio-link">zaofestivals.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          </a>
+
+          <a href="https://pods.media/lets-talk-about-web3/" target="_blank" rel="noopener" class="portfolio-card">
+            <div>
+              <h3>Let's Talk About Ethereum</h3>
+              <p>Weekly podcast on the Ethereum ecosystem. Three seasons as Let's Talk About Web3 first.</p>
+            </div>
+            <span class="portfolio-link">pods.media <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          </a>
+
+          <a href="https://paragraph.com/@thezao" target="_blank" rel="noopener" class="portfolio-card">
+            <div>
+              <h3>Daily Newsletter</h3>
+              <p>400+ editions of build-in-public documentation across the ZAO ecosystem.</p>
+            </div>
+            <span class="portfolio-link">paragraph.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          </a>
+
+          <a href="/nexus.html" class="portfolio-card">
+            <div>
+              <h3>ZABAL Nexus</h3>
+              <p>Every brand, site, social, repo, and contract across the ZAO ecosystem in one place.</p>
+            </div>
+            <span class="portfolio-link">bettercallzaal.com/nexus <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          </a>
+
+          <a href="/poidh.html" class="portfolio-card">
+            <div>
+              <h3>POIDH Leaderboard</h3>
+              <p>On-chain bounty submission tracker for ZABAL clipping + content bounties. Pulls from POIDH contracts directly.</p>
+            </div>
+            <span class="portfolio-link">bettercallzaal.com/poidh <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          </a>
+
+          <a href="/outdoors/" class="portfolio-card">
+            <div>
+              <h3>Outdoors</h3>
+              <p>Eagle Scout (2016). National Ski Patroller (2014-present): Blue Hills MA, Mt Hood OR, Hermon Mountain ME. Outdoor leadership receipts.</p>
+            </div>
+            <span class="portfolio-link">More <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          </a>
+        </div>
+      </details>
     </div>
   </section>
 
-  <div class="section-divider"></div>
+  <!-- ─── Parallax breaker ─── -->
+  <div class="parallax-text" aria-hidden="true">
+    <div class="parallax-text-track">
+      <span><span class="pt-word">Engineer</span><span class="pt-sep">&#9670;</span><span class="pt-word">Builder</span><span class="pt-sep">&#9670;</span><span class="pt-word">Connector</span><span class="pt-sep">&#9670;</span><span class="pt-word">Founder</span><span class="pt-sep">&#9670;</span><span class="pt-word">Operator</span><span class="pt-sep">&#9670;</span><span class="pt-word">Patroller</span><span class="pt-sep">&#9670;</span></span>
+      <span><span class="pt-word">Engineer</span><span class="pt-sep">&#9670;</span><span class="pt-word">Builder</span><span class="pt-sep">&#9670;</span><span class="pt-word">Connector</span><span class="pt-sep">&#9670;</span><span class="pt-word">Founder</span><span class="pt-sep">&#9670;</span><span class="pt-word">Operator</span><span class="pt-sep">&#9670;</span><span class="pt-word">Patroller</span><span class="pt-sep">&#9670;</span></span>
+    </div>
+  </div>
 
   <!-- ─── Testimonials ─── -->
   <section class="section" id="testimonials">
@@ -1231,7 +1409,13 @@
     </div>
   </section>
 
-  <div class="section-divider"></div>
+  <!-- ─── Parallax breaker ─── -->
+  <div class="parallax-text" aria-hidden="true">
+    <div class="parallax-text-track">
+      <span><span class="pt-word">Build something</span><span class="pt-sep">&#9670;</span><span class="pt-word">Ship publicly</span><span class="pt-sep">&#9670;</span><span class="pt-word">Bring the team</span><span class="pt-sep">&#9670;</span></span>
+      <span><span class="pt-word">Build something</span><span class="pt-sep">&#9670;</span><span class="pt-word">Ship publicly</span><span class="pt-sep">&#9670;</span><span class="pt-word">Bring the team</span><span class="pt-sep">&#9670;</span></span>
+    </div>
+  </div>
 
   <!-- ─── Contact ─── -->
   <section class="section" id="contact">
