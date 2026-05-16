@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCZ YapZ - BetterCallZaal</title>
+  <meta name="description" content="Long-form interviews with builders, artists, and operators across the ZAO + Farcaster ecosystem. Full transcripts, RSS, YouTube. Conversation as a primitive.">
+  <link rel="icon" type="image/png" href="/assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a1a;
+      --surface: #14140f;
+      --border: #2f2a18;
+      --border-hover: #4a4220;
+      --text: #f5efde;
+      --text-muted: #b8a880;
+      --text-dim: #786b54;
+      --orange: #ff6b35;
+      --cyan: #4ec3e0;
+      --gold: #ffb347;
+      --accent: var(--gold);
+      --radius: 0.5rem;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Outfit', sans-serif; font-weight: 300; line-height: 1.6; min-height: 100vh; }
+    .container { max-width: 880px; margin: 0 auto; padding: 0 1.25rem; }
+    nav { position: sticky; top: 0; background: rgba(10,10,26,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); z-index: 50; }
+    nav .container { display: flex; justify-content: space-between; align-items: center; padding-top: 0.85rem; padding-bottom: 0.85rem; }
+    nav a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+    nav a:hover { color: var(--text); }
+    nav .brand { font-family: 'Syne', sans-serif; font-weight: 800; color: var(--text); letter-spacing: 0.02em; }
+    nav .brand .accent { color: var(--accent); }
+    header.hero { padding: 4rem 0 3rem; border-bottom: 1px solid var(--border); }
+    .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--accent); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1rem; }
+    h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.4rem, 6vw, 3.6rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    h1 .accent { color: var(--accent); }
+    .hero-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 640px; }
+    section { padding: 3rem 0; border-bottom: 1px solid var(--border); }
+    section h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.6rem; margin-bottom: 1.25rem; color: var(--text); }
+    section h2 .accent { color: var(--accent); }
+    section p { color: var(--text-muted); margin-bottom: 0.8rem; }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .feature-tile { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; transition: border-color 0.2s; }
+    .feature-tile:hover { border-color: var(--accent); }
+    .feature-tile .feature-label { font-family: 'JetBrains Mono', monospace; font-size: 0.66rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .feature-tile h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--text); margin-bottom: 0.5rem; }
+    .feature-tile p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin: 0; }
+    .cta { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; background: var(--accent); color: var(--bg); border-radius: var(--radius); text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: transform 0.15s, opacity 0.15s; }
+    .cta:hover { transform: translateY(-1px); opacity: 0.9; }
+    .cta-secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+    .cta-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+    footer { padding: 2.5rem 0; color: var(--text-dim); font-size: 0.85rem; text-align: center; }
+    footer a { color: var(--text-muted); text-decoration: none; margin: 0 0.6rem; }
+    footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a class="brand" href="/">BetterCall<span class="accent">Zaal</span></a>
+      <a href="/">&larr; Back</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="eyebrow">Tier 1 - what I host</div>
+      <h1>BCZ <span class="accent">YapZ</span>.</h1>
+      <p class="hero-sub">Long-form interviews with builders, artists, and operators across the ZAO + Farcaster ecosystem. Audio + video + transcript every time. Designed so an agent can read the back catalog the same way a human can.</p>
+      <div class="cta-row">
+        <a class="cta" href="https://bczyapz.com" target="_blank" rel="noopener">Visit bczyapz.com</a>
+        <a class="cta cta-secondary" href="https://bczyapz.com/ep/" target="_blank" rel="noopener">Episodes</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>The thesis</h2>
+      <p>Most podcasts are voice files in a wrapper. The conversation happened, the file lives somewhere, and the knowledge inside is locked behind an hour of listening. BCZ YapZ treats every conversation as a piece of public infrastructure - the audio is one surface, but the transcript, the show notes, the quotes, and the agent-readable context all ship with the episode.</p>
+      <p>Pair that with the ZAO ecosystem on Farcaster, and you get an evolving public record of what builders, artists, and operators are actually working on - in their own words, dated, searchable, transcribable, and remixable.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>How <span class="accent">BCZ YapZ</span> is different</h2>
+      <div class="feature-grid">
+        <div class="feature-tile">
+          <div class="feature-label">Format</div>
+          <h3>Long-form, low-edit</h3>
+          <p>Real conversations. No interruption-marketing, no awkward sponsorship reads mid-thought. If it ran an hour, you get an hour.</p>
+        </div>
+        <div class="feature-tile">
+          <div class="feature-label">Distribution</div>
+          <h3>Multi-surface, RSS-first</h3>
+          <p>YouTube for video. RSS for podcast apps. Farcaster for clips + discussion. Transcripts on the site for search + agents.</p>
+        </div>
+        <div class="feature-tile">
+          <div class="feature-label">Context</div>
+          <h3>Agent-readable archive</h3>
+          <p>Every episode page exposes structured metadata so an LLM can search "what did Cassie say about Hypersnap auth?" and find the right minute.</p>
+        </div>
+        <div class="feature-tile">
+          <div class="feature-label">Guests</div>
+          <h3>Ecosystem-aligned</h3>
+          <p>Builders shipping in public, artists building owned audiences, operators inside the ZAO + Farcaster ecosystem. Not influencer-cycle bookings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Related shows I run or co-host</h2>
+      <p><strong style="color: var(--text);">Let's Talk About Ethereum</strong> - weekly co-hosted live show, evolved from Let's Talk About Web3 (3 prior seasons). On Pods.media at <a style="color: var(--accent);" href="https://pods.media/lets-talk-about-web3/" target="_blank" rel="noopener">pods.media/lets-talk-about-web3</a>.</p>
+      <p><strong style="color: var(--text);">ZAO Newsletter</strong> - 400+ build-in-public editions on Paragraph. The written companion to the spoken record at <a style="color: var(--accent);" href="https://paragraph.com/@thezao" target="_blank" rel="noopener">paragraph.com/@thezao</a>.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <a href="/">Home</a>
+      &middot;
+      <a href="https://bczyapz.com" target="_blank" rel="noopener">bczyapz.com</a>
+      &middot;
+      <a href="https://bczyapz.com/feed.xml" target="_blank" rel="noopener">RSS</a>
+      &middot;
+      <a href="https://pods.media/lets-talk-about-web3/" target="_blank" rel="noopener">Pods.media</a>
+    </div>
+  </footer>
+</body>
+</html>

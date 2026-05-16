@@ -278,26 +278,55 @@
       flex-shrink: 0;
     }
 
-    /* ─── Stats Row ─── */
+    /* ─── Stats Row (value receipts) ─── */
     .stats-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: clamp(1rem, 3vw, 2rem);
+      gap: 1rem;
       margin-top: 2.5rem;
       margin-bottom: 2.5rem;
-      max-width: 680px;
     }
 
-    .stat-item { text-align: center; }
+    .stat-item {
+      text-align: left;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.2s;
+    }
+    .stat-item:hover { border-color: var(--border-hover); }
+    .stat-item a { text-decoration: none; color: inherit; display: block; }
 
     .stat-number {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
-      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
       color: var(--cyan);
+      line-height: 1.1;
     }
 
     .stat-label {
+      font-size: clamp(0.7rem, 1.2vw, 0.78rem);
+      color: var(--text);
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-top: 0.35rem;
+      margin-bottom: 0.3rem;
+    }
+    .stat-source {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.66rem;
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .stat-source svg { width: 10px; height: 10px; fill: none; stroke: currentColor; stroke-width: 2; opacity: 0.7; }
+    .stat-old-label-hidden {
       font-size: clamp(0.65rem, 1.2vw, 0.75rem);
       color: var(--text-muted);
       text-transform: uppercase;
@@ -1270,31 +1299,38 @@
         </div>
       </div>
 
+      <p class="section-sub fade-in" style="color: var(--text-muted); font-size: 0.95rem; max-width: 680px; margin-top: 1.5rem;">Receipts, not vanity. Every number below ties to a public source you can verify.</p>
       <div class="stats-row fade-in">
-        <div class="stat-item">
+        <a class="stat-item" href="https://wavewarz-intelligence.vercel.app/" target="_blank" rel="noopener">
+          <div class="stat-number">$39,780+</div>
+          <div class="stat-label">on-chain volume settled for artists</div>
+          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>wavewarz-intelligence.vercel.app &middot; 950 battles, 459 SOL</span>
+        </a>
+        <a class="stat-item" href="https://www.thezao.com/" target="_blank" rel="noopener">
           <div class="stat-number">1,000+</div>
-          <div class="stat-label">Participants</div>
-        </div>
-        <div class="stat-item">
+          <div class="stat-label">artists + creators with new tools</div>
+          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>thezao.com &middot; ZAO community roster</span>
+        </a>
+        <a class="stat-item" href="https://github.com/bettercallzaal" target="_blank" rel="noopener">
+          <div class="stat-number">73+</div>
+          <div class="stat-label">open-source repos shipped</div>
+          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>github.com/bettercallzaal &middot; live count</span>
+        </a>
+        <a class="stat-item" href="https://www.thezao.com/" target="_blank" rel="noopener">
+          <div class="stat-number">100+</div>
+          <div class="stat-label">weekly governance meetings run</div>
+          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>ZAO Fractal &middot; week 100 May 2026</span>
+        </a>
+        <a class="stat-item" href="https://paragraph.com/@thezao" target="_blank" rel="noopener">
           <div class="stat-number">400+</div>
-          <div class="stat-label">Newsletters</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">90+</div>
-          <div class="stat-label">Governance<br>Meetings</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">$50K+</div>
-          <div class="stat-label">On-chain<br>Volume</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">65+</div>
-          <div class="stat-label">Repos</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">2</div>
-          <div class="stat-label">Festivals<br>Produced</div>
-        </div>
+          <div class="stat-label">newsletter editions published</div>
+          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>paragraph.com/@thezao &middot; build in public</span>
+        </a>
+        <a class="stat-item" href="/#portfolio">
+          <div class="stat-number">7x</div>
+          <div class="stat-label">throughput on $1.5M robotics project</div>
+          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>PCC Structurals &middot; pre-ZAO engineering past</span>
+        </a>
       </div>
 
       <div class="journey-timeline">
@@ -1383,29 +1419,29 @@
 
       <p class="section-label fade-in" style="margin-top: 0.5rem; color: var(--orange);">Tier 1 - Front Line</p>
       <div class="portfolio-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
-        <a href="https://www.thezao.com/" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-1">
+        <a href="/zao/" class="portfolio-card fade-in stagger-1">
           <div>
             <h3>The ZAO</h3>
-            <p>The umbrella org I founded. Impact community bringing ownership back to independent artists. 1,000+ participants, 90+ governance meetings, MIT licensed.</p>
+            <p>The umbrella org I founded. Impact community bringing ownership back to independent artists. 1,000+ participants, 100+ governance meetings, MIT licensed.</p>
             <span class="stat-badge">Founder</span>
           </div>
-          <span class="portfolio-link">thezao.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          <span class="portfolio-link">My pitch &rarr; thezao.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
 
-        <a href="https://www.wavewarz.com/" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-2">
+        <a href="/wavewarz/" class="portfolio-card fade-in stagger-2">
           <div>
             <h3>WaveWarZ</h3>
             <p>Onchain artist prediction markets on Solana. 40+ artists with real W/L records. Artists battle, fans trade.</p>
           </div>
-          <span class="portfolio-link">wavewarz.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          <span class="portfolio-link">My pitch &rarr; wavewarz.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
 
-        <a href="https://bczyapz.com" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-2">
+        <a href="/bczyapz/" class="portfolio-card fade-in stagger-3">
           <div>
             <h3>BCZ YapZ</h3>
             <p>Long-form interviews with builders, artists, and operators across the ZAO + Farcaster ecosystem. Episodes, transcripts, RSS.</p>
           </div>
-          <span class="portfolio-link">bczyapz.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          <span class="portfolio-link">My pitch &rarr; bczyapz.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
 
         <a href="https://t.me/ZAOstockTeamBot" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-3">
