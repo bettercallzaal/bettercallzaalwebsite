@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The ZAO - BetterCallZaal</title>
+  <meta name="description" content="The umbrella org I founded in 2023. Impact community bringing ownership back to independent artists - profit margin, data, IP rights. Built on Farcaster + Base.">
+  <link rel="icon" type="image/png" href="/assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a1a;
+      --surface: #12121f;
+      --border: #2a2a3a;
+      --border-hover: #3a3a4a;
+      --text: #e8e8f0;
+      --text-muted: #9999aa;
+      --text-dim: #6a6a7a;
+      --orange: #ff6b35;
+      --cyan: #4ec3e0;
+      --gold: #ffb347;
+      --accent: var(--orange);
+      --radius: 0.5rem;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Outfit', sans-serif; font-weight: 300; line-height: 1.6; min-height: 100vh; }
+    .container { max-width: 880px; margin: 0 auto; padding: 0 1.25rem; }
+    nav { position: sticky; top: 0; background: rgba(10,10,26,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); z-index: 50; }
+    nav .container { display: flex; justify-content: space-between; align-items: center; padding-top: 0.85rem; padding-bottom: 0.85rem; }
+    nav a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+    nav a:hover { color: var(--text); }
+    nav .brand { font-family: 'Syne', sans-serif; font-weight: 800; color: var(--text); letter-spacing: 0.02em; }
+    nav .brand .accent { color: var(--accent); }
+    header.hero { padding: 4rem 0 3rem; border-bottom: 1px solid var(--border); }
+    .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--accent); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1rem; }
+    h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.4rem, 6vw, 3.6rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    h1 .accent { color: var(--accent); }
+    .hero-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 640px; }
+    section { padding: 3rem 0; border-bottom: 1px solid var(--border); }
+    section h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.6rem; margin-bottom: 1.25rem; }
+    section h2 .accent { color: var(--accent); }
+    section p { color: var(--text-muted); margin-bottom: 0.8rem; }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .stat-tile { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; transition: border-color 0.2s; }
+    .stat-tile:hover { border-color: var(--accent); }
+    .stat-tile .stat-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.5rem; color: var(--accent); line-height: 1.1; }
+    .stat-tile .stat-desc { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.4rem; line-height: 1.45; }
+    .stat-tile .stat-src { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--text-dim); margin-top: 0.5rem; letter-spacing: 0.05em; }
+    .cta { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; background: var(--accent); color: var(--bg); border-radius: var(--radius); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: transform 0.15s, opacity 0.15s; }
+    .cta:hover { transform: translateY(-1px); opacity: 0.9; }
+    .cta-secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+    .cta-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+    .role-list { display: grid; gap: 0.6rem; margin-top: 1rem; }
+    .role-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.85rem 1.1rem; display: grid; grid-template-columns: 14px 1fr; gap: 0.85rem; align-items: start; font-size: 0.9rem; color: var(--text-muted); }
+    .role-item::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-top: 0.55rem; }
+    footer { padding: 2.5rem 0; color: var(--text-dim); font-size: 0.85rem; text-align: center; }
+    footer a { color: var(--text-muted); text-decoration: none; margin: 0 0.6rem; }
+    footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a class="brand" href="/">BetterCall<span class="accent">Zaal</span></a>
+      <a href="/">&larr; Back</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="eyebrow">Tier 1 - what I founded</div>
+      <h1>The <span class="accent">ZAO</span>.</h1>
+      <p class="hero-sub">The umbrella org I started in 2023 to bring ownership back to independent artists. Profit margin, data, IP rights - everything middlemen took from creators - rebuilt on Farcaster + Base with peer-validated governance.</p>
+      <div class="cta-row">
+        <a class="cta" href="https://www.thezao.com/" target="_blank" rel="noopener">Visit thezao.com</a>
+        <a class="cta cta-secondary" href="https://www.thezao.com/about" target="_blank" rel="noopener">Join</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>Why I started <span class="accent">The ZAO</span></h2>
+      <p>I'd watched friends release music for years and net almost nothing - 70% taken by a label, 15% taken by a streamer, 10% taken by an aggregator, the artist left with crumbs and no data on who actually listened. By 2022, the tools to flip that existed (Farcaster, Base, onchain payment rails, social graphs) but no one had stitched them together for music.</p>
+      <p>The ZAO is the stitching. Community first, governance second, tooling third. Every primitive we build - the social client (ZAO OS), the prediction markets (WaveWarZ), the festivals (ZAOstock), the token (ZABAL), the agent layer (ZOE) - serves the same thesis: artists own their margin, data, and IP.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Where to look</h2>
+      <p>The receipts live across multiple public surfaces. The most reliable way to verify activity is to follow the channel + read the newsletter for a few weeks.</p>
+      <div class="stat-grid">
+        <a class="stat-tile" href="https://www.thezao.com/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+          <div class="stat-num">thezao.com</div>
+          <div class="stat-desc">main site - community + onboarding + timeline</div>
+          <div class="stat-src">/about, /community, /timeline</div>
+        </a>
+        <a class="stat-tile" href="https://paragraph.com/@thezao" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+          <div class="stat-num">paragraph.com</div>
+          <div class="stat-desc">400+ build-in-public newsletter editions</div>
+          <div class="stat-src">@thezao</div>
+        </a>
+        <a class="stat-tile" href="https://farcaster.xyz/~/channel/zao" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+          <div class="stat-num">/zao</div>
+          <div class="stat-desc">Farcaster channel - daily ecosystem activity</div>
+          <div class="stat-src">farcaster.xyz/~/channel/zao</div>
+        </a>
+        <a class="stat-tile" href="https://github.com/bettercallzaal" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+          <div class="stat-num">github</div>
+          <div class="stat-desc">all ZAO tooling open source under MIT-style licenses</div>
+          <div class="stat-src">github.com/bettercallzaal</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>What lives under the umbrella</h2>
+      <p style="font-size: 0.88rem; font-style: italic;">For the canonical, exhaustive list see <a style="color: var(--accent);" href="/nexus.html">the ZABAL Nexus</a>. Below is the short version of what I work on most.</p>
+      <div class="role-list">
+        <div class="role-item"><span><strong style="color: var(--text);">ZAO OS</strong> - the Farcaster social client for the ZAO community. Feed, music player, governance tooling. <a style="color: var(--accent);" href="https://zaoos.com" target="_blank" rel="noopener">zaoos.com</a></span></div>
+        <div class="role-item"><span><strong style="color: var(--text);">WaveWarZ</strong> - onchain artist prediction markets on Solana. Live stats at <a style="color: var(--accent);" href="https://wavewarz-intelligence.vercel.app/" target="_blank" rel="noopener">wavewarz-intelligence.vercel.app</a>.</span></div>
+        <div class="role-item"><span><strong style="color: var(--text);">ZAOstock</strong> - the inaugural ZAO festival, planned for Ellsworth, Maine. Pre-public; ops in Telegram for now.</span></div>
+        <div class="role-item"><span><strong style="color: var(--text);">ZABAL + Empire Builder</strong> - the ecosystem token launched via Clanker, wrapped as an Empire with leaderboards + boosters.</span></div>
+        <div class="role-item"><span><strong style="color: var(--text);">Fractal governance</strong> - peer-validated Respect-earning weekly meetings (Fractal Mondays). Governance token is earned through participation, not bought.</span></div>
+        <div class="role-item"><span><strong style="color: var(--text);">ZABAL Games</strong> - June prep / July submissions / August finals Farcaster vibe-coding challenge. <a style="color: var(--accent);" href="/zabalgames.html">bettercallzaal.com/zabalgames</a></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>How to plug in</h2>
+      <p>If you're an artist, builder, or creator, the front door is <a style="color: var(--accent);" href="https://www.thezao.com/about" target="_blank" rel="noopener">thezao.com/about</a>. We run weekly Fractal Monday meetings - show up consistently, share what you've worked on, earn Respect, earn governance power.</p>
+      <p>If you want to build something on top of the ZAO stack (a snap, an Empire, a leaderboard, an integration), the <a style="color: var(--accent);" href="/zabalgames.html">ZABAL Games</a> happen June-August 2026 - prep month June, open build-a-thon July, finals August.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <a href="/">Home</a>
+      &middot;
+      <a href="https://www.thezao.com/" target="_blank" rel="noopener">thezao.com</a>
+      &middot;
+      <a href="https://farcaster.xyz/~/channel/zao" target="_blank" rel="noopener">/zao on Farcaster</a>
+      &middot;
+      <a href="https://github.com/bettercallzaal" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>

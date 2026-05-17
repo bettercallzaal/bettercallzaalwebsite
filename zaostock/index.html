@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maine Work - BetterCallZaal</title>
-  <meta name="description" content="Local project management + builds for Maine clients. Cameron / Riverside Group construction PM, FarmDrop, hospitality websites.">
+  <title>ZAOstock - BetterCallZaal</title>
+  <meta name="description" content="The inaugural ZAO festival. Pre-public; ops in Telegram for now. Public site coming.">
   <link rel="icon" type="image/png" href="/assets/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
       --orange: #ff6b35;
       --cyan: #4ec3e0;
       --gold: #ffb347;
-      --accent: #6ab04c;
+      --accent: var(--orange);
       --radius: 0.5rem;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -42,13 +42,8 @@
     section h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.6rem; margin-bottom: 1.25rem; }
     section h2 .accent { color: var(--accent); }
     section p { color: var(--text-muted); margin-bottom: 0.8rem; }
-    .client-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
-    .client-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; transition: border-color 0.2s, transform 0.2s; text-decoration: none; color: inherit; display: block; }
-    .client-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .client-card .label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.6rem; }
-    .client-card h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.15rem; margin-bottom: 0.6rem; color: var(--text); }
-    .client-card p { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 0.75rem; }
-    .client-card .url { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--accent); display: inline-flex; align-items: center; gap: 0.3rem; }
+    .status-pill { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.25rem 0.6rem; background: rgba(255,107,53,0.12); color: var(--accent); border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
+    .status-pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
     .cta { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; background: var(--accent); color: var(--bg); border-radius: var(--radius); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: transform 0.15s, opacity 0.15s; }
     .cta:hover { transform: translateY(-1px); opacity: 0.9; }
     .cta-secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
@@ -56,8 +51,6 @@
     footer { padding: 2.5rem 0; color: var(--text-dim); font-size: 0.85rem; text-align: center; }
     footer a { color: var(--text-muted); text-decoration: none; margin: 0 0.6rem; }
     footer a:hover { color: var(--text); }
-    .status-pill { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.25rem 0.6rem; background: rgba(106,176,76,0.12); color: var(--accent); border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
-    .status-pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
   </style>
 </head>
 <body>
@@ -70,47 +63,21 @@
 
   <header class="hero">
     <div class="container">
-      <div class="eyebrow">Ellsworth, Maine + remote</div>
-      <h1>Maine <span class="accent">Work</span>.</h1>
-      <span class="status-pill">Client work</span>
-      <p class="hero-sub">Local client work in Maine - websites + project management. Currently active across construction (Cameron / Riverside Group), agriculture (FarmDrop), and hospitality.</p>
+      <div class="eyebrow">ZAO festival</div>
+      <h1>ZAO<span class="accent">stock</span>.</h1>
+      <span class="status-pill">Pre-public</span>
+      <p class="hero-sub">A ZAO festival in early planning. Ops run in Telegram for now; public site coming.</p>
       <div class="cta-row">
-        <a class="cta" href="/#contact">Hire me for a Maine project</a>
-        <a class="cta cta-secondary" href="/">Other work</a>
+        <a class="cta" href="https://t.me/ZAOstockTeamBot" target="_blank" rel="noopener">Telegram team bot</a>
+        <a class="cta cta-secondary" href="/zao/">About the ZAO</a>
       </div>
     </div>
   </header>
 
   <section>
     <div class="container">
-      <h2>Where I work from</h2>
-      <p>Based in Ellsworth, Maine. Available across the state for local engagements.</p>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>Current clients</h2>
-      <div class="client-grid">
-        <a class="client-card" href="https://riversidegroupme.com" target="_blank" rel="noopener">
-          <div class="label">Construction</div>
-          <h3>Cameron - Riverside Group</h3>
-          <p>Website rebuild for a Maine construction company, tied to a logo refresh ahead of season-start merch reprint.</p>
-          <span class="url">riversidegroupme.com</span>
-        </a>
-        <div class="client-card">
-          <div class="label">Agriculture</div>
-          <h3>FarmDrop</h3>
-          <p>Event prep + admin ops support.</p>
-          <span class="url">Active engagement</span>
-        </div>
-        <div class="client-card">
-          <div class="label">Hospitality</div>
-          <h3>Hotels</h3>
-          <p>Hospitality web + ops work.</p>
-          <span class="url">Active intake</span>
-        </div>
-      </div>
+      <h2>Status</h2>
+      <p>Public website + full details pending. The Telegram team bot is the current entry point for anyone helping plan, perform, or partner.</p>
     </div>
   </section>
 
@@ -118,11 +85,9 @@
     <div class="container">
       <a href="/">Home</a>
       &middot;
-      <a href="https://farcaster.xyz/bettercallzaal" target="_blank" rel="noopener">Farcaster</a>
+      <a href="/zao/">The ZAO</a>
       &middot;
-      <a href="https://www.linkedin.com/in/zaalp" target="_blank" rel="noopener">LinkedIn</a>
-      &middot;
-      <a href="mailto:zaalp99@gmail.com">Email</a>
+      <a href="https://t.me/ZAOstockTeamBot" target="_blank" rel="noopener">Telegram</a>
     </div>
   </footer>
 </body>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WaveWarZ - BetterCallZaal</title>
+  <meta name="description" content="Onchain artist prediction markets on Solana. Artists battle, fans trade. 950+ battles, 459 SOL volume settled instantly to artists.">
+  <link rel="icon" type="image/png" href="/assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #04080f;
+      --surface: #0a1220;
+      --border: #1a2540;
+      --border-hover: #2a3550;
+      --text: #e8f0f8;
+      --text-muted: #8090a8;
+      --text-dim: #5a6878;
+      --orange: #ff6b35;
+      --cyan: #4ec3e0;
+      --gold: #ffb347;
+      --accent: #95fe7c;
+      --accent2: #7ec1fb;
+      --radius: 0.5rem;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Outfit', sans-serif; font-weight: 300; line-height: 1.6; min-height: 100vh; }
+    .container { max-width: 880px; margin: 0 auto; padding: 0 1.25rem; }
+    nav { position: sticky; top: 0; background: rgba(4,8,15,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); z-index: 50; }
+    nav .container { display: flex; justify-content: space-between; align-items: center; padding-top: 0.85rem; padding-bottom: 0.85rem; }
+    nav a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+    nav a:hover { color: var(--text); }
+    nav .brand { font-family: 'Syne', sans-serif; font-weight: 800; color: var(--text); letter-spacing: 0.02em; }
+    nav .brand .accent { background: linear-gradient(90deg, var(--accent2), var(--accent)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    header.hero { padding: 4rem 0 3rem; border-bottom: 1px solid var(--border); }
+    .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--accent); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1rem; }
+    h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.4rem, 6vw, 3.6rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    h1 .accent { background: linear-gradient(90deg, var(--accent2), var(--accent)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 640px; }
+    section { padding: 3rem 0; border-bottom: 1px solid var(--border); }
+    section h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.6rem; margin-bottom: 1.25rem; color: var(--text); }
+    section h2 .accent { color: var(--accent); }
+    section p { color: var(--text-muted); margin-bottom: 0.8rem; }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .stat-tile { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; transition: border-color 0.2s, box-shadow 0.2s; }
+    .stat-tile:hover { border-color: var(--accent); box-shadow: 0 0 0 1px rgba(149,254,124,0.18); }
+    .stat-tile .stat-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.5rem; color: var(--accent); line-height: 1.1; }
+    .stat-tile .stat-desc { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.4rem; line-height: 1.45; }
+    .stat-tile .stat-src { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--text-dim); margin-top: 0.5rem; letter-spacing: 0.05em; }
+    .cta { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; background: var(--accent); color: var(--bg); border-radius: var(--radius); text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: transform 0.15s, opacity 0.15s; }
+    .cta:hover { transform: translateY(-1px); opacity: 0.9; }
+    .cta-secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+    .cta-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+    footer { padding: 2.5rem 0; color: var(--text-dim); font-size: 0.85rem; text-align: center; }
+    footer a { color: var(--text-muted); text-decoration: none; margin: 0 0.6rem; }
+    footer a:hover { color: var(--text); }
+    .pulse-line { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); margin: 0; opacity: 0.4; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a class="brand" href="/">BetterCall<span class="accent">Zaal</span></a>
+      <a href="/">&larr; Back</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="eyebrow">Tier 1 - what I helped scale</div>
+      <h1>Wave<span class="accent">WarZ</span>.</h1>
+      <p class="hero-sub">Onchain artist prediction markets on Solana. Artists battle head to head, fans trade outcomes, settlement runs on-chain. Built with Hurric4n3Ike.</p>
+      <div class="cta-row">
+        <a class="cta" href="https://www.wavewarz.com/" target="_blank" rel="noopener">Visit wavewarz.com</a>
+        <a class="cta cta-secondary" href="https://wavewarz-intelligence.vercel.app/" target="_blank" rel="noopener">Live stats</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="pulse-line"></div>
+
+  <section>
+    <div class="container">
+      <h2>What it is</h2>
+      <p>Onchain prediction markets for music artist battles on Solana. Artists go head-to-head, wallets bet on outcomes, settlement is automated. Built with Hurric4n3Ike.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Live receipts <span class="accent">(verifiable)</span></h2>
+      <p style="font-size: 0.9rem;">Pulled from <a style="color: var(--accent);" href="https://wavewarz-intelligence.vercel.app/" target="_blank" rel="noopener">wavewarz-intelligence.vercel.app</a> - all numbers reconciled against on-chain settlement on Solana.</p>
+      <div class="stat-grid">
+        <div class="stat-tile">
+          <div class="stat-num">459.41 SOL</div>
+          <div class="stat-desc">total volume - $39,780+ settled across battles</div>
+          <div class="stat-src">950 battles, test battles excluded</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-num">7.8 SOL</div>
+          <div class="stat-desc">paid out to artists - $675 instant + automatic</div>
+          <div class="stat-src">no royalty waitlist, no claim window</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-num">43</div>
+          <div class="stat-desc">main battles (events) settled</div>
+          <div class="stat-src">+ 776 quick battles community-run</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-num">3.67 SOL</div>
+          <div class="stat-desc">platform revenue at 0.5% fee + 3% settlement</div>
+          <div class="stat-src">lowest gatekeeper take in music</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>My role</h2>
+      <p>Co-builder with Hurric4n3Ike. Helped build + scale WaveWarZ. Organized and hosted the first IRL WaveWarZ battle.</p>
+      <p style="font-style: italic; border-left: 2px solid var(--accent); padding-left: 1rem; margin-top: 1rem;">"Zaal helped build and scale WaveWarZ to over $60k+ in volume with a completely new music model, over 1.2k followers on X in a few months, and organized and hosted our first in real life WaveWarZ battle. Without Zaal WaveWarZ would not be dominating Web3 Music the way it is now. This is your GUY." <span style="display: block; margin-top: 0.5rem; font-style: normal; color: var(--text-dim); font-size: 0.85rem;">- Hurric4n3Ike (<a style="color: var(--accent);" href="https://x.com/hurric4n3ike" target="_blank" rel="noopener">@hurric4n3ike</a>)</span></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <a href="/">Home</a>
+      &middot;
+      <a href="https://www.wavewarz.com/" target="_blank" rel="noopener">wavewarz.com</a>
+      &middot;
+      <a href="https://wavewarz-intelligence.vercel.app/" target="_blank" rel="noopener">intelligence dashboard</a>
+      &middot;
+      <a href="https://x.com/hurric4n3ike" target="_blank" rel="noopener">@hurric4n3ike</a>
+    </div>
+  </footer>
+</body>
+</html>

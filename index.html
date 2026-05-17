@@ -278,26 +278,57 @@
       flex-shrink: 0;
     }
 
-    /* ─── Stats Row ─── */
+    /* ─── Stats Row (value receipts) ─── */
     .stats-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: clamp(1rem, 3vw, 2rem);
+      gap: 1rem;
       margin-top: 2.5rem;
       margin-bottom: 2.5rem;
-      max-width: 680px;
     }
 
-    .stat-item { text-align: center; }
+    .stat-item {
+      text-align: left;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.25rem;
+      transition: border-color 0.2s;
+    }
+    .stat-item:hover { border-color: var(--border-hover); }
+    .stat-item a { text-decoration: none; color: inherit; display: block; }
 
     .stat-number {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
-      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
       color: var(--cyan);
+      line-height: 1.1;
     }
 
     .stat-label {
+      font-size: clamp(0.7rem, 1.2vw, 0.78rem);
+      color: var(--text);
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-top: 0.35rem;
+      margin-bottom: 0.3rem;
+    }
+    .stat-source {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.66rem;
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.25rem;
+      word-break: break-word;
+    }
+    .stat-source svg { width: 10px; height: 10px; fill: none; stroke: currentColor; stroke-width: 2; opacity: 0.7; flex-shrink: 0; }
+    .stat-old-label-hidden {
       font-size: clamp(0.65rem, 1.2vw, 0.75rem);
       color: var(--text-muted);
       text-transform: uppercase;
@@ -737,10 +768,10 @@
       margin-top: 0.5rem;
     }
 
-    /* ─── Contact channels (3-card) ─── */
+    /* ─── Contact channels (2-card, was 3-card) ─── */
     .contact-channels {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: 1.25rem;
       margin-top: 2.5rem;
     }
@@ -1186,8 +1217,14 @@
       .field label { font-size: 0.8rem; }
       .btn-submit { width: 100%; }
       .tl-item { grid-template-columns: 60px 1fr; gap: 1rem; }
-      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .stats-row { grid-template-columns: 1fr; gap: 0.75rem; }
       .about-header { flex-direction: column; align-items: flex-start; }
+      .testimonial-controls { gap: 0.75rem; flex-wrap: wrap; }
+      .channel-icon { width: 40px; height: 40px; }
+      .channel-icon svg { width: 22px; height: 22px; }
+      .contact-channel { padding: 1.25rem 1.1rem; }
+      .parallax-text { padding: 2rem 0; }
+      .logo-strip { padding: 1rem 1.25rem 1.75rem; }
     }
 
     @media (max-width: 375px) {
@@ -1265,36 +1302,43 @@
         <div>
           <p class="about-text">For too long, middlemen have extracted from artists &mdash; their revenue, their data, their audiences. I build the infrastructure that gives it back.</p>
           <p class="about-text" style="margin-top: 1rem;">I'm Zaal &mdash; electrical engineer turned ecosystem architect, based in Maine. BS Electrical Engineering from RIT (2022). Led a $1.5M robotics project at PCC Structurals that 7x'd throughput. Now Building Automation Technician at <strong>The Jackson Laboratory</strong> by day, and founder of <strong>The ZAO</strong> the rest of the time.</p>
-          <p class="about-text" style="margin-top: 1rem;">Before any of the websites: Eagle Scout (2016), and eleven seasons on National Ski Patrol &mdash; Blue Hills MA, Mt Hood OR, now Hermon Mountain ME. Most of what I know about leading a team, staying calm under stress, and finishing what I start, I learned in patrol rooms long before a code editor.</p>
+          <p class="about-text" style="margin-top: 1rem;">Before any of the websites: Eagle Scout (2016), and over a decade on National Ski Patrol &mdash; Blue Hills MA, Mt Hood OR, now Hermon Mountain ME.</p>
           <p class="about-text" style="margin-top: 1rem;">I also connect builders, artists, and communities with the right people to make things happen. Whether you need infrastructure built or the right introduction made &mdash; that's what I do.</p>
         </div>
       </div>
 
+      <p class="section-sub fade-in" style="color: var(--text-muted); font-size: 0.95rem; max-width: 680px; margin-top: 1.5rem;">Receipts, not vanity. Every number below ties to a public source you can verify.</p>
       <div class="stats-row fade-in">
-        <div class="stat-item">
+        <a class="stat-item" href="https://wavewarz-intelligence.vercel.app/" target="_blank" rel="noopener">
+          <div class="stat-number">$39,780+</div>
+          <div class="stat-label">on-chain volume settled for artists</div>
+          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>wavewarz-intelligence.vercel.app &middot; 950 battles, 459 SOL</span>
+        </a>
+        <a class="stat-item" href="https://www.thezao.com/" target="_blank" rel="noopener">
           <div class="stat-number">1,000+</div>
-          <div class="stat-label">Participants</div>
-        </div>
-        <div class="stat-item">
+          <div class="stat-label">artists + creators with new tools</div>
+          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>thezao.com &middot; ZAO community roster</span>
+        </a>
+        <a class="stat-item" href="https://github.com/bettercallzaal" target="_blank" rel="noopener">
+          <div class="stat-number">73+</div>
+          <div class="stat-label">open-source repos shipped</div>
+          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>github.com/bettercallzaal &middot; live count</span>
+        </a>
+        <a class="stat-item" href="https://www.thezao.com/" target="_blank" rel="noopener">
+          <div class="stat-number">100+</div>
+          <div class="stat-label">weekly governance meetings run</div>
+          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>ZAO Fractal &middot; week 100 May 2026</span>
+        </a>
+        <a class="stat-item" href="https://paragraph.com/@thezao" target="_blank" rel="noopener">
           <div class="stat-number">400+</div>
-          <div class="stat-label">Newsletters</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">90+</div>
-          <div class="stat-label">Governance<br>Meetings</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">$50K+</div>
-          <div class="stat-label">On-chain<br>Volume</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">65+</div>
-          <div class="stat-label">Repos</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">2</div>
-          <div class="stat-label">Festivals<br>Produced</div>
-        </div>
+          <div class="stat-label">newsletter editions published</div>
+          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>paragraph.com/@thezao &middot; build in public</span>
+        </a>
+        <a class="stat-item" href="/#portfolio">
+          <div class="stat-number">7x</div>
+          <div class="stat-label">throughput on $1.5M robotics project</div>
+          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>PCC Structurals &middot; pre-ZAO engineering past</span>
+        </a>
       </div>
 
       <div class="journey-timeline">
@@ -1302,14 +1346,14 @@
           <div class="tl-year">2014</div>
           <div class="tl-content">
             <h4>National Ski Patrol &mdash; Blue Hills, MA</h4>
-            <p>OEC trained. Where the patrol-room reflex came from</p>
+            <p>Home patrol started here</p>
           </div>
         </div>
         <div class="tl-item fade-in stagger-2">
           <div class="tl-year">2016</div>
           <div class="tl-content">
             <h4>Eagle Scout</h4>
-            <p>21 merit badges, an Eagle project, the discipline of working with adults as a kid</p>
+            <p>Rank earned</p>
           </div>
         </div>
         <div class="tl-item fade-in stagger-3">
@@ -1320,10 +1364,9 @@
           </div>
         </div>
         <div class="tl-item fade-in stagger-4">
-          <div class="tl-year">2022</div>
+          <div class="tl-year">2022-2024</div>
           <div class="tl-content">
-            <h4>Mt Hood, OR &middot; Entered Web3</h4>
-            <p>West Coast patrol seasons. Web3 in the bear market &mdash; the people still building were serious</p>
+            <h4>Mt Hood, OR &middot; West Coast patrol seasons</h4>
           </div>
         </div>
         <div class="tl-item fade-in stagger-5">
@@ -1334,40 +1377,20 @@
           </div>
         </div>
         <div class="tl-item fade-in stagger-6">
-          <div class="tl-year">2024</div>
-          <div class="tl-content">
-            <h4>ZAO-Palooza &amp; ZAO-Chella</h4>
-            <p>22 artists. Live on-chain music battles</p>
-          </div>
-        </div>
-        <div class="tl-item fade-in stagger-1">
           <div class="tl-year">2025</div>
           <div class="tl-content">
             <h4>Building Automation at JAX &middot; Hermon Mountain patrol</h4>
-            <p>Day job back in Maine. New home mountain. ZAO + WaveWarZ scaling underneath</p>
+            <p>Back to Maine</p>
           </div>
         </div>
-        <div class="tl-item fade-in stagger-2">
+        <div class="tl-item fade-in stagger-1">
           <div class="tl-year">2026</div>
           <div class="tl-content">
-            <h4>ZAO OS + ZAOstock &middot; ZABAL Games</h4>
-            <p>Festival planned for Ellsworth, Maine. Vibe-coding challenge for Farcaster builders</p>
+            <h4>ZAO OS &middot; ZAOstock &middot; ZABAL Games</h4>
           </div>
         </div>
       </div>
 
-      <div class="about-paths fade-in">
-        <a href="https://www.thezao.com/about" target="_blank" rel="noopener" class="path-card">
-          <h3><span class="gradient">Join the ZAO</span></h3>
-          <p>You're an artist or creator. Connect with the community, find collaborators, and own your work.</p>
-          <span class="path-link">Explore <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-        </a>
-        <a href="#contact" class="path-card">
-          <h3><span class="gradient">Connector Treatment</span></h3>
-          <p>You've got a challenge. Tell me about it and I'll connect you with the right people to make it happen.</p>
-          <span class="path-link">Get started <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-        </a>
-      </div>
     </div>
   </section>
 
@@ -1383,38 +1406,38 @@
 
       <p class="section-label fade-in" style="margin-top: 0.5rem; color: var(--orange);">Tier 1 - Front Line</p>
       <div class="portfolio-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
-        <a href="https://www.thezao.com/" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-1">
+        <a href="/zao/" class="portfolio-card fade-in stagger-1">
           <div>
             <h3>The ZAO</h3>
-            <p>The umbrella org I founded. Impact community bringing ownership back to independent artists. 1,000+ participants, 90+ governance meetings, MIT licensed.</p>
+            <p>The umbrella org I founded. Impact community bringing ownership back to independent artists. 1,000+ participants, 100+ governance meetings, MIT licensed.</p>
             <span class="stat-badge">Founder</span>
           </div>
-          <span class="portfolio-link">thezao.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          <span class="portfolio-link">My pitch &rarr; thezao.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
 
-        <a href="https://www.wavewarz.com/" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-2">
+        <a href="/wavewarz/" class="portfolio-card fade-in stagger-2">
           <div>
             <h3>WaveWarZ</h3>
             <p>Onchain artist prediction markets on Solana. 40+ artists with real W/L records. Artists battle, fans trade.</p>
           </div>
-          <span class="portfolio-link">wavewarz.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          <span class="portfolio-link">My pitch &rarr; wavewarz.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
 
-        <a href="https://bczyapz.com" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-2">
+        <a href="/bczyapz/" class="portfolio-card fade-in stagger-3">
           <div>
             <h3>BCZ YapZ</h3>
             <p>Long-form interviews with builders, artists, and operators across the ZAO + Farcaster ecosystem. Episodes, transcripts, RSS.</p>
           </div>
-          <span class="portfolio-link">bczyapz.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          <span class="portfolio-link">My pitch &rarr; bczyapz.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
 
-        <a href="https://t.me/ZAOstockTeamBot" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-3">
+        <a href="/zaostock/" class="portfolio-card fade-in stagger-4">
           <div>
             <h3>ZAOstock</h3>
-            <p>The inaugural ZAO festival. Curated, paid, no-pay-to-play indie artist showcase. Telegram-first ops; public site coming.</p>
+            <p>A ZAO festival in early planning. Telegram-first ops; public site coming.</p>
             <span class="stat-badge">Pre-public</span>
           </div>
-          <span class="portfolio-link">t.me/ZAOstockTeamBot <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          <span class="portfolio-link">More <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
       </div>
 
@@ -1438,12 +1461,12 @@
           <span class="portfolio-link">More <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
 
-        <a href="https://www.linkedin.com/in/zaalp" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-6">
+        <a href="/engineering-past/" class="portfolio-card fade-in stagger-6">
           <div>
             <h3>Engineering Past</h3>
             <p>BS Electrical Engineering (RIT 2022). Led a $1.5M robotics project at PCC Structurals (7x throughput gain). Current: Building Automation at The Jackson Laboratory.</p>
           </div>
-          <span class="portfolio-link">linkedin.com/in/zaalp <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+          <span class="portfolio-link">More <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
       </div>
 
@@ -1614,7 +1637,7 @@
     <div class="container">
       <p class="section-label fade-in">Contact</p>
       <h2 class="section-title fade-in">Let's build something.</h2>
-      <p class="contact-sub fade-in" style="max-width: 640px;">Three ways to reach me. Farcaster DMs are fastest. Email for anything that needs a paper trail. Or grab time on the calendar.</p>
+      <p class="contact-sub fade-in" style="max-width: 640px;">Two ways to reach me. Farcaster DMs are fastest. Email for anything that needs a paper trail - drop a Calendly link in the form if you want to book a call and I'll grab a slot.</p>
 
       <div class="contact-channels fade-in">
         <a class="contact-channel" href="https://farcaster.xyz/bettercallzaal" target="_blank" rel="noopener">
@@ -1623,7 +1646,7 @@
           </div>
           <span class="channel-label">Fastest</span>
           <h3>Farcaster DM</h3>
-          <p>Cast at me, DM me, or tag me on /zao. Average reply within a couple hours during the workday.</p>
+          <p>Cast at me, DM me, or tag me on /zao.</p>
           <span class="channel-cta">@bettercallzaal <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
 
@@ -1631,12 +1654,12 @@
           <div class="channel-icon" style="color: var(--cyan);">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
-          <span class="channel-label">Paper trail</span>
+          <span class="channel-label">Paper trail + booking</span>
           <h3>Email</h3>
-          <p><strong style="color: var(--text);">zaalp99@gmail.com</strong> for personal + Maine work.<br><strong style="color: var(--text);">info@thezao.com</strong> for ZAO-ecosystem inquiries.</p>
+          <p><strong style="color: var(--text);">zaalp99@gmail.com</strong> - personal + Maine work.<br><strong style="color: var(--text);">info@thezao.com</strong> - ZAO ecosystem inquiries.</p>
           <form id="contactForm" action="https://formspree.io/f/mjgajyqe" method="POST" class="channel-form">
             <input type="text" id="c-name" name="name" placeholder="Your name" required>
-            <textarea id="c-idea" name="idea" placeholder="What do you want to build?" required></textarea>
+            <textarea id="c-idea" name="idea" placeholder="What do you want to build? (drop a Calendly link if you want a call)" required></textarea>
             <input type="text" id="c-contact" name="contact" placeholder="Best way to reach you" required>
             <button type="submit" class="btn-submit"><span>Send It</span></button>
           </form>
@@ -1645,16 +1668,6 @@
             <p>I'll be in touch soon.</p>
           </div>
         </div>
-
-        <a class="contact-channel" href="https://calendly.com/zaalp99/30minmeeting" target="_blank" rel="noopener">
-          <div class="channel-icon" style="color: var(--gold);">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          </div>
-          <span class="channel-label">30 min</span>
-          <h3>Book a Call</h3>
-          <p>Pick a slot on my Calendly. Or send your Calendly back in the email form and I'll book on your end - whatever works.</p>
-          <span class="channel-cta">calendly.com/zaalp99 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-        </a>
       </div>
     </div>
   </section>
