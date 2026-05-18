@@ -487,58 +487,46 @@
 
   <section id="mentors">
     <div class="container">
-      <div class="section-eyebrow">The Team</div>
-      <h2 class="section-title">8 ZAO Mentors</h2>
+      <div class="section-eyebrow">Join The Team</div>
+      <h2 class="section-title">Mentor or Workshop Speaker</h2>
       <p class="section-sub">
-        Each mentor will claim one champion from Phase 1 builds + embed as their teammate during the Finals. Mentors come from across the ZAO ecosystem - music, builders, ops, governance. Each defines their own search style (the kind of builder they're looking for) when applications open.
+        Two ways to lend your time to ZABAL Games. <strong>Mentors</strong> claim a champion from July submissions and embed as their teammate during the August Finals. <strong>Workshop speakers</strong> drop into June bootcamp with a recorded session on their specialty (Empire Builder, Snaps, agents, tokens, music infra, fractal governance - your call).
       </p>
 
-      <div class="options-grid">
-        <div class="option-card">
-          <div class="option-letter">Mentor 1</div>
-          <h3>Eduard</h3>
-          <p>Confirmed. Category-style TBD.</p>
+      <form id="mentorForm" action="https://formspree.io/f/mjgajyqe" method="POST" style="margin-top: 1.5rem; max-width: 640px;">
+        <input type="hidden" name="form_source" value="zabal-games-mentor-signup">
+        <div class="field">
+          <label for="m-name">Your Name</label>
+          <input type="text" id="m-name" name="name" placeholder="Your name" required>
         </div>
-        <div class="option-card">
-          <div class="option-letter">Mentor 2</div>
-          <h3>Iman</h3>
-          <p>ZAO Music team. Category-style TBD.</p>
+        <div class="field">
+          <label for="m-handle">Farcaster / X handle</label>
+          <input type="text" id="m-handle" name="handle" placeholder="@bettercallzaal" required>
         </div>
-        <div class="option-card">
-          <div class="option-letter">Mentor 3</div>
-          <h3>ohnahji</h3>
-          <p>Category-style TBD.</p>
+        <div class="field">
+          <label for="m-role">I want to be a</label>
+          <select id="m-role" name="role" required style="width: 100%; background: var(--surface); border: 1px solid var(--border); color: var(--text); font-family: 'Outfit', sans-serif; font-size: 1rem; padding: 0.85rem 1rem; border-radius: var(--radius); outline: none; appearance: none;">
+            <option value="">Pick one</option>
+            <option value="mentor">Mentor (claim a champion, build alongside in August Finals)</option>
+            <option value="speaker">Workshop speaker (June bootcamp recorded session)</option>
+            <option value="both">Both</option>
+            <option value="partner">Partner / sponsor</option>
+          </select>
         </div>
-        <div class="option-card">
-          <div class="option-letter">Mentor 4</div>
-          <h3>candytoybox</h3>
-          <p>Category-style TBD.</p>
+        <div class="field">
+          <label for="m-expertise">Your specialty / what you'd bring</label>
+          <textarea id="m-expertise" name="expertise" placeholder="Empire Builder, Snaps, agent harnesses, tokens, music infra, fractal governance, festivals, anything else..." required></textarea>
         </div>
-        <div class="option-card">
-          <div class="option-letter">Mentor 5</div>
-          <h3>freezetheverse</h3>
-          <p>Likely streamer-focused track. Category TBD.</p>
+        <div class="field">
+          <label for="m-context">Anything else I should know</label>
+          <textarea id="m-context" name="context" placeholder="Time you can commit, why you want in, ideas for what a session/champion-track looks like"></textarea>
         </div>
-        <div class="option-card">
-          <div class="option-letter">Mentor 6</div>
-          <h3>Thy Revolution</h3>
-          <p>Category-style TBD.</p>
-        </div>
-        <div class="option-card">
-          <div class="option-letter">Mentor 7</div>
-          <h3>Tom Fellenz</h3>
-          <p>ZAO Music DBA. Likely smart-contract / hard-coder track. Category TBD.</p>
-        </div>
-        <div class="option-card">
-          <div class="option-letter">Mentor 8</div>
-          <h3>Adam SongJam</h3>
-          <p>SongJam founder, ZABAL co-creator. Category-style TBD.</p>
-        </div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </form>
+      <div class="form-success" id="mentorSuccess" style="display: none; margin-top: 1.5rem; padding: 1rem 1.25rem; background: var(--surface); border: 1px solid var(--gold); border-radius: var(--radius);">
+        <strong style="color: var(--gold); font-family: 'Syne', sans-serif;">Got it.</strong>
+        <p style="margin-top: 0.4rem;">I'll reach out in Farcaster DM to lock the details.</p>
       </div>
-
-      <p class="section-sub" style="margin-top: 1.5rem; font-size: 0.85rem;">
-        Roster status as of 2026-05-13. Some mentors still confirming. Bios + category specifics ship when finalized.
-      </p>
     </div>
   </section>
 
@@ -1301,6 +1289,33 @@
       };
 
       loadSubmissions();
+    })();
+  </script>
+
+  <script>
+    // Mentor / workshop speaker signup form
+    (function() {
+      var form = document.getElementById('mentorForm');
+      var success = document.getElementById('mentorSuccess');
+      if (!form || !success) return;
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var data = new FormData(form);
+        fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        }).then(function(res) {
+          if (res.ok) {
+            form.style.display = 'none';
+            success.style.display = 'block';
+          } else {
+            alert('Something went wrong. DM @bettercallzaal on Farcaster instead.');
+          }
+        }).catch(function() {
+          alert('Something went wrong. DM @bettercallzaal on Farcaster instead.');
+        });
+      });
     })();
   </script>
 
