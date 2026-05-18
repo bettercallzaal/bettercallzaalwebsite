@@ -65,6 +65,7 @@ The live test plan Zaal is walking through right now is in `/tmp/bcz-test-plan.m
 /zaostock/              Pre-public Oct 2026 ZAO festival in Ellsworth, Maine (orange accent)
 /zabalgames.html        Farcaster Vibe-Coding Challenge (June prep / July ship / Aug finals)
 /nexus.html             Existing canonical link-inventory hub (redirects to nexus.thezao.com per vercel.json)
+/kit.html               ZABAL Brand Kit (25 brands, machine-readable JSON manifest) - added in PR #5 by parallel session
 /poidh.html             POIDH bounty leaderboard
 /privacy.html /terms.html /refund.html    Legal — effective May 5-7, 2026
 ```
