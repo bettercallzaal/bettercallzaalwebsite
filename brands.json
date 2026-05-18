@@ -1,30 +1,78 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "generated": "2026-05-17",
   "title": "ZABAL Brand Kit",
   "subtitle": "Every brand under the ZABAL umbrella, what it is, and how to plug in.",
   "categories": [
-    { "id": "core", "label": "Core" },
-    { "id": "festivals", "label": "Festivals" },
-    { "id": "music", "label": "Music + Audio" },
-    { "id": "agency", "label": "Agency + Personal" },
-    { "id": "agents", "label": "Agents + Bots" },
-    { "id": "infra", "label": "Infrastructure" },
-    { "id": "shows", "label": "Shows" },
-    { "id": "tools", "label": "Tools + Snaps" }
+    {
+      "id": "core",
+      "label": "Core"
+    },
+    {
+      "id": "governance",
+      "label": "Governance"
+    },
+    {
+      "id": "festivals",
+      "label": "Festivals"
+    },
+    {
+      "id": "music",
+      "label": "Music + Audio"
+    },
+    {
+      "id": "agency",
+      "label": "Agency + Personal"
+    },
+    {
+      "id": "agents",
+      "label": "Agents + Bots"
+    },
+    {
+      "id": "infra",
+      "label": "Infrastructure"
+    },
+    {
+      "id": "shows",
+      "label": "Shows"
+    },
+    {
+      "id": "tools",
+      "label": "Tools + Snaps"
+    }
   ],
   "statuses": [
-    { "id": "active", "label": "Active", "color": "#22c55e" },
-    { "id": "building", "label": "Building", "color": "#f5c842" },
-    { "id": "paused", "label": "Paused", "color": "#94a3b8" },
-    { "id": "graduated", "label": "Graduated", "color": "#00e5ff" },
-    { "id": "experimenting", "label": "Experimenting", "color": "#ff6b35" }
+    {
+      "id": "active",
+      "label": "Active",
+      "color": "#22c55e"
+    },
+    {
+      "id": "building",
+      "label": "Building",
+      "color": "#f5c842"
+    },
+    {
+      "id": "paused",
+      "label": "Paused",
+      "color": "#94a3b8"
+    },
+    {
+      "id": "graduated",
+      "label": "Graduated",
+      "color": "#00e5ff"
+    },
+    {
+      "id": "experimenting",
+      "label": "Experimenting",
+      "color": "#ff6b35"
+    }
   ],
   "brands": [
     {
       "id": "thezao",
       "name": "The ZAO",
-      "tag": "Parent · Impact Network",
+      "tag": "Parent \u00b7 Impact Network",
       "tagColor": "orange",
       "status": "active",
       "category": "core",
@@ -33,25 +81,55 @@
       "audience": "188 gated members on Base + open Farcaster + Discord",
       "monetization": "Sponsorships, festival revenue, $ZABAL token economy, Pro Tickets",
       "links": [
-        { "label": "Website", "url": "https://thezao.com" },
-        { "label": "App", "url": "https://zaoos.com" },
-        { "label": "Newsletter", "url": "https://paragraph.com/@thezao" },
-        { "label": "Farcaster /zao", "url": "https://farcaster.xyz/~/channel/zao" },
-        { "label": "X", "url": "https://x.com/thezao" },
-        { "label": "GitHub", "url": "https://github.com/bettercallzaal/ZAOOS" }
+        {
+          "label": "Website",
+          "url": "https://thezao.com"
+        },
+        {
+          "label": "App",
+          "url": "https://zaoos.com"
+        },
+        {
+          "label": "Newsletter",
+          "url": "https://paragraph.com/@thezao"
+        },
+        {
+          "label": "Farcaster /zao",
+          "url": "https://farcaster.xyz/~/channel/zao"
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/thezao"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/bettercallzaal/ZAOOS"
+        }
       ],
       "plugIn": {
-        "sponsor": { "label": "Sponsor a festival or program", "url": "mailto:zaal@thezao.com?subject=ZAO sponsorship" },
-        "collab": { "label": "Co-build a feature or chapter", "url": "https://farcaster.xyz/zaal" },
-        "customer": { "label": "Join the gated community", "url": "https://thezao.com/community" },
-        "contributor": { "label": "Submit to a fractal session", "url": "https://farcaster.xyz/~/channel/zao" },
+        "sponsor": {
+          "label": "Sponsor a festival or program",
+          "url": "mailto:zaal@thezao.com?subject=ZAO sponsorship"
+        },
+        "collab": {
+          "label": "Co-build a feature or chapter",
+          "url": "https://farcaster.xyz/zaal"
+        },
+        "customer": {
+          "label": "Join the gated community",
+          "url": "https://thezao.com/community"
+        },
+        "contributor": {
+          "label": "Submit to a fractal session",
+          "url": "https://farcaster.xyz/~/channel/zao"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "zaoos",
       "name": "ZAO OS",
-      "tag": "App · Monorepo Lab",
+      "tag": "App \u00b7 Monorepo Lab",
       "tagColor": "cyan",
       "status": "active",
       "category": "core",
@@ -60,20 +138,35 @@
       "audience": "188 gated members + dev contributors",
       "monetization": "OSS, no direct revenue; graduates billed to BCZ Strategies",
       "links": [
-        { "label": "App", "url": "https://zaoos.com" },
-        { "label": "Repo", "url": "https://github.com/bettercallzaal/ZAOOS" },
-        { "label": "Research library (729 docs)", "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/research" }
+        {
+          "label": "App",
+          "url": "https://zaoos.com"
+        },
+        {
+          "label": "Repo",
+          "url": "https://github.com/bettercallzaal/ZAOOS"
+        },
+        {
+          "label": "Research library (729 docs)",
+          "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/research"
+        }
       ],
       "plugIn": {
-        "contributor": { "label": "Open a PR", "url": "https://github.com/bettercallzaal/ZAOOS/pulls" },
-        "customer": { "label": "Get gated access", "url": "https://thezao.com/community" },
+        "contributor": {
+          "label": "Open a PR",
+          "url": "https://github.com/bettercallzaal/ZAOOS/pulls"
+        },
+        "customer": {
+          "label": "Get gated access",
+          "url": "https://thezao.com/community"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "zabal",
       "name": "$ZABAL",
-      "tag": "Token · Empire V3",
+      "tag": "Token \u00b7 Empire V3",
       "tagColor": "gold",
       "status": "active",
       "category": "core",
@@ -82,20 +175,35 @@
       "audience": "Token holders + Empire Builder community",
       "monetization": "Native token, used for access + Pro Tickets + tipping",
       "links": [
-        { "label": "Empire Builder", "url": "https://www.empirebuilder.world/" },
-        { "label": "ZABAL Live Hub", "url": "https://thezao.com/zabal" },
-        { "label": "Clanker", "url": "https://clanker.world/" }
+        {
+          "label": "Empire Builder",
+          "url": "https://www.empirebuilder.world/"
+        },
+        {
+          "label": "ZABAL Live Hub",
+          "url": "https://thezao.com/zabal"
+        },
+        {
+          "label": "Clanker",
+          "url": "https://clanker.world/"
+        }
       ],
       "plugIn": {
-        "customer": { "label": "Buy $ZABAL on Base", "url": "https://clanker.world/" },
-        "contributor": { "label": "Hold + vote in haatz", "url": "https://thezao.com/zabal" },
+        "customer": {
+          "label": "Buy $ZABAL on Base",
+          "url": "https://clanker.world/"
+        },
+        "contributor": {
+          "label": "Hold + vote in haatz",
+          "url": "https://thezao.com/zabal"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "zao-festivals",
       "name": "ZAO Festivals",
-      "tag": "Umbrella · IRL",
+      "tag": "Umbrella \u00b7 IRL",
       "tagColor": "pink",
       "status": "active",
       "category": "festivals",
@@ -104,18 +212,27 @@
       "audience": "Independent artists + ZAO members + city-level music communities",
       "monetization": "Pro Tickets, sponsorships, fiscal sponsorship via Fractured Atlas / New Media Commons",
       "links": [
-        { "label": "ZAO Festivals overview", "url": "https://thezao.com/festivals" }
+        {
+          "label": "ZAO Festivals overview",
+          "url": "https://thezao.com/festivals"
+        }
       ],
       "plugIn": {
-        "sponsor": { "label": "Sponsor a chapter", "url": "mailto:zaal@thezao.com?subject=ZAO Festivals sponsorship" },
-        "collab": { "label": "Co-host a chapter in your city", "url": "mailto:zaal@thezao.com?subject=Co-host ZAO Festival" },
+        "sponsor": {
+          "label": "Sponsor a chapter",
+          "url": "mailto:zaal@thezao.com?subject=ZAO Festivals sponsorship"
+        },
+        "collab": {
+          "label": "Co-host a chapter in your city",
+          "url": "mailto:zaal@thezao.com?subject=Co-host ZAO Festival"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "zaostock",
       "name": "ZAOstock",
-      "tag": "Festival · 2026 Flagship",
+      "tag": "Festival \u00b7 2026 Flagship",
       "tagColor": "gold",
       "status": "active",
       "category": "festivals",
@@ -124,23 +241,47 @@
       "audience": "Independent musicians + visual artists + Ellsworth/Maine community + 4M+ Acadia visitors annually",
       "monetization": "$50 Pro Tickets + sponsorships (3 tracks) + fiscal sponsorship",
       "links": [
-        { "label": "Site", "url": "https://zaostock.com" },
-        { "label": "Repo", "url": "https://github.com/bettercallzaal/zaostock" },
-        { "label": "Pro Ticket", "url": "https://zaostock.com#pro-ticket" },
-        { "label": "Sponsor deck", "url": "mailto:zaal@thezao.com?subject=ZAOstock sponsor deck" }
+        {
+          "label": "Site",
+          "url": "https://zaostock.com"
+        },
+        {
+          "label": "Repo",
+          "url": "https://github.com/bettercallzaal/zaostock"
+        },
+        {
+          "label": "Pro Ticket",
+          "url": "https://zaostock.com#pro-ticket"
+        },
+        {
+          "label": "Sponsor deck",
+          "url": "mailto:zaal@thezao.com?subject=ZAOstock sponsor deck"
+        }
       ],
       "plugIn": {
-        "sponsor": { "label": "Sponsor a track ($1-25K)", "url": "mailto:zaal@thezao.com?subject=ZAOstock sponsorship" },
-        "customer": { "label": "Get a $50 Pro Ticket", "url": "https://zaostock.com#pro-ticket" },
-        "collab": { "label": "Submit lineup (musicians/artists)", "url": "https://zaostock.com/apply" },
-        "contributor": { "label": "Volunteer", "url": "https://zaostock.com/volunteer" },
+        "sponsor": {
+          "label": "Sponsor a track ($1-25K)",
+          "url": "mailto:zaal@thezao.com?subject=ZAOstock sponsorship"
+        },
+        "customer": {
+          "label": "Get a $50 Pro Ticket",
+          "url": "https://zaostock.com#pro-ticket"
+        },
+        "collab": {
+          "label": "Submit lineup (musicians/artists)",
+          "url": "https://zaostock.com/apply"
+        },
+        "contributor": {
+          "label": "Volunteer",
+          "url": "https://zaostock.com/volunteer"
+        },
         "contact": "info@thezao.com"
       }
     },
     {
       "id": "nextzaoville",
       "name": "NextZAOville",
-      "tag": "Festival · DMV 2026",
+      "tag": "Festival \u00b7 DMV 2026",
       "tagColor": "pink",
       "status": "building",
       "category": "festivals",
@@ -149,17 +290,23 @@
       "audience": "DMV music community + ZAO ecosystem",
       "monetization": "TBD; ZAOstock model expected",
       "links": [
-        { "label": "Announcement (in ZAOstock site Lineage section)", "url": "https://zaostock.com#lineage" }
+        {
+          "label": "Announcement (in ZAOstock site Lineage section)",
+          "url": "https://zaostock.com#lineage"
+        }
       ],
       "plugIn": {
-        "collab": { "label": "Co-host (DMV music orgs)", "url": "mailto:zaal@thezao.com?subject=NextZAOville" },
+        "collab": {
+          "label": "Co-host (DMV music orgs)",
+          "url": "mailto:zaal@thezao.com?subject=NextZAOville"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "coc-concertz",
       "name": "COC Concertz",
-      "tag": "Graduated · Virtual Concerts",
+      "tag": "Graduated \u00b7 Virtual Concerts",
       "tagColor": "muted",
       "status": "graduated",
       "category": "festivals",
@@ -168,18 +315,27 @@
       "audience": "13+ promoters + virtual concert audience",
       "monetization": "Concert ticketing + sponsorships",
       "links": [
-        { "label": "Repo", "url": "https://github.com/bettercallzaal/CoCConcertZ" }
+        {
+          "label": "Repo",
+          "url": "https://github.com/bettercallzaal/CoCConcertZ"
+        }
       ],
       "plugIn": {
-        "contributor": { "label": "PR the repo", "url": "https://github.com/bettercallzaal/CoCConcertZ/pulls" },
-        "collab": { "label": "Promoter inquiries", "url": "mailto:zaal@thezao.com?subject=COC Concertz" },
+        "contributor": {
+          "label": "PR the repo",
+          "url": "https://github.com/bettercallzaal/CoCConcertZ/pulls"
+        },
+        "collab": {
+          "label": "Promoter inquiries",
+          "url": "mailto:zaal@thezao.com?subject=COC Concertz"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "wavewarz",
       "name": "WaveWarZ",
-      "tag": "Music · Solana Production",
+      "tag": "Music \u00b7 Solana Production",
       "tagColor": "cyan",
       "status": "active",
       "category": "music",
@@ -188,23 +344,47 @@
       "audience": "Solana music + crypto audience",
       "monetization": "On-chain battle fees + sponsorships + token economy",
       "links": [
-        { "label": "Main site", "url": "https://wavewarz.com/" },
-        { "label": "Intelligence dashboard", "url": "https://wavewarz-intelligence.vercel.app/" },
-        { "label": "Spectator app (demo)", "url": "https://github.com/bettercallzaal/wavewarzapp" },
-        { "label": "Base port (early)", "url": "https://github.com/bettercallzaal/wwbase" },
-        { "label": "BCZ wavewarz brief", "url": "https://bettercallzaal.com/wavewarz/" }
+        {
+          "label": "Main site",
+          "url": "https://wavewarz.com/"
+        },
+        {
+          "label": "Intelligence dashboard",
+          "url": "https://wavewarz-intelligence.vercel.app/"
+        },
+        {
+          "label": "Spectator app (demo)",
+          "url": "https://github.com/bettercallzaal/wavewarzapp"
+        },
+        {
+          "label": "Base port (early)",
+          "url": "https://github.com/bettercallzaal/wwbase"
+        },
+        {
+          "label": "BCZ wavewarz brief",
+          "url": "https://bettercallzaal.com/wavewarz/"
+        }
       ],
       "plugIn": {
-        "sponsor": { "label": "Sponsor a battle / season", "url": "mailto:zaal@thezao.com?subject=WaveWarZ sponsorship" },
-        "customer": { "label": "Enter a battle", "url": "https://wavewarz.com/" },
-        "collab": { "label": "Technical co-founder applications (Base)", "url": "https://github.com/bettercallzaal/wwbase" },
+        "sponsor": {
+          "label": "Sponsor a battle / season",
+          "url": "mailto:zaal@thezao.com?subject=WaveWarZ sponsorship"
+        },
+        "customer": {
+          "label": "Enter a battle",
+          "url": "https://wavewarz.com/"
+        },
+        "collab": {
+          "label": "Technical co-founder applications (Base)",
+          "url": "https://github.com/bettercallzaal/wwbase"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "fishbowlz",
       "name": "FISHBOWLZ",
-      "tag": "Audio Rooms · Reviving",
+      "tag": "Audio Rooms \u00b7 Reviving",
       "tagColor": "pink",
       "status": "building",
       "category": "music",
@@ -213,20 +393,35 @@
       "audience": "Farcaster music community + ZAO event hosts",
       "monetization": "TBD; tip jar + sponsored rooms candidate",
       "links": [
-        { "label": "Standalone repo", "url": "https://github.com/bettercallzaal/fishbowlz" },
-        { "label": "Spec (Doc 662)", "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/research/music/662-fishbowlz-revival-juke-mute-lockout" },
-        { "label": "Juke (partner)", "url": "https://juke.audio" }
+        {
+          "label": "Standalone repo",
+          "url": "https://github.com/bettercallzaal/fishbowlz"
+        },
+        {
+          "label": "Spec (Doc 662)",
+          "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/research/music/662-fishbowlz-revival-juke-mute-lockout"
+        },
+        {
+          "label": "Juke (partner)",
+          "url": "https://juke.audio"
+        }
       ],
       "plugIn": {
-        "collab": { "label": "Juke API + co-host pilots", "url": "https://juke.audio/developers" },
-        "contributor": { "label": "PR the standalone repo", "url": "https://github.com/bettercallzaal/fishbowlz" },
+        "collab": {
+          "label": "Juke API + co-host pilots",
+          "url": "https://juke.audio/developers"
+        },
+        "contributor": {
+          "label": "PR the standalone repo",
+          "url": "https://github.com/bettercallzaal/fishbowlz"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "songjam",
-      "name": "SongJam · $SANG",
-      "tag": "Music · Token",
+      "name": "SongJam \u00b7 $SANG",
+      "tag": "Music \u00b7 Token",
       "tagColor": "cyan",
       "status": "active",
       "category": "music",
@@ -235,18 +430,27 @@
       "audience": "Music + crypto community",
       "monetization": "$SANG token economy + integrations",
       "links": [
-        { "label": "SongJam", "url": "https://songjam.io" }
+        {
+          "label": "SongJam",
+          "url": "https://songjam.io"
+        }
       ],
       "plugIn": {
-        "customer": { "label": "Hold $SANG", "url": "https://songjam.io" },
-        "collab": { "label": "Partner integrations", "url": "mailto:zaal@thezao.com?subject=SongJam x ZAO" },
+        "customer": {
+          "label": "Hold $SANG",
+          "url": "https://songjam.io"
+        },
+        "collab": {
+          "label": "Partner integrations",
+          "url": "mailto:zaal@thezao.com?subject=SongJam x ZAO"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "aurdour",
       "name": "Aurdour",
-      "tag": "Music · OSS DJ",
+      "tag": "Music \u00b7 OSS DJ",
       "tagColor": "cyan",
       "status": "paused",
       "category": "music",
@@ -255,17 +459,23 @@
       "audience": "DJs + bedroom producers + ZAO music ops",
       "monetization": "OSS, no direct revenue; potential SaaS Flow Mode tier",
       "links": [
-        { "label": "Repo", "url": "https://github.com/bettercallzaal/Aurdour" }
+        {
+          "label": "Repo",
+          "url": "https://github.com/bettercallzaal/Aurdour"
+        }
       ],
       "plugIn": {
-        "contributor": { "label": "PR the OSS DJ tool", "url": "https://github.com/bettercallzaal/Aurdour/pulls" },
+        "contributor": {
+          "label": "PR the OSS DJ tool",
+          "url": "https://github.com/bettercallzaal/Aurdour/pulls"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "bcz",
       "name": "BetterCallZaal",
-      "tag": "Agency · Personal Brand",
+      "tag": "Agency \u00b7 Personal Brand",
       "tagColor": "orange",
       "status": "active",
       "category": "agency",
@@ -274,23 +484,47 @@
       "audience": "Founders + protocols + agencies needing a connector",
       "monetization": "Consulting fees, project work, retainers",
       "links": [
-        { "label": "Site", "url": "https://bettercallzaal.com" },
-        { "label": "Farcaster", "url": "https://farcaster.xyz/bettercallzaal" },
-        { "label": "X", "url": "https://x.com/bettercallzaal" },
-        { "label": "YouTube", "url": "https://youtube.com/@bettercallzaal" },
-        { "label": "LinkedIn", "url": "https://www.linkedin.com/in/zaalp/" },
-        { "label": "GitHub", "url": "https://github.com/bettercallzaal" }
+        {
+          "label": "Site",
+          "url": "https://bettercallzaal.com"
+        },
+        {
+          "label": "Farcaster",
+          "url": "https://farcaster.xyz/bettercallzaal"
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/bettercallzaal"
+        },
+        {
+          "label": "YouTube",
+          "url": "https://youtube.com/@bettercallzaal"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/zaalp/"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/bettercallzaal"
+        }
       ],
       "plugIn": {
-        "customer": { "label": "Hire BCZ (got a problem?)", "url": "https://bettercallzaal.com#contact" },
-        "collab": { "label": "Bring a project to the table", "url": "https://bettercallzaal.com#contact" },
+        "customer": {
+          "label": "Hire BCZ (got a problem?)",
+          "url": "https://bettercallzaal.com#contact"
+        },
+        "collab": {
+          "label": "Bring a project to the table",
+          "url": "https://bettercallzaal.com#contact"
+        },
         "contact": "zaal@bettercallzaal.com"
       }
     },
     {
       "id": "bcz-yapz",
       "name": "BCZ YapZ",
-      "tag": "Show · Graduated",
+      "tag": "Show \u00b7 Graduated",
       "tagColor": "cyan",
       "status": "graduated",
       "category": "shows",
@@ -299,20 +533,35 @@
       "audience": "Web3 + music + culture audience",
       "monetization": "Sponsorships + clips",
       "links": [
-        { "label": "Site", "url": "https://bczyapz.com" },
-        { "label": "Repo", "url": "https://github.com/bettercallzaal/bcz-yapz" },
-        { "label": "BCZ landing", "url": "https://bettercallzaal.com/bczyapz/" }
+        {
+          "label": "Site",
+          "url": "https://bczyapz.com"
+        },
+        {
+          "label": "Repo",
+          "url": "https://github.com/bettercallzaal/bcz-yapz"
+        },
+        {
+          "label": "BCZ landing",
+          "url": "https://bettercallzaal.com/bczyapz/"
+        }
       ],
       "plugIn": {
-        "sponsor": { "label": "Sponsor an episode", "url": "mailto:zaal@bettercallzaal.com?subject=BCZ YapZ sponsorship" },
-        "collab": { "label": "Be a guest", "url": "https://farcaster.xyz/bettercallzaal" },
+        "sponsor": {
+          "label": "Sponsor an episode",
+          "url": "mailto:zaal@bettercallzaal.com?subject=BCZ YapZ sponsorship"
+        },
+        "collab": {
+          "label": "Be a guest",
+          "url": "https://farcaster.xyz/bettercallzaal"
+        },
         "contact": "zaal@bettercallzaal.com"
       }
     },
     {
       "id": "ltae",
       "name": "Let's Talk About ETH (with Maceo)",
-      "tag": "Show · Building",
+      "tag": "Show \u00b7 Building",
       "tagColor": "pink",
       "status": "building",
       "category": "shows",
@@ -321,19 +570,31 @@
       "audience": "ETH community + web3 builders",
       "monetization": "Pods.media + episode sponsorships",
       "links": [
-        { "label": "Pods.media", "url": "https://pods.media/lets-talk-about-web3/" },
-        { "label": "B-ZBUILD2 repo", "url": "https://github.com/bettercallzaal/B-ZBUILD2" }
+        {
+          "label": "Pods.media",
+          "url": "https://pods.media/lets-talk-about-web3/"
+        },
+        {
+          "label": "B-ZBUILD2 repo",
+          "url": "https://github.com/bettercallzaal/B-ZBUILD2"
+        }
       ],
       "plugIn": {
-        "sponsor": { "label": "Sponsor an episode", "url": "mailto:zaal@bettercallzaal.com?subject=LTAE sponsorship" },
-        "collab": { "label": "Guest pitch", "url": "https://farcaster.xyz/bettercallzaal" },
+        "sponsor": {
+          "label": "Sponsor an episode",
+          "url": "mailto:zaal@bettercallzaal.com?subject=LTAE sponsorship"
+        },
+        "collab": {
+          "label": "Guest pitch",
+          "url": "https://farcaster.xyz/bettercallzaal"
+        },
         "contact": "zaal@bettercallzaal.com"
       }
     },
     {
       "id": "newsletter",
       "name": "Year of the ZABAL",
-      "tag": "Newsletter · Daily",
+      "tag": "Newsletter \u00b7 Daily",
       "tagColor": "gold",
       "status": "active",
       "category": "shows",
@@ -342,97 +603,139 @@
       "audience": "400+ subscribers + ZAO ecosystem followers",
       "monetization": "Free; supports brand awareness for paid surfaces",
       "links": [
-        { "label": "Paragraph", "url": "https://paragraph.com/@thezao" }
+        {
+          "label": "Paragraph",
+          "url": "https://paragraph.com/@thezao"
+        }
       ],
       "plugIn": {
-        "customer": { "label": "Subscribe", "url": "https://paragraph.com/@thezao" },
+        "customer": {
+          "label": "Subscribe",
+          "url": "https://paragraph.com/@thezao"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "zoe",
       "name": "ZOE",
-      "tag": "Agent · Concierge",
+      "tag": "Agent \u00b7 Concierge",
       "tagColor": "cyan",
       "status": "active",
       "category": "agents",
-      "blurb": "@zaoclaw_bot — single concierge for tasks, captures, brief/reflect, recall. ZAO's primary agent surface. Hermes-brain pattern. Runs on VPS + uses Claude Max subscription.",
+      "blurb": "@zaoclaw_bot \u2014 single concierge for tasks, captures, brief/reflect, recall. ZAO's primary agent surface. Hermes-brain pattern. Runs on VPS + uses Claude Max subscription.",
       "founded": "2025",
       "audience": "Zaal + ZAO team",
       "monetization": "Internal tool; no direct revenue",
       "links": [
-        { "label": "Source", "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/bot/src/zoe" },
-        { "label": "Telegram", "url": "https://t.me/zaoclaw_bot" }
+        {
+          "label": "Source",
+          "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/bot/src/zoe"
+        },
+        {
+          "label": "Telegram",
+          "url": "https://t.me/zaoclaw_bot"
+        }
       ],
       "plugIn": {
-        "contributor": { "label": "PR the bot", "url": "https://github.com/bettercallzaal/ZAOOS" },
+        "contributor": {
+          "label": "PR the bot",
+          "url": "https://github.com/bettercallzaal/ZAOOS"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "hermes",
       "name": "Hermes",
-      "tag": "Agent · Auto-PR",
+      "tag": "Agent \u00b7 Auto-PR",
       "tagColor": "orange",
       "status": "active",
       "category": "agents",
-      "blurb": "@zoe_hermes_bot — autonomous fix-PR pipeline. Coder + critic + auto-PR. The agent that ships code. Coordinates with ZAO Devz on group dispatch.",
+      "blurb": "@zoe_hermes_bot \u2014 autonomous fix-PR pipeline. Coder + critic + auto-PR. The agent that ships code. Coordinates with ZAO Devz on group dispatch.",
       "founded": "2025",
       "audience": "Zaal + dev contributors",
       "monetization": "Internal tool",
       "links": [
-        { "label": "Source", "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/bot/src/hermes" },
-        { "label": "Telegram", "url": "https://t.me/zoe_hermes_bot" }
+        {
+          "label": "Source",
+          "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/bot/src/hermes"
+        },
+        {
+          "label": "Telegram",
+          "url": "https://t.me/zoe_hermes_bot"
+        }
       ],
       "plugIn": {
-        "contributor": { "label": "PR the pipeline", "url": "https://github.com/bettercallzaal/ZAOOS" },
+        "contributor": {
+          "label": "PR the pipeline",
+          "url": "https://github.com/bettercallzaal/ZAOOS"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "zao-devz",
       "name": "ZAO Devz",
-      "tag": "Agent · Group Dispatch",
+      "tag": "Agent \u00b7 Group Dispatch",
       "tagColor": "cyan",
       "status": "active",
       "category": "agents",
-      "blurb": "@zaodevz_bot — group dispatch + hourly learning tip. Group surface for developer coordination. Phase 3 fold-in to Hermes pending.",
+      "blurb": "@zaodevz_bot \u2014 group dispatch + hourly learning tip. Group surface for developer coordination. Phase 3 fold-in to Hermes pending.",
       "founded": "2025",
       "audience": "ZAO dev community",
       "monetization": "Internal tool",
       "links": [
-        { "label": "Source", "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/bot/src/devz" },
-        { "label": "Telegram", "url": "https://t.me/zaodevz_bot" }
+        {
+          "label": "Source",
+          "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/bot/src/devz"
+        },
+        {
+          "label": "Telegram",
+          "url": "https://t.me/zaodevz_bot"
+        }
       ],
       "plugIn": {
-        "contributor": { "label": "PR the bot", "url": "https://github.com/bettercallzaal/ZAOOS" },
+        "contributor": {
+          "label": "PR the bot",
+          "url": "https://github.com/bettercallzaal/ZAOOS"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "zaocoworkingbot",
       "name": "ZAOcoworkingBot",
-      "tag": "Agent · Team Tracker",
+      "tag": "Agent \u00b7 Team Tracker",
       "tagColor": "orange",
       "status": "building",
       "category": "agents",
-      "blurb": "@ZAOcoworkingBot — universal team action tracker across all brands (Zaal + Iman + ThyRev + Samantha). Doc 650. Live on VPS. Multi-model + BYOK (Claude / OpenAI / MiniMax).",
+      "blurb": "@ZAOcoworkingBot \u2014 universal team action tracker across all brands (Zaal + Iman + ThyRev + Samantha). Doc 650. Live on VPS. Multi-model + BYOK (Claude / OpenAI / MiniMax).",
       "founded": "2026",
       "audience": "ZAO + WaveWarZ + COC Concertz teams",
       "monetization": "Internal team tool",
       "links": [
-        { "label": "Spec (Doc 650)", "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/research/agents/650-cowork-zaodevz-imanagent" },
-        { "label": "Telegram", "url": "https://t.me/ZAOcoworkingBot" }
+        {
+          "label": "Spec (Doc 650)",
+          "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/research/agents/650-cowork-zaodevz-imanagent"
+        },
+        {
+          "label": "Telegram",
+          "url": "https://t.me/ZAOcoworkingBot"
+        }
       ],
       "plugIn": {
-        "contributor": { "label": "Onboard via /whoami DM", "url": "https://t.me/ZAOcoworkingBot" },
+        "contributor": {
+          "label": "Onboard via /whoami DM",
+          "url": "https://t.me/ZAOcoworkingBot"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "bonfires-zabal",
       "name": "ZABAL Bonfire",
-      "tag": "Infra · Knowledge Graph",
+      "tag": "Infra \u00b7 Knowledge Graph",
       "tagColor": "gold",
       "status": "building",
       "category": "infra",
@@ -441,20 +744,35 @@
       "audience": "ZOE + ZAO agents + future BYOK agents",
       "monetization": "0.1 ETH per bonfire mint; $KNOW token economy",
       "links": [
-        { "label": "ZABAL bonfire", "url": "https://zabal.bonfires.ai" },
-        { "label": "Bonfires platform", "url": "https://bonfires.ai" },
-        { "label": "Spec (Doc 665)", "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/research/agents/665-bonfires-deep-dive-zao-integration" }
+        {
+          "label": "ZABAL bonfire",
+          "url": "https://zabal.bonfires.ai"
+        },
+        {
+          "label": "Bonfires platform",
+          "url": "https://bonfires.ai"
+        },
+        {
+          "label": "Spec (Doc 665)",
+          "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/research/agents/665-bonfires-deep-dive-zao-integration"
+        }
       ],
       "plugIn": {
-        "collab": { "label": "Integrate via bonfires-sdk", "url": "https://github.com/NERDDAO/bonfires-sdk" },
-        "customer": { "label": "Mint a bonfire", "url": "https://mint.bonfires.ai" },
+        "collab": {
+          "label": "Integrate via bonfires-sdk",
+          "url": "https://github.com/NERDDAO/bonfires-sdk"
+        },
+        "customer": {
+          "label": "Mint a bonfire",
+          "url": "https://mint.bonfires.ai"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "poidh-zao",
       "name": "POIDH (ZAO bounties)",
-      "tag": "Infra · Bounty Board",
+      "tag": "Infra \u00b7 Bounty Board",
       "tagColor": "cyan",
       "status": "active",
       "category": "infra",
@@ -463,19 +781,31 @@
       "audience": "ZAO community contributors + POIDH user base",
       "monetization": "Pay-to-claim model + sponsorships",
       "links": [
-        { "label": "ZAO POIDH album", "url": "https://poidh.xyz/a/thezao" },
-        { "label": "ZAO leaderboard", "url": "https://bettercallzaal.com/poidh.html" }
+        {
+          "label": "ZAO POIDH album",
+          "url": "https://poidh.xyz/a/thezao"
+        },
+        {
+          "label": "ZAO leaderboard",
+          "url": "https://bettercallzaal.com/poidh.html"
+        }
       ],
       "plugIn": {
-        "customer": { "label": "Claim a bounty", "url": "https://poidh.xyz/a/thezao" },
-        "sponsor": { "label": "Fund a new bounty", "url": "mailto:zaal@thezao.com?subject=Sponsor POIDH bounty" },
+        "customer": {
+          "label": "Claim a bounty",
+          "url": "https://poidh.xyz/a/thezao"
+        },
+        "sponsor": {
+          "label": "Fund a new bounty",
+          "url": "mailto:zaal@thezao.com?subject=Sponsor POIDH bounty"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "zabal-games",
       "name": "ZABAL Games",
-      "tag": "Experimenting · Empire V3",
+      "tag": "Experimenting \u00b7 Empire V3",
       "tagColor": "pink",
       "status": "experimenting",
       "category": "infra",
@@ -484,19 +814,31 @@
       "audience": "Empire Builder + $ZABAL holders",
       "monetization": "On-chain game fees + token incentives",
       "links": [
-        { "label": "Landing", "url": "https://bettercallzaal.com/zabalgames.html" },
-        { "label": "Empire Builder", "url": "https://www.empirebuilder.world/" },
-        { "label": "Notes (Doc 654)", "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/research/events/654-zabal-games-empire-v3-yerbearzerker" }
+        {
+          "label": "Landing",
+          "url": "https://bettercallzaal.com/zabalgames.html"
+        },
+        {
+          "label": "Empire Builder",
+          "url": "https://www.empirebuilder.world/"
+        },
+        {
+          "label": "Notes (Doc 654)",
+          "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/research/events/654-zabal-games-empire-v3-yerbearzerker"
+        }
       ],
       "plugIn": {
-        "collab": { "label": "Co-design a game", "url": "mailto:zaal@thezao.com?subject=ZABAL Games" },
+        "collab": {
+          "label": "Co-design a game",
+          "url": "mailto:zaal@thezao.com?subject=ZABAL Games"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "zlank",
       "name": "Zlank",
-      "tag": "Tool · No-code Snap Builder",
+      "tag": "Tool \u00b7 No-code Snap Builder",
       "tagColor": "cyan",
       "status": "building",
       "category": "tools",
@@ -505,40 +847,64 @@
       "audience": "ZAO members + Farcaster builders",
       "monetization": "Free v1; OSS+managed-service plan",
       "links": [
-        { "label": "Site", "url": "https://zlank.online" },
-        { "label": "Repo", "url": "https://github.com/bettercallzaal/zlank" },
-        { "label": "Snap template", "url": "https://github.com/bettercallzaal/zlank-snap-template" }
+        {
+          "label": "Site",
+          "url": "https://zlank.online"
+        },
+        {
+          "label": "Repo",
+          "url": "https://github.com/bettercallzaal/zlank"
+        },
+        {
+          "label": "Snap template",
+          "url": "https://github.com/bettercallzaal/zlank-snap-template"
+        }
       ],
       "plugIn": {
-        "customer": { "label": "Use Zlank (ZAO members)", "url": "https://zlank.online" },
-        "contributor": { "label": "Fork the template", "url": "https://github.com/bettercallzaal/zlank-snap-template" },
+        "customer": {
+          "label": "Use Zlank (ZAO members)",
+          "url": "https://zlank.online"
+        },
+        "contributor": {
+          "label": "Fork the template",
+          "url": "https://github.com/bettercallzaal/zlank-snap-template"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "zao-101",
       "name": "zao-101",
-      "tag": "Tool · Onboarding",
+      "tag": "Tool \u00b7 Onboarding",
       "tagColor": "muted",
       "status": "active",
       "category": "tools",
-      "blurb": "Learn about The ZAO — artist org, autonomous org, operating system, open source. Public onboarding microsite.",
+      "blurb": "Learn about The ZAO \u2014 artist org, autonomous org, operating system, open source. Public onboarding microsite.",
       "founded": "2026",
       "audience": "Curious newcomers",
       "monetization": "Free; supports member acquisition",
       "links": [
-        { "label": "Repo", "url": "https://github.com/bettercallzaal/zao-101" }
+        {
+          "label": "Repo",
+          "url": "https://github.com/bettercallzaal/zao-101"
+        }
       ],
       "plugIn": {
-        "customer": { "label": "Read + onboard", "url": "https://github.com/bettercallzaal/zao-101" },
-        "contributor": { "label": "PR improvements", "url": "https://github.com/bettercallzaal/zao-101/pulls" },
+        "customer": {
+          "label": "Read + onboard",
+          "url": "https://github.com/bettercallzaal/zao-101"
+        },
+        "contributor": {
+          "label": "PR improvements",
+          "url": "https://github.com/bettercallzaal/zao-101/pulls"
+        },
         "contact": "zaal@thezao.com"
       }
     },
     {
       "id": "zao-video-editor",
       "name": "ZAOVideoEditor",
-      "tag": "Tool · OSS Video",
+      "tag": "Tool \u00b7 OSS Video",
       "tagColor": "muted",
       "status": "paused",
       "category": "tools",
@@ -547,10 +913,206 @@
       "audience": "Content creators + ZAO ops",
       "monetization": "OSS, no direct revenue",
       "links": [
-        { "label": "Repo", "url": "https://github.com/bettercallzaal/ZAOVideoEditor" }
+        {
+          "label": "Repo",
+          "url": "https://github.com/bettercallzaal/ZAOVideoEditor"
+        }
       ],
       "plugIn": {
-        "contributor": { "label": "PR the OSS tool", "url": "https://github.com/bettercallzaal/ZAOVideoEditor/pulls" },
+        "contributor": {
+          "label": "PR the OSS tool",
+          "url": "https://github.com/bettercallzaal/ZAOVideoEditor/pulls"
+        },
+        "contact": "zaal@thezao.com"
+      }
+    },
+    {
+      "id": "zao-fractals",
+      "name": "ZAO Fractals",
+      "tag": "Governance \u00b7 Respect Game",
+      "tagColor": "gold",
+      "status": "active",
+      "category": "governance",
+      "blurb": "Weekly Respect Game consensus governing The ZAO. 90+ weeks of fractal sessions Mondays 6pm EST. Two-ledger Respect model: OG Respect (ERC-20 at 0x34cE...6957) for one-time distributions + ZOR (ERC-1155 at 0x9885...445c) for weekly consensus via ORDAO/OREC. Submit at zao.frapps.xyz.",
+      "founded": "2024-08",
+      "audience": "ZAO members + Optimystics / Optimism Fractal ecosystem",
+      "monetization": "On-chain Respect token economy; no fiat revenue",
+      "links": [
+        {
+          "label": "Submit Breakout",
+          "url": "https://zao.frapps.xyz/submitBreakout"
+        },
+        {
+          "label": "ZAO Fractal app",
+          "url": "https://zao-fractal.vercel.app"
+        },
+        {
+          "label": "Discord bot (April)",
+          "url": "https://github.com/bettercallzaal/fractalbotapril2026"
+        },
+        {
+          "label": "ORDAO (partner)",
+          "url": "https://optimystics.io/ordao"
+        },
+        {
+          "label": "Respect Game (partner)",
+          "url": "https://optimystics.io/respect"
+        }
+      ],
+      "plugIn": {
+        "contributor": {
+          "label": "Submit at the weekly fractal",
+          "url": "https://zao.frapps.xyz/submitBreakout"
+        },
+        "collab": {
+          "label": "Co-host a fractal community",
+          "url": "https://optimystics.io/tools"
+        },
+        "contact": "zaal@thezao.com"
+      }
+    },
+    {
+      "id": "zao-music",
+      "name": "ZAO Music",
+      "tag": "Music Label \u00b7 DBA",
+      "tagColor": "pink",
+      "status": "building",
+      "category": "music",
+      "blurb": "ZAO's music label, DBA under BCZ Strategies LLC. Distribution stack: BMI + DistroKid + 0xSplits. Skips CD Baby + Revelator (major-owned 2026). Team: DCoop + GodCloud + Iman. First release: Cipher.",
+      "founded": "2026",
+      "audience": "ZAO artist roster + independent musicians",
+      "monetization": "Music distribution royalties + 0xSplits artist payouts",
+      "links": [
+        {
+          "label": "Music entity overview (Doc 475)",
+          "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/research/business/475-zao-music-entity"
+        }
+      ],
+      "plugIn": {
+        "collab": {
+          "label": "Artist signing inquiries",
+          "url": "mailto:zaal@thezao.com?subject=ZAO Music"
+        },
+        "contributor": {
+          "label": "Submit a song",
+          "url": "mailto:zaal@thezao.com?subject=ZAO Music submission"
+        },
+        "contact": "zaal@thezao.com"
+      }
+    },
+    {
+      "id": "zaomusicbot",
+      "name": "ZAO Music Bot",
+      "tag": "Agent \u00b7 Music Ops",
+      "tagColor": "pink",
+      "status": "active",
+      "category": "agents",
+      "blurb": "JavaScript bot driving ZAO Music workflows (release coordination, social posts, distribution status). Sub-surface of ZAO Music.",
+      "founded": "2026",
+      "audience": "ZAO Music ops team",
+      "monetization": "Internal tool",
+      "links": [
+        {
+          "label": "Repo",
+          "url": "https://github.com/bettercallzaal/zaomusicbot"
+        }
+      ],
+      "plugIn": {
+        "contributor": {
+          "label": "PR the bot",
+          "url": "https://github.com/bettercallzaal/zaomusicbot/pulls"
+        },
+        "contact": "zaal@thezao.com"
+      }
+    },
+    {
+      "id": "zounz",
+      "name": "ZOUNZ",
+      "tag": "Music \u00b7 Farcaster Mini App",
+      "tagColor": "cyan",
+      "status": "building",
+      "category": "music",
+      "blurb": "Farcaster Music Mini App. AI music generation + Audius discovery + Zora NFT minting on Base + Attention Markets on Solana. Multi-chain music surface inside ZAOOS.",
+      "founded": "2025",
+      "audience": "Farcaster music community + ZAO members",
+      "monetization": "Zora mint fees + on-chain attention markets",
+      "links": [
+        {
+          "label": "Repo",
+          "url": "https://github.com/bettercallzaal/ZOUNZ"
+        },
+        {
+          "label": "ZAOOS mount",
+          "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/src/components/zounz"
+        }
+      ],
+      "plugIn": {
+        "customer": {
+          "label": "Mint music NFTs on Base",
+          "url": "https://github.com/bettercallzaal/ZOUNZ"
+        },
+        "contributor": {
+          "label": "PR the mini app",
+          "url": "https://github.com/bettercallzaal/ZOUNZ/pulls"
+        },
+        "contact": "zaal@thezao.com"
+      }
+    },
+    {
+      "id": "bcz-journal",
+      "name": "BCZ Journal",
+      "tag": "Show \u00b7 Public Journal",
+      "tagColor": "orange",
+      "status": "active",
+      "category": "shows",
+      "blurb": "Zaal's public build-in-public journal. Long-form posts on The ZAO, WaveWarZ, ZABAL ecosystem activity.",
+      "founded": "2026",
+      "audience": "Builders + ZAO ecosystem followers",
+      "monetization": "Free; supports brand awareness",
+      "links": [
+        {
+          "label": "Repo",
+          "url": "https://github.com/bettercallzaal/bcz-journal"
+        }
+      ],
+      "plugIn": {
+        "customer": {
+          "label": "Read the journal",
+          "url": "https://github.com/bettercallzaal/bcz-journal"
+        },
+        "contributor": {
+          "label": "PR a guest post",
+          "url": "https://github.com/bettercallzaal/bcz-journal/pulls"
+        },
+        "contact": "zaal@bettercallzaal.com"
+      }
+    },
+    {
+      "id": "textsplitter",
+      "name": "textsplitter",
+      "tag": "Tool \u00b7 Bonfires Feeder",
+      "tagColor": "muted",
+      "status": "active",
+      "category": "tools",
+      "blurb": "X Spaces audio transcript chunker that preprocesses Wavewarz Spaces recordings into kEngrams for the Wavewarz Bonfire. Sibling utility to bonfires-sdk.",
+      "founded": "2026",
+      "audience": "ZAO ops + Bonfires power users",
+      "monetization": "OSS, no direct revenue",
+      "links": [
+        {
+          "label": "Repo",
+          "url": "https://github.com/bettercallzaal/textsplitter"
+        },
+        {
+          "label": "Bonfires deep-dive (Doc 665)",
+          "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/research/agents/665-bonfires-deep-dive-zao-integration"
+        }
+      ],
+      "plugIn": {
+        "contributor": {
+          "label": "PR the utility",
+          "url": "https://github.com/bettercallzaal/textsplitter/pulls"
+        },
         "contact": "zaal@thezao.com"
       }
     }
