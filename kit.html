@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZABAL Brand Kit — Every brand + how to plug in</title>
+  <meta name="description" content="Every brand under the ZABAL umbrella, what it is, status, and exactly how to sponsor, collab, customer, or contribute.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://bettercallzaal.com/kit.html">
+  <meta property="og:title" content="ZABAL Brand Kit">
+  <meta property="og:description" content="Every brand under the ZABAL umbrella + exactly how to plug in.">
+  <meta property="og:url" content="https://bettercallzaal.com/kit.html">
+  <meta property="og:image" content="https://bettercallzaal.com/assets/icon.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="/assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #070709;
+      --surface: #111115;
+      --surface-2: #16161c;
+      --surface-3: #1c1c25;
+      --orange: #ff6b35;
+      --cyan: #00e5ff;
+      --gold: #f5c842;
+      --pink: #ff3d6e;
+      --green: #22c55e;
+      --gradient-main: linear-gradient(135deg, #ff6b35, #ff3d6e, #00e5ff);
+      --text: #e4e2dd;
+      --text-muted: #8a8895;
+      --text-dim: #4e4c57;
+      --border: #1f1e26;
+      --border-hover: #2f2d3a;
+      --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 800px 600px at 15% -10%, rgba(255,107,53,0.12), transparent 60%),
+        radial-gradient(ellipse 700px 500px at 90% 10%, rgba(0,229,255,0.10), transparent 60%),
+        radial-gradient(ellipse 600px 400px at 50% 100%, rgba(255,61,110,0.08), transparent 60%);
+      z-index: -1;
+    }
+    body::after {
+      content: '';
+      position: fixed; inset: 0; pointer-events: none;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      z-index: 9999;
+    }
+    a { color: var(--cyan); text-decoration: none; transition: color 0.15s; }
+    a:hover { color: var(--orange); }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 1.25rem; }
+
+    /* nav */
+    .nav { padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: rgba(7,7,9,0.92); backdrop-filter: blur(12px); z-index: 100; }
+    .nav-inner { max-width: 1180px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .nav-brand { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.05rem; background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .nav-back { font-size: 0.85rem; color: var(--text-muted); }
+    .nav-back:hover { color: var(--text); }
+
+    /* hero */
+    .hero { padding: 4.5rem 0 2rem; text-align: center; }
+    .hero-eyebrow { font-weight: 500; font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--orange); margin-bottom: 1rem; }
+    .hero h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.5rem, 7vw, 4.5rem); line-height: 1; letter-spacing: -0.02em; margin-bottom: 1.25rem; background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero p { max-width: 640px; margin: 0 auto; font-size: clamp(1rem, 1.5vw, 1.1rem); color: var(--text-muted); }
+    .hero-stats { margin-top: 2rem; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-dim); }
+    .hero-stats strong { color: var(--gold); font-weight: 700; font-size: 1.1rem; display: block; }
+
+    /* filters */
+    .filters { padding: 1.5rem 0 0.5rem; border-bottom: 1px solid var(--border); }
+    .filter-row { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 0.85rem; }
+    .filter-row .label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); align-self: center; margin-right: 0.5rem; }
+    .chip {
+      display: inline-block; padding: 0.4rem 0.9rem; border: 1px solid var(--border); border-radius: 999px;
+      font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.04em; cursor: pointer; transition: all 0.15s;
+      background: transparent;
+    }
+    .chip:hover { border-color: var(--border-hover); color: var(--text); }
+    .chip.active { border-color: var(--orange); color: var(--text); background: rgba(255,107,53,0.08); }
+    .search-row { display: flex; justify-content: center; padding-bottom: 1rem; }
+    .search { width: 100%; max-width: 420px; padding: 0.6rem 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; color: var(--text); font-family: inherit; font-size: 0.9rem; }
+    .search:focus { outline: none; border-color: var(--cyan); }
+
+    /* grid */
+    .results-meta { padding: 1.5rem 0 0.5rem; font-size: 0.8rem; color: var(--text-dim); text-align: center; letter-spacing: 0.1em; text-transform: uppercase; }
+    .grid { padding: 1rem 0 4rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 1.25rem; }
+    @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+
+    /* card */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: border-color 0.15s, transform 0.15s;
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+    .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+    .card h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.35rem; letter-spacing: -0.005em; line-height: 1.15; }
+    .card-meta { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; flex-shrink: 0; }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .status-label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); font-weight: 500; }
+    .tag {
+      font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.2rem 0.55rem;
+      border: 1px solid var(--border); border-radius: 4px; color: var(--orange); font-weight: 500;
+    }
+    .tag.cyan { color: var(--cyan); }
+    .tag.gold { color: var(--gold); }
+    .tag.pink { color: var(--pink); }
+    .tag.muted { color: var(--text-muted); }
+    .blurb { color: var(--text-muted); font-size: 0.92rem; line-height: 1.55; }
+    .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1.5rem; font-size: 0.78rem; color: var(--text-dim); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 0.8rem 0; }
+    .stats div { display: flex; flex-direction: column; gap: 0.15rem; }
+    .stats .key { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); }
+    .stats .val { color: var(--text); font-size: 0.85rem; }
+    .links-row { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    .link-pill {
+      display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.3rem 0.7rem;
+      border: 1px solid var(--border); border-radius: 999px; font-size: 0.75rem; color: var(--text-muted);
+      transition: all 0.15s; background: var(--surface-2);
+    }
+    .link-pill:hover { border-color: var(--cyan); color: var(--cyan); }
+    .plug-in { border-top: 1px solid var(--border); padding-top: 1rem; }
+    .plug-in-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; font-weight: 600; }
+    .ctas { display: flex; flex-direction: column; gap: 0.4rem; }
+    .cta {
+      display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
+      padding: 0.55rem 0.9rem; border: 1px solid var(--border); border-radius: 6px;
+      font-size: 0.82rem; color: var(--text); background: var(--surface-2); transition: all 0.15s;
+    }
+    .cta:hover { border-color: var(--orange); color: var(--orange); background: rgba(255,107,53,0.05); }
+    .cta-role { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim); font-weight: 600; min-width: 80px; }
+    .cta-label { flex: 1; }
+    .cta-arrow { color: var(--text-dim); font-weight: 700; }
+    .contact-line { font-size: 0.78rem; color: var(--text-dim); margin-top: 0.4rem; }
+    .contact-line a { color: var(--cyan); }
+
+    /* footer */
+    footer { border-top: 1px solid var(--border); padding: 3rem 0; text-align: center; font-size: 0.82rem; color: var(--text-dim); }
+    footer a { color: var(--cyan); }
+    .empty { text-align: center; padding: 4rem 1rem; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">BetterCallZaal</a>
+      <a href="/" class="nav-back">&larr; back to bettercallzaal.com</a>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <div class="hero-eyebrow">ZABAL Brand Kit</div>
+    <h1>Every brand. One page.</h1>
+    <p>The ZABAL umbrella in full. What each brand is, where it lives, the status, and exactly how to sponsor, collab, customer, or contribute.</p>
+    <div class="hero-stats" id="hero-stats"></div>
+  </header>
+
+  <section class="filters">
+    <div class="container">
+      <div class="filter-row" id="category-row"><span class="label">Category</span></div>
+      <div class="filter-row" id="status-row"><span class="label">Status</span></div>
+      <div class="search-row">
+        <input type="search" class="search" id="search" placeholder="Search brands, products, or surfaces..." aria-label="Search brands">
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="results-meta" id="results-meta">Loading...</div>
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <footer>
+    <div class="container">
+      ZABAL Brand Kit · machine-readable manifest at <a href="/brands.json">brands.json</a> · updated <span id="updated"></span><br>
+      <a href="/">bettercallzaal.com</a> · <a href="https://thezao.com">thezao.com</a> · <a href="https://github.com/bettercallzaal">github.com/bettercallzaal</a>
+    </div>
+  </footer>
+
+  <script>
+    const ROLE_ORDER = ['sponsor', 'collab', 'customer', 'contributor'];
+    const ROLE_LABELS = {
+      sponsor: 'Sponsor',
+      collab: 'Collab',
+      customer: 'Customer',
+      contributor: 'Contribute'
+    };
+
+    let DATA = null;
+    let filters = { category: 'all', status: 'all', q: '' };
+
+    async function load() {
+      try {
+        const res = await fetch('/brands.json');
+        if (!res.ok) throw new Error('Failed to load brands.json');
+        DATA = await res.json();
+        renderFilters();
+        renderHero();
+        render();
+        document.getElementById('updated').textContent = DATA.generated || '';
+      } catch (err) {
+        document.getElementById('results-meta').textContent = 'Failed to load brand data';
+        console.error(err);
+      }
+    }
+
+    function renderHero() {
+      const total = DATA.brands.length;
+      const counts = {};
+      DATA.brands.forEach(b => { counts[b.status] = (counts[b.status] || 0) + 1; });
+      const stats = document.getElementById('hero-stats');
+      stats.innerHTML = `
+        <div><strong>${total}</strong> brands</div>
+        <div><strong>${counts.active || 0}</strong> active</div>
+        <div><strong>${counts.building || 0}</strong> building</div>
+        <div><strong>${counts.graduated || 0}</strong> graduated</div>
+        <div><strong>${DATA.categories.length}</strong> categories</div>
+      `;
+    }
+
+    function renderFilters() {
+      const catRow = document.getElementById('category-row');
+      const allChip = chip('All', 'all', filters.category === 'all', () => { filters.category = 'all'; render(); });
+      catRow.appendChild(allChip);
+      DATA.categories.forEach(c => {
+        catRow.appendChild(chip(c.label, c.id, filters.category === c.id, () => { filters.category = c.id; render(); }));
+      });
+
+      const statusRow = document.getElementById('status-row');
+      const allStatus = chip('All', 'all', filters.status === 'all', () => { filters.status = 'all'; render(); });
+      statusRow.appendChild(allStatus);
+      DATA.statuses.forEach(s => {
+        statusRow.appendChild(chip(s.label, s.id, filters.status === s.id, () => { filters.status = s.id; render(); }));
+      });
+
+      document.getElementById('search').addEventListener('input', e => {
+        filters.q = e.target.value.toLowerCase().trim();
+        render();
+      });
+    }
+
+    function chip(label, id, active, onClick) {
+      const b = document.createElement('button');
+      b.className = 'chip' + (active ? ' active' : '');
+      b.dataset.id = id;
+      b.textContent = label;
+      b.addEventListener('click', () => {
+        document.querySelectorAll('.filter-row .chip').forEach(c => {
+          if (c.parentNode === b.parentNode && c !== b) c.classList.remove('active');
+        });
+        b.classList.add('active');
+        onClick();
+      });
+      return b;
+    }
+
+    function statusColor(id) {
+      const s = DATA.statuses.find(x => x.id === id);
+      return s ? s.color : '#94a3b8';
+    }
+    function statusLabel(id) {
+      const s = DATA.statuses.find(x => x.id === id);
+      return s ? s.label : id;
+    }
+
+    function render() {
+      const grid = document.getElementById('grid');
+      grid.innerHTML = '';
+      const filtered = DATA.brands.filter(b => {
+        if (filters.category !== 'all' && b.category !== filters.category) return false;
+        if (filters.status !== 'all' && b.status !== filters.status) return false;
+        if (filters.q) {
+          const hay = (b.name + ' ' + b.blurb + ' ' + b.tag + ' ' + (b.audience || '') + ' ' + (b.monetization || '')).toLowerCase();
+          if (!hay.includes(filters.q)) return false;
+        }
+        return true;
+      });
+      document.getElementById('results-meta').textContent = `${filtered.length} of ${DATA.brands.length} brands`;
+      if (!filtered.length) {
+        grid.innerHTML = '<div class="empty">No matches. Clear filters or try a different search.</div>';
+        return;
+      }
+      filtered.forEach(b => grid.appendChild(card(b)));
+    }
+
+    function card(b) {
+      const el = document.createElement('article');
+      el.className = 'card';
+      el.id = b.id;
+
+      // head
+      const head = document.createElement('div');
+      head.className = 'card-head';
+      const title = document.createElement('div');
+      title.innerHTML = `<h2>${escape(b.name)}</h2><div style="margin-top:0.35rem;"><span class="tag ${b.tagColor||''}">${escape(b.tag)}</span></div>`;
+      const meta = document.createElement('div');
+      meta.className = 'card-meta';
+      meta.innerHTML = `<span class="status-dot" style="background:${statusColor(b.status)}"></span><span class="status-label">${escape(statusLabel(b.status))}</span>`;
+      head.append(title, meta);
+      el.appendChild(head);
+
+      // blurb
+      const blurb = document.createElement('p');
+      blurb.className = 'blurb';
+      blurb.textContent = b.blurb;
+      el.appendChild(blurb);
+
+      // stats
+      const stats = document.createElement('div');
+      stats.className = 'stats';
+      stats.innerHTML = `
+        <div><span class="key">Founded</span><span class="val">${escape(b.founded || '—')}</span></div>
+        <div><span class="key">Audience</span><span class="val">${escape(b.audience || '—')}</span></div>
+        <div style="grid-column: 1 / -1;"><span class="key">Monetization</span><span class="val">${escape(b.monetization || '—')}</span></div>
+      `;
+      el.appendChild(stats);
+
+      // links
+      if (b.links && b.links.length) {
+        const linksWrap = document.createElement('div');
+        linksWrap.className = 'links-row';
+        b.links.forEach(l => {
+          const a = document.createElement('a');
+          a.className = 'link-pill';
+          a.href = l.url;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          a.textContent = l.label;
+          linksWrap.appendChild(a);
+        });
+        el.appendChild(linksWrap);
+      }
+
+      // plug-in CTAs
+      const pi = b.plugIn || {};
+      const ctas = ROLE_ORDER.map(role => pi[role]).filter(Boolean);
+      if (ctas.length || pi.contact) {
+        const plug = document.createElement('div');
+        plug.className = 'plug-in';
+        plug.innerHTML = '<div class="plug-in-label">How to plug in</div>';
+        const ctaWrap = document.createElement('div');
+        ctaWrap.className = 'ctas';
+        ROLE_ORDER.forEach(role => {
+          const c = pi[role];
+          if (!c) return;
+          const a = document.createElement('a');
+          a.className = 'cta';
+          a.href = c.url;
+          a.target = c.url.startsWith('mailto:') || c.url.startsWith('https://t.me/') ? '_self' : '_blank';
+          a.rel = 'noopener';
+          a.innerHTML = `<span class="cta-role">${ROLE_LABELS[role]}</span><span class="cta-label">${escape(c.label)}</span><span class="cta-arrow">&rarr;</span>`;
+          ctaWrap.appendChild(a);
+        });
+        plug.appendChild(ctaWrap);
+        if (pi.contact) {
+          const cnt = document.createElement('div');
+          cnt.className = 'contact-line';
+          cnt.innerHTML = `Contact &middot; <a href="mailto:${escape(pi.contact)}">${escape(pi.contact)}</a>`;
+          plug.appendChild(cnt);
+        }
+        el.appendChild(plug);
+      }
+
+      return el;
+    }
+
+    function escape(s) {
+      if (s == null) return '';
+      return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+
+    load();
+  </script>
+</body>
+</html>
