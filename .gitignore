@@ -9,6 +9,9 @@ node_modules/
 *.log
 
 # Embedded working dirs (not part of the public site)
-Maine/Cameron/riverside-site/
+Maine/Cameron/
 Maine/FarmDrop/
 Maine/Hotels/
+
+# Private out-of-repo files (PII, credentials, contacts)
+.private/
