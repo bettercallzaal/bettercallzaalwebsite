@@ -13,7 +13,7 @@ A Farcaster vibe-coding challenge for the ZAO ecosystem. You do not apply with a
 Builders and mentors - both doors are open right now.
 
 bettercallzaal.com/zabalgames.html
-/zabalgames
+/zabal
 
 ---
 
@@ -56,13 +56,13 @@ Two open roles right now:
 1. Builders - you do not apply with a pitch, you apply by shipping. Start warming up now.
 2. Mentors + workshop speakers - the roster is open. Claim a champion and build alongside them in the Finals, or record a June session on your specialty.
 
-Everything is at bettercallzaal.com/zabalgames.html - builder and mentor sign-up forms both on the page. Casts go to the /zabalgames channel.
+Everything is at bettercallzaal.com/zabalgames.html - builder and mentor sign-up forms both on the page. Casts go to the /zabal channel.
 
 ---
 
 ## Notes for Zaal before posting
 
 - Dates are intentionally month-level. If you lock exact dates before posting, swap "three months" detail in.
-- The `/zabalgames` Farcaster channel does not exist yet (per Doc 701 infra status) - create it before this post goes live, or the link is dead.
+- The `/zabal` Farcaster channel is live (farcaster.xyz/~/channel/zabal) - casts have a home.
 - The page's submission board + builder form are not wired to a backend yet (no Supabase). Mentor form is live (Formspree). If you post now, the mentor ask works; the builder ask should say "warming up / July" not "submit now" - the current draft already does this.
 - For platform-specific variants (X, LinkedIn, newsletter), run `/socials` on this post.
