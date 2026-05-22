@@ -83,8 +83,8 @@ Framework per brand: One-liner / Mission / Audience / Voice / Visual / Build sur
 - **One-liner:** Virtual concert community - promoters running streamed shows.
 - **Mission:** Give virtual concerts a real home - for the metaverse + streamed shows and the promoters who run them.
 - **Audience:** 13+ concert promoters + the audiences who attend virtual + metaverse concerts.
-- **Voice:** **[TBD - Zaal: COC Concertz voice/tone - still open as of 2026-05-21.]**
-- **Visual:** **[TBD - Zaal: COC Concertz visual identity - still open as of 2026-05-21.]**
+- **Voice:** Warm, communal, builder-energy - the same family as the ZAO umbrella. COC reads as part of the ecosystem, not a separate vibe. (Confirmed 2026-05-22.)
+- **Visual:** Its own distinct brand - colors, logo, vibe separate from the ZAO umbrella. **[TBD - Zaal describing the spec.]**
 - **Build surface:** Next.js 16 + Firebase + Cloudinary. Surfaces: `/portal/newsletter` (newsletter builder), `/stage` (concert stream interface), `/team` (promoter dashboard). Existing content pipeline: record show -> Descript edit -> newsletter builder generates YouTube descriptions (MiniMax AI) -> manual cross-post. 150+ concerts run. Builders can ship: concert streaming tools, the content pipeline automation, promoter dashboards, ticketing/RSVP, metaverse concert UX.
 - **Status:** Live - COC Concertz #3 ran March 2026 (metaverse concert with DUO DO, JOSEPH GOATS, STILO WORLD).
 
@@ -111,6 +111,6 @@ The Phase 2 prompt bundle includes this whole guide - Finalists read it to under
 Resolved 2026-05-21 (see ZAO research Doc 701 Part 7): ZAO OS (1:1 with umbrella), ZABAL voice, WaveWarZ voice (loud arena brand confirmed), ZAO Festivals (Maine-local visual), ZAO Music (artist-collective voice, umbrella visual), Respect (Fibonacci motif), COC Concertz mission line.
 
 Still open:
-- COC Concertz voice + visual identity
+- COC Concertz visual spec (voice locked 2026-05-22 - warm + communal; visual is its own distinct brand, Zaal to describe)
 - ZABAL - the concrete wordmark + zabal.art palette spec
 - WaveWarZ - palette/vibe spec (extract from wavewarz-intelligence.vercel.app)
