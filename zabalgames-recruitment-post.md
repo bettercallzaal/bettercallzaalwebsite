@@ -1,90 +1,93 @@
-# ZABAL Games Season 1 - Workshop Lead Recruitment Campaign
+# ZABAL Games Season 1 - Launch Kit
 
-> Drafted 2026-05-21, refocused 2026-05-22. The active campaign is recruiting WORKSHOP LEADS for the June prep month. A workshop lead records one June bootcamp session on their specialty - watchable live or after. Open call plus seeded direct asks. Builder recruitment opens for July; mentor recruitment runs on the same form. No emojis, no em dashes per brand rules. Paste-ready, four channels.
+> The public launch announcement for ZABAL Games Season 1. Drafted 2026-05-21, reworked 2026-05-22 after the Tyler call (research Doc 714). ZABAL Games and ZAOstock announce as SEPARATE posts - this kit is the ZABAL Games post. Goal of the launch: announce the event, drive workshop-lead signups for June, point people to the Farcaster spaces session this weekend. No emojis, no em dashes per brand rules. Paste-ready.
 
-> Sign-up: bettercallzaal.com/zabalgames.html (mentor/workshop-lead form). Casts go to /zabal on Farcaster.
+> Sign-up: bettercallzaal.com/zabalgames.html. Channel: /zabal on Farcaster. Entry (opening end of month): the Zabal connector on Magnetic.
 
 ---
 
-## 1. Farcaster - /zabal channel
+## 1. Farcaster - launch announcement (/zabal)
 
 ### Main cast
 
-ZABAL Games Season 1 needs workshop leads.
+ZABAL Games Season 1.
 
-June is the prep month - recorded sessions that get a whole cohort of Farcaster vibe-coders ready to build for the ZAO ecosystem. I am looking for the people who lead them.
+A Farcaster vibe-coding challenge for the ZAO ecosystem - streamer games crossed with a hackathon. Three months:
 
-You know Empire Builder? Agents? Claude Code? Tokens? Governance? Music infra? Record one session on it. Watchable live or after. That is the whole ask.
+June - workshops. Builders across the ecosystem record sessions on the tools they have built.
+July - open build. Anyone ships a build for ZABAL, ZAO, or WaveWarZ, against one machine-readable context file.
+August - the Finals. The strongest builds get a ZAO mentor embedded as a teammate, then a live reveal.
 
-You get cast credit, a spot on the ZABAL Games team, and a hand in what the cohort learns.
+I am going live on Farcaster spaces this weekend to walk through it - and DJing some old ZAO music for the lore. Come hang.
+
+First thing I need: workshop leads. If you have built something, you have a session to give.
 
 bettercallzaal.com/zabalgames.html
 
 ### Thread
 
-**2/** What ZABAL Games is: a Farcaster vibe-coding challenge for the ZAO ecosystem. June to learn, July to build, August to compete. Builders ship real things with a ZAO mentor in their corner.
+**2/** Why it runs this way: the build is the application. You do not pitch, you ship. June seasons you with context and tools. July you build in the open. August the best builds collaborate with a ZAO mentor for the Finals - and every finalist wins.
 
-**3/** June prep is recorded sessions, Far-Hack style. The cohort watches, loads context, and shows up to July ready. Workshop leads are what make June worth showing up for.
+**3/** Home base is two surfaces. A Magnetic portal holds the full workshop library plus entry and submissions - one place, all the context. A Farcaster mini app is the explainer and the front door. Entry is the Zabal connector: collect it, you are in. Both open end of month.
 
-**4/** Topics are wide open: Empire Builder, Clanker, Farcaster mini apps, Claude Code, Cursor, MCP, agent harnesses, ZAO governance, Respect and fractals, music infra, POIDH, zlank, Songjam, festivals. If you know it, teach it.
+**4/** June is workshop month and I am recruiting leads now. Record one session on what you know - Empire Builder, agents, Claude Code, tokens, governance, music infra, festivals, whatever your edge is. One recording, watchable live or after.
 
-**5/** One recorded session. Low lift, real credit, a standing spot on the team. Sign up on the page or reply here.
-
-bettercallzaal.com/zabalgames.html
+**5/** Sign up: bettercallzaal.com/zabalgames.html. Spaces session this weekend. This is Season 1 - get in early.
 
 ---
 
 ## 2. X / Twitter
 
-ZABAL Games Season 1 is looking for workshop leads.
+ZABAL Games Season 1.
 
-It is a Farcaster vibe-coding challenge for the ZAO ecosystem - June prep, July open build-a-thon, August Finals.
+A Farcaster vibe-coding challenge for the ZAO ecosystem - streamer games meets hackathon.
 
-June is recorded sessions that get the cohort ready to build. Lead one. Pick your lane: Empire Builder, agents, Claude Code, tokens, governance, music infra, whatever you know.
+June: workshops. July: open build-a-thon. August: the Finals, with ZAO mentors embedded.
 
-One session. Cast credit. A spot on the team.
+Going live on Farcaster spaces this weekend to break it down.
 
-Sign up: bettercallzaal.com/zabalgames.html
+First ask - workshop leads. Built something? You have a session to give.
+
+bettercallzaal.com/zabalgames.html
 
 ---
 
 ## 3. Telegram + group chats
 
-Looking for workshop leads for ZABAL Games Season 1.
+ZABAL Games Season 1 is happening.
 
-Quick context: ZABAL Games is a Farcaster vibe-coding challenge for the ZAO ecosystem. Three months - June is prep, July is an open build-a-thon, August is the Finals.
+It is a Farcaster vibe-coding challenge for the ZAO ecosystem - think streamer games crossed with a hackathon. Three months:
 
-June prep is a set of recorded sessions that get the whole cohort ready to build. I need people to lead them.
+- June: workshop month. Builders across the ecosystem record sessions on the tools they have built.
+- July: open build-a-thon. Anyone ships a build for ZABAL, ZAO, or WaveWarZ. The build is the application.
+- August: the Finals. The strongest builds get a ZAO mentor embedded as a teammate, then a live reveal stream. Every finalist wins.
 
-The ask is small: record one session on something you know well. Empire Builder, Clanker, Farcaster mini apps, Claude Code, Cursor, MCP, agent harnesses, ZAO governance, Respect, fractals, music infra, POIDH, zlank, Songjam, festivals - whatever your thing is. Watchable live or after, so the cost is one recording.
+This weekend I am going live on Farcaster spaces to walk through the whole thing - and DJing old ZAO music for the lore. Come through.
 
-What you get: cast credit, a standing spot on the ZABAL Games team, and a direct hand in what the next wave of ZAO builders learns first.
+Right now I need workshop leads. If you have built something, you have a 30-minute session to give - Empire Builder, agents, Claude Code, tokens, governance, music infra, whatever your specialty is. One recording, watchable live or after.
 
-Sign up: bettercallzaal.com/zabalgames.html - pick the workshop lead option on the form. Or just message me.
-
+Sign up: bettercallzaal.com/zabalgames.html
 Casts go to the /zabal channel on Farcaster.
 
 ---
 
 ## 4. Newsletter / Paragraph
 
-### Lead a workshop at ZABAL Games Season 1
+### ZABAL Games Season 1
 
-ZABAL Games is the ZAO ecosystem's Farcaster vibe-coding challenge. It runs three months: June to learn, July to build, August to compete. June is the prep month - a library of recorded sessions that gets a whole cohort of builders ready before they ship a thing.
+ZABAL Games is the ZAO ecosystem's Farcaster vibe-coding challenge - streamer games crossed with a hackathon. It runs three months: June to learn, July to build, August to compete.
 
-We are recruiting the people who lead those sessions.
+June is workshop month. Builders from across the ecosystem record one session each on the tools they have built, and the whole library lands in one place. July is an open build-a-thon - anyone ships a build for ZABAL, ZAO, or WaveWarZ, pointed at a single machine-readable context file describing every ZAO project and where it stands. August is the Finals, where the strongest builds get a ZAO mentor embedded as a teammate, followed by a live reveal stream. Every finalist wins.
 
-A workshop lead records one session on their specialty. Empire Builder, Clanker, Farcaster mini apps, Claude Code, Cursor, MCP, agent harnesses, ZAO governance, Respect and fractals, music infrastructure, POIDH, zlank, Songjam, festival operations - if you know it well enough to teach it, there is a slot for it. Sessions are watchable live or after, so the time cost is one recording.
+We are recruiting workshop leads now. If you have built something worth teaching - Empire Builder, agents, Claude Code, tokens, governance, music infrastructure, festival operations - you have a session to give. One recording, watchable live or after.
 
-In return: public cast credit, a standing spot on the ZABAL Games team, auto-eligibility for future Seasons, and a direct hand in what the next wave of ZAO builders learns first.
-
-Sign up at bettercallzaal.com/zabalgames.html - pick the workshop lead option on the form. Questions go to the /zabal channel on Farcaster.
+Sign up at bettercallzaal.com/zabalgames.html. This weekend, catch the launch on Farcaster spaces. Casts go to the /zabal channel.
 
 ---
 
 ## 5. Share card - image generation prompt
 
-> Paste this into ChatGPT (image mode), DALL-E, or any image model. Target: a 1200x630 social/OG card. Brand fonts are Syne (headings) + Outfit (body) - match if the tool allows, otherwise a heavy geometric sans-serif.
+> Paste into ChatGPT image mode / DALL-E. Target: 1200x630 OG card. Brand fonts: Syne (headings), Outfit (body).
 
 ```
 Design a 1200x630 social share card for an event called "ZABAL GAMES".
@@ -110,13 +113,41 @@ No emojis. No people. No logos other than the "ZABAL GAMES" wordmark.
 Clean, confident, modern. Landscape, 1200x630.
 ```
 
-Variant for a Farcaster-feed square (1:1): same spec, 1080x1080, headline stacked.
+Square 1:1 variant for the Farcaster feed: same spec, 1080x1080, headline stacked.
+
+---
+
+## 6. Zabal connector - NFT image generation prompt
+
+> The Zabal connector is the anchor magnet - collecting it is entry/RSVP to ZABAL Games, and it auto-drops the road-to-ZAOstock entry. The mechanic is set; it needs art. Generate this and send the file to Tyler for the Magnetic magnet.
+
+```
+Design a collectible NFT artwork for the "ZABAL CONNECTOR" - the entry token
+for ZABAL Games.
+
+Concept: a connector / hub / node - something that reads instantly as "this
+links you in". A central glowing node with luminous lines radiating out to
+smaller nodes around it (the connector is the general channel that links to
+side channels).
+
+Style: dark, premium, web3-native. Background near-black (#070709) with a
+subtle fractal-noise texture. Central node in a warm-to-cool gradient -
+orange (#ff6b35) through pink (#ff3d6e) to cyan (#00e5ff). Radiating
+connection lines in ZABAL purple (#a78bfa) and cyan, thin and glowing.
+
+The word "ZABAL" small, off-white (#e4e2dd), heavy geometric sans
+(Syne-style). Optional tiny "SEASON 1" tag in muted gold (#f5c842).
+
+Square 1:1, 1080x1080. Clean, iconic, reads well small as a collectible
+thumbnail. No emojis, no people, no photographic elements. Geometric, glowing.
+```
 
 ---
 
 ## Notes for Zaal
 
-- Channels to hit (all four selected): Farcaster /zabal, X, Telegram + GCs, newsletter/Paragraph.
-- Open call + seeded asks: these posts are the open call. Separately DM the people you already want for specific topics (Jordan on Empire Builder, kmac on zlank, etc).
-- The site form uses the role option "Workshop lead" - terminology now matches this campaign.
-- If you want me to generate the share card directly instead of running the prompt yourself, share an OpenAI API key and I will produce the 1200x630 file.
+- ZABAL Games and ZAOstock go out as separate posts. This kit is ZABAL Games only.
+- Timeline grounding: workshop-lead signup is live now (the site form). The Magnetic portal + Zabal connector entry open end of month (~May 30) - the announcement says "end of month" so it is not overpromising.
+- Farcaster spaces session is the weekend hook - launch the post, then go live.
+- Open call + seeded asks: these posts are the open call. DM specific people for specific topics (Jordan on Empire Builder, kmac on zlank, Tyler on Magnetic - Tyler already confirmed).
+- For the share card and connector art: run the prompts, or share an OpenAI API key and I generate the files directly.
