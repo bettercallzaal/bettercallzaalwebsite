@@ -1506,9 +1506,30 @@
             <div>
               <h3>ZABAL Games</h3>
               <p>Farcaster Vibe-Coding Challenge - Season 1. June prep / July ship / August finals. Open build-a-thon onboarding builders into ZAO.</p>
+              <p id="zg-live-stats" style="margin-top: 0.4rem; font-size: 0.78rem; color: rgba(255,255,255,0.5); font-family: 'JetBrains Mono', monospace; letter-spacing: 0.02em;">Loading live counts...</p>
             </div>
             <span class="portfolio-link">zabalgames.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
           </a>
+          <script>
+          (function() {
+            var el = document.getElementById('zg-live-stats');
+            if (!el) return;
+            Promise.all([
+              fetch('https://zabalgames.com/data/workshop-leads.json', { cache: 'no-cache' }).then(function(r) { return r.json(); }).catch(function() { return { leads: [] }; }),
+              fetch('https://zabalgames.com/data/adoptable-projects.json', { cache: 'no-cache' }).then(function(r) { return r.json(); }).catch(function() { return { projects: [] }; }),
+              fetch('https://zabalgames.com/data/changelog.json', { cache: 'no-cache' }).then(function(r) { return r.json(); }).catch(function() { return { entries: [] }; })
+            ]).then(function(results) {
+              var leads = (results[0].leads || []).length;
+              var projects = (results[1].projects || []).length;
+              var entries = (results[2].entries || []).length;
+              el.textContent = 'LIVE - ' + leads + ' workshop lead' + (leads === 1 ? '' : 's') +
+                ' - ' + projects + ' adoptable project' + (projects === 1 ? '' : 's') +
+                ' - ' + entries + ' shipped milestones';
+            }).catch(function() {
+              el.style.display = 'none';
+            });
+          })();
+          </script>
 
           <a href="https://zaofestivals.com/" target="_blank" rel="noopener" class="portfolio-card">
             <div>
