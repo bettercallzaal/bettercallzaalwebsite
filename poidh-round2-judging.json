@@ -1,0 +1,283 @@
+{
+  "round": 2,
+  "bounty_id": 1166,
+  "bounty_url": "https://poidh.xyz/base/bounty/1166",
+  "bounty_title": "Best 60s POIDH ad from Ep 19 w/ Kenny",
+  "deadline_pt": "2026-05-22 23:59 PT",
+  "winner_cast_target": "2026-05-24",
+  "amount_eth_at_judging": 0.0105,
+  "judging_generated_at": "2026-05-25",
+  "judging_note": "Claude auto-checked X URL presence + @bettercallzaal tag + mentions via syndication endpoint. Duration (45-60s) and edited-vs-raw require manual playback - marked UNKNOWN where I cannot verify. Zaal confirms final verdict.",
+  "floor_rules": [
+    {"id": "duration", "label": "45 to 60 seconds", "auto_checkable": false},
+    {"id": "edited", "label": "Edited (cuts, not a raw screen recording)", "auto_checkable": false},
+    {"id": "x_post", "label": "Posted on X (post URL submitted)", "auto_checkable": true},
+    {"id": "tag_bcz", "label": "Tagged @bettercallzaal", "auto_checkable": true}
+  ],
+  "rubric_tiers": [
+    {"id": "distribution", "label": "Distribution", "examples": "Cross-posted to Farcaster /poidh + /zao, tagged @poidhxyz + @kennyistyping, engagement (likes/replies)"},
+    {"id": "craft", "label": "Craft", "examples": "Tight cuts, captions, hook in first 3s, clear CTA, watchable on mute"},
+    {"id": "substance", "label": "Substance", "examples": "Hits the POIDH thesis from Ep 19: permissionless real-world coordination, not generic crypto hype"},
+    {"id": "bonus", "label": "Bonus", "examples": "Adds creative spin, attributes the source episode by name, encourages new bounties"}
+  ],
+  "submissions": [
+    {
+      "claim_id": 6645,
+      "wallet": "0x6dce11cc9bba17d3c1ef60c26f0958300bb06953",
+      "fc_handle": "joeyofdeus",
+      "display_name": "Monksage",
+      "x_handle": "joey_of_deus",
+      "x_url": "https://x.com/joey_of_deus/status/2057966595029319888",
+      "poidh_claim_url": "https://poidh.xyz/base/bounty/1166",
+      "x_text": "How do we pull money to get things done in the real world? On BCZ YapZ Ep 19, @kennyistyping explains how POIDH brings transparent, permissionless coordination to life",
+      "x_favs": 9,
+      "x_replies": 0,
+      "x_created": "2026-05-22T23:27:26Z",
+      "mentions": ["@kennyistyping", "@bettercallzaal", "@poidhxyz"],
+      "links_in_post": ["http://poidh.xyz"],
+      "media_thumb": "https://pbs.twimg.com/ext_tw_video_thumb/2057966498904231936/pu/img/X0vBsVzsrFcGadle.jpg",
+      "media_mp4": "https://video.twimg.com/ext_tw_video/2057966498904231936/pu/vid/avc1/480x270/w0kk59RfF-lpkEIy.mp4",
+      "floor_checks": {
+        "x_post": "PASS",
+        "tag_bcz": "PASS",
+        "duration": "UNKNOWN",
+        "edited": "LIKELY"
+      },
+      "rubric_score": {
+        "distribution": "STRONG - tagged all three: @bettercallzaal, @kennyistyping, @poidhxyz. Links poidh.xyz.",
+        "craft": "Clean copy, emoji hook, two-question setup landing the POIDH answer. Needs playback to confirm edit quality.",
+        "substance": "Directly cites Ep 19 + Kenny by name. Hits the permissionless coordination thesis exactly.",
+        "bonus": "Cross-tagged POIDH team itself + linked poidh.xyz."
+      },
+      "claude_verdict": "STRONG_CANDIDATE",
+      "claude_notes": "Strongest tag-set of the cohort. Posted right at deadline (23:27 PT on 2026-05-22). 9 likes is mid-pack. Floor PASS pending duration confirmation."
+    },
+    {
+      "claim_id": 6644,
+      "wallet": "0xdf5a944221bc8ec4054b9e9d2b80e1a0afe7da78",
+      "fc_handle": "akukiwil",
+      "display_name": "Akukiwil",
+      "x_handle": "akukiwil_",
+      "x_url": "https://x.com/akukiwil_/status/2057950695945552254",
+      "poidh_claim_url": "https://poidh.xyz/base/bounty/1166",
+      "x_text": "Coordinate funds for laser-specific real-world tasks without relying on a single middleman. POIDH changes the game, permissionless bounty structures into action. All you need is a wallet. Post your bounty now at poidh.xyz",
+      "x_favs": 2,
+      "x_replies": 0,
+      "x_created": "2026-05-22T22:24:15Z",
+      "mentions": ["@bettercallzaal", "@kennyistyping", "@poidhxyz"],
+      "links_in_post": ["https://poidh.xyz"],
+      "media_thumb": "https://pbs.twimg.com/amplify_video_thumb/2057950247918477312/img/WLn4ZV1bUtmQeQaE.jpg",
+      "media_mp4": "https://video.twimg.com/amplify_video/2057950247918477312/vid/avc1/480x270/Y7UWVgO7ZYV3i7mq.mp4",
+      "floor_checks": {
+        "x_post": "PASS",
+        "tag_bcz": "PASS",
+        "duration": "UNKNOWN",
+        "edited": "LIKELY"
+      },
+      "rubric_score": {
+        "distribution": "STRONG - all three tags + link to poidh.xyz. Also cross-posted on Farcaster per POIDH submission text.",
+        "craft": "Clear CTA, action-oriented copy. Hash-tag-free which reads cleaner.",
+        "substance": "Permissionless + middleman-free framing - on-thesis.",
+        "bonus": "Includes 'post your bounty now' CTA that pushes adoption."
+      },
+      "claude_verdict": "STRONG_CANDIDATE",
+      "claude_notes": "Posted within an hour of submission 6645. Lower likes (2) but copy is action-led. POIDH submission description shows Farcaster cross-post too."
+    },
+    {
+      "claim_id": 6634,
+      "wallet": "0xa34514c2150029afa4d37577daee301166105355",
+      "fc_handle": "cryptfi-mariano",
+      "display_name": "J'Mariano",
+      "x_handle": "cryptfi_mariano",
+      "x_url": null,
+      "poidh_claim_url": "https://poidh.xyz/base/bounty/1166",
+      "x_text": null,
+      "x_favs": null,
+      "x_replies": null,
+      "x_created": null,
+      "mentions": [],
+      "links_in_post": [],
+      "media_thumb": "https://beige-impossible-dragon-883.mypinata.cloud/ipfs/QmSnBPLfY92Z9CyX4bHv99YHK5QZAvuu1eYy1E3UbP3HM2",
+      "media_mp4": null,
+      "floor_checks": {
+        "x_post": "FAIL",
+        "tag_bcz": "FAIL",
+        "duration": "FAIL",
+        "edited": "FAIL"
+      },
+      "rubric_score": {
+        "distribution": "FAIL - no X URL submitted. POIDH description is plain text only, no link to a video post.",
+        "craft": "Cannot assess - no video link.",
+        "substance": "Description text is generic POIDH boilerplate, not Ep 19 specific.",
+        "bonus": "n/a"
+      },
+      "claude_verdict": "FLOOR_FAIL",
+      "claude_notes": "Bounty rule 3 explicitly says 'Submit the X post URL on POIDH at this bounty page.' Submission description has only text praising POIDH - no X URL. Floor FAIL on multiple rules. Note: this is the same wallet sitting on unaccepted Round 1 claim 6368."
+    },
+    {
+      "claim_id": 6616,
+      "wallet": "0x8dbab1f536c1c0f8df8aa07b89b53b62a89a4dab",
+      "fc_handle": "remixitphotos",
+      "display_name": "Ebuka",
+      "x_handle": "remixitphotos",
+      "x_url": "https://x.com/remixitphotos/status/2056492760337719605",
+      "poidh_claim_url": "https://poidh.xyz/base/bounty/1166",
+      "x_text": "From struggling with healthcare coordination to realizing anyone can pool money for real-world tasks like cleaning up trash in Seattle - permissionless, with proof required. Pics Or It Didn't Happen.",
+      "x_favs": 2,
+      "x_replies": 0,
+      "x_created": "2026-05-18T21:50:56Z",
+      "mentions": ["@bettercallzaal", "@kennyistyping", "@poidhxyz"],
+      "links_in_post": [],
+      "media_thumb": "https://pbs.twimg.com/amplify_video_thumb/2056492216978223104/img/BCNFjagqW6JnvzH9.jpg",
+      "media_mp4": "https://video.twimg.com/amplify_video/2056492216978223104/vid/avc1/480x270/uHqVPZgSKaB9nfQ5.mp4",
+      "floor_checks": {
+        "x_post": "PASS",
+        "tag_bcz": "PASS",
+        "duration": "UNKNOWN",
+        "edited": "LIKELY"
+      },
+      "rubric_score": {
+        "distribution": "STRONG - all three tags. No external link added.",
+        "craft": "Vivid concrete examples (healthcare coordination, trash cleanup in Seattle) rather than abstract. Bumper line 'Pics Or It Didn't Happen.' is memorable.",
+        "substance": "Pulls a specific story arc from Ep 19. Concrete > generic.",
+        "bonus": "Closes with the POIDH motto as a one-liner."
+      },
+      "claude_verdict": "STRONG_CANDIDATE",
+      "claude_notes": "Strongest substance write-up - actual examples from the episode. If video matches the copy, this is a finalist."
+    },
+    {
+      "claim_id": 6608,
+      "wallet": "0x96e9025466be0d99a89f17e3df72b2ecf6e36796",
+      "fc_handle": "dee-13",
+      "display_name": "Dee",
+      "x_handle": "Dee13____",
+      "x_url": "https://x.com/Dee13____/status/2056276687206097376",
+      "poidh_claim_url": "https://poidh.xyz/base/bounty/1166",
+      "x_text": "this is POIDH. this is for POIDH. POIDH is one of the most active mini apps on Farcaster where you can join daily bounties or create your own for people to complete tasks, make content, and earn rewards.",
+      "x_favs": 11,
+      "x_replies": 0,
+      "x_created": "2026-05-18T07:32:20Z",
+      "mentions": ["@poidhxyz", "@farcaster_xyz", "@bettercallzaal", "@kennyistyping"],
+      "links_in_post": [],
+      "media_thumb": "https://pbs.twimg.com/ext_tw_video_thumb/2056276487431483392/pu/img/v_xoz_KpRM5NTe8C.jpg",
+      "media_mp4": "https://video.twimg.com/ext_tw_video/2056276487431483392/pu/vid/avc1/320x426/059V8NFHPJUzE__y.mp4",
+      "floor_checks": {
+        "x_post": "PASS",
+        "tag_bcz": "PASS",
+        "duration": "UNKNOWN",
+        "edited": "LIKELY"
+      },
+      "rubric_score": {
+        "distribution": "STRONG - 4 tags including @farcaster_xyz. POIDH submission description says cross-posted across Farcaster + /poidh + /zao channels.",
+        "craft": "Vertical 320x426 video = mobile-native, scroll-stopping format. Repetition hook ('this is POIDH / this is for POIDH') is ad-y.",
+        "substance": "Frames POIDH as a Farcaster mini app for daily bounties - true but slightly off the Ep 19 thesis (real-world coordination > 'most active mini app').",
+        "bonus": "Highest engagement of the cohort (11 likes) + cross-posted to Farcaster /zao + /poidh."
+      },
+      "claude_verdict": "STRONG_CANDIDATE",
+      "claude_notes": "Best distribution + highest engagement. Vertical format suggests intentional ad craft. Frames POIDH more as a product than as Ep 19's real-world thesis - may or may not match what Zaal wants the ad to say."
+    },
+    {
+      "claim_id": 6586,
+      "wallet": "0x3c768766da85cce630f10b40ee118be440b5f4b9",
+      "fc_handle": null,
+      "display_name": "Jony",
+      "x_handle": "storm_the_first",
+      "x_url": "https://x.com/storm_the_first/status/2055231464120131692",
+      "poidh_claim_url": "https://poidh.xyz/base/bounty/1166",
+      "x_text": "Crypto's hype is currently drowning out its actual help",
+      "x_favs": 2,
+      "x_replies": 0,
+      "x_created": "2026-05-15T10:19:00Z",
+      "mentions": ["@kennyistyping", "@bettercallzaal"],
+      "links_in_post": [],
+      "media_thumb": "https://pbs.twimg.com/ext_tw_video_thumb/2055231343634616320/pu/img/7WQOLOkvYnoV9UwG.jpg",
+      "media_mp4": "https://video.twimg.com/ext_tw_video/2055231343634616320/pu/vid/avc1/480x270/XqVrXNJe8mmimAdX.mp4",
+      "floor_checks": {
+        "x_post": "PASS",
+        "tag_bcz": "PASS",
+        "duration": "UNKNOWN",
+        "edited": "UNKNOWN"
+      },
+      "rubric_score": {
+        "distribution": "MEDIUM - tagged @bettercallzaal + @kennyistyping but NOT @poidhxyz. One-line copy.",
+        "craft": "Single-line copy. Strength = punchline if the video delivers. Weakness = no context for the scroll-by viewer.",
+        "substance": "Strong thesis line ('crypto's hype is drowning out its actual help') but does not name POIDH in the copy.",
+        "bonus": "n/a - minimal copy work."
+      },
+      "claude_verdict": "FLOOR_PASS_WEAK_RUBRIC",
+      "claude_notes": "Floor likely passes if video is 45-60s. But the copy under-sells POIDH - whole pitch is in the video. If clip is great, could still win. If clip is mediocre, the copy doesn't carry it."
+    },
+    {
+      "claim_id": 6585,
+      "wallet": "0xbdf8181cb0e5c89d8c79378eab50dad3e7c2a18a",
+      "fc_handle": "kayhwizard",
+      "display_name": "Heis_Kayh",
+      "x_handle": "kayhwizard",
+      "x_url": "https://x.com/kayhwizard/status/2055004108239564818",
+      "poidh_claim_url": "https://poidh.xyz/base/bounty/1166",
+      "x_text": "I think that permissionless aspect of anyone being able to put up a sufficient bounty...",
+      "x_favs": 2,
+      "x_replies": 1,
+      "x_created": "2026-05-14T19:15:34Z",
+      "mentions": ["@bettercallzaal", "@kennyistyping"],
+      "links_in_post": [],
+      "media_thumb": "https://pbs.twimg.com/amplify_video_thumb/2054999628446056448/img/SaZFDJRI4vmNNIPk.jpg",
+      "media_mp4": "https://video.twimg.com/amplify_video/2054999628446056448/vid/avc1/480x270/PKjNnGVh2zNSuAvc.mp4",
+      "floor_checks": {
+        "x_post": "PASS",
+        "tag_bcz": "PASS",
+        "duration": "UNKNOWN",
+        "edited": "UNKNOWN"
+      },
+      "rubric_score": {
+        "distribution": "MEDIUM - tagged @bettercallzaal + @kennyistyping, missing @poidhxyz.",
+        "craft": "Cliffhanger copy (... ends mid-sentence). May intrigue or may frustrate scroll-by readers.",
+        "substance": "On-thesis (permissionless bounty creation) but truncated - the video has to land the rest.",
+        "bonus": "Got 1 reply = some engagement."
+      },
+      "claude_verdict": "FLOOR_PASS_WEAK_RUBRIC",
+      "claude_notes": "Solo reply on the post means at least one viewer engaged. Copy is incomplete on purpose. Verdict depends entirely on the video itself."
+    },
+    {
+      "claim_id": 6584,
+      "wallet": "0xacb10c106b7a4f7cf80c5f2e0a8e4daa8bd4abf3",
+      "fc_handle": "i-d0-care",
+      "display_name": "Kaspa",
+      "x_handle": "KaspaMeta",
+      "x_url": "https://x.com/KaspaMeta/status/2054990017487880667",
+      "poidh_claim_url": "https://poidh.xyz/base/bounty/1166",
+      "x_text": "We're never gonna have good adoption if all crypto does is gambling.",
+      "x_favs": 4,
+      "x_replies": 0,
+      "x_created": "2026-05-14T18:19:34Z",
+      "mentions": ["@bettercallzaal", "@kennyistyping"],
+      "links_in_post": [],
+      "media_thumb": "https://pbs.twimg.com/ext_tw_video_thumb/2054989413113843712/pu/img/V4AW7t0fIL5Reom8.jpg",
+      "media_mp4": "https://video.twimg.com/ext_tw_video/2054989413113843712/pu/vid/avc1/480x270/_YLCL1ZMRIjc-l1E.mp4",
+      "floor_checks": {
+        "x_post": "PASS",
+        "tag_bcz": "PASS",
+        "duration": "UNKNOWN",
+        "edited": "UNKNOWN"
+      },
+      "rubric_score": {
+        "distribution": "MEDIUM - tagged @bettercallzaal + @kennyistyping, missing @poidhxyz.",
+        "craft": "Punchy one-liner with anti-gambling angle. Stops the scroll.",
+        "substance": "Captures the 'real utility' frame from Ep 19 without naming POIDH explicitly in copy - the video has to make the POIDH connection.",
+        "bonus": "4 likes = second-highest of cohort."
+      },
+      "claude_verdict": "FLOOR_PASS_WEAK_RUBRIC",
+      "claude_notes": "Strong contrarian hook but copy doesn't name POIDH. Like the others without explicit POIDH naming, all pressure is on the video itself. Posted earliest (2026-05-14) = had a week to gather engagement."
+    }
+  ],
+  "claude_summary": {
+    "floor_pass_count": 7,
+    "floor_fail_count": 1,
+    "strong_candidates": [6645, 6644, 6616, 6608],
+    "weak_floor_pass": [6586, 6585, 6584],
+    "floor_fails": [6634],
+    "recommended_finalists": [6608, 6616, 6645, 6644],
+    "recommended_winner_pick_logic": "Pick one of [6608, 6616, 6645, 6644] after watching all four videos. 6608 (Dee) has best distribution + highest engagement (vertical mobile format, 11 likes, cross-posted Farcaster). 6616 (Ebuka) has strongest substance write-up with specific Ep 19 examples. 6645 (Monksage) has strongest tag-set + posted right at deadline. 6644 (Akukiwil) has strongest CTA copy. Final pick depends on which of the four videos best functions AS A POIDH AD (not just AS A POIDH SUBMISSION).",
+    "rejection_template_for_6634": "Round 2 required submitting an X post URL per rule 3. Your submission contained only text, no link to an X post. Encourage to re-submit on future bounties with the video link included."
+  }
+}

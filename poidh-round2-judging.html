@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POIDH Round 2 (Bounty 1166) - Submission Judging - BetterCallZaal</title>
+  <meta name="description" content="Per-submission judging for POIDH bounty 1166 'Best 60s POIDH ad from Ep 19 w/ Kenny'. Floor checks + rubric scores + verdict for all 8 submissions.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://bettercallzaal.com/poidh-round2-judging.html">
+  <meta property="og:title" content="POIDH Round 2 (1166) - Submission Judging">
+  <meta property="og:description" content="Floor rules + rubric scores for all 8 submissions to bounty 1166. Floor PASS/FAIL on each; rubric on Distribution/Craft/Substance/Bonus.">
+  <meta property="og:url" content="https://bettercallzaal.com/poidh-round2-judging.html">
+  <meta property="og:image" content="https://bettercallzaal.com/assets/icon.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="/assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #070709;
+      --surface: #111115;
+      --surface-2: #16161c;
+      --orange: #ff6b35;
+      --cyan: #00e5ff;
+      --gold: #f5c842;
+      --pink: #ff3d6e;
+      --poidh-blue: #2a81d5;
+      --zabal: #a78bfa;
+      --green: #4ade80;
+      --yellow: #facc15;
+      --red: #f87171;
+      --gradient-main: linear-gradient(135deg, #ff6b35, #ff3d6e, #00e5ff);
+      --gradient-zabal: linear-gradient(135deg, #a78bfa, #00e5ff);
+      --text: #e4e2dd;
+      --text-muted: #8a8895;
+      --text-dim: #4e4c57;
+      --border: #1f1e26;
+      --border-hover: #2f2d3a;
+      --radius: 8px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 800px 600px at 15% -10%, rgba(167,139,250,0.14), transparent 60%),
+        radial-gradient(ellipse 700px 500px at 90% 10%, rgba(0,229,255,0.10), transparent 60%),
+        radial-gradient(ellipse 600px 400px at 50% 100%, rgba(255,107,53,0.08), transparent 60%);
+      z-index: -1;
+    }
+    a { color: var(--cyan); text-decoration: none; transition: color 0.15s; }
+    a:hover { color: var(--orange); }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Top nav */
+    .topnav { padding: 1.5rem 0; border-bottom: 1px solid var(--border); }
+    .topnav-inner { display: flex; gap: 1.5rem; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+    .topnav a.brand { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.05rem; color: var(--text); letter-spacing: -0.01em; }
+    .topnav nav { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+    .topnav nav a { color: var(--text-muted); font-size: 0.9rem; }
+    .topnav nav a:hover { color: var(--text); }
+
+    /* Hero */
+    .hero { padding: 3rem 0 2rem; border-bottom: 1px solid var(--border); }
+    .badge {
+      display: inline-block; padding: 0.25rem 0.625rem; border-radius: 999px;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
+      background: rgba(42,129,213,0.16); border: 1px solid rgba(42,129,213,0.4); color: var(--poidh-blue);
+    }
+    .hero h1 {
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: clamp(1.8rem, 4.5vw, 2.6rem); line-height: 1.1; margin: 0.75rem 0 0.5rem;
+      background: var(--gradient-main); -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero p.sub { color: var(--text-muted); max-width: 720px; font-size: 1rem; }
+    .hero-meta { margin-top: 1rem; display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
+    .hero-meta strong { color: var(--text); font-weight: 500; }
+
+    /* Floor rules box */
+    .floor-card {
+      margin: 2rem 0; padding: 1.5rem;
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    }
+    .floor-card h2 { font-family: 'Syne', sans-serif; font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--text); }
+    .floor-card .floor-note { color: var(--text-dim); font-size: 0.8rem; font-style: italic; }
+    .floor-card ol { margin: 0.75rem 0 1rem 1.25rem; }
+    .floor-card ol li { margin: 0.25rem 0; }
+    .rubric-grid { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 0.75rem; }
+    .rubric-pill {
+      padding: 0.65rem 0.85rem; border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--surface-2);
+    }
+    .rubric-pill .r-name { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--gold); font-size: 0.85rem; letter-spacing: 0.05em; }
+    .rubric-pill .r-ex { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+    /* Summary banner */
+    .summary { margin: 1.5rem 0 2.5rem; padding: 1.25rem; background: var(--surface-2); border: 1px solid var(--border-hover); border-radius: var(--radius); display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; }
+    .summary .stat { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; }
+    .summary .stat strong { display: block; font-size: 1.4rem; font-family: 'Syne', sans-serif; font-weight: 700; color: var(--cyan); }
+    .summary .stat.fail strong { color: var(--red); }
+    .summary .stat.strong strong { color: var(--green); }
+    .summary .stat.weak strong { color: var(--yellow); }
+
+    /* Submissions list */
+    section.submissions { padding: 0 0 4rem; }
+    .sub-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      margin-bottom: 1.5rem; overflow: hidden;
+    }
+    .sub-card.verdict-STRONG_CANDIDATE { border-left: 4px solid var(--green); }
+    .sub-card.verdict-FLOOR_PASS_WEAK_RUBRIC { border-left: 4px solid var(--yellow); }
+    .sub-card.verdict-FLOOR_FAIL { border-left: 4px solid var(--red); opacity: 0.78; }
+    .sub-head {
+      display: flex; gap: 1rem; padding: 1.25rem 1.5rem; align-items: center; flex-wrap: wrap; border-bottom: 1px solid var(--border);
+    }
+    .sub-head .avatar {
+      width: 44px; height: 44px; border-radius: 50%; background: var(--surface-2); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--text-dim);
+      border: 1px solid var(--border-hover); overflow: hidden;
+    }
+    .sub-head .avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .sub-head .who { flex: 1; min-width: 200px; }
+    .sub-head .who .name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; color: var(--text); }
+    .sub-head .who .handles { font-size: 0.78rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; word-break: break-all; }
+    .sub-head .verdict-badge {
+      padding: 0.4rem 0.75rem; border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500;
+      border: 1px solid var(--border-hover);
+    }
+    .verdict-badge.STRONG_CANDIDATE { background: rgba(74,222,128,0.12); color: var(--green); border-color: rgba(74,222,128,0.4); }
+    .verdict-badge.FLOOR_PASS_WEAK_RUBRIC { background: rgba(250,204,21,0.12); color: var(--yellow); border-color: rgba(250,204,21,0.4); }
+    .verdict-badge.FLOOR_FAIL { background: rgba(248,113,113,0.12); color: var(--red); border-color: rgba(248,113,113,0.4); }
+
+    .sub-body { padding: 1.25rem 1.5rem; display: grid; gap: 1.5rem; grid-template-columns: minmax(0, 1fr); }
+    @media (min-width: 800px) {
+      .sub-body { grid-template-columns: 260px 1fr; }
+    }
+    .media-block { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; align-self: start; }
+    .media-block video, .media-block img { width: 100%; display: block; aspect-ratio: 16/9; object-fit: cover; background: #000; }
+    .media-block.no-media { padding: 2rem 1rem; text-align: center; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+    .media-block .media-cap { padding: 0.5rem 0.75rem; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-muted); display: flex; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; }
+
+    .analysis h3 { font-family: 'Syne', sans-serif; font-size: 0.85rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 0.5rem; }
+    .analysis .x-text {
+      padding: 0.85rem 1rem; background: var(--surface-2); border-left: 3px solid var(--poidh-blue); border-radius: 4px;
+      font-size: 0.9rem; color: var(--text); margin-bottom: 1rem; font-style: italic;
+    }
+    .analysis .x-text.no-text { color: var(--text-dim); font-style: italic; }
+    .meta-row { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; }
+    .meta-row span strong { color: var(--text); font-weight: 500; }
+
+    .floor-checks { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+    .floor-chip {
+      padding: 0.35rem 0.7rem; border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.05em;
+      border: 1px solid var(--border-hover);
+    }
+    .floor-chip.PASS { background: rgba(74,222,128,0.1); color: var(--green); border-color: rgba(74,222,128,0.3); }
+    .floor-chip.FAIL { background: rgba(248,113,113,0.1); color: var(--red); border-color: rgba(248,113,113,0.3); }
+    .floor-chip.UNKNOWN { background: rgba(167,139,250,0.1); color: var(--zabal); border-color: rgba(167,139,250,0.3); }
+    .floor-chip.LIKELY { background: rgba(245,200,66,0.1); color: var(--gold); border-color: rgba(245,200,66,0.3); }
+
+    .rubric-list { display: grid; gap: 0.6rem; }
+    .rubric-list .rl {
+      padding: 0.65rem 0.85rem; background: var(--surface-2); border-radius: 4px; border: 1px solid var(--border);
+    }
+    .rubric-list .rl .rl-cat { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--cyan); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .rubric-list .rl .rl-body { font-size: 0.85rem; color: var(--text); margin-top: 0.2rem; }
+
+    .claude-notes {
+      margin-top: 1rem; padding: 0.85rem 1rem;
+      background: rgba(167,139,250,0.06); border-left: 3px solid var(--zabal); border-radius: 4px;
+      font-size: 0.85rem; color: var(--text);
+    }
+    .claude-notes .cn-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--zabal); display: block; margin-bottom: 0.25rem;
+    }
+
+    .sub-links { padding: 0.85rem 1.5rem; background: var(--surface-2); border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; }
+    .sub-links a { color: var(--cyan); }
+
+    footer { padding: 2rem 0; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+    footer .lifeline { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-dim); margin-top: 0.5rem; }
+  </style>
+</head>
+<body>
+  <div class="topnav">
+    <div class="container topnav-inner">
+      <a class="brand" href="/">BetterCallZaal</a>
+      <nav>
+        <a href="/nexus.html">Nexus</a>
+        <a href="/poidh.html">POIDH Hub</a>
+        <a href="https://poidh.xyz/base/bounty/1166" target="_blank" rel="noopener">Bounty 1166</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="container">
+      <span class="badge" id="round-badge">Round 2 - Judging</span>
+      <h1 id="hero-title">Bounty 1166 Judging</h1>
+      <p class="sub" id="hero-sub">Floor checks + rubric scores for every submission. Auto-verified what could be auto-verified; flagged the rest for manual playback.</p>
+      <div class="hero-meta" id="hero-meta"></div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="floor-card" id="floor-card">
+      <h2>The bar (floor rules)</h2>
+      <p class="floor-note">Miss any of these and you're not in the running. Auto-checks done on URL + tags; duration + edit quality need manual playback.</p>
+      <ol id="floor-list"></ol>
+      <h2 style="margin-top:1rem">Rubric (more boxes ticked = stronger judging weight)</h2>
+      <div class="rubric-grid" id="rubric-grid"></div>
+    </div>
+
+    <div class="summary" id="summary"></div>
+  </div>
+
+  <section class="submissions">
+    <div class="container" id="submissions-list"></div>
+  </section>
+
+  <footer>
+    <div class="container">
+      Generated by Claude from poidh-round2-judging.json. Floor checks via x.com syndication API. Zaal confirms final verdict.
+      <div class="lifeline" id="generated-note"></div>
+    </div>
+  </footer>
+
+  <script>
+    const FLOOR_LABELS = {
+      x_post: "X post URL submitted",
+      tag_bcz: "Tagged @bettercallzaal",
+      duration: "45-60 seconds",
+      edited: "Edited (not raw)"
+    };
+    const RUBRIC_LABELS = {
+      distribution: "Distribution",
+      craft: "Craft",
+      substance: "Substance",
+      bonus: "Bonus"
+    };
+
+    function escapeHtml(s) {
+      if (s == null) return "";
+      return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+    }
+
+    async function render() {
+      const list = document.getElementById('submissions-list');
+      let data;
+      try {
+        const r = await fetch('/poidh-round2-judging.json', { cache: 'no-store' });
+        data = await r.json();
+      } catch (e) {
+        list.innerHTML = '<p style="color:var(--red)">Failed to load judging data: ' + escapeHtml(e.message) + '</p>';
+        return;
+      }
+
+      document.title = `POIDH Round ${data.round} (Bounty ${data.bounty_id}) - Submission Judging - BetterCallZaal`;
+      document.getElementById('round-badge').textContent = `Round ${data.round} - Judging`;
+      document.getElementById('hero-title').textContent = `Bounty ${data.bounty_id} - ${data.bounty_title}`;
+      document.getElementById('hero-sub').textContent = data.judging_note;
+      document.getElementById('hero-meta').innerHTML = `
+        <span><strong>Deadline:</strong> ${escapeHtml(data.deadline_pt)}</span>
+        <span><strong>Winner cast:</strong> ${escapeHtml(data.winner_cast_target)}</span>
+        <span><strong>Prize:</strong> ${data.amount_eth_at_judging} ETH</span>
+        <span><strong>Submissions:</strong> ${data.submissions.length}</span>
+        <span><a href="${data.bounty_url}" target="_blank" rel="noopener">view on POIDH</a></span>
+      `;
+
+      const floorList = document.getElementById('floor-list');
+      floorList.innerHTML = data.floor_rules.map(r =>
+        `<li><strong>${escapeHtml(r.label)}</strong>${r.auto_checkable ? '' : ' <span style="color:var(--text-dim);font-size:0.78rem">(manual playback)</span>'}</li>`
+      ).join('');
+
+      const rubricGrid = document.getElementById('rubric-grid');
+      rubricGrid.innerHTML = data.rubric_tiers.map(r =>
+        `<div class="rubric-pill"><div class="r-name">${escapeHtml(r.label)}</div><div class="r-ex">${escapeHtml(r.examples)}</div></div>`
+      ).join('');
+
+      const s = data.claude_summary;
+      const summary = document.getElementById('summary');
+      summary.innerHTML = `
+        <div class="stat strong"><strong>${s.strong_candidates.length}</strong> strong candidates</div>
+        <div class="stat weak"><strong>${s.weak_floor_pass.length}</strong> weak floor pass</div>
+        <div class="stat fail"><strong>${s.floor_fails.length}</strong> floor fail</div>
+        <div class="stat"><strong>${data.submissions.length}</strong> total submissions</div>
+        <div class="stat"><strong>${s.recommended_finalists.length}</strong> finalists (recommended)</div>
+      `;
+
+      document.getElementById('generated-note').textContent = `Judging generated ${data.judging_generated_at}. Recommended finalists: ${s.recommended_finalists.join(', ')}.`;
+
+      const order = [...s.strong_candidates, ...s.weak_floor_pass, ...s.floor_fails];
+      const byId = Object.fromEntries(data.submissions.map(x => [x.claim_id, x]));
+
+      list.innerHTML = order.map(id => {
+        const sub = byId[id];
+        if (!sub) return '';
+        const verdict = sub.claude_verdict;
+        const initials = (sub.fc_handle || sub.x_handle || sub.display_name || '??').slice(0, 2).toUpperCase();
+        const avatarHtml = `<div class="avatar"><span>${escapeHtml(initials)}</span></div>`;
+
+        const mediaHtml = sub.media_mp4
+          ? `<div class="media-block">
+              <video src="${sub.media_mp4}" poster="${sub.media_thumb || ''}" controls preload="none"></video>
+              <div class="media-cap">
+                <span>video preview</span>
+                <span><a href="${sub.x_url}" target="_blank" rel="noopener">view on X</a></span>
+              </div>
+            </div>`
+          : `<div class="media-block no-media">No X video link in submission</div>`;
+
+        const floorChipsHtml = Object.entries(sub.floor_checks).map(([k, v]) =>
+          `<span class="floor-chip ${v}">${FLOOR_LABELS[k] || k}: ${v}</span>`
+        ).join('');
+
+        const rubricHtml = Object.entries(sub.rubric_score).map(([k, v]) =>
+          `<div class="rl"><div class="rl-cat">${RUBRIC_LABELS[k] || k}</div><div class="rl-body">${escapeHtml(v)}</div></div>`
+        ).join('');
+
+        const mentionsHtml = (sub.mentions || []).map(m => `<span><strong>${escapeHtml(m)}</strong></span>`).join('');
+
+        return `
+          <article class="sub-card verdict-${verdict}" id="claim-${sub.claim_id}">
+            <header class="sub-head">
+              ${avatarHtml}
+              <div class="who">
+                <div class="name">${escapeHtml(sub.display_name || sub.fc_handle || sub.x_handle || 'unknown')}</div>
+                <div class="handles">
+                  ${sub.fc_handle ? `FC @${escapeHtml(sub.fc_handle)} - ` : ''}
+                  ${sub.x_handle ? `X @${escapeHtml(sub.x_handle)} - ` : ''}
+                  ${escapeHtml(sub.wallet.slice(0,10))}...${escapeHtml(sub.wallet.slice(-6))}
+                </div>
+              </div>
+              <span class="verdict-badge ${verdict}">${verdict.replace(/_/g, ' ')}</span>
+            </header>
+            <div class="sub-body">
+              ${mediaHtml}
+              <div class="analysis">
+                <h3>X copy</h3>
+                <div class="x-text${sub.x_text ? '' : ' no-text'}">${sub.x_text ? escapeHtml(sub.x_text) : 'No X post linked - submission contained text only'}</div>
+                <div class="meta-row">
+                  ${sub.x_favs != null ? `<span><strong>${sub.x_favs}</strong> likes</span>` : ''}
+                  ${sub.x_replies != null ? `<span><strong>${sub.x_replies}</strong> replies</span>` : ''}
+                  ${sub.x_created ? `<span><strong>Posted:</strong> ${escapeHtml(sub.x_created.slice(0,10))}</span>` : ''}
+                  ${mentionsHtml ? `<span><strong>Tags:</strong> ${mentionsHtml}</span>` : ''}
+                </div>
+                <h3>Floor checks</h3>
+                <div class="floor-checks">${floorChipsHtml}</div>
+                <h3>Rubric notes</h3>
+                <div class="rubric-list">${rubricHtml}</div>
+                <div class="claude-notes">
+                  <span class="cn-label">Claude verdict + notes</span>
+                  ${escapeHtml(sub.claude_notes)}
+                </div>
+              </div>
+            </div>
+            <div class="sub-links">
+              <a href="${sub.poidh_claim_url}" target="_blank" rel="noopener">POIDH bounty page</a>
+              ${sub.x_url ? `<a href="${sub.x_url}" target="_blank" rel="noopener">X post</a>` : ''}
+              <a href="https://basescan.org/address/${sub.wallet}" target="_blank" rel="noopener">basescan</a>
+              <span style="color:var(--text-dim)">claim id ${sub.claim_id}</span>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    render();
+  </script>
+</body>
+</html>
