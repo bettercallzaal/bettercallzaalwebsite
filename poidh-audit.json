@@ -7,9 +7,9 @@
   "issuers": [
     "0x7234c36a71ec237c2ae7698e8916e0735001e9af"
   ],
-  "total_claims": 11,
-  "submitter_count": 10,
-  "total_eth_escrow": 0.0165,
+  "total_claims": 19,
+  "submitter_count": 16,
+  "total_eth_escrow": 0.021,
   "bounties": [
     {
       "id": 1151,
@@ -19,7 +19,7 @@
       "issuer": "0x7234c36a71ec237c2ae7698e8916e0735001e9af",
       "album": "wethemmedia",
       "amount_eth": 0.0105,
-      "in_progress": true,
+      "in_progress": false,
       "is_voting": true,
       "is_canceled": false,
       "claims_count": 11
@@ -31,14 +31,24 @@
       "description": "Make a 45-60 second edited clip from BCZ YapZ Ep 19 (with Kenny from POIDH) that works as an ad for POIDH itself.\n\nWatch the episode: https://www.youtube.com/watch?v=IFG_34K7Vig\n\nTHE BAR (do these or you're not in the running)\n1. 45 to 60 seconds. Edited - cuts, not a raw screen recording.\n2. Post the clip on X with @bettercallzaal tagged.\n3. Submit the X post URL on POIDH at this bounty page.\n\nThat's it for the floor. Now the rubric - more boxes ticked = stronger judging weight. You don't need ",
       "issuer": "0x7234c36a71ec237c2ae7698e8916e0735001e9af",
       "album": "wethemmedia",
-      "amount_eth": 0.006,
+      "amount_eth": 0.0105,
       "in_progress": true,
       "is_voting": false,
       "is_canceled": false,
-      "claims_count": 0
+      "claims_count": 8
     }
   ],
   "claims": [
+    {
+      "bounty_id": 1151,
+      "claim_id": 6368,
+      "issuer": "0xa34514c2150029afa4d37577daee301166105355",
+      "title": "This Startup Is Fixing Our Broken Food System\u2026 The Story, The Impact, The Future\u2014 Farmdrop",
+      "description": "We keep hearing that the food system is \u201cbroken\u201d\u2026 but this conversation shows what fixing it actually looks like.\n\nFrom learning with farmers across Spain, Mexico, and Guatemala to leading a 15-year grassroots movement, Hannah shares how **FarmDrop** is rebuilding the connection between producers and people\u2014using tech, community, and a mission-driven model.\n\nThis isn\u2019t just about buying food.\nIt\u2019s about:\n\u2022 Giving farmers control over pricing and distribution\n\u2022 Reducing waste through smarter systems\n\u2022 Expanding access to real, local food\n\u2022 Redefining what \u201clocal\u201d truly means\n\nFarmDrop blends the simplicity of a farmers market with the power of technology\u2014creating a system where communities don\u2019t just consume food\u2026 they participate in it.\n\n\n\ud83d\udc47 Watch the full story:\n\nhttps://youtu.be/Y8ykMqUTlS4?si=rujIEK0S2POz3U8h",
+      "image_url": "https://beige-impossible-dragon-883.mypinata.cloud/ipfs/QmebrSjB89ZGzg59dDBzqfenYdZ92vPqo4VFyMj9ehvju2",
+      "accepted": true,
+      "on_chain_id": 1052
+    },
     {
       "bounty_id": 1151,
       "claim_id": 6419,
@@ -78,16 +88,6 @@
       "image_url": "https://beige-impossible-dragon-883.mypinata.cloud/ipfs/QmTiGQCx2EYhSGfHMv1xxGpTYs9HFrELxAqccyF5MWfz6x",
       "accepted": false,
       "on_chain_id": 1054
-    },
-    {
-      "bounty_id": 1151,
-      "claim_id": 6368,
-      "issuer": "0xa34514c2150029afa4d37577daee301166105355",
-      "title": "This Startup Is Fixing Our Broken Food System\u2026 The Story, The Impact, The Future\u2014 Farmdrop",
-      "description": "We keep hearing that the food system is \u201cbroken\u201d\u2026 but this conversation shows what fixing it actually looks like.\n\nFrom learning with farmers across Spain, Mexico, and Guatemala to leading a 15-year grassroots movement, Hannah shares how **FarmDrop** is rebuilding the connection between producers and people\u2014using tech, community, and a mission-driven model.\n\nThis isn\u2019t just about buying food.\nIt\u2019s about:\n\u2022 Giving farmers control over pricing and distribution\n\u2022 Reducing waste through smarter systems\n\u2022 Expanding access to real, local food\n\u2022 Redefining what \u201clocal\u201d truly means\n\nFarmDrop blends the simplicity of a farmers market with the power of technology\u2014creating a system where communities don\u2019t just consume food\u2026 they participate in it.\n\n\n\ud83d\udc47 Watch the full story:\n\nhttps://youtu.be/Y8ykMqUTlS4?si=rujIEK0S2POz3U8h",
-      "image_url": "https://beige-impossible-dragon-883.mypinata.cloud/ipfs/QmebrSjB89ZGzg59dDBzqfenYdZ92vPqo4VFyMj9ehvju2",
-      "accepted": false,
-      "on_chain_id": 1052
     },
     {
       "bounty_id": 1151,
@@ -148,6 +148,86 @@
       "image_url": "https://beige-impossible-dragon-883.mypinata.cloud/ipfs/QmW99XPhpmwbRDDbrfdcNffbBNhwmAk97ci67JRvbM9XGZ",
       "accepted": false,
       "on_chain_id": 1000
+    },
+    {
+      "bounty_id": 1166,
+      "claim_id": 6645,
+      "issuer": "0x6dce11cc9bba17d3c1ef60c26f0958300bb06953",
+      "title": "Real-world coordination shouldn't require permission. \ud83c\udf0d",
+      "description": "https://x.com/i/status/2057966595029319888",
+      "image_url": "https://beige-impossible-dragon-883.mypinata.cloud/ipfs/QmYWTsGEREEkQpb2v56RXPgzb9ok8dByNeGQ6uMZD9M2VS",
+      "accepted": false,
+      "on_chain_id": 1329
+    },
+    {
+      "bounty_id": 1166,
+      "claim_id": 6644,
+      "issuer": "0xdf5a944221ca0590a70d9754bcb78e0bef9cdac2",
+      "title": "PERMISSIONLESS BOUNTIES ON THE BLOCKCHAIN",
+      "description": "X : https://x.com/akukiwil_/status/2057950695945552254?s=20\n\nFcaster : https://farcaster.xyz/akukiwil/0xea2c0371\n\nImagine a tool that lets humans coordinate funds for laser-specific real-world tasks without relying on a single middleman. \n\n\"The coolest thing is the fact that it wouldn\u2019t be possible to create POIDH without blockchain.\" \n\nPOIDH changes the game by bringing trustless, permissionless bounty structures into action. All you need is a wallet. \n\nPost your bounty now at poidh.xyz \ud83d\udee0\ufe0f",
+      "image_url": "https://beige-impossible-dragon-883.mypinata.cloud/ipfs/QmQQVYzAqDt8Ri61WPvkrSxA2Zif9VKyxYpoU8tNjBgiYD",
+      "accepted": false,
+      "on_chain_id": 1328
+    },
+    {
+      "bounty_id": 1166,
+      "claim_id": 6634,
+      "issuer": "0xa34514c2150029afa4d37577daee301166105355",
+      "title": "The Proof of solving real world problems is Poidh",
+      "description": "Poidh.xyz is building a new way for people to share real experiences, discover trusted opinions, and make better decisions online \u2014 turning \u201cPic Or It Didn\u2019t Happen\u201d into a movement for internet trust.\n\nhttps://youtu.be/0sJTe4999gU?si=71rVQSsJI25eS08i",
+      "image_url": "https://beige-impossible-dragon-883.mypinata.cloud/ipfs/QmSnBPLfY92Z9CyX4bHv99YHK5QZAvuu1eYy1E3UbP3HM2",
+      "accepted": false,
+      "on_chain_id": 1318
+    },
+    {
+      "bounty_id": 1166,
+      "claim_id": 6616,
+      "issuer": "0x8dbab1f53609b3f40241557ad0bf3d76275db485",
+      "title": "Pics Or It Didn\u2019t Happen.",
+      "description": "https://x.com/remixitphotos/status/2056492760337719605?s=46",
+      "image_url": "https://beige-impossible-dragon-883.mypinata.cloud/ipfs/Qmb3YwUJwJg9Xg64dkURRbHrQJazhk8YXYeaSUGtkForgL",
+      "accepted": false,
+      "on_chain_id": 1300
+    },
+    {
+      "bounty_id": 1166,
+      "claim_id": 6608,
+      "issuer": "0x96e9025466a3e15dc2c3b28c1c6c71523a93f703",
+      "title": "this is for POIDH.",
+      "description": "https://x.com/i/status/2056276687206097376\n\n\ncross posted across farcaster, POIDH channel and zao channel. ",
+      "image_url": "https://beige-impossible-dragon-883.mypinata.cloud/ipfs/QmULPz3j6d6z3foVnhWFnj6QEK8CFTjJTcF1EGUDA2Lmjc",
+      "accepted": false,
+      "on_chain_id": 1292
+    },
+    {
+      "bounty_id": 1166,
+      "claim_id": 6586,
+      "issuer": "0x3c768766da85cce630f10b40ee118be440b5f4b9",
+      "title": "my ad",
+      "description": "https://x.com/i/status/2055231464120131692",
+      "image_url": "https://beige-impossible-dragon-883.mypinata.cloud/ipfs/QmPboBehSDyBhVv87dfDuW3dv1R3Qafis4EJfEkrRuNMgZ",
+      "accepted": false,
+      "on_chain_id": 1270
+    },
+    {
+      "bounty_id": 1166,
+      "claim_id": 6585,
+      "issuer": "0xbdf8181cb0b528e6f4cad5a72e3ac8090ec32328",
+      "title": "My clip",
+      "description": "https://x.com/kayhwizard/status/2055004108239564818?s=46",
+      "image_url": "https://beige-impossible-dragon-883.mypinata.cloud/ipfs/QmcTP1e4aqSF35JGgHqfmLCeNwgszMwtry5KPX79wNSs8d",
+      "accepted": false,
+      "on_chain_id": 1269
+    },
+    {
+      "bounty_id": 1166,
+      "claim_id": 6584,
+      "issuer": "0xacb10c106b9ccc38c0e036b5e1a1c591cefa57e6",
+      "title": "We\u2019re never gonna have good adoption if all crypto does is gambling",
+      "description": "https://x.com/i/status/2054990017487880667",
+      "image_url": "https://beige-impossible-dragon-883.mypinata.cloud/ipfs/QmRexftJ74n8ZYNdx71gi4g7vRVdwAQnVfGV3cpPnVpWEC",
+      "accepted": false,
+      "on_chain_id": 1268
     }
   ]
 }
