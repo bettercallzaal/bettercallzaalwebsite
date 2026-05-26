@@ -1,6 +1,16 @@
-# POIDH x $ZABAL Empire - Session Recap (2026-05-11)
+# POIDH x $ZABAL Empire - Session Recap (last updated 2026-05-26)
 
 > Resume artifact. Paste the prompt at the bottom into the next session to bootstrap context.
+
+## 2026-05-26 update (overnight session)
+
+- **Round 1 closed** - claim 6368 (@cryptfi-mariano) ACCEPTED on-chain. Winner paid out 0.0105 ETH.
+- **Round 2 (bounty 1166) closed 2026-05-22** - 8 submissions, 7 with X videos + 1 floor-fail text-only.
+- **Real durations resolved via ffprobe** - 3 strict-floor PASS (6645=59.70s, 6584=59.70s, 6585=57.49s), 2 NEAR-OVER (6586=60.21s, 6608=60.46s), 2 FAIL-OVER (6644=66.71s, 6616=91.88s).
+- **Top pick: claim 6645 (@joeyofdeus / Monksage)** - only clean-floor submission with all three brand tags (@bettercallzaal + @kennyistyping + @poidhxyz) + names BCZ YapZ Ep 19 + Kenny in copy.
+- **Painful demote: claim 6616 (@remixitphotos / Ebuka)** - cohort's strongest copy (Seattle trash, healthcare examples from Ep 19), DROPPED to FLOOR_FAIL_DURATION at 91.88s vs 60s cap.
+- **Per-submission judging page LIVE at bettercallzaal.com/poidh-round2-judging.html** - per-card pros/cons + scenarios + decision matrix + compare table + cast templates + winner-pick form. Nav links added from /poidh.html + /nexus.html.
+- **EB slot 8 leaderboard refreshed** - 10 -> 16 unique submitters. ZABAL distribution flows automatically on next EB refresh cycle.
 
 ## What's LIVE right now
 
