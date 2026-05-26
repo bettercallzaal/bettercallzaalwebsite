@@ -50,6 +50,26 @@
         "bonus": "Cross-tagged POIDH team itself + linked poidh.xyz."
       },
       "claude_verdict": "STRONG_CANDIDATE",
+      "pick_score": 8,
+      "why_pick": [
+        "Only submission that names BCZ YapZ Ep 19 + @kennyistyping in copy - reads as a real attribution, not a generic ad",
+        "Full tag-set: @bettercallzaal + @kennyistyping + @poidhxyz, plus poidh.xyz link",
+        "9 likes = second highest engagement of cohort",
+        "Two-question copy framing ('how do we...?' -> 'on Ep 19, X explains...') is classic ad structure",
+        "Lands the permissionless coordination thesis exactly as Kenny framed it in the episode"
+      ],
+      "why_skip": [
+        "Posted 32 min before deadline - little time to gather engagement, currently 0 replies",
+        "Video resolution is 480x270 (16:9, desktop crop) - less mobile-native than vertical formats",
+        "If duration is over 60s or under 45s, floor fails regardless of copy quality"
+      ],
+      "key_unknowns": [
+        "Duration: cannot auto-verify - watch to confirm 45-60s",
+        "Edit quality: thumbnail looks like a presentation slide; need to confirm tight cuts vs slide-show pacing",
+        "Does the audio hold up at 1x speed without subs?"
+      ],
+      "if_video_lands": "Winner-grade. Copy + tags + thesis fit are unmatched. Vote this one.",
+      "if_video_doesnt": "Drops to a Top 4 finalist; lean toward 6608 (Dee) or 6616 (Ebuka) instead.",
       "claude_notes": "Strongest tag-set of the cohort. Posted right at deadline (23:27 PT on 2026-05-22). 9 likes is mid-pack. Floor PASS pending duration confirmation."
     },
     {
@@ -81,7 +101,27 @@
         "bonus": "Includes 'post your bounty now' CTA that pushes adoption."
       },
       "claude_verdict": "STRONG_CANDIDATE",
-      "claude_notes": "Posted within an hour of submission 6645. Lower likes (2) but copy is action-led. POIDH submission description shows Farcaster cross-post too."
+      "pick_score": 7,
+      "why_pick": [
+        "Most action-led CTA of the cohort - 'Post your bounty now at poidh.xyz' converts viewers into users",
+        "Full tag-set + poidh.xyz link in the body, not just mentions",
+        "POIDH submission description shows cross-post to Farcaster - real distribution effort",
+        "Copy reads like ad copy, not commentary - tight, no fluff",
+        "'All you need is a wallet' is a memorable one-liner that captures the permissionless aspect"
+      ],
+      "why_skip": [
+        "Only 2 likes despite strong copy - either posted to small audience or video isn't pulling viewers in",
+        "'POIDH changes the game' is generic crypto phrasing - thesis-fit weaker than 6645's Ep 19 framing",
+        "No mention of BCZ YapZ Ep 19 by name - feels like a general POIDH ad, not THIS episode's ad",
+        "Submitted right after 6645 - both at deadline, but this one has 4.5x less engagement"
+      ],
+      "key_unknowns": [
+        "Duration: amplify_video format suggests a polished upload, but length still unconfirmed",
+        "Does the video reference Kenny / Ep 19 / BCZ at all, or is it a clip-free 'about POIDH' explainer?",
+        "Why low engagement? Account reach or video weak?"
+      ],
+      "if_video_lands": "Winner-grade for ADOPTION goals - if you want a clip that converts strangers, this CTA structure is the model.",
+      "if_video_doesnt": "Drops out of top 4 - copy alone doesn't carry without Ep 19 substance."
     },
     {
       "claim_id": 6634,
@@ -112,6 +152,22 @@
         "bonus": "n/a"
       },
       "claude_verdict": "FLOOR_FAIL",
+      "pick_score": 0,
+      "why_pick": [
+        "n/a - no winning case. Floor fail by submission rules."
+      ],
+      "why_skip": [
+        "Bounty rule 3 explicitly says: 'Submit the X post URL on POIDH at this bounty page.' This submission has only text, no URL",
+        "No video to evaluate at all - cannot score Craft, Distribution, or Substance",
+        "Description text is generic 'POIDH is a movement for internet trust' - not specific to Ep 19 or Kenny",
+        "Same wallet has an UNACCEPTED Round 1 claim 6368 - pattern of submitting incomplete claims"
+      ],
+      "key_unknowns": [
+        "Did Mariano post a video on X and forget to link it? Worth asking before final rejection",
+        "Is the IPFS image a screenshot of an X post? If yes, hunt for the URL"
+      ],
+      "if_video_lands": "n/a - there is no video.",
+      "if_video_doesnt": "Confirmed floor fail. Send rejection cast: 'Round 2 needed an X post URL. Resubmit on next bounty with the link.'",
       "claude_notes": "Bounty rule 3 explicitly says 'Submit the X post URL on POIDH at this bounty page.' Submission description has only text praising POIDH - no X URL. Floor FAIL on multiple rules. Note: this is the same wallet sitting on unaccepted Round 1 claim 6368."
     },
     {
@@ -143,7 +199,28 @@
         "bonus": "Closes with the POIDH motto as a one-liner."
       },
       "claude_verdict": "STRONG_CANDIDATE",
-      "claude_notes": "Strongest substance write-up - actual examples from the episode. If video matches the copy, this is a finalist."
+      "pick_score": 9,
+      "why_pick": [
+        "Strongest substance write-up of the cohort - pulls two SPECIFIC examples Kenny mentioned (healthcare coordination + Seattle trash cleanup)",
+        "Closes with the POIDH motto as a punchline - free brand reinforcement",
+        "Full tag-set including @poidhxyz",
+        "Copy demonstrates the writer actually watched the episode - not a recycled crypto-Twitter pitch",
+        "Highest signal-per-word - 41 words but every one is doing work",
+        "amplify_video format = polished upload (not native X recorder)"
+      ],
+      "why_skip": [
+        "Only 2 likes despite strong copy - posted 4 days ago, no engagement traction",
+        "No CTA in the copy ('go submit your bounty' / 'try poidh.xyz') - leaves viewer with no next action",
+        "No external link to poidh.xyz in the body",
+        "Posted 2026-05-18, oldest of the strong candidates - has had a week and stayed at 2 likes"
+      ],
+      "key_unknowns": [
+        "Duration: amplify upload suggests intentional length, but 45-60s unconfirmed",
+        "Does the video reinforce the Seattle / healthcare examples or just say 'POIDH is cool'?",
+        "Is the video itself well-edited or did all the craft go into the tweet copy?"
+      ],
+      "if_video_lands": "TOP PICK. Copy proves comprehension of Ep 19; if video matches the copy quality, this is the winner.",
+      "if_video_doesnt": "Still finishes Top 4 because copy is so strong - but pick 6608 or 6645 instead for distribution + tags."
     },
     {
       "claim_id": 6608,
@@ -174,7 +251,28 @@
         "bonus": "Highest engagement of the cohort (11 likes) + cross-posted to Farcaster /zao + /poidh."
       },
       "claude_verdict": "STRONG_CANDIDATE",
-      "claude_notes": "Best distribution + highest engagement. Vertical format suggests intentional ad craft. Frames POIDH more as a product than as Ep 19's real-world thesis - may or may not match what Zaal wants the ad to say."
+      "pick_score": 8,
+      "why_pick": [
+        "Highest engagement of all 8 submissions (11 likes)",
+        "Only vertical (320x426 portrait) video - mobile-native, the only one that fits a phone screen without rotation",
+        "Most tags (4) including @farcaster_xyz - widest distribution surface",
+        "Cross-posted to Farcaster /poidh + /zao channels per POIDH submission description",
+        "Repetition hook ('this is POIDH. this is for POIDH.') is ad-pattern: announce-then-explain",
+        "Highest pick odds if 'best ad' means 'ad that DID best in the wild'"
+      ],
+      "why_skip": [
+        "Frames POIDH as 'most active mini app on Farcaster' - true, but NOT Kenny's real-world coordination thesis from Ep 19",
+        "No mention of BCZ YapZ Ep 19 or Kenny by name in the copy",
+        "Copy reads as a 'what is POIDH' explainer, not 'here is the moment from this episode'",
+        "Vertical format may not play well if Zaal wants to re-share on desktop surfaces"
+      ],
+      "key_unknowns": [
+        "Duration: vertical mobile format usually skews short (15-30s), might miss 45s floor",
+        "Does the video actually reference Ep 19, or is it a generic 'I made an ad for POIDH' clip?",
+        "Why the engagement spike vs other strong candidates - Dee's audience or video itself?"
+      ],
+      "if_video_lands": "TOP PICK if criteria favor 'ad that performs' over 'ad that quotes the episode'. Mobile-native + best engagement = best PR optics.",
+      "if_video_doesnt": "Could drop if duration < 45s (vertical format risk). If video is generic, lean 6616 (Ebuka) for substance fit."
     },
     {
       "claim_id": 6586,
@@ -205,7 +303,26 @@
         "bonus": "n/a - minimal copy work."
       },
       "claude_verdict": "FLOOR_PASS_WEAK_RUBRIC",
-      "claude_notes": "Floor likely passes if video is 45-60s. But the copy under-sells POIDH - whole pitch is in the video. If clip is great, could still win. If clip is mediocre, the copy doesn't carry it."
+      "pick_score": 5,
+      "why_pick": [
+        "Strong opinion-driven hook line - 'crypto's hype is drowning out its actual help' - contrarian and stops scroll",
+        "Lets the video be the pitch - if the clip is great, copy stays out of its way",
+        "Posted earliest of the weak-floor group (2026-05-15) - had longest window for engagement"
+      ],
+      "why_skip": [
+        "Copy doesn't name POIDH AT ALL - viewer has no idea what the ad is for unless they watch",
+        "Missing @poidhxyz tag - poidh team won't see it, less reshare leverage",
+        "Only 2 likes after 10 days - hook didn't convert",
+        "Highest video-dependency risk in the cohort - if video is mediocre, the whole submission collapses",
+        "No CTA, no link, no thesis statement"
+      ],
+      "key_unknowns": [
+        "Does the video actually mention POIDH or BCZ YapZ at all?",
+        "Duration - cannot verify",
+        "Is the 'crypto hype' framing pro-POIDH or just contrarian filler?"
+      ],
+      "if_video_lands": "Surprise dark-horse pick - if the clip nails the 'real help' angle, the contrarian copy becomes a feature not a bug.",
+      "if_video_doesnt": "Floor pass with no rubric points. Likely 5th or 6th place."
     },
     {
       "claim_id": 6585,
@@ -236,7 +353,27 @@
         "bonus": "Got 1 reply = some engagement."
       },
       "claude_verdict": "FLOOR_PASS_WEAK_RUBRIC",
-      "claude_notes": "Solo reply on the post means at least one viewer engaged. Copy is incomplete on purpose. Verdict depends entirely on the video itself."
+      "pick_score": 5,
+      "why_pick": [
+        "On-thesis - 'permissionless aspect of anyone being able to put up a bounty' is exactly Kenny's Ep 19 message",
+        "Got 1 reply = only weak-floor submission with any conversation",
+        "amplify_video format suggests polished upload, not screen-record",
+        "Cliffhanger copy can work - creates curiosity if the video pays it off"
+      ],
+      "why_skip": [
+        "Missing @poidhxyz tag - distribution surface smaller",
+        "Cliffhanger copy is a coin-flip - works if video delivers, frustrates if it doesn't",
+        "2 likes + 1 reply after 11 days - low traction",
+        "Copy is incomplete on purpose - asks viewer to do work to find the payoff",
+        "Doesn't name BCZ YapZ Ep 19 or Kenny by name"
+      ],
+      "key_unknowns": [
+        "What's the rest of the sentence? Does the video complete the thought?",
+        "Duration - unconfirmed",
+        "Was the 1 reply positive or asking for clarification?"
+      ],
+      "if_video_lands": "Solid mid-pack pick - on-thesis content + amplify upload + some engagement.",
+      "if_video_doesnt": "5th-6th place. Copy alone doesn't earn a podium spot."
     },
     {
       "claim_id": 6584,
@@ -267,17 +404,43 @@
         "bonus": "4 likes = second-highest of cohort."
       },
       "claude_verdict": "FLOOR_PASS_WEAK_RUBRIC",
-      "claude_notes": "Strong contrarian hook but copy doesn't name POIDH. Like the others without explicit POIDH naming, all pressure is on the video itself. Posted earliest (2026-05-14) = had a week to gather engagement."
+      "pick_score": 6,
+      "why_pick": [
+        "Strong contrarian hook: 'crypto's just gambling' is the exact frame Kenny pushed back on in Ep 19",
+        "4 likes = third-highest engagement (only Dee at 11 and Monksage at 9 beat it)",
+        "Posted earliest of cohort (2026-05-14) - had 11 days to find audience",
+        "Quotable one-liner - the kind of copy that gets screenshotted",
+        "Punchline structure: copy sets up the problem, video presumably sets up POIDH as the answer"
+      ],
+      "why_skip": [
+        "Missing @poidhxyz tag",
+        "Doesn't name POIDH or BCZ YapZ Ep 19 in copy at all - relies 100% on video",
+        "If video doesn't make the POIDH bridge, the submission reads as generic anti-gambling, not a POIDH ad",
+        "0 replies despite 4 likes - viewers agreed but didn't engage further"
+      ],
+      "key_unknowns": [
+        "Does the video bridge from 'crypto = gambling problem' to 'POIDH = real-world coordination answer'?",
+        "Duration - unconfirmed",
+        "Is the 4 likes the account's normal baseline or an outlier?"
+      ],
+      "if_video_lands": "Dark-horse Top 3. Punchy copy + decent engagement + if the video lands the POIDH bridge.",
+      "if_video_doesnt": "Reads as generic crypto-critique not POIDH ad. 4th-5th place."
     }
   ],
   "claude_summary": {
     "floor_pass_count": 7,
     "floor_fail_count": 1,
-    "strong_candidates": [6645, 6644, 6616, 6608],
-    "weak_floor_pass": [6586, 6585, 6584],
+    "strong_candidates": [6616, 6645, 6608, 6644],
+    "weak_floor_pass": [6584, 6585, 6586],
     "floor_fails": [6634],
-    "recommended_finalists": [6608, 6616, 6645, 6644],
-    "recommended_winner_pick_logic": "Pick one of [6608, 6616, 6645, 6644] after watching all four videos. 6608 (Dee) has best distribution + highest engagement (vertical mobile format, 11 likes, cross-posted Farcaster). 6616 (Ebuka) has strongest substance write-up with specific Ep 19 examples. 6645 (Monksage) has strongest tag-set + posted right at deadline. 6644 (Akukiwil) has strongest CTA copy. Final pick depends on which of the four videos best functions AS A POIDH AD (not just AS A POIDH SUBMISSION).",
+    "recommended_finalists": [6616, 6645, 6608, 6644],
+    "pick_decision_matrix": {
+      "if_optimizing_for_substance": "6616 (Ebuka) - specific Ep 19 examples + POIDH motto close",
+      "if_optimizing_for_distribution": "6608 (Dee) - 11 likes, vertical mobile, cross-posted Farcaster",
+      "if_optimizing_for_thesis_quote": "6645 (Monksage) - only one to name Ep 19 + Kenny in copy",
+      "if_optimizing_for_adoption_cta": "6644 (Akukiwil) - 'post your bounty now at poidh.xyz' converter copy"
+    },
+    "recommended_winner_pick_logic": "Pick depends on what 'best ad' means: (a) ad that BEST DESCRIBES the episode = 6616, (b) ad that PERFORMED best in the wild = 6608, (c) ad that CITES the source = 6645, (d) ad that CONVERTS to action = 6644. Watch all 4 videos. If 6616's video matches its copy quality, it's the winner. Otherwise 6608 for distribution metrics.",
     "rejection_template_for_6634": "Round 2 required submitting an X post URL per rule 3. Your submission contained only text, no link to an X post. Encourage to re-submit on future bounties with the video link included."
   }
 }

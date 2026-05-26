@@ -186,6 +186,59 @@
       color: var(--zabal); display: block; margin-bottom: 0.25rem;
     }
 
+    /* Pros / cons two-col */
+    .proscons { display: grid; gap: 0.75rem; grid-template-columns: 1fr; margin-bottom: 1rem; }
+    @media (min-width: 700px) { .proscons { grid-template-columns: 1fr 1fr; } }
+    .pclist { padding: 0.85rem 1rem; border-radius: 4px; background: var(--surface-2); border: 1px solid var(--border); }
+    .pclist.pick { border-left: 3px solid var(--green); }
+    .pclist.skip { border-left: 3px solid var(--red); }
+    .pclist .pc-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.4rem; }
+    .pclist.pick .pc-label { color: var(--green); }
+    .pclist.skip .pc-label { color: var(--red); }
+    .pclist ul { margin: 0; padding-left: 1.1rem; }
+    .pclist li { font-size: 0.85rem; margin: 0.35rem 0; color: var(--text); }
+
+    .unknowns {
+      margin-bottom: 1rem; padding: 0.75rem 0.9rem; border-radius: 4px;
+      background: rgba(167,139,250,0.06); border-left: 3px solid var(--zabal);
+      font-size: 0.82rem; color: var(--text);
+    }
+    .unknowns .u-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--zabal); display: block; margin-bottom: 0.3rem; }
+    .unknowns ul { margin: 0; padding-left: 1.1rem; }
+    .unknowns li { margin: 0.2rem 0; }
+
+    .scenarios { display: grid; gap: 0.6rem; grid-template-columns: 1fr; margin-bottom: 1rem; }
+    @media (min-width: 700px) { .scenarios { grid-template-columns: 1fr 1fr; } }
+    .scen { padding: 0.7rem 0.9rem; border-radius: 4px; background: var(--surface-2); border: 1px solid var(--border); font-size: 0.85rem; }
+    .scen.lands { border-left: 3px solid var(--green); }
+    .scen.fails { border-left: 3px solid var(--yellow); }
+    .scen .s-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.3rem; }
+    .scen.lands .s-label { color: var(--green); }
+    .scen.fails .s-label { color: var(--yellow); }
+
+    .pick-score-pill {
+      display: inline-flex; align-items: baseline; gap: 0.3rem;
+      padding: 0.3rem 0.65rem; border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.05em;
+      background: var(--surface-2); border: 1px solid var(--border-hover); color: var(--text-muted); margin-right: 0.5rem;
+    }
+    .pick-score-pill strong { font-family: 'Syne', sans-serif; font-size: 0.95rem; color: var(--gold); }
+
+    /* Decision matrix */
+    .decision-matrix {
+      margin: 1.5rem 0 2.5rem; padding: 1.25rem; background: var(--surface); border: 1px solid var(--border-hover); border-radius: var(--radius);
+    }
+    .decision-matrix h2 { font-family: 'Syne', sans-serif; font-size: 1rem; margin-bottom: 0.6rem; color: var(--text); }
+    .decision-matrix .dm-row {
+      display: flex; gap: 1rem; flex-wrap: wrap; padding: 0.6rem 0; border-bottom: 1px dashed var(--border); align-items: baseline;
+    }
+    .decision-matrix .dm-row:last-child { border-bottom: 0; }
+    .decision-matrix .dm-if { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--cyan); min-width: 240px; }
+    .decision-matrix .dm-pick { font-size: 0.9rem; color: var(--text); flex: 1; }
+    .decision-matrix .dm-logic {
+      margin-top: 0.75rem; padding: 0.75rem; background: var(--surface-2); border-radius: 4px; font-size: 0.85rem; color: var(--text);
+      border-left: 3px solid var(--gold);
+    }
+
     .sub-links { padding: 0.85rem 1.5rem; background: var(--surface-2); border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; }
     .sub-links a { color: var(--cyan); }
 
@@ -224,6 +277,8 @@
     </div>
 
     <div class="summary" id="summary"></div>
+
+    <div class="decision-matrix" id="decision-matrix"></div>
   </div>
 
   <section class="submissions">
@@ -301,6 +356,18 @@
 
       document.getElementById('generated-note').textContent = `Judging generated ${data.judging_generated_at}. Recommended finalists: ${s.recommended_finalists.join(', ')}.`;
 
+      const dmEl = document.getElementById('decision-matrix');
+      const dm = s.pick_decision_matrix || {};
+      const dmRows = Object.entries(dm).map(([k, v]) => {
+        const ifLabel = k.replace(/^if_optimizing_for_/, '').replace(/_/g, ' ');
+        return `<div class="dm-row"><span class="dm-if">if optimizing for ${escapeHtml(ifLabel)}</span><span class="dm-pick">${escapeHtml(v)}</span></div>`;
+      }).join('');
+      dmEl.innerHTML = `
+        <h2>Decision matrix - which submission depends on what you want</h2>
+        ${dmRows}
+        <div class="dm-logic"><strong>Logic:</strong> ${escapeHtml(s.recommended_winner_pick_logic || '')}</div>
+      `;
+
       const order = [...s.strong_candidates, ...s.weak_floor_pass, ...s.floor_fails];
       const byId = Object.fromEntries(data.submissions.map(x => [x.claim_id, x]));
 
@@ -343,7 +410,10 @@
                   ${escapeHtml(sub.wallet.slice(0,10))}...${escapeHtml(sub.wallet.slice(-6))}
                 </div>
               </div>
-              <span class="verdict-badge ${verdict}">${verdict.replace(/_/g, ' ')}</span>
+              <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.3rem">
+                ${typeof sub.pick_score === 'number' ? `<span class="pick-score-pill">pick score <strong>${sub.pick_score}</strong>/10</span>` : ''}
+                <span class="verdict-badge ${verdict}">${verdict.replace(/_/g, ' ')}</span>
+              </div>
             </header>
             <div class="sub-body">
               ${mediaHtml}
@@ -358,12 +428,32 @@
                 </div>
                 <h3>Floor checks</h3>
                 <div class="floor-checks">${floorChipsHtml}</div>
+                <h3>Why pick / why skip</h3>
+                <div class="proscons">
+                  <div class="pclist pick">
+                    <span class="pc-label">Why pick</span>
+                    <ul>${(sub.why_pick || []).map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>
+                  </div>
+                  <div class="pclist skip">
+                    <span class="pc-label">Why skip</span>
+                    <ul>${(sub.why_skip || []).map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>
+                  </div>
+                </div>
+                ${sub.key_unknowns && sub.key_unknowns.length ? `
+                <div class="unknowns">
+                  <span class="u-label">Key unknowns (need manual playback)</span>
+                  <ul>${sub.key_unknowns.map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>
+                </div>` : ''}
+                <div class="scenarios">
+                  ${sub.if_video_lands ? `<div class="scen lands"><span class="s-label">If video lands</span>${escapeHtml(sub.if_video_lands)}</div>` : ''}
+                  ${sub.if_video_doesnt ? `<div class="scen fails"><span class="s-label">If video doesn't land</span>${escapeHtml(sub.if_video_doesnt)}</div>` : ''}
+                </div>
                 <h3>Rubric notes</h3>
                 <div class="rubric-list">${rubricHtml}</div>
-                <div class="claude-notes">
+                ${sub.claude_notes ? `<div class="claude-notes">
                   <span class="cn-label">Claude verdict + notes</span>
                   ${escapeHtml(sub.claude_notes)}
-                </div>
+                </div>` : ''}
               </div>
             </div>
             <div class="sub-links">
