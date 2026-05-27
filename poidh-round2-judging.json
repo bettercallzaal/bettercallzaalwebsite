@@ -71,7 +71,9 @@
       ],
       "if_video_lands": "WINNER. Floor PASS + tags + Ep 19 cite + substance = unbeatable on strict reading.",
       "if_video_doesnt": "Even if edit quality is mediocre, this still wins on the strict 45-60s rule - the only strong candidate without a duration penalty.",
-      "claude_notes": "RESOLVED 2026-05-26: 59.70s duration confirms floor PASS. Promoted to TOP PICK because it is the only clean-PASS submission with all three brand tags + an explicit Ep 19 citation in copy."
+      "claude_notes": "RESOLVED 2026-05-26: 59.70s duration confirms floor PASS. Promoted to TOP PICK because it is the only clean-PASS submission with all three brand tags + an explicit Ep 19 citation in copy.",
+      "winner": true,
+      "winner_pick_reason": "Zaal picked Monksage 2026-05-27. The intro framing (How do you pull money to get things done in the real world? -> answer from Ep 19) is the strongest 3-second hook in the cohort. Video opens with blue title cards that match the copy's question."
     },
     {
       "claim_id": 6584,
@@ -435,6 +437,9 @@
       "if_distribution_overrides_rule": "6608 (Dee) - 11 likes + vertical + 4 tags but 0.46s over the cap"
     },
     "recommended_winner": 6645,
+    "winner_picked_at": "2026-05-27",
+    "winner_picked_by": "Zaal",
+    "winner_pick_reason": "Zaal's call (2026-05-27): Monksage's intro framing was the most enjoyable - the question-then-Ep-19-answer setup (How do you pull money to get things done in the real world? On BCZ YapZ Ep 19 @kennyistyping explains how POIDH brings transparent permissionless coordination to life) reads as a real ad. Plus 59.70s strict-floor pass + all 3 brand tags + poidh.xyz link + 9 likes.",
     "recommended_winner_reason": "After ffprobe-confirmed durations, 6645 (Monksage) is the only submission that (a) cleanly clears the 45-60s floor at 59.70s, (b) has the full @bettercallzaal + @kennyistyping + @poidhxyz tag-set, (c) names BCZ YapZ Ep 19 + Kenny in the copy itself, (d) sits in the top 2 for X engagement. Other strong contenders (6616, 6644, 6608) all broke the duration rule by a margin large enough to disqualify under a fair strict reading.",
     "rejection_template_for_6634": "Round 2 required submitting an X post URL per rule 3. Resubmit on Round 3 with the video link.",
     "honorable_mention_template_for_6616": "Your copy was the cohort's strongest - specific Ep 19 references (Seattle, healthcare). Duration ran 91s vs 60s cap. Trim and submit to Round 3 - you'd be a frontrunner.",

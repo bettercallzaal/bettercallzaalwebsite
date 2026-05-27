@@ -94,6 +94,8 @@ def main() -> int:
     all_claims: list[dict] = []
     total_eth = 0.0
     total_claims = 0
+    # Track which bounties each address submitted to (for score = bounty count)
+    bounties_by_addr: dict[str, set[int]] = {}
 
     for bid in bounty_ids:
         b = trpc("bounties.fetch", {"id": bid, "chainId": args.chain})
@@ -113,9 +115,11 @@ def main() -> int:
 
         for c in items:
             addr = c["issuer"].lower()
-            if addr != issuer and addr not in seen:
-                seen.add(addr)
-                unique_order.append(addr)
+            if addr != issuer:
+                bounties_by_addr.setdefault(addr, set()).add(bid)
+                if addr not in seen:
+                    seen.add(addr)
+                    unique_order.append(addr)
             all_claims.append({
                 "bounty_id": bid,
                 "claim_id": c["id"],
@@ -141,7 +145,13 @@ def main() -> int:
             "claims_count": sum(1 for c in all_claims if c["bounty_id"] == bid),
         })
 
-    leaderboard_feed = [{"address": a, "score": 1} for a in unique_order]
+    # Score = number of distinct BCZ bounties this wallet submitted to
+    # (capped at len(bounty_ids), so e.g. submitting twice to one bounty still = 1
+    # but submitting to both R1 + R2 = 2). Per Zaal 2026-05-27.
+    def addr_score(addr: str) -> int:
+        return len(bounties_by_addr.get(addr, set())) or 1
+
+    leaderboard_feed = [{"address": a, "score": addr_score(a)} for a in unique_order]
 
     print(f"\nFetching live EB leaderboard...")
     eb = fetch_eb_leaderboard()
@@ -178,7 +188,7 @@ def main() -> int:
         prof = profiles.get(addr, {})
         enriched_leaderboard.append({
             "address": addr,
-            "score": 1,
+            "score": addr_score(addr),
             "rank": eb_e.get("rank"),
             "farcaster_username": eb_e.get("farcaster_username") or prof.get("handle"),
             "displayName": prof.get("displayName"),
