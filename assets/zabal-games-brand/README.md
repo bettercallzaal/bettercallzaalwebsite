@@ -1,87 +1,171 @@
-# ZABAL Gamez Brand Kit
+# ZABAL Gamez Brand Kit (canonical)
 
-Pre-cleared assets for the ZABAL Gamez campaign. Use freely under CC-BY 4.0 - just keep "ZABAL Gamez" or `zabalgamez.com` visible somewhere in your final piece.
+Mirror of the canonical brand kit from `github.com/ZAODEVZ/zabalgames` (`docs/brand-kit-2026-05-28.md` + `docs/brand-context.md`), bundled here so editors can lift assets for BCZ POIDH bounty submissions, mentor outreach, social posts, sponsor pitches, and anything else.
 
-Maintainer: Zaal / BetterCallZaal. Last updated: 2026-05-31.
+Source of truth: https://github.com/ZAODEVZ/zabalgames (docs/ + assets/). If this kit and the source disagree, the source wins. Re-sync target: weekly during the campaign.
 
-## What this is for
+Maintainer: Zaal / BetterCallZaal. Last sync: 2026-05-31. Logo reveal: 2026-05-28. CC-BY 4.0.
 
-ZABAL Gamez is 3 months of building with The ZAO. June workshops, July open build-a-thon, August Finals with embedded ZAO mentors. Free. Anyone welcome.
+---
 
-Landing: https://zabalgamez.com
-Lead signup: https://zabalgamez.com/lead.html
-Farcaster channel: https://farcaster.xyz/~/channel/zabal
-Magnetiq portal: (link forthcoming via Tyler Stambaugh)
-Lu.ma calendar: https://luma.com/ZABALgames
+## What ZABAL Gamez is (one paragraph)
 
-## Brand voice (1-pager)
+ZABAL Gamez is The ZAO's 3-month Build-A-Thon. June workshops, July open build-a-thon, August Finals with ZAO mentors embedded as teammates. Three tracks (artist, builder, creator). Free to join. Anyone welcome. The 100+ member ZAO community is the real audience.
 
-**Tagline:** 3 months of building with The ZAO. Free to join. Anyone welcome.
+- Landing: https://zabalgamez.com
+- Lead signup: https://zabalgamez.com/lead.html
+- Farcaster channel: https://farcaster.xyz/~/channel/zabal
+- Repo + every document: https://github.com/ZAODEVZ/zabalgames
+- Lu.ma calendar: https://luma.com/ZABALgames
 
-**Permission to do:** Real shipped builds, mentor-paired, public, fun.
-**Permission to skip:** Hackathon prizefighting, gated cohorts, NDA culture, dry tutorials.
+---
 
-**The frame:** Vibe-coding with a ZAO mentor in your corner. The build matters, but the relationship matters more. Walk away with a real artifact + a real connection + a real onchain credential whether you stay or not.
+## Visual direction
 
-**Tone:** Direct, builder-to-builder, no marketing veneer. Mention specific tools (Claude Code, Cursor, Empire Builder, Juke, POIDH) by name. Make "free" visible.
+**Arcade-meets-builder.** Retro arcade cabinet hero + modern minimalist site chrome. The logo carries the retro energy. The chrome stays sleek. The pairing reads as "playful builder space," not "novelty arcade site."
 
-**Hard-no list:** No emojis. No em dashes (use hyphens). No crypto/web3 jargon in public copy. "100+" for ZAO member count, never a specific number.
+Logo composition (per `brand-kit-2026-05-28.md`):
+- Chunky 3D letter forms (yellow "ZABAL" / red "Z" / cyan "GAMES")
+- "INSERT COIN" pixel font caption
+- Rainbow pixel-art border (tetris-style multi-color blocks)
+- Joystick + button graphics on either side
+- CRT scan-line dark navy background
 
-## Palette
+---
+
+## Site palette (the dark theme - use for UI work)
 
 | Token | Hex | Use |
-|-------|-----|-----|
-| `--bg` | `#070709` | Page background, deep void |
-| `--text` | `#e4e2dd` | Primary body text on dark |
-| `--text-muted` | `#8a8895` | Secondary / caption text |
-| `--cyan` | `#00e5ff` | Links, primary CTA, ZABAL accent |
-| `--orange` | `#ff6b35` | Highlight, secondary accent, energy |
-| `--gold` | `#f5c842` | Awards, callouts |
-| `--zabal-purple` | `#a78bfa` | ZABAL ecosystem accent |
+|---|---|---|
+| `--bg` | `#070709` | Page background |
+| `--surface` | `#111115` | Cards, modals |
+| `--surface-2` | `#16161c` | Hovered cards, nested surfaces |
+| `--text` | `#e4e2dd` | Primary text |
+| `--text-muted` | `#8a8895` | Secondary text |
+| `--text-dim` | `#4e4c57` | Tertiary text, captions |
+| `--border` | `#1f1e26` | Card borders |
+| `--border-hover` | `#2f2d3a` | Card borders on hover |
+| `--orange` | `#ff6b35` | Primary accent (CTAs, "Build" path) |
+| `--cyan` | `#00e5ff` | Secondary accent, links, "Watch" path |
+| `--gold` | `#f5c842` | Tertiary accent, "Learn" path, eyebrows |
+| `--pink` | `#ff3d6e` | Spot accent, fix-state, decision callout |
+| `--zabal` | `#a78bfa` | ZABAL token, deep accent, workshop accent |
+
+See `palette.svg` for the swatch card.
+
+## Arcade palette (the logo - use for collateral that matches the hero)
+
+For cabinet skins, stream overlays, merch, motion graphics that should match the hero exactly:
+
+| Token | Hex | What it is in the logo |
+|---|---|---|
+| `arcade-red` | `#E53935` | The "Z" + the right button |
+| `arcade-amber` | `#FFA000` | ZABAL letter mid-tone |
+| `arcade-yellow` | `#FFC107` | ZABAL letter highlight |
+| `arcade-cyan` | `#00BCD4` | GAMES mid-tone |
+| `arcade-cyan-bright` | `#00E5FF` | GAMES highlight (matches `--cyan`) |
+| `arcade-magenta` | `#E91E63` | GAMES outline + pixel-border accent |
+| `arcade-green` | `#66BB6A` | Joystick ring + pixel-border accent |
+| `arcade-navy` | `#1A1B5E` | Background base |
+| `pixel-white` | `#FAFAFA` | "INSERT COIN" + sparkles |
+
+See `palette-arcade.svg` for the swatch card.
+
+---
 
 ## Typography
 
-Web stack (zabalgamez.com):
-- Display / headings: Syne (700-800)
-- Body: Outfit (300-600)
-- Numbers / mono: JetBrains Mono (400-500)
+### Site (web stack via Google Fonts)
 
-Fallback (system):
+- **Headings:** Syne 700-800
+- **Body:** Outfit 300-600
+- **Numbers, code, mono:** JetBrains Mono 400-500
+
+### System fallback
+
 ```css
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 ```
 
-## Assets in this folder
+### Asset design (optional layer for arcade-feel collateral)
 
-| File | What | Status |
-|------|------|--------|
-| `README.md` | This file | Live |
-| `zabal-gamez-promo.mp3` | 11s ZABAL Gamez audio bumper (voiceover: "ZABAL Gamez. Season One. Three months of building with The ZAO. June workshops. July open build. August Finals. Free to join. Anyone welcome. zabalgamez.com.") - drop at intro/outro or under your edit at low volume | Live |
-| `palette.svg` | Color swatches inline SVG | Live |
-| `logo-wordmark.svg` | "ZABAL GAMEZ" wordmark vector | Live |
-| `logo-mark.svg` | Compact mark for tight spaces | TODO |
-| `b-roll-channel-walkthrough.mp4` | 10-15s screen capture of `/zabal` Farcaster channel | TODO |
-| `b-roll-magnetiq-portal.mp4` | 10-15s screen capture of Magnetiq portal | TODO - coordinate with Tyler Stambaugh |
-| `b-roll-workshop-1.mp4` | 10-15s screen capture of a recorded workshop | TODO - pull from Lu.ma recordings once first workshop drops |
-| `prize-card-25eth.png` | "0.0125 ETH wins" 1080x1080 | TODO |
-| `prize-card-tiers.png` | "Winner gets ETH, everyone earns ZABAL" 1080x1080 | TODO |
-| `social-template-farcaster.png` | 1200x630 Farcaster embed card | TODO |
-| `social-template-x.png` | 1200x675 X card | TODO |
+- **Pixel display font:** Press Start 2P or VT323 - sparingly, for "INSERT COIN" treatment only
+- **Chunky 3D titles:** Bungee or Russo One for ZABAL/GAMES feel
+- Body still Outfit for legibility
 
-Empty rows ship as the campaign grows.
+Do NOT use a pixel font in body copy. It reads ironic + hurts legibility. Save it for hero-graphic treatments only.
+
+---
+
+## Voice
+
+- Direct, warm, builder-energy
+- "We learn it together" not "trust us"
+- Drop articles when terse helps ("Sign up. Insert coin." NOT "You should sign up by inserting a coin.")
+- "Insert coin" is the spirit-totem callback - use it sparingly + intentionally (one moment per surface max)
+- No emojis. No em dashes. (Global ZAO rule.)
+- "Build for a real community, not a weekend you forget."
+- "Build event, not a video-game contest."
+- Use "100+ members" never specific count.
+
+See `phrases.md` for the approved + banned phrase lists.
+
+---
+
+## Files in this folder
+
+| File | What |
+|---|---|
+| `README.md` | This file |
+| `phrases.md` | Approved phrases + banned phrases + brand glossary (correct spellings) |
+| `asset-inventory.md` | Where each asset goes (OG, Twitter, Telegram, Mini App, etc) |
+| `palette.svg` | Site palette swatch card |
+| `palette-arcade.svg` | Arcade-logo palette swatch card |
+| `logo.png` | Arcade hero logo, 1024x1024, ~1.2 MB. OG image, Mini App splash, t-shirts, stream overlays |
+| `logo-gamez.png` | Wider variant with the "GAMEZ" emphasis, ~1.0 MB |
+| `logo-wordmark.svg` | Clean SVG wordmark for tight spaces (light/dark adaptive) |
+| `icon.png` | Clean Z favicon mark, 1024x1024 (browser scales) |
+| `og-card.svg` | SVG OG card fallback (text + minimal graphics) |
+| `embed-card.svg` | 1200x630 SVG embed card (Farcaster + X + general) |
+| `embed-card-gamez.png` | 1200x630 raster embed card |
+| `zabal-gamez-promo.mp3` | 11-second audio bumper - drop as intro/outro tag or under your edit at low volume |
+
+Pending (TODO):
+- `b-roll-channel-walkthrough.mp4` - 10-15s screen capture of /zabal Farcaster channel
+- `b-roll-magnetiq-portal.mp4` - 10-15s screen capture of Magnetiq portal (coordinate with Tyler)
+- `b-roll-workshop-1.mp4` - 10-15s screen capture of a recorded workshop (after first workshop drops)
+- `prize-card-eth.png` - "0.0125 ETH wins" social card
+- `prize-card-tracks.png` - "Artist / Builder / Creator - pick your lane" social card
+- `og-card.png` - 1200x630 raster of the OG card for clients that don't unfurl SVG
+
+---
 
 ## Audio rule (for BCZ POIDH bounty submissions)
 
-**No random library music or ambient pads under spoken dialog.** If you want non-silence under your edit, use ONE of:
+If your ad has audio, choose ONE of:
 
-1. **The `zabal-gamez-promo.mp3` from this folder** (sanctioned brand audio - drop as intro/outro tag or loop under your edit at low volume)
-2. **Original source-episode audio** (always fine)
-3. **One clear instrumental track** that does not compete with spoken dialog
+1. The `zabal-gamez-promo.mp3` in this folder (sanctioned brand audio - drop as intro/outro tag or loop under your edit at low volume)
+2. Original source-episode audio (always fine)
+3. One clear instrumental track that does not compete with spoken dialog
 
-Layered melodic music over spoken dialog = automatic floor fail on any BCZ POIDH bounty.
+Random library music or melodic pads over dialog = automatic floor fail on any BCZ POIDH bounty.
+
+---
 
 ## License
 
 CC-BY 4.0. Remix, mash up, recolor, re-time, re-voice freely. Attribution: keep "ZABAL Gamez" or "zabalgamez.com" visible in the final piece.
 
 If you build something with this kit, post it in `/zabal` on Farcaster + tag `@bettercallzaal` so we can boost it.
+
+---
+
+## Where this kit's canonical copy lives
+
+- `github.com/ZAODEVZ/zabalgames/docs/brand-kit-2026-05-28.md` - the canonical Season 1 brand spec
+- `github.com/ZAODEVZ/zabalgames/docs/brand-context.md` - the 7-brand ZAO ecosystem spine
+- `github.com/ZAODEVZ/zabalgames/docs/logo-brief-2026-05-26.md` - logo design brief
+- `github.com/ZAODEVZ/zabalgames/docs/media-kit-2026-05-26.md` - press / media pull
+- `github.com/ZAODEVZ/zabalgames/docs/magnetiq-mementos-zao-brands-2026-05-28.md` - Magnetiq mementos catalog
+
+This BCZ folder is a working mirror. Update by re-syncing the docs + re-copying the assets when the canonical changes.
