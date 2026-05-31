@@ -1,0 +1,54 @@
+{
+  "round": 3,
+  "bounty_id": 1180,
+  "bounty_url": "https://poidh.xyz/base/bounty/1180",
+  "bounty_title": "Best ad for ZABAL Gamez",
+  "deadline_pt": "2026-06-14 23:59 PT",
+  "winner_cast_target": "2026-06-15",
+  "amount_eth_at_judging": 0.0125,
+  "judging_generated_at": null,
+  "durations_resolved_at": null,
+  "judging_note": "Pre-built scaffold. Submissions populate as they come in over the R3 window (May 31 - Jun 14, 2026). After close: run scripts/refresh-poidh-leaderboard.py with bounty 1180 added to defaults; download every submission asset; ffprobe video durations; populate this JSON; ship at bettercallzaal.com/poidh-round3-judging.html.",
+  "floor_rules": [
+    {"id": "format", "label": "Any format ad (image / video / meme / motion / cast / poster / audio drop)", "auto_checkable": false},
+    {"id": "tag_bcz", "label": "Tagged @bettercallzaal on X", "auto_checkable": true},
+    {"id": "zabal_crosspost", "label": "Cross-posted in /zabal Farcaster channel", "auto_checkable": false},
+    {"id": "x_url_on_poidh", "label": "X post URL submitted on POIDH bounty page", "auto_checkable": true},
+    {"id": "audio_rule", "label": "If audio: official promo MP3 OR source audio OR one clear instrumental (no layered library music under dialog)", "auto_checkable": false}
+  ],
+  "rubric_tiers": [
+    {"id": "distribution", "label": "Distribution", "examples": "Cross-post on additional Farcaster feeds + Bluesky/Threads/LinkedIn/IG/TikTok; tag @kennyistyping + @poidhxyz + @yerbearserker; include zabalgamez.com as visible link"},
+    {"id": "craft", "label": "Craft", "examples": "Clarity in 3s; on-brand energy not generic crypto; vertical/square mobile-native; captions if audio; ZABAL Gamez wordmark/logo visible; intro context line in post body; shareability"},
+    {"id": "substance", "label": "Substance", "examples": "One clear takeaway (free + 3 months + real mentors + real shipped builds for 100+ member community); names real beat (June workshops / July open build / August Finals / one of 3 tracks / mentor model / Finals stream); speaks to artist OR builder OR creator viewer"},
+    {"id": "bonus", "label": "Bonus", "examples": "Direct invitation to MENTORS not just builders; testimonial pull-quote from past/current ZAO contributor; B-roll showing what a ZAO build looks like; plays in any orientation"}
+  ],
+  "submissions": [],
+  "claude_summary": {
+    "floor_pass_count": null,
+    "floor_borderline_count": null,
+    "floor_fail_count": null,
+    "strong_candidates_strict": [],
+    "borderline_duration": [],
+    "floor_fails_duration": [],
+    "floor_fails_other": [],
+    "recommended_finalists_strict": [],
+    "recommended_winner": null,
+    "recommended_winner_reason": "TBD after Jun 14 close + judging pass"
+  },
+  "round_1_outcome": {
+    "winner_claim_id": 6368,
+    "winner_wallet": "0xa34514c2150029afa4d37577daee301166105355",
+    "winner_handle": "cryptfi-mariano",
+    "accepted_at_check": "2026-05-26",
+    "note": "Round 1 (bounty 1151) winner confirmed accepted on-chain 2026-05-26."
+  },
+  "round_2_outcome": {
+    "winner_claim_id": 6645,
+    "winner_wallet": "0x6dce11cc9bba17d3c1ef60c26f0958300bb06953",
+    "winner_handle": "joeyofdeus",
+    "winner_display_name": "Monksage",
+    "winner_x_url": "https://x.com/joey_of_deus/status/2057966595029319888",
+    "accepted_at_check": "2026-05-27",
+    "note": "Round 2 (bounty 1166) winner picked by Zaal 2026-05-27. Only strict-floor 45-60s PASS with all three brand tags + Ep 19 + Kenny named in copy."
+  }
+}
