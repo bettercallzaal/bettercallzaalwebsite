@@ -4,6 +4,8 @@ Mirror of the canonical brand kit from `github.com/ZAODEVZ/zabalgames` (`docs/br
 
 Source of truth: https://github.com/ZAODEVZ/zabalgames (docs/ + assets/). If this kit and the source disagree, the source wins. Re-sync target: weekly during the campaign.
 
+This kit is also mirrored into the **zpoidh repo** at `github.com/bettercallzaal/zpoidh/tree/main/assets/brand-kits/zabal-games/` - the canonical home for every BCZ POIDH bounty's brand assets across rounds.
+
 Maintainer: Zaal / BetterCallZaal. Last sync: 2026-05-31. Logo reveal: 2026-05-28. CC-BY 4.0.
 
 ---
