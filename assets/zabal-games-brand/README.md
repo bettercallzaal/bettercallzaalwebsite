@@ -128,7 +128,7 @@ See `phrases.md` for the approved + banned phrase lists.
 | `og-card.svg` | SVG OG card fallback (text + minimal graphics) |
 | `embed-card.svg` | 1200x630 SVG embed card (Farcaster + X + general) |
 | `embed-card-gamez.png` | 1200x630 raster embed card |
-| `zabal-gamez-promo.mp3` | 11-second audio bumper - drop as intro/outro tag or under your edit at low volume |
+| `zabal-gamez-promo.mp3` | 50-second ZABAL Gamez promo audio (1.3 MB, 48kHz stereo, 212 kbps) - drop as intro / outro / full ambient bed under your edit |
 
 Pending (TODO):
 - `b-roll-channel-walkthrough.mp4` - 10-15s screen capture of /zabal Farcaster channel

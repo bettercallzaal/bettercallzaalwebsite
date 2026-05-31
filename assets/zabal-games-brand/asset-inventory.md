@@ -23,7 +23,7 @@ Where each asset belongs in the unfurl + design pipeline.
 | `og-card.svg` | SVG-aware unfurl clients | bulk social (use embed-card-gamez.png) |
 | `embed-card.svg` (1200x630) | Vector embed card | clients that reject SVG |
 | `embed-card-gamez.png` (1200x630, 670 KB) | Bulk 1200x630 raster social unfurl | the OG hero (that's logo.png) |
-| `zabal-gamez-promo.mp3` (11s, 183 KB) | Audio bumper - intro/outro tag, ambient bed under your edit at low volume | replacement for source-episode dialog |
+| `zabal-gamez-promo.mp3` (50s, 1.3 MB, 48kHz stereo 212 kbps) | Full promo audio - use as intro / outro / full ambient bed under your edit | replacement for source-episode dialog |
 | `palette.svg` | Designer reference for site-UI colors | hero collateral (use palette-arcade.svg) |
 | `palette-arcade.svg` | Designer reference for arcade-logo collateral | site UI work (use palette.svg) |
 
