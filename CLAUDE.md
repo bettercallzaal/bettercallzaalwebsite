@@ -10,6 +10,8 @@ Personal site and Farcaster Mini App for Zaal (FID: 19640) — FOSS (free & open
 index.html                        # The entire site — HTML + embedded CSS + JS
 assets/                           # Images (icon.png = Z logo)
 .well-known/farcaster.json        # Farcaster Mini App domain manifest
+projects/                         # FOSS catalog — index.html renders from projects.json
+scripts/sync-projects.js          # Regenerates projects/projects.json from ZABAL Gamez
 research/                         # Research docs (see research/README.md)
 .agents/skills/bcz-research/      # /bcz-research skill definition
 ```
@@ -36,6 +38,17 @@ research/                         # Research docs (see research/README.md)
 - `sdk.actions.ready()` MUST be called — dismisses splash screen
 - Inside mini app: use `sdk.actions.composeCast()` for sharing
 - Outside mini app: Warpcast compose URL fallback
+
+## Projects Catalog (`/projects`)
+
+The `/projects` page renders client-side from `projects/projects.json` (single source of truth — edit it to change the catalog, no rebuild). To resync from the canonical ZABAL Gamez list:
+
+```
+node scripts/sync-projects.js          # rewrites projects/projects.json
+node scripts/sync-projects.js --check   # dry run; exits non-zero if stale
+```
+
+The sync pulls the GitHub raw URL (zabalgames.com itself is Cloudflare-blocked). `scripts/project-overrides.json` (keyed by stable upstream `id`) adds the tech `stack` chips and cleaner display names that upstream doesn't carry — edit it when new projects appear. Needs Node 18+ (global fetch).
 
 ## Research Library
 
