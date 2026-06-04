@@ -61,4 +61,4 @@ Most repos live under the [`bettercallzaal`](https://github.com/bettercallzaal) 
 ## Open follow-ups
 
 - `zabalgames.com` is behind Cloudflare (403 to automated fetch); research above pulled from the public `raw.githubusercontent.com/ZAODEVZ/zabalgames` mirror. Re-verify against the live site when possible.
-- Consider a dedicated `/projects`-style index on bettercallzaal.com that mirrors the ZABAL Gamez catalog so the FOSS body of work is browsable from the personal site too.
+- Consider a dedicated `/projects`-style index on bettercallzaal.com that mirrors the ZABAL Gamez catalog so the FOSS body of work is browsable from the personal site too. **(Done 2026-06-04 — built at [`/projects/`](https://bettercallzaal.com/projects/), all 46 projects, linked from the homepage Portfolio section.)**
