@@ -2,11 +2,11 @@
 
 ## What BetterCallZaal Is
 
-The personal site and brand hub for Zaal (FID: 19640) — an engineer, builder, and connector in the web3/Farcaster/music ecosystem. The site showcases Zaal's work, collects testimonials, drives inbound via a contact form, and is a Farcaster Mini App so it's natively shareable and launchable inside Warpcast.
+The personal site and brand hub for Zaal (FID: 19640) — a FOSS (free & open source software) builder, connector, and ecosystem architect in the web3/Farcaster/music ecosystem. The site showcases Zaal's work, collects testimonials, drives inbound via a contact form, and is a Farcaster Mini App so it's natively shareable and launchable inside Warpcast.
 
 ## Who Zaal Is
 
-- Engineer turned web3 builder, based in Maine
+- FOSS builder (free & open source software), based in Maine — electrical engineer turned web3 builder
 - Builder of The ZAO — a creator infrastructure ecosystem (zaoos.com)
 - Helped WaveWarZ scale to $60k+ volume, 1.2k X followers
 - Active Farcaster user: @bettercallzaal (FID 19640)

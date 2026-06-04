@@ -75,7 +75,7 @@ LinkedIn pulls title, description, and image from OG tags automatically. No othe
 ```html
 <!-- Open Graph — drives LinkedIn, Telegram, general previews -->
 <meta property="og:title" content="BetterCallZaal — The Connector">
-<meta property="og:description" content="Engineer. Builder. Connector.">
+<meta property="og:description" content="FOSS Builder. Connector. Ecosystem Architect.">
 <meta property="og:image" content="https://bettercallzaal.com/assets/icon.png">
 <meta property="og:url" content="https://bettercallzaal.com">
 <meta property="og:type" content="website">
@@ -84,7 +84,7 @@ LinkedIn pulls title, description, and image from OG tags automatically. No othe
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@bettercallzaal">
 <meta name="twitter:title" content="BetterCallZaal — The Connector">
-<meta name="twitter:description" content="Engineer. Builder. Connector.">
+<meta name="twitter:description" content="FOSS Builder. Connector. Ecosystem Architect.">
 <meta name="twitter:image" content="https://bettercallzaal.com/assets/icon.png">
 
 <!-- Farcaster — makes URL launchable as a mini app in casts -->

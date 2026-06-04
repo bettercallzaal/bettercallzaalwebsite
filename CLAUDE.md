@@ -2,7 +2,7 @@
 
 ## What This Is
 
-Personal site and Farcaster Mini App for Zaal (FID: 19640) — engineer, builder, and connector in the web3/Farcaster/music ecosystem. Pure static HTML hosted at `bettercallzaal.com`.
+Personal site and Farcaster Mini App for Zaal (FID: 19640) — FOSS (free & open source software) builder, connector, and ecosystem architect in the web3/Farcaster/music ecosystem. Pure static HTML hosted at `bettercallzaal.com`.
 
 ## Project Structure
 

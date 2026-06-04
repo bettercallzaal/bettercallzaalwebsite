@@ -63,7 +63,7 @@ Server pings every 30s; client must pong within 70s or connection drops.
 | Command | Returns |
 |---------|---------|
 | `!zao` | Link to bettercallzaal.com |
-| `!bcz` | "BetterCallZaal - engineer + builder in web3/Farcaster/music ecosystem" |
+| `!bcz` | "BetterCallZaal - FOSS builder + connector in web3/Farcaster/music ecosystem" |
 | `!fid` | Viewer FID lookup (custom variable hitting Neynar) |
 | `!schedule` | Next stream time |
 | `!tip` | Link to SE tip page |
