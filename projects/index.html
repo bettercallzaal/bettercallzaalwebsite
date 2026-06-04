@@ -89,7 +89,9 @@
     .card a.repo { font-family: 'JetBrains Mono', monospace; font-size: 0.76rem; color: var(--accent); display: inline-flex; align-items: center; gap: 0.35rem; }
     .card a.repo:hover { text-decoration: underline; }
     .card .spec { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-dim); }
-    .card svg { width: 13px; height: 13px; fill: currentColor; }
+    .card svg { width: 13px; height: 13px; fill: currentColor; flex-shrink: 0; }
+
+    .loading { color: var(--text-dim); font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; padding: 2rem 0; }
 
     footer { padding: 2.5rem 0 3.5rem; color: var(--text-dim); font-size: 0.85rem; text-align: center; }
     footer a { color: var(--text-muted); margin: 0 0.6rem; }
@@ -110,7 +112,7 @@
       <h1>Open source. <span class="accent">All of it.</span></h1>
       <p class="hero-sub">The body of work behind the FOSS-builder title. Every project here is shipped in public across the ZAO / Farcaster ecosystem and kept <strong>MIT and forkable</strong> &mdash; extend a live product, fork a starter, or build a concept on the existing rails. Mirrors the <a href="https://zabalgames.com/projects" target="_blank" rel="noopener">ZABAL Gamez</a> adoption catalog.</p>
       <div class="stat-row">
-        <div class="stat"><b>46</b><span>PROJECTS CATALOGUED</span></div>
+        <div class="stat"><b id="stat-count">46</b><span>PROJECTS CATALOGUED</span></div>
         <div class="stat"><b>73+</b><span>OPEN-SOURCE REPOS</span></div>
         <div class="stat"><b>MIT</b><span>KEEP THE REPO + CREDIT</span></div>
       </div>
@@ -142,87 +144,14 @@
     </div>
   </div>
 
-  <section>
-    <div class="container">
-      <div class="section-head"><h2>Shipped</h2><span class="count">23 live</span></div>
-      <p class="section-sub">In production and usable today.</p>
-      <div class="grid">
-        <div class="card"><div class="card-top"><h3>ZAOOS</h3><span class="badge extend">Extend</span></div><p class="desc">Monorepo lab and gated Farcaster client &mdash; social feed, audio/video spaces, governance.</p><span class="stack">Node.js · React · Farcaster</span><a class="repo" href="https://github.com/bettercallzaal/ZAOOS" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>bettercallzaal/ZAOOS</a></div>
-        <div class="card"><div class="card-top"><h3>ZAONEXUS</h3><span class="badge extend">Extend</span></div><p class="desc">Searchable directory of 200+ ecosystem links with dark/light mode.</p><span class="stack">Next.js · Vercel</span><a class="repo" href="https://github.com/bettercallzaal/ZAONEXUS" target="_blank" rel="noopener">bettercallzaal/ZAONEXUS</a></div>
-        <div class="card"><div class="card-top"><h3>ZAO-Leaderboard</h3><span class="badge extend">Extend</span></div><p class="desc">Onchain leaderboard ranking members by Respect holdings on Optimism.</p><span class="stack">Next.js · Optimism · Airtable · Alchemy</span><a class="repo" href="https://github.com/bettercallzaal/ZAO-Leaderboard" target="_blank" rel="noopener">bettercallzaal/ZAO-Leaderboard</a></div>
-        <div class="card"><div class="card-top"><h3>zao-claude-skills</h3><span class="badge fork">Fork</span></div><p class="desc">Library of Claude Code skills for ecosystem tasks &mdash; meeting capture, research, distribution.</p><span class="stack">Claude API · Node.js</span><a class="repo" href="https://github.com/bettercallzaal/zao-claude-skills" target="_blank" rel="noopener">bettercallzaal/zao-claude-skills</a></div>
-        <div class="card"><div class="card-top"><h3>ZAOscribe</h3><span class="badge fork">Fork</span></div><p class="desc">Discord bot recording per-speaker audio, transcribing, and extracting action items.</p><span class="stack">Discord.js · Python</span><a class="repo" href="https://github.com/ZAODEVZ/ZAOsribeBOT" target="_blank" rel="noopener">ZAODEVZ/ZAOsribeBOT</a></div>
-        <div class="card"><div class="card-top"><h3>wavewarzapp</h3><span class="badge extend">Extend</span></div><p class="desc">Fan spectator app for WaveWarZ Solana music battles with real-time stats.</p><span class="stack">React · Solana Web3.js</span><a class="repo" href="https://github.com/bettercallzaal/wavewarzapp" target="_blank" rel="noopener">bettercallzaal/wavewarzapp</a></div>
-        <div class="card"><div class="card-top"><h3>songjam-site</h3><span class="badge extend">Extend</span></div><p class="desc">Leaderboard aggregating Farcaster, Space, and timeline contribution points.</p><span class="stack">Next.js · React</span><a class="repo" href="https://github.com/bettercallzaal/songjam-site" target="_blank" rel="noopener">bettercallzaal/songjam-site</a></div>
-        <div class="card"><div class="card-top"><h3>zpoidh</h3><span class="badge extend">Extend</span></div><p class="desc">BetterCallZaal bounty ops home with rounds, judging, and leaderboards.</p><span class="stack">Next.js · Base</span><a class="repo" href="https://github.com/bettercallzaal/zpoidh" target="_blank" rel="noopener">bettercallzaal/zpoidh</a></div>
-        <div class="card"><div class="card-top"><h3>CoCConcertZ</h3><span class="badge extend">Extend</span></div><p class="desc">Virtual-concert platform and Farcaster Mini App with artist portals, chat, galleries.</p><span class="stack">Next.js · Farcaster</span><a class="repo" href="https://github.com/bettercallzaal/CoCConcertZ" target="_blank" rel="noopener">bettercallzaal/CoCConcertZ</a></div>
-        <div class="card"><div class="card-top"><h3>zlank</h3><span class="badge extend">Extend</span></div><p class="desc">No-code Farcaster Snap builder with 11 block types and live preview. FarHack 2026 winner.</p><span class="stack">Next.js · React · Farcaster Snap SDK</span><a class="repo" href="https://github.com/bettercallzaal/zlank" target="_blank" rel="noopener">bettercallzaal/zlank</a></div>
-        <div class="card"><div class="card-top"><h3>fishbowlz</h3><span class="badge extend">Extend</span></div><p class="desc">Persistent audio rooms with hot-seat rotation, transcripts, token gating, and tipping.</p><span class="stack">Next.js · Farcaster</span><a class="repo" href="https://github.com/bettercallzaal/fishbowlz" target="_blank" rel="noopener">bettercallzaal/fishbowlz</a></div>
-        <div class="card"><div class="card-top"><h3>nouns-snap</h3><span class="badge fork">Fork</span></div><p class="desc">Example Snap browsing Nouns DAO NFTs &mdash; image, owner, live auction.</p><span class="stack">React · Farcaster Snap SDK</span><a class="repo" href="https://github.com/bettercallzaal/nouns-snap" target="_blank" rel="noopener">bettercallzaal/nouns-snap</a></div>
-        <div class="card"><div class="card-top"><h3>duodo-snap</h3><span class="badge fork">Fork</span></div><p class="desc">Example Snap for Duo Do music fundraiser with goal tracker and event info.</p><span class="stack">React · Farcaster Snap SDK</span><a class="repo" href="https://github.com/bettercallzaal/duodo-snap" target="_blank" rel="noopener">bettercallzaal/duodo-snap</a></div>
-        <div class="card"><div class="card-top"><h3>zabalsnap1</h3><span class="badge fork">Fork</span></div><p class="desc">Example Snap with ZABAL token tracker, burn tracker, leaderboard, and share.</p><span class="stack">React · Farcaster Snap SDK</span><a class="repo" href="https://github.com/bettercallzaal/zabalsnap1" target="_blank" rel="noopener">bettercallzaal/zabalsnap1</a></div>
-        <div class="card"><div class="card-top"><h3>ltaesnap</h3><span class="badge fork">Fork</span></div><p class="desc">Example Snap for the Let The Artist Eat podcast with episode cards and host profiles.</p><span class="stack">React · Farcaster Snap SDK</span><a class="repo" href="https://github.com/bettercallzaal/ltaesnap" target="_blank" rel="noopener">bettercallzaal/ltaesnap</a></div>
-        <div class="card"><div class="card-top"><h3>ZAOVideoEditor</h3><span class="badge extend">Extend</span></div><p class="desc">Local-first video editor for conversation content with AI transcription and captions.</p><span class="stack">Next.js · FFmpeg · OpenAI</span><a class="repo" href="https://github.com/bettercallzaal/ZAOVideoEditor" target="_blank" rel="noopener">bettercallzaal/ZAOVideoEditor</a></div>
-        <div class="card"><div class="card-top"><h3>zaomusicbot</h3><span class="badge extend">Extend</span></div><p class="desc">Discord music bot (Lavalink + discord.js) with lofi and radio commands.</p><span class="stack">Discord.js · Lavalink</span><a class="repo" href="https://github.com/bettercallzaal/zaomusicbot" target="_blank" rel="noopener">bettercallzaal/zaomusicbot</a></div>
-        <div class="card"><div class="card-top"><h3>zaostock</h3><span class="badge extend">Extend</span></div><p class="desc">Dashboard for the ZAOstock 2026 festival in Maine with team login and volunteer signup.</p><span class="stack">Next.js · Supabase</span><a class="repo" href="https://github.com/bettercallzaal/zaostock" target="_blank" rel="noopener">bettercallzaal/zaostock</a></div>
-        <div class="card"><div class="card-top"><h3>ZAOfractal</h3><span class="badge extend">Extend</span></div><p class="desc">Governance documentation hub for ZAO Fractal &mdash; the weekly Respect Game on Optimism.</p><span class="stack">Astro · Optimism</span><a class="repo" href="https://github.com/ZAODEVZ/ZAOfractal" target="_blank" rel="noopener">ZAODEVZ/ZAOfractal</a></div>
-        <div class="card"><div class="card-top"><h3>fractalbot</h3><span class="badge fork">Fork</span></div><p class="desc">Respect Game bot with voting flows, onchain token submission, Snapshot integration.</p><span class="stack">Node.js · Snapshot · Optimism</span><a class="repo" href="https://github.com/bettercallzaal/fractalbotapril2026" target="_blank" rel="noopener">bettercallzaal/fractalbotapril2026</a></div>
-        <div class="card"><div class="card-top"><h3>/zabal mini app</h3><span class="badge extend">Extend</span></div><p class="desc">Farcaster Mini App season hub &mdash; workshop schedule, join counter, submissions board.</p><span class="stack">Next.js · Farcaster</span><a class="repo" href="https://github.com/ZAODEVZ/zabalgames" target="_blank" rel="noopener">ZAODEVZ/zabalgames</a></div>
-        <div class="card"><div class="card-top"><h3>zabalartsubmission</h3><span class="badge extend">Extend</span></div><p class="desc">ZABAL Live Hub &mdash; voting on livestream direction (Studio / Market / Social / Battle).</p><span class="stack">Next.js · Farcaster</span><a class="repo" href="https://github.com/bettercallzaal/zabalartsubmission" target="_blank" rel="noopener">bettercallzaal/zabalartsubmission</a></div>
-        <div class="card"><div class="card-top"><h3>bcz-yapz</h3><span class="badge extend">Extend</span></div><p class="desc">Long-form interview show site with searchable episodes, transcripts, YouTube chapters.</p><span class="stack">Next.js · React</span><a class="repo" href="https://github.com/bettercallzaal/bcz-yapz" target="_blank" rel="noopener">bettercallzaal/bcz-yapz</a></div>
+  <main id="catalog">
+    <div class="container"><p class="loading">Loading the open-source catalog&hellip;</p></div>
+    <noscript>
+      <div class="container">
+        <p class="note" style="padding: 2rem 0;">This catalog renders from <a href="/projects/projects.json">projects.json</a>. Enable JavaScript to browse it here, or view the source list directly on <a href="https://github.com/bettercallzaal" target="_blank" rel="noopener">github.com/bettercallzaal</a> and <a href="https://zabalgames.com/projects" target="_blank" rel="noopener">zabalgames.com/projects</a>.</p>
       </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-head"><h2>Working</h2><span class="count">7 in progress</span></div>
-      <p class="section-sub">Active builds &mdash; usable, still moving.</p>
-      <div class="grid">
-        <div class="card"><div class="card-top"><h3>farscout</h3><span class="badge extend">Extend</span></div><p class="desc">Autonomous Farcaster research scout reading casts and triaging novelty via Discord.</p><span class="stack">Claude API · Discord.js · Node.js</span><a class="repo" href="https://github.com/bettercallzaal/farscout" target="_blank" rel="noopener">bettercallzaal/farscout</a></div>
-        <div class="card"><div class="card-top"><h3>ZAOcowork</h3><span class="badge extend">Extend</span></div><p class="desc">Task tracker with Telegram bot, Next.js Kanban UI, and a research-dispatch pipeline.</p><span class="stack">Next.js · Supabase · Telegram</span><a class="repo" href="https://github.com/ZAODEVZ/ZAOcowork" target="_blank" rel="noopener">ZAODEVZ/ZAOcowork</a></div>
-        <div class="card"><div class="card-top"><h3>hermes-orchestrator</h3><span class="badge fork">Fork</span></div><p class="desc">Supervisor framework for agentic systems &mdash; classify, spawn, monitor agents with pluggable adapters.</p><span class="stack">Node.js · Claude API</span><a class="repo" href="https://github.com/bettercallzaal/hermes-orchestrator" target="_blank" rel="noopener">bettercallzaal/hermes-orchestrator</a></div>
-        <div class="card"><div class="card-top"><h3>WARZAI</h3><span class="badge fork">Fork</span></div><p class="desc">WaveWarZ AI agent (ElizaOS) with Solana onchain integration.</p><span class="stack">ElizaOS · Solana Web3.js</span><a class="repo" href="https://github.com/bettercallzaal/WARZAI" target="_blank" rel="noopener">bettercallzaal/WARZAI</a></div>
-        <div class="card"><div class="card-top"><h3>Aurdour</h3><span class="badge extend">Extend</span></div><p class="desc">Browser-based two-deck DJ platform with real-time mixing, effects, and Flow Mode auto-DJ.</p><span class="stack">Web Audio API · React</span><a class="repo" href="https://github.com/bettercallzaal/Aurdour" target="_blank" rel="noopener">bettercallzaal/Aurdour</a></div>
-        <div class="card"><div class="card-top"><h3>Zuke</h3><span class="badge extend">Extend</span></div><p class="desc">White-label live audio-rooms surface for Farcaster communities with listener badges.</p><span class="stack">Next.js · Farcaster</span><a class="repo" href="https://github.com/ZAODEVZ/Zuke" target="_blank" rel="noopener">ZAODEVZ/Zuke</a></div>
-        <div class="card"><div class="card-top"><h3>zaoprojects</h3><span class="badge extend">Extend</span></div><p class="desc">ZAO ecosystem progress-timeline dashboard (early v0.1) wired to a data source.</p><span class="stack">Next.js · React</span><a class="repo" href="https://github.com/bettercallzaal/zaoprojects" target="_blank" rel="noopener">bettercallzaal/zaoprojects</a></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-head"><h2>Early-stage</h2><span class="count">4 starters</span></div>
-      <p class="section-sub">Scaffolds and templates ready to fork.</p>
-      <div class="grid">
-        <div class="card"><div class="card-top"><h3>ZAO 101</h3><span class="badge fork">Fork</span></div><p class="desc">Static onboarding guide (home, pillars, join, FAQ) with placeholder scaffolding.</p><span class="stack">Astro / Next.js</span><a class="repo" href="https://github.com/bettercallzaal/zao-101" target="_blank" rel="noopener">bettercallzaal/zao-101</a></div>
-        <div class="card"><div class="card-top"><h3>ZOUNZ</h3><span class="badge fork">Fork</span></div><p class="desc">Farcaster music NFT mini app &mdash; browse / create collections, mint on Base.</p><span class="stack">Next.js · Base · mint.club API</span><a class="repo" href="https://github.com/bettercallzaal/ZOUNZ" target="_blank" rel="noopener">bettercallzaal/ZOUNZ</a></div>
-        <div class="card"><div class="card-top"><h3>ZAOFlights</h3><span class="badge fork">Fork</span></div><p class="desc">Conversational flight-search scaffold (Next.js chat + results split).</p><span class="stack">Next.js · React</span><a class="repo" href="https://github.com/bettercallzaal/ZAOFlights" target="_blank" rel="noopener">bettercallzaal/ZAOFlights</a></div>
-        <div class="card"><div class="card-top"><h3>zlank-snap-template</h3><span class="badge fork">Fork</span></div><p class="desc">Starter template for hand-built Farcaster Snaps (Hono + Vercel + SDK).</p><span class="stack">Hono · Vercel · Farcaster Snap SDK</span><a class="repo" href="https://github.com/bettercallzaal/zlank-snap-template" target="_blank" rel="noopener">bettercallzaal/zlank-snap-template</a></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-head"><h2>Concept</h2><span class="count">12 to build</span></div>
-      <p class="section-sub">Specced and open for a builder to pick up &mdash; start from the rails, ship in the open.</p>
-      <div class="grid">
-        <div class="card"><div class="card-top"><h3>A new ZOE skill</h3><span class="badge build">Build</span></div><p class="desc">Extend the ZOE concierge bot (Telegram) with Claude Code CLI subprocesses.</p><span class="spec">Spec: Player Bundle</span></div>
-        <div class="card"><div class="card-top"><h3>WaveWarZ-Base Finals settlement</h3><span class="badge build">Build</span></div><p class="desc">Wire WaveWarZ-Base contracts into the Finals page &mdash; read battle state, per-finalist trade view.</p><span class="spec">Spec: Doc 720</span></div>
-        <div class="card"><div class="card-top"><h3>Songjam leaderboard migration</h3><span class="badge build">Build</span></div><p class="desc">Move the leaderboard off the X scraper to an Empire Builder leaderboard on Farcaster-native data.</p><span class="spec">Spec: Doc 654</span></div>
-        <div class="card"><div class="card-top"><h3>POIDH bounty leaderboard</h3><span class="badge build">Build</span></div><p class="desc">Empire Builder leaderboard counting unique POIDH bounty submitters across all bounties.</p><span class="spec">Spec: Doc 654</span></div>
-        <div class="card"><div class="card-top"><h3>COC Concertz content pipeline</h3><span class="badge build">Build</span></div><p class="desc">Automate the cross-post end &mdash; Descript export to X, Bluesky, Discord, Farcaster.</p><span class="spec">Spec: Player Bundle</span></div>
-        <div class="card"><div class="card-top"><h3>Concert discovery + calendar</h3><span class="badge build">Build</span></div><p class="desc">Surface concert events &mdash; filter by date/genre/venue, calendar export, Farcaster cast.</p><span class="spec">Spec: Player Bundle</span></div>
-        <div class="card"><div class="card-top"><h3>zlank Empire daily-stats Snap</h3><span class="badge build">Build</span></div><p class="desc">One-click "Today's Empire Builder stats" Snap template on zlank (kmac.eth + Zaal collab).</p><span class="spec">Spec: Doc 654</span></div>
-        <div class="card"><div class="card-top"><h3>ZAO Snaps tab on zlank</h3><span class="badge build">Build</span></div><p class="desc">Curated tab of 8 pre-built Snap templates for ZAO use cases (leaderboard, ZOE claim, RSVP).</p><span class="spec">Spec: Issue 64</span></div>
-        <div class="card"><div class="card-top"><h3>Twitch to Empire Builder feed</h3><span class="badge build">Build</span></div><p class="desc">Feed StreamElements WebSocket events into the Empire Builder leaderboard for live creator stats.</p><span class="spec">Spec: Player Bundle</span></div>
-        <div class="card"><div class="card-top"><h3>Streaming auto-clip flywheel</h3><span class="badge build">Build</span></div><p class="desc">Turn hours of stream into short clips (TikTok, Reels, Shorts, Farcaster) via ZAOVideoEditor.</p><span class="spec">Spec: Doc 701</span></div>
-        <div class="card"><div class="card-top"><h3>ZABAL Gamez judging system</h3><span class="badge build">Build</span></div><p class="desc">July judging &mdash; wallet/Farcaster + GitHub signup, rolling admission, Bonfire scoring.</p><span class="spec">Spec: Synthesis 05-30</span></div>
-        <div class="card"><div class="card-top"><h3>Knowledge-game report scorer</h3><span class="badge build">Build</span></div><p class="desc">Builders write reports indexed into the Bonfire graph; scored by citation frequency in daily summaries.</p><span class="spec">Spec: Knowledge Game</span></div>
-      </div>
-    </div>
-  </section>
+    </noscript>
+  </main>
 
   <footer>
     <div class="container">
@@ -230,5 +159,43 @@
       <p style="margin-top: 0.75rem;"><a href="/">BetterCallZaal</a> &middot; <a href="/engineering-past/">Engineering past</a> &middot; <a href="https://farcaster.xyz/bettercallzaal" target="_blank" rel="noopener">Farcaster</a></p>
     </div>
   </footer>
+
+  <script>
+    const GH_SVG = '<svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>';
+    const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+    function card(p) {
+      const type = ['extend', 'fork', 'build'].includes(p.type) ? p.type : 'build';
+      const badge = type.charAt(0).toUpperCase() + type.slice(1);
+      const stack = p.stack ? `<span class="stack">${esc(p.stack)}</span>` : '';
+      const link = p.repo
+        ? `<a class="repo" href="https://github.com/${esc(p.repo)}" target="_blank" rel="noopener">${GH_SVG}${esc(p.repo)}</a>`
+        : (p.spec ? `<span class="spec">Spec: ${esc(p.spec)}</span>` : '');
+      return `<div class="card"><div class="card-top"><h3>${esc(p.name)}</h3><span class="badge ${type}">${badge}</span></div><p class="desc">${esc(p.desc)}</p>${stack}${link}</div>`;
+    }
+
+    function group(g) {
+      const cards = (g.projects || []).map(card).join('');
+      const count = (g.projects || []).length;
+      const label = g.label ? `${count} ${esc(g.label)}` : `${count}`;
+      const sub = g.note ? `<p class="section-sub">${esc(g.note)}</p>` : '';
+      return `<section><div class="container"><div class="section-head"><h2>${esc(g.name)}</h2><span class="count">${label}</span></div>${sub}<div class="grid">${cards}</div></div></section>`;
+    }
+
+    fetch('./projects.json', { cache: 'no-cache' })
+      .then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then((data) => {
+        const groups = data.groups || [];
+        const total = groups.reduce((n, g) => n + (g.projects ? g.projects.length : 0), 0);
+        document.getElementById('catalog').innerHTML = groups.map(group).join('');
+        const sc = document.getElementById('stat-count');
+        if (total) sc.textContent = total;
+      })
+      .catch((err) => {
+        document.getElementById('catalog').innerHTML =
+          '<div class="container"><p class="loading">Could not load the catalog (' + esc(err.message) +
+          '). Browse the repos directly at <a href="https://github.com/bettercallzaal" target="_blank" rel="noopener">github.com/bettercallzaal</a>.</p></div>';
+      });
+  </script>
 </body>
 </html>

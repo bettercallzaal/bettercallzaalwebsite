@@ -1,0 +1,79 @@
+{
+  "_comment": "Source of truth for /projects. Mirrors zabalgames.com/projects. Edit this file to add/remove projects — the page renders from it on load, no rebuild needed. type: extend | fork | build. Omit 'repo' for concept-stage and add 'spec'.",
+  "groups": [
+    {
+      "name": "Shipped",
+      "label": "live",
+      "note": "In production and usable today.",
+      "projects": [
+        { "name": "ZAOOS", "type": "extend", "desc": "Monorepo lab and gated Farcaster client — social feed, audio/video spaces, governance.", "stack": "Node.js · React · Farcaster", "repo": "bettercallzaal/ZAOOS" },
+        { "name": "ZAONEXUS", "type": "extend", "desc": "Searchable directory of 200+ ecosystem links with dark/light mode.", "stack": "Next.js · Vercel", "repo": "bettercallzaal/ZAONEXUS" },
+        { "name": "ZAO-Leaderboard", "type": "extend", "desc": "Onchain leaderboard ranking members by Respect holdings on Optimism.", "stack": "Next.js · Optimism · Airtable · Alchemy", "repo": "bettercallzaal/ZAO-Leaderboard" },
+        { "name": "zao-claude-skills", "type": "fork", "desc": "Library of Claude Code skills for ecosystem tasks — meeting capture, research, distribution.", "stack": "Claude API · Node.js", "repo": "bettercallzaal/zao-claude-skills" },
+        { "name": "ZAOscribe", "type": "fork", "desc": "Discord bot recording per-speaker audio, transcribing, and extracting action items.", "stack": "Discord.js · Python", "repo": "ZAODEVZ/ZAOsribeBOT" },
+        { "name": "wavewarzapp", "type": "extend", "desc": "Fan spectator app for WaveWarZ Solana music battles with real-time stats.", "stack": "React · Solana Web3.js", "repo": "bettercallzaal/wavewarzapp" },
+        { "name": "songjam-site", "type": "extend", "desc": "Leaderboard aggregating Farcaster, Space, and timeline contribution points.", "stack": "Next.js · React", "repo": "bettercallzaal/songjam-site" },
+        { "name": "zpoidh", "type": "extend", "desc": "BetterCallZaal bounty ops home with rounds, judging, and leaderboards.", "stack": "Next.js · Base", "repo": "bettercallzaal/zpoidh" },
+        { "name": "CoCConcertZ", "type": "extend", "desc": "Virtual-concert platform and Farcaster Mini App with artist portals, chat, galleries.", "stack": "Next.js · Farcaster", "repo": "bettercallzaal/CoCConcertZ" },
+        { "name": "zlank", "type": "extend", "desc": "No-code Farcaster Snap builder with 11 block types and live preview. FarHack 2026 winner.", "stack": "Next.js · React · Farcaster Snap SDK", "repo": "bettercallzaal/zlank" },
+        { "name": "fishbowlz", "type": "extend", "desc": "Persistent audio rooms with hot-seat rotation, transcripts, token gating, and tipping.", "stack": "Next.js · Farcaster", "repo": "bettercallzaal/fishbowlz" },
+        { "name": "nouns-snap", "type": "fork", "desc": "Example Snap browsing Nouns DAO NFTs — image, owner, live auction.", "stack": "React · Farcaster Snap SDK", "repo": "bettercallzaal/nouns-snap" },
+        { "name": "duodo-snap", "type": "fork", "desc": "Example Snap for Duo Do music fundraiser with goal tracker and event info.", "stack": "React · Farcaster Snap SDK", "repo": "bettercallzaal/duodo-snap" },
+        { "name": "zabalsnap1", "type": "fork", "desc": "Example Snap with ZABAL token tracker, burn tracker, leaderboard, and share.", "stack": "React · Farcaster Snap SDK", "repo": "bettercallzaal/zabalsnap1" },
+        { "name": "ltaesnap", "type": "fork", "desc": "Example Snap for the Let The Artist Eat podcast with episode cards and host profiles.", "stack": "React · Farcaster Snap SDK", "repo": "bettercallzaal/ltaesnap" },
+        { "name": "ZAOVideoEditor", "type": "extend", "desc": "Local-first video editor for conversation content with AI transcription and captions.", "stack": "Next.js · FFmpeg · OpenAI", "repo": "bettercallzaal/ZAOVideoEditor" },
+        { "name": "zaomusicbot", "type": "extend", "desc": "Discord music bot (Lavalink + discord.js) with lofi and radio commands.", "stack": "Discord.js · Lavalink", "repo": "bettercallzaal/zaomusicbot" },
+        { "name": "zaostock", "type": "extend", "desc": "Dashboard for the ZAOstock 2026 festival in Maine with team login and volunteer signup.", "stack": "Next.js · Supabase", "repo": "bettercallzaal/zaostock" },
+        { "name": "ZAOfractal", "type": "extend", "desc": "Governance documentation hub for ZAO Fractal — the weekly Respect Game on Optimism.", "stack": "Astro · Optimism", "repo": "ZAODEVZ/ZAOfractal" },
+        { "name": "fractalbot", "type": "fork", "desc": "Respect Game bot with voting flows, onchain token submission, Snapshot integration.", "stack": "Node.js · Snapshot · Optimism", "repo": "bettercallzaal/fractalbotapril2026" },
+        { "name": "/zabal mini app", "type": "extend", "desc": "Farcaster Mini App season hub — workshop schedule, join counter, submissions board.", "stack": "Next.js · Farcaster", "repo": "ZAODEVZ/zabalgames" },
+        { "name": "zabalartsubmission", "type": "extend", "desc": "ZABAL Live Hub — voting on livestream direction (Studio / Market / Social / Battle).", "stack": "Next.js · Farcaster", "repo": "bettercallzaal/zabalartsubmission" },
+        { "name": "bcz-yapz", "type": "extend", "desc": "Long-form interview show site with searchable episodes, transcripts, YouTube chapters.", "stack": "Next.js · React", "repo": "bettercallzaal/bcz-yapz" }
+      ]
+    },
+    {
+      "name": "Working",
+      "label": "in progress",
+      "note": "Active builds — usable, still moving.",
+      "projects": [
+        { "name": "farscout", "type": "extend", "desc": "Autonomous Farcaster research scout reading casts and triaging novelty via Discord.", "stack": "Claude API · Discord.js · Node.js", "repo": "bettercallzaal/farscout" },
+        { "name": "ZAOcowork", "type": "extend", "desc": "Task tracker with Telegram bot, Next.js Kanban UI, and a research-dispatch pipeline.", "stack": "Next.js · Supabase · Telegram", "repo": "ZAODEVZ/ZAOcowork" },
+        { "name": "hermes-orchestrator", "type": "fork", "desc": "Supervisor framework for agentic systems — classify, spawn, monitor agents with pluggable adapters.", "stack": "Node.js · Claude API", "repo": "bettercallzaal/hermes-orchestrator" },
+        { "name": "WARZAI", "type": "fork", "desc": "WaveWarZ AI agent (ElizaOS) with Solana onchain integration.", "stack": "ElizaOS · Solana Web3.js", "repo": "bettercallzaal/WARZAI" },
+        { "name": "Aurdour", "type": "extend", "desc": "Browser-based two-deck DJ platform with real-time mixing, effects, and Flow Mode auto-DJ.", "stack": "Web Audio API · React", "repo": "bettercallzaal/Aurdour" },
+        { "name": "Zuke", "type": "extend", "desc": "White-label live audio-rooms surface for Farcaster communities with listener badges.", "stack": "Next.js · Farcaster", "repo": "ZAODEVZ/Zuke" },
+        { "name": "zaoprojects", "type": "extend", "desc": "ZAO ecosystem progress-timeline dashboard (early v0.1) wired to a data source.", "stack": "Next.js · React", "repo": "bettercallzaal/zaoprojects" }
+      ]
+    },
+    {
+      "name": "Early-stage",
+      "label": "starters",
+      "note": "Scaffolds and templates ready to fork.",
+      "projects": [
+        { "name": "ZAO 101", "type": "fork", "desc": "Static onboarding guide (home, pillars, join, FAQ) with placeholder scaffolding.", "stack": "Astro / Next.js", "repo": "bettercallzaal/zao-101" },
+        { "name": "ZOUNZ", "type": "fork", "desc": "Farcaster music NFT mini app — browse / create collections, mint on Base.", "stack": "Next.js · Base · mint.club API", "repo": "bettercallzaal/ZOUNZ" },
+        { "name": "ZAOFlights", "type": "fork", "desc": "Conversational flight-search scaffold (Next.js chat + results split).", "stack": "Next.js · React", "repo": "bettercallzaal/ZAOFlights" },
+        { "name": "zlank-snap-template", "type": "fork", "desc": "Starter template for hand-built Farcaster Snaps (Hono + Vercel + SDK).", "stack": "Hono · Vercel · Farcaster Snap SDK", "repo": "bettercallzaal/zlank-snap-template" }
+      ]
+    },
+    {
+      "name": "Concept",
+      "label": "to build",
+      "note": "Specced and open for a builder to pick up — start from the rails, ship in the open.",
+      "projects": [
+        { "name": "A new ZOE skill", "type": "build", "desc": "Extend the ZOE concierge bot (Telegram) with Claude Code CLI subprocesses.", "spec": "Player Bundle" },
+        { "name": "WaveWarZ-Base Finals settlement", "type": "build", "desc": "Wire WaveWarZ-Base contracts into the Finals page — read battle state, per-finalist trade view.", "spec": "Doc 720" },
+        { "name": "Songjam leaderboard migration", "type": "build", "desc": "Move the leaderboard off the X scraper to an Empire Builder leaderboard on Farcaster-native data.", "spec": "Doc 654" },
+        { "name": "POIDH bounty leaderboard", "type": "build", "desc": "Empire Builder leaderboard counting unique POIDH bounty submitters across all bounties.", "spec": "Doc 654" },
+        { "name": "COC Concertz content pipeline", "type": "build", "desc": "Automate the cross-post end — Descript export to X, Bluesky, Discord, Farcaster.", "spec": "Player Bundle" },
+        { "name": "Concert discovery + calendar", "type": "build", "desc": "Surface concert events — filter by date/genre/venue, calendar export, Farcaster cast.", "spec": "Player Bundle" },
+        { "name": "zlank Empire daily-stats Snap", "type": "build", "desc": "One-click \"Today's Empire Builder stats\" Snap template on zlank (kmac.eth + Zaal collab).", "spec": "Doc 654" },
+        { "name": "ZAO Snaps tab on zlank", "type": "build", "desc": "Curated tab of 8 pre-built Snap templates for ZAO use cases (leaderboard, ZOE claim, RSVP).", "spec": "Issue 64" },
+        { "name": "Twitch to Empire Builder feed", "type": "build", "desc": "Feed StreamElements WebSocket events into the Empire Builder leaderboard for live creator stats.", "spec": "Player Bundle" },
+        { "name": "Streaming auto-clip flywheel", "type": "build", "desc": "Turn hours of stream into short clips (TikTok, Reels, Shorts, Farcaster) via ZAOVideoEditor.", "spec": "Doc 701" },
+        { "name": "ZABAL Gamez judging system", "type": "build", "desc": "July judging — wallet/Farcaster + GitHub signup, rolling admission, Bonfire scoring.", "spec": "Synthesis 05-30" },
+        { "name": "Knowledge-game report scorer", "type": "build", "desc": "Builders write reports indexed into the Bonfire graph; scored by citation frequency in daily summaries.", "spec": "Knowledge Game" }
+      ]
+    }
+  ]
+}
