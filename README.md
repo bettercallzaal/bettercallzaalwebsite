@@ -1,6 +1,6 @@
 # BetterCallZaal.com
 
-Personal consulting website for Zaal Panthaki (@BetterCallZaal) — engineer, web3 builder, and connector.
+Personal consulting website for Zaal Panthaki (@BetterCallZaal) — FOSS (free & open source software) builder, connector, and ecosystem architect.
 
 ## What is this?
 

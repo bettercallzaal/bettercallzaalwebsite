@@ -11,6 +11,7 @@ Research docs supporting the bettercallzaal.com site and Farcaster mini app.
 | [03](./03-social-sharing/) | Social Sharing | Share URLs for Farcaster, X, LinkedIn + meta tags |
 | [04](./04-ritzy-periwinkle/) | Ritzy Periwinkle | Marisa "Ritzy P" Estrada Rivera — Web3 strategist, speaker, creative |
 | [05](./05-founder-story-section/) | Founder Story Section | How to add Zaal's origin story to the site — timeline format, content, design |
+| [06](./06-zabalgames-foss-projects/) | ZABAL Gamez & FOSS Builder | ZABAL Gamez build-a-thon + the `/projects` catalog of 46 open-source MIT projects — evidence base for the "FOSS Builder" identity |
 
 ## How to Add Research
 
