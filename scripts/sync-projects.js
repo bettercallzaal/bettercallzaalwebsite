@@ -106,11 +106,23 @@ async function main() {
   } catch {}
 
   if (check) {
+    // Compare content only — ignore the _generated timestamp so a new day
+    // alone doesn't report the catalog as stale.
+    const stripDate = (s) => {
+      try {
+        const o = JSON.parse(s);
+        delete o._generated;
+        return JSON.stringify(o);
+      } catch {
+        return s;
+      }
+    };
+    const same = stripDate(prevStr) === stripDate(nextStr);
     console.log(
       `[check] upstream: ${total} projects across ${next.groups.length} groups · ${stacksKept} stack chips preserved`
     );
-    console.log(prevStr === nextStr ? '[check] projects.json is up to date.' : '[check] projects.json WOULD change — run without --check to write.');
-    process.exit(prevStr === nextStr ? 0 : 1);
+    console.log(same ? '[check] projects.json is up to date.' : '[check] projects.json WOULD change — run without --check to write.');
+    process.exit(same ? 0 : 1);
   }
 
   fs.writeFileSync(OUT, nextStr);
