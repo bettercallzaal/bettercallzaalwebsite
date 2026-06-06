@@ -12,6 +12,7 @@ Research docs supporting the bettercallzaal.com site and Farcaster mini app.
 | [04](./04-ritzy-periwinkle/) | Ritzy Periwinkle | Marisa "Ritzy P" Estrada Rivera — Web3 strategist, speaker, creative |
 | [05](./05-founder-story-section/) | Founder Story Section | How to add Zaal's origin story to the site — timeline format, content, design |
 | [06](./06-zabalgames-foss-projects/) | ZABAL Gamez & FOSS Builder | ZABAL Gamez build-a-thon + the `/projects` catalog of 46 open-source MIT projects — evidence base for the "FOSS Builder" identity |
+| [07](./07-bio-expansion/) | Bio Expansion | New citable facts for the bio — WaveWarZ co-founder, build-in-public + résumé, media/shows; plus unverified items to confirm |
 
 ## How to Add Research
 
