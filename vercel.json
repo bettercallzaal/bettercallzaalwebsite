@@ -1,6 +1,4 @@
 {
-  "buildCommand": "node scripts/sync-projects.js || echo 'projects sync skipped — using committed projects.json'",
-  "outputDirectory": ".",
   "redirects": [
     {
       "source": "/nexus.html",
