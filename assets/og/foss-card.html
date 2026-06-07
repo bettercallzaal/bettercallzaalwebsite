@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FOSS Builder — share card (1200×630)</title>
+  <!--
+    Social / embed card for BetterCallZaal (1200×630, the OG/Twitter standard).
+    This sandbox has no image rasterizer, so export to PNG manually:
+      1. Open this file in a browser at 100% zoom.
+      2. Screenshot exactly the 1200×630 card (or use devtools device size 1200×630).
+      3. Save as assets/og/foss-card.png and commit.
+      4. Point og:image / twitter:image / fc:miniapp imageUrl at /assets/og/foss-card.png.
+    (Or render headlessly: `npx playwright screenshot --viewport-size=1200,630 foss-card.html foss-card.png`.)
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;500&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { background: #05050c; }
+    .card {
+      width: 1200px; height: 630px; position: relative; overflow: hidden;
+      background:
+        radial-gradient(ellipse 700px 520px at 8% -10%, rgba(255,107,53,0.22), transparent 60%),
+        radial-gradient(ellipse 650px 480px at 100% 110%, rgba(78,195,224,0.18), transparent 60%),
+        radial-gradient(ellipse 500px 360px at 60% 50%, rgba(255,179,71,0.06), transparent 70%),
+        #0a0a1a;
+      font-family: 'Outfit', sans-serif; color: #e8e8f0;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 72px 80px; border: 1px solid #1f1e26;
+    }
+    .left { max-width: 760px; }
+    .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: 0.22em; text-transform: uppercase; color: #4ec3e0; margin-bottom: 22px; }
+    h1 {
+      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 108px; line-height: 0.98; letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #ff6b35, #ffb347 55%, #4ec3e0);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .sub { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 34px; color: #e8e8f0; margin-top: 14px; letter-spacing: 0.01em; }
+    .meta { font-size: 23px; color: #9999aa; margin-top: 26px; line-height: 1.5; }
+    .meta strong { color: #e8e8f0; font-weight: 500; }
+    .domain { position: absolute; left: 80px; bottom: 64px; font-family: 'JetBrains Mono', monospace; font-size: 24px; color: #ff6b35; letter-spacing: 0.04em; }
+    .right { display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .right img { width: 230px; height: 230px; border-radius: 28px; border: 1px solid #2a2a3a; }
+    .badge {
+      position: absolute; right: 80px; bottom: 64px;
+      font-family: 'JetBrains Mono', monospace; font-size: 19px; color: #9999aa;
+      border: 1px solid #2a2a3a; border-radius: 999px; padding: 8px 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="left">
+      <div class="eyebrow">Free &amp; Open Source Software</div>
+      <h1>FOSS Builder</h1>
+      <div class="sub">Connector · Ecosystem Architect</div>
+      <div class="meta">I'm <strong>Zaal</strong> — founder of <strong>The ZAO</strong>, co-founder of <strong>WaveWarZ</strong>.<br>Building creator infrastructure in public. <strong>73+ open-source repos</strong>.</div>
+    </div>
+    <div class="right">
+      <img src="../icon.png" alt="Z">
+    </div>
+    <div class="domain">bettercallzaal.com</div>
+    <div class="badge">@bettercallzaal</div>
+  </div>
+</body>
+</html>

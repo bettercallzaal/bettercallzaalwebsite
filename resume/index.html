@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Résumé - Zaal Panthaki · FOSS Builder</title>
+  <meta name="description" content="Zaal Panthaki (BetterCallZaal) — FOSS builder, connector, ecosystem architect. Founder of The ZAO, co-founder of WaveWarZ. 73+ open-source repos. BS Electrical Engineering, RIT.">
+  <link rel="canonical" href="https://bettercallzaal.com/resume/">
+  <meta property="og:title" content="Résumé - Zaal Panthaki · FOSS Builder">
+  <meta property="og:description" content="Founder of The ZAO, co-founder of WaveWarZ. Free & open source software builder. 73+ open-source repos.">
+  <meta property="og:url" content="https://bettercallzaal.com/resume/">
+  <meta property="og:image" content="https://bettercallzaal.com/assets/icon.png">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/png" href="/assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a1a;
+      --surface: #12121f;
+      --border: #2a2a3a;
+      --border-hover: #3a3a4a;
+      --text: #e8e8f0;
+      --text-muted: #9999aa;
+      --text-dim: #6a6a7a;
+      --orange: #ff6b35;
+      --cyan: #4ec3e0;
+      --gold: #ffb347;
+      --accent: var(--orange);
+      --radius: 0.5rem;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Outfit', sans-serif; font-weight: 300; line-height: 1.6; min-height: 100vh; }
+    body::before {
+      content: ''; position: fixed; inset: 0; pointer-events: none; z-index: -1;
+      background:
+        radial-gradient(ellipse 800px 600px at 12% -8%, rgba(255,107,53,0.10), transparent 60%),
+        radial-gradient(ellipse 700px 500px at 92% 8%, rgba(78,195,224,0.08), transparent 60%);
+    }
+    .container { max-width: 820px; margin: 0 auto; padding: 0 1.25rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav { position: sticky; top: 0; background: rgba(10,10,26,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); z-index: 50; }
+    nav .container { display: flex; justify-content: space-between; align-items: center; padding-top: 0.85rem; padding-bottom: 0.85rem; }
+    nav a { color: var(--text-muted); font-size: 0.9rem; }
+    nav a:hover { color: var(--text); text-decoration: none; }
+    nav .brand { font-family: 'Syne', sans-serif; font-weight: 800; color: var(--text); letter-spacing: 0.02em; }
+    nav .brand .accent { color: var(--accent); }
+
+    header.hero { padding: 3.5rem 0 2rem; border-bottom: 1px solid var(--border); }
+    .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--accent); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.85rem; }
+    h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.1rem, 5vw, 3rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+    .title { font-family: 'JetBrains Mono', monospace; color: var(--text-muted); font-size: 0.95rem; letter-spacing: 0.02em; margin-bottom: 1rem; }
+    .summary { font-size: 1.02rem; color: var(--text-muted); max-width: 660px; }
+    .summary strong { color: var(--text); font-weight: 500; }
+    .links { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; }
+    .links a { padding: 0.4rem 0.8rem; border: 1px solid var(--border); border-radius: 6px; color: var(--cyan); }
+    .links a:hover { border-color: var(--cyan); text-decoration: none; }
+
+    section { padding: 2.25rem 0; border-bottom: 1px solid var(--border); }
+    h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.35rem; margin-bottom: 1.25rem; }
+    h2 .accent { color: var(--accent); }
+
+    .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem; }
+    .metric { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.9rem 1rem; }
+    .metric b { display: block; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--text); }
+    .metric span { font-size: 0.8rem; color: var(--text-muted); }
+
+    .row { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; display: grid; grid-template-columns: 150px 1fr; gap: 1rem; align-items: start; margin-bottom: 0.75rem; transition: border-color 0.2s; }
+    .row:hover { border-color: var(--accent); }
+    .row .when { font-family: 'JetBrains Mono', monospace; font-size: 0.76rem; color: var(--accent); letter-spacing: 0.04em; padding-top: 0.15rem; }
+    .row .what strong { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--text); display: block; margin-bottom: 0.15rem; }
+    .row .what .org { color: var(--text-muted); font-size: 0.9rem; }
+    .row .what p { color: var(--text-muted); font-size: 0.92rem; margin-top: 0.4rem; }
+    @media (max-width: 600px) { .row { grid-template-columns: 1fr; gap: 0.3rem; } }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .chip { font-family: 'JetBrains Mono', monospace; font-size: 0.76rem; color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 0.3rem 0.7rem; }
+    p.lead { color: var(--text-muted); margin-bottom: 1rem; }
+    p.lead a { color: var(--accent); }
+
+    footer { padding: 2.5rem 0 3.5rem; color: var(--text-dim); font-size: 0.85rem; text-align: center; }
+    footer a { color: var(--text-muted); margin: 0 0.6rem; }
+    footer a:hover { color: var(--text); }
+    @media print { nav, footer, body::before { display: none; } body { background: #fff; color: #111; } .row, .metric { border-color: #ccc; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a class="brand" href="/">BetterCall<span class="accent">Zaal</span></a>
+      <a href="/">&larr; Back</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="eyebrow">Résumé</div>
+      <h1>Zaal Panthaki</h1>
+      <p class="title">FOSS Builder · Connector · Ecosystem Architect — Maine, USA</p>
+      <p class="summary">A <strong>free &amp; open source software (FOSS) builder</strong> and ecosystem architect. Electrical engineer by training who turned an automation instinct toward shipping open-source software in public. <strong>Founder of The ZAO</strong> (creator-infrastructure ecosystem) and <strong>co-founder of WaveWarZ</strong> (onchain music battles). 73+ open-source repos and counting.</p>
+      <div class="links">
+        <a href="https://github.com/bettercallzaal" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://farcaster.xyz/bettercallzaal" target="_blank" rel="noopener">Farcaster</a>
+        <a href="https://www.linkedin.com/in/zaalp/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://x.com/bettercallzaal" target="_blank" rel="noopener">X</a>
+        <a href="/projects/">Project catalog</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>Highlights</h2>
+      <div class="metrics">
+        <div class="metric"><b>73+</b><span>open-source repos shipped</span></div>
+        <div class="metric"><b>250+</b><span>artists + creators in The ZAO</span></div>
+        <div class="metric"><b>100+</b><span>weekly governance meetings run</span></div>
+        <div class="metric"><b>400+</b><span>newsletter editions published</span></div>
+        <div class="metric"><b>459 SOL</b><span>traded on WaveWarZ</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="row">
+        <div class="when">2023 — now</div>
+        <div class="what">
+          <strong>Founder</strong>
+          <span class="org">The ZAO — creator infrastructure ecosystem</span>
+          <p>Built and run a Web3 ecosystem giving independent artists margin, data, and IP back. Ship open-source tooling, run weekly onchain governance (ZAO Fractal, 100+ weeks), and publish in public (400+ newsletter editions).</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">2024 — now</div>
+        <div class="what">
+          <strong>Co-founder &amp; Backend</strong>
+          <span class="org">WaveWarZ — onchain music battles (Solana)</span>
+          <p>Artist prediction markets with instant, automatic settlement. Built the backend; organized and hosted the first IRL WaveWarZ battle.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">Maine</div>
+        <div class="what">
+          <strong>Building Automation Technician</strong>
+          <span class="org">The Jackson Laboratory</span>
+          <p>Building automation at a biomedical research institution headquartered in Bar Harbor, Maine.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">2026</div>
+        <div class="what">
+          <strong>Web + Ops Consulting</strong>
+          <span class="org">Riverside Group LLC — Maine client work</span>
+          <p>Web and operations consulting for a landscape design firm in Mount Desert, Maine.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">pre-2022</div>
+        <div class="what">
+          <strong>Automation Engineer</strong>
+          <span class="org">PCC Structurals</span>
+          <p>Led a $1.5M robotics project that achieved a 7x throughput gain in heavy manufacturing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Education</h2>
+      <div class="row">
+        <div class="when">2022</div>
+        <div class="what">
+          <strong>BS, Electrical Engineering</strong>
+          <span class="org">Rochester Institute of Technology (RIT)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Skills &amp; stack</h2>
+      <div class="chips">
+        <span class="chip">Next.js</span><span class="chip">React</span><span class="chip">Node.js</span>
+        <span class="chip">Farcaster SDK</span><span class="chip">Solana</span><span class="chip">Base</span><span class="chip">Optimism</span>
+        <span class="chip">Claude API / agents</span><span class="chip">Supabase</span><span class="chip">Discord.js</span>
+        <span class="chip">Smart contracts</span><span class="chip">Automation / pipelines</span><span class="chip">Vercel</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Selected open-source work</h2>
+      <p class="lead">A few highlights — the full catalog of 46 projects (extend / fork / build, all MIT) lives at <a href="/projects/">/projects</a>.</p>
+      <div class="row">
+        <div class="when">FarHack 2026</div>
+        <div class="what"><strong>zlank</strong><span class="org">No-code Farcaster Snap builder — won the Snap category ($1,000 prize).</span></div>
+      </div>
+      <div class="row">
+        <div class="when">Flagship</div>
+        <div class="what"><strong>ZAOOS</strong><span class="org">Monorepo lab + gated Farcaster client — social feed, spaces, governance.</span></div>
+      </div>
+      <div class="row">
+        <div class="when">Directory</div>
+        <div class="what"><strong>ZAONEXUS</strong><span class="org">Searchable directory of 200+ ecosystem links.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Media</h2>
+      <p class="lead">Co-host of <a href="https://pods.media/lets-talk-about-web3/" target="_blank" rel="noopener">Let's Talk About Ethereum</a> (weekly), host of <a href="/bczyapz/">BCZ YapZ</a> (long-form interviews), and daily on <a href="https://twitch.tv/bettercallzaal" target="_blank" rel="noopener">Twitch</a>.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p><a href="/">BetterCallZaal.com</a> &middot; <a href="/projects/">Projects</a> &middot; <a href="/engineering-past/">Engineering past</a> &middot; <a href="mailto:zaal@bettercallzaal.com">zaal@bettercallzaal.com</a></p>
+    </div>
+  </footer>
+</body>
+</html>
