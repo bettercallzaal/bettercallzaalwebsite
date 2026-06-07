@@ -11,11 +11,14 @@
     "iconUrl": "https://bettercallzaal.com/assets/icon.png",
     "splashImageUrl": "https://bettercallzaal.com/assets/icon.png",
     "splashBackgroundColor": "#0a0a1a",
-    "subtitle": "The Connector",
-    "description": "Got a problem? BetterCallZaal. I connect you with the right people to build, grow, and ship.",
+    "subtitle": "Open tools for artists",
+    "description": "I build open-source infrastructure that returns margin, data & IP to independent artists. Got a problem? BetterCallZaal.",
     "primaryCategory": "social",
-    "tags": ["connector", "web3", "music", "builder"],
+    "tags": ["open-source", "web3", "music", "artists", "builder"],
     "heroImageUrl": "https://bettercallzaal.com/assets/icon.png",
-    "tagline": "The Connector"
+    "tagline": "Ownership, back to artists",
+    "ogTitle": "BetterCallZaal",
+    "ogDescription": "Open-source infrastructure returning ownership to independent artists.",
+    "ogImageUrl": "https://bettercallzaal.com/assets/icon.png"
   }
 }
