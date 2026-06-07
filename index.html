@@ -21,6 +21,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="canonical" href="https://bettercallzaal.com">
+  <link rel="icon" type="image/png" href="/assets/icon.png">
+  <link rel="apple-touch-icon" href="/assets/icon.png">
   <style>
     *, *::before, *::after {
       margin: 0;
@@ -1879,22 +1881,30 @@
 
   <!-- Farcaster Mini App SDK -->
   <script type="module">
-    import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk';
+    try {
+      const { sdk } = await import('https://esm.sh/@farcaster/miniapp-sdk');
 
-    const isMiniApp = !!sdk.context;
+      // Real detection — sdk.context is a Promise (always truthy), so the old
+      // `!!sdk.context` check ran this branch for every web visitor too.
+      const isMiniApp = await sdk.isInMiniApp();
 
-    // Dismiss splash screen if inside Farcaster
-    if (isMiniApp) {
-      sdk.actions.ready();
+      if (isMiniApp) {
+        // Dismiss the Farcaster splash screen
+        sdk.actions.ready();
 
-      // Inside mini app: use SDK composeCast instead of link
-      document.getElementById('share-farcaster').addEventListener('click', function(e) {
-        e.preventDefault();
-        sdk.actions.composeCast({
-          text: 'Got a problem? BetterCallZaal. FOSS builder, connector, ecosystem architect.',
-          embeds: ['https://bettercallzaal.com']
+        // Inside the mini app: use SDK composeCast instead of the link fallback
+        document.getElementById('share-farcaster').addEventListener('click', function (e) {
+          e.preventDefault();
+          sdk.actions.composeCast({
+            text: 'Got a problem? BetterCallZaal. FOSS builder, connector, ecosystem architect.',
+            embeds: ['https://bettercallzaal.com']
+          });
         });
-      });
+      }
+    } catch (err) {
+      // Not in a mini app, or the SDK CDN is unreachable. The site works fine
+      // without it and the share button keeps its default Warpcast-URL fallback.
+      console.warn('Farcaster Mini App SDK unavailable:', err);
     }
   </script>
 
