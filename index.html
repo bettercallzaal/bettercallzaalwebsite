@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BetterCallZaal — FOSS Builder, Connector, Ecosystem Architect</title>
-  <meta name="description" content="Founder of The ZAO. Free & open source software (FOSS) builder, based in Maine — electrical engineer by training. Building creator infrastructure that gives margin, data, and IP back to independent artists.">
-  <meta property="og:title" content="BetterCallZaal — FOSS Builder, Connector, Ecosystem Architect">
-  <meta property="og:description" content="Founder of The ZAO. Free & open source software (FOSS) builder, based in Maine — electrical engineer by training. Building creator infrastructure that gives margin, data, and IP back to independent artists.">
+  <title>BetterCallZaal — Open-Source Infrastructure for Artist Ownership</title>
+  <meta name="description" content="I'm Zaal Panthaki — founder of The ZAO and an open-source builder returning margin, data, and IP to independent artists. Got a problem? BetterCallZaal.">
+  <meta property="og:title" content="BetterCallZaal — Open-Source Infrastructure for Artist Ownership">
+  <meta property="og:description" content="I'm Zaal Panthaki — founder of The ZAO and an open-source builder returning margin, data, and IP to independent artists. Got a problem? BetterCallZaal.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://bettercallzaal.com/assets/icon.png">
   <meta property="og:url" content="https://bettercallzaal.com">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@bettercallzaal">
-  <meta name="twitter:title" content="BetterCallZaal — FOSS Builder, Connector, Ecosystem Architect">
-  <meta name="twitter:description" content="Founder of The ZAO. Free & open source software (FOSS) builder, based in Maine — electrical engineer by training. Building creator infrastructure that gives margin, data, and IP back to independent artists.">
+  <meta name="twitter:title" content="BetterCallZaal — Open-Source Infrastructure for Artist Ownership">
+  <meta name="twitter:description" content="I'm Zaal Panthaki — founder of The ZAO and an open-source builder returning margin, data, and IP to independent artists. Got a problem? BetterCallZaal.">
   <meta name="twitter:image" content="https://bettercallzaal.com/assets/icon.png">
   <meta name="fc:miniapp" content='{"version":"1","imageUrl":"https://bettercallzaal.com/assets/icon.png","button":{"title":"Open BetterCallZaal","action":{"type":"launch_frame","name":"BetterCallZaal","url":"https://bettercallzaal.com","splashImageUrl":"https://bettercallzaal.com/assets/icon.png","splashBackgroundColor":"#0a0a1a"}}}'>
   <link rel="preconnect" href="https://auth.farcaster.xyz">
@@ -21,8 +21,46 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="canonical" href="https://bettercallzaal.com">
-  <link rel="icon" type="image/png" href="/assets/icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/assets/icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://bettercallzaal.com/#zaal",
+        "name": "Zaal Panthaki",
+        "alternateName": "BetterCallZaal",
+        "url": "https://bettercallzaal.com",
+        "image": "https://bettercallzaal.com/assets/pfp.jpeg",
+        "jobTitle": "Founder of The ZAO",
+        "description": "Open-source builder returning margin, data, and IP to independent artists. Founder of The ZAO, co-founder of WaveWarZ.",
+        "knowsAbout": ["Open-source software", "web3", "Farcaster", "Solana", "music technology", "creator infrastructure", "AI agents"],
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Rochester Institute of Technology" },
+        "worksFor": { "@type": "Organization", "name": "The ZAO", "url": "https://www.thezao.com/" },
+        "address": { "@type": "PostalAddress", "addressRegion": "Maine", "addressCountry": "US" },
+        "sameAs": [
+          "https://x.com/bettercallzaal",
+          "https://github.com/bettercallzaal",
+          "https://farcaster.xyz/bettercallzaal",
+          "https://www.linkedin.com/in/zaalp/",
+          "https://www.thezao.com/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://bettercallzaal.com/#website",
+        "url": "https://bettercallzaal.com",
+        "name": "BetterCallZaal",
+        "description": "Open-source infrastructure returning ownership to independent artists.",
+        "author": { "@id": "https://bettercallzaal.com/#zaal" },
+        "publisher": { "@id": "https://bettercallzaal.com/#zaal" }
+      }
+    ]
+  }
+  </script>
   <style>
     *, *::before, *::after {
       margin: 0;
@@ -1213,7 +1251,6 @@
 
     @media (max-width: 480px) {
       .hero h1 { font-size: clamp(1.5rem, 7vw, 2.5rem); }
-      .hero h1 .line-2 { white-space: nowrap; }
       .container { padding: 0 1.25rem; }
       .field { margin-bottom: 1.5rem; }
       .field label { font-size: 0.8rem; }
@@ -1256,12 +1293,12 @@
 
   <!-- ─── Hero ─── -->
   <section class="hero">
-    <p class="hero-label">FOSS Builder &middot; Connector &middot; Ecosystem Architect</p>
+    <p class="hero-label">Founder of The ZAO &middot; Building in the open</p>
     <h1>
-      <span class="line-1">Got a problem?</span>
-      <span class="line-2">BetterCallZaal.</span>
+      <span class="line-1">Their margin, data &amp; IP &mdash;</span>
+      <span class="line-2">back where it belongs.</span>
     </h1>
-    <p class="hero-sub">Tell me what you're building. I'll bring the right people to the table &mdash; including myself &mdash; to build, grow, and ship it in the open.</p>
+    <p class="hero-sub">I'm Zaal. I build open-source infrastructure that returns ownership to independent artists &mdash; and connect the people who make it run. Got a problem? BetterCallZaal.</p>
     <a href="#contact" class="hero-cta"><span>Let's Talk</span></a>
     <div class="hero-socials">
       <a href="https://x.com/bettercallzaal" target="_blank" rel="noopener" aria-label="X">
@@ -1300,13 +1337,13 @@
   <section class="section" id="about">
     <div class="container">
       <p class="section-label fade-in">About</p>
-      <h2 class="section-title fade-in">The FOSS Builder</h2>
+      <h2 class="section-title fade-in">Why I Build in the Open</h2>
 
       <div class="about-header fade-in">
         <img src="assets/pfp.jpeg" alt="Zaal Panthaki" class="about-pfp" width="160" height="160" loading="lazy">
         <div>
           <p class="about-text">For too long, middlemen have extracted from artists &mdash; their revenue, their data, their audiences. I build the infrastructure that gives it back.</p>
-          <p class="about-text" style="margin-top: 1rem;">I'm Zaal &mdash; a free &amp; open source software (FOSS) builder and ecosystem architect, based in Maine. Electrical engineer by training (BS EE, RIT 2022) &mdash; I led a $1.5M robotics project at PCC Structurals before turning that automation instinct toward shipping open-source software in public. Building automation work at <strong>The Jackson Laboratory</strong>. <strong>Founder of The ZAO</strong>, <strong>co-founder of WaveWarZ</strong>. I build in public &mdash; 73+ open-source repos on <a href="https://github.com/bettercallzaal" target="_blank" rel="noopener" style="color: var(--cyan);">GitHub</a> (<a href="/resume/" style="color: var(--cyan);">full resume</a>).</p>
+          <p class="about-text" style="margin-top: 1rem;">I'm Zaal &mdash; a free &amp; open source software (FOSS) builder based in Maine. Electrical engineer by training (BS EE, RIT 2022) &mdash; I led a $1.5M robotics project at PCC Structurals before turning that automation instinct toward shipping open-source software in public. Building automation work at <strong>The Jackson Laboratory</strong>. <strong>Founder of The ZAO</strong>, <strong>co-founder of WaveWarZ</strong>. I build in public &mdash; 73+ open-source repos on <a href="https://github.com/bettercallzaal" target="_blank" rel="noopener" style="color: var(--cyan);">GitHub</a> (<a href="/resume/" style="color: var(--cyan);">full resume</a>).</p>
           <p class="about-text" style="margin-top: 1rem;">I also connect builders, artists, and communities with the right people to make things happen. Whether you need infrastructure built or the right introduction made &mdash; that's what I do.</p>
         </div>
       </div>
@@ -1315,8 +1352,8 @@
       <div class="stats-row fade-in">
         <a class="stat-item" href="https://wavewarz-intelligence.vercel.app/" target="_blank" rel="noopener">
           <div class="stat-number">459 SOL</div>
-          <div class="stat-label">traded on WaveWarZ &middot; 7.8 SOL paid out to artists</div>
-          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>wavewarz-intelligence.vercel.app &middot; 950 battles, ~$39K volume, $675 artist payouts</span>
+          <div class="stat-label">fan-trading volume on WaveWarZ &middot; artists paid direct, instant &amp; automatic onchain</div>
+          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>wavewarz-intelligence.vercel.app &middot; 950 battles &middot; 7.8 SOL settled straight to artists, no middleman &mdash; live &amp; scaling</span>
         </a>
         <a class="stat-item" href="https://www.thezao.com/" target="_blank" rel="noopener">
           <div class="stat-number">250+</div>
@@ -1613,8 +1650,8 @@
   <!-- ─── Parallax breaker ─── -->
   <div class="parallax-text" aria-hidden="true">
     <div class="parallax-text-track">
-      <span><span class="pt-word">FOSS Builder</span><span class="pt-sep">&#9670;</span><span class="pt-word">Connector</span><span class="pt-sep">&#9670;</span><span class="pt-word">Founder</span><span class="pt-sep">&#9670;</span><span class="pt-word">Operator</span><span class="pt-sep">&#9670;</span><span class="pt-word">Patroller</span><span class="pt-sep">&#9670;</span></span>
-      <span><span class="pt-word">FOSS Builder</span><span class="pt-sep">&#9670;</span><span class="pt-word">Connector</span><span class="pt-sep">&#9670;</span><span class="pt-word">Founder</span><span class="pt-sep">&#9670;</span><span class="pt-word">Operator</span><span class="pt-sep">&#9670;</span><span class="pt-word">Patroller</span><span class="pt-sep">&#9670;</span></span>
+      <span><span class="pt-word">Open Source</span><span class="pt-sep">&#9670;</span><span class="pt-word">Artist Ownership</span><span class="pt-sep">&#9670;</span><span class="pt-word">Founder</span><span class="pt-sep">&#9670;</span><span class="pt-word">Connector</span><span class="pt-sep">&#9670;</span><span class="pt-word">Built in Public</span><span class="pt-sep">&#9670;</span></span>
+      <span><span class="pt-word">Open Source</span><span class="pt-sep">&#9670;</span><span class="pt-word">Artist Ownership</span><span class="pt-sep">&#9670;</span><span class="pt-word">Founder</span><span class="pt-sep">&#9670;</span><span class="pt-word">Connector</span><span class="pt-sep">&#9670;</span><span class="pt-word">Built in Public</span><span class="pt-sep">&#9670;</span></span>
     </div>
   </div>
 
@@ -1754,11 +1791,11 @@
   <!-- ─── Share ─── -->
   <div class="share-bar fade-in">
     <span class="share-bar-label">Share</span>
-    <a class="share-btn" id="share-farcaster" href="https://farcaster.xyz/~/compose?text=Got%20a%20problem%3F%20BetterCallZaal.%20FOSS%20builder%2C%20connector%2C%20ecosystem%20architect.&embeds[]=https%3A%2F%2Fbettercallzaal.com" target="_blank" rel="noopener" aria-label="Share on Farcaster">
+    <a class="share-btn" id="share-farcaster" href="https://farcaster.xyz/~/compose?text=Got%20a%20problem%3F%20BetterCallZaal.%20Open-source%20tools%20that%20return%20ownership%20to%20independent%20artists.&embeds[]=https%3A%2F%2Fbettercallzaal.com" target="_blank" rel="noopener" aria-label="Share on Farcaster">
       <svg viewBox="0 0 1000 1000"><path d="M257.778 155.556H742.222V844.445H671.111V528.889H670.414C662.554 441.677 589.258 373.333 500 373.333C410.742 373.333 337.446 441.677 329.586 528.889H328.889V844.445H257.778V155.556Z"/><path d="M128.889 253.333L157.778 351.111H182.222V746.667C169.949 746.667 160 756.616 160 768.889V795.556H155.556C143.283 795.556 133.333 805.505 133.333 817.778V844.445H382.222V817.778C382.222 805.505 372.273 795.556 360 795.556H355.556V768.889C355.556 756.616 345.606 746.667 333.333 746.667H306.667V253.333H128.889Z"/><path d="M693.333 746.667C681.06 746.667 671.111 756.616 671.111 768.889V795.556H666.667C654.394 795.556 644.444 805.505 644.444 817.778V844.445H893.333V817.778C893.333 805.505 883.384 795.556 871.111 795.556H866.667V768.889C866.667 756.616 856.717 746.667 844.444 746.667V351.111H868.889L897.778 253.333H720V746.667H693.333Z"/></svg>
       Farcaster
     </a>
-    <a class="share-btn" id="share-x" href="https://twitter.com/intent/tweet?text=Got%20a%20problem%3F%20BetterCallZaal.%20FOSS%20builder%2C%20connector%2C%20ecosystem%20architect.&url=https%3A%2F%2Fbettercallzaal.com&via=bettercallzaal" target="_blank" rel="noopener" aria-label="Share on X">
+    <a class="share-btn" id="share-x" href="https://twitter.com/intent/tweet?text=Got%20a%20problem%3F%20BetterCallZaal.%20Open-source%20tools%20that%20return%20ownership%20to%20independent%20artists.&url=https%3A%2F%2Fbettercallzaal.com&via=bettercallzaal" target="_blank" rel="noopener" aria-label="Share on X">
       <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
       X
     </a>
@@ -1766,7 +1803,7 @@
       <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       LinkedIn
     </a>
-    <a class="share-btn" href="https://t.me/share/url?url=https%3A%2F%2Fbettercallzaal.com&text=Got%20a%20problem%3F%20BetterCallZaal.%20FOSS%20builder%2C%20connector%2C%20ecosystem%20architect." target="_blank" rel="noopener" aria-label="Share on Telegram">
+    <a class="share-btn" href="https://t.me/share/url?url=https%3A%2F%2Fbettercallzaal.com&text=Got%20a%20problem%3F%20BetterCallZaal.%20Open-source%20tools%20that%20return%20ownership%20to%20independent%20artists." target="_blank" rel="noopener" aria-label="Share on Telegram">
       <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.464.141a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
       Telegram
     </a>
@@ -1896,7 +1933,7 @@
         document.getElementById('share-farcaster').addEventListener('click', function (e) {
           e.preventDefault();
           sdk.actions.composeCast({
-            text: 'Got a problem? BetterCallZaal. FOSS builder, connector, ecosystem architect.',
+            text: 'Got a problem? BetterCallZaal. Open-source tools that return ownership to independent artists.',
             embeds: ['https://bettercallzaal.com']
           });
         });
