@@ -1,0 +1,33 @@
+{
+  "_comment": "CANONICAL METRICS — single source of truth. Every surface (index.html, resume/, brands.json, kit, OG card) must match these numbers. Update here first, then sync surfaces. Conflicting receipts undermine the 'Receipts, not vanity' promise.",
+  "_updated": "2026-06-11",
+  "wavewarz": {
+    "sol_traded": "459 SOL",
+    "battles": "950+",
+    "usd_volume_approx": "~$39K",
+    "artist_payouts": "7.8 SOL",
+    "source": "https://wavewarz-intelligence.vercel.app/",
+    "note": "Testimonial quotes ($60k+) are the speaker's words and are not edited."
+  },
+  "zao": {
+    "community": "250+ artists + creators",
+    "community_source": "https://www.thezao.com/",
+    "members_public_phrasing": "100+ gated members",
+    "members_rule": "phrases.md bans citing specific holder counts in public copy",
+    "governance": "100+ weekly fractal meetings (week 100 hit May 2026)",
+    "newsletter": "400+ daily editions",
+    "newsletter_source": "https://paragraph.com/@thezao"
+  },
+  "github": {
+    "repos": "80+",
+    "source": "https://github.com/bettercallzaal"
+  },
+  "festivals": {
+    "produced": 2,
+    "list": "ZAO-PALOOZA (NYC 2024), ZAO-CHELLA (Miami 2024)",
+    "next": "ZAOstock — Oct 3, 2026, Ellsworth, Maine"
+  },
+  "wins": {
+    "farhack": "Won the Snap category at FarHack 2026 with Zlank"
+  }
+}

@@ -72,13 +72,13 @@
     {
       "id": "thezao",
       "name": "The ZAO",
-      "tag": "Parent \u00b7 Impact Network",
+      "tag": "Parent · Impact Network",
       "tagColor": "orange",
       "status": "active",
       "category": "core",
-      "blurb": "The umbrella DAO and impact network. Music + web3 community with 188+ members governing, collaborating, and shipping together. Everything else orbits this.",
+      "blurb": "The umbrella DAO and impact network. Music + web3 community with 250+ artists + creators governing, collaborating, and shipping together. Everything else orbits this.",
       "founded": "2024",
-      "audience": "188 gated members on Base + open Farcaster + Discord",
+      "audience": "100+ gated members on Base + open Farcaster + Discord",
       "monetization": "Sponsorships, festival revenue, $ZABAL token economy, Pro Tickets",
       "links": [
         {
@@ -129,13 +129,13 @@
     {
       "id": "zaoos",
       "name": "ZAO OS",
-      "tag": "App \u00b7 Monorepo Lab",
+      "tag": "App · Monorepo Lab",
       "tagColor": "cyan",
       "status": "active",
       "category": "core",
       "blurb": "The gated Farcaster client where ZAO members govern, post, listen, and trade. Also the lab where new ecosystem things get prototyped before they graduate to their own home.",
       "founded": "2024",
-      "audience": "188 gated members + dev contributors",
+      "audience": "100+ gated members + dev contributors",
       "monetization": "OSS, no direct revenue; graduates billed to BCZ Strategies",
       "links": [
         {
@@ -166,7 +166,7 @@
     {
       "id": "zabal",
       "name": "$ZABAL",
-      "tag": "Token \u00b7 Empire V3",
+      "tag": "Token · Empire V3",
       "tagColor": "gold",
       "status": "active",
       "category": "core",
@@ -203,7 +203,7 @@
     {
       "id": "zao-festivals",
       "name": "ZAO Festivals",
-      "tag": "Umbrella \u00b7 IRL",
+      "tag": "Umbrella · IRL",
       "tagColor": "pink",
       "status": "active",
       "category": "festivals",
@@ -232,7 +232,7 @@
     {
       "id": "zaostock",
       "name": "ZAOstock",
-      "tag": "Festival \u00b7 2026 Flagship",
+      "tag": "Festival · 2026 Flagship",
       "tagColor": "gold",
       "status": "active",
       "category": "festivals",
@@ -281,7 +281,7 @@
     {
       "id": "nextzaoville",
       "name": "NextZAOville",
-      "tag": "Festival \u00b7 DMV 2026",
+      "tag": "Festival · DMV 2026",
       "tagColor": "pink",
       "status": "building",
       "category": "festivals",
@@ -306,7 +306,7 @@
     {
       "id": "coc-concertz",
       "name": "COC Concertz",
-      "tag": "Graduated \u00b7 Virtual Concerts",
+      "tag": "Graduated · Virtual Concerts",
       "tagColor": "muted",
       "status": "graduated",
       "category": "festivals",
@@ -335,11 +335,11 @@
     {
       "id": "wavewarz",
       "name": "WaveWarZ",
-      "tag": "Music \u00b7 Solana Production",
+      "tag": "Music · Solana Production",
       "tagColor": "cyan",
       "status": "active",
       "category": "music",
-      "blurb": "Agentic music battles on Solana mainnet. 735 battles + 472 SOL traded as of audit. Cofounders Hurric4n3Ike (lead dev) + candytoybox / Samantha. Becoming WaveWarZ LabZ LLC Texas.",
+      "blurb": "Agentic music battles on Solana mainnet. 950+ battles + 459 SOL traded (live dashboard). Cofounders Hurric4n3Ike (lead dev) + candytoybox / Samantha. Becoming WaveWarZ LabZ LLC Texas.",
       "founded": "2024",
       "audience": "Solana music + crypto audience",
       "monetization": "On-chain battle fees + sponsorships + token economy",
@@ -384,7 +384,7 @@
     {
       "id": "fishbowlz",
       "name": "FISHBOWLZ",
-      "tag": "Audio Rooms \u00b7 Reviving",
+      "tag": "Audio Rooms · Reviving",
       "tagColor": "pink",
       "status": "building",
       "category": "music",
@@ -420,8 +420,8 @@
     },
     {
       "id": "songjam",
-      "name": "SongJam \u00b7 $SANG",
-      "tag": "Music \u00b7 Token",
+      "name": "SongJam · $SANG",
+      "tag": "Music · Token",
       "tagColor": "cyan",
       "status": "active",
       "category": "music",
@@ -450,7 +450,7 @@
     {
       "id": "aurdour",
       "name": "Aurdour",
-      "tag": "Music \u00b7 OSS DJ",
+      "tag": "Music · OSS DJ",
       "tagColor": "cyan",
       "status": "paused",
       "category": "music",
@@ -475,7 +475,7 @@
     {
       "id": "bcz",
       "name": "BetterCallZaal",
-      "tag": "Agency \u00b7 Personal Brand",
+      "tag": "Agency · Personal Brand",
       "tagColor": "orange",
       "status": "active",
       "category": "agency",
@@ -524,7 +524,7 @@
     {
       "id": "bcz-yapz",
       "name": "BCZ YapZ",
-      "tag": "Show \u00b7 Graduated",
+      "tag": "Show · Graduated",
       "tagColor": "cyan",
       "status": "graduated",
       "category": "shows",
@@ -561,7 +561,7 @@
     {
       "id": "ltae",
       "name": "Let's Talk About ETH (with Maceo)",
-      "tag": "Show \u00b7 Building",
+      "tag": "Show · Building",
       "tagColor": "pink",
       "status": "building",
       "category": "shows",
@@ -594,7 +594,7 @@
     {
       "id": "newsletter",
       "name": "Year of the ZABAL",
-      "tag": "Newsletter \u00b7 Daily",
+      "tag": "Newsletter · Daily",
       "tagColor": "gold",
       "status": "active",
       "category": "shows",
@@ -619,11 +619,11 @@
     {
       "id": "zoe",
       "name": "ZOE",
-      "tag": "Agent \u00b7 Concierge",
+      "tag": "Agent · Concierge",
       "tagColor": "cyan",
       "status": "active",
       "category": "agents",
-      "blurb": "@zaoclaw_bot \u2014 single concierge for tasks, captures, brief/reflect, recall. ZAO's primary agent surface. Hermes-brain pattern. Runs on VPS + uses Claude Max subscription.",
+      "blurb": "@zaoclaw_bot — single concierge for tasks, captures, brief/reflect, recall. ZAO's primary agent surface. Hermes-brain pattern. Runs on VPS + uses Claude Max subscription.",
       "founded": "2025",
       "audience": "Zaal + ZAO team",
       "monetization": "Internal tool; no direct revenue",
@@ -648,11 +648,11 @@
     {
       "id": "hermes",
       "name": "Hermes",
-      "tag": "Agent \u00b7 Auto-PR",
+      "tag": "Agent · Auto-PR",
       "tagColor": "orange",
       "status": "active",
       "category": "agents",
-      "blurb": "@zoe_hermes_bot \u2014 autonomous fix-PR pipeline. Coder + critic + auto-PR. The agent that ships code. Coordinates with ZAO Devz on group dispatch.",
+      "blurb": "@zoe_hermes_bot — autonomous fix-PR pipeline. Coder + critic + auto-PR. The agent that ships code. Coordinates with ZAO Devz on group dispatch.",
       "founded": "2025",
       "audience": "Zaal + dev contributors",
       "monetization": "Internal tool",
@@ -677,11 +677,11 @@
     {
       "id": "zao-devz",
       "name": "ZAO Devz",
-      "tag": "Agent \u00b7 Group Dispatch",
+      "tag": "Agent · Group Dispatch",
       "tagColor": "cyan",
       "status": "active",
       "category": "agents",
-      "blurb": "@zaodevz_bot \u2014 group dispatch + hourly learning tip. Group surface for developer coordination. Phase 3 fold-in to Hermes pending.",
+      "blurb": "@zaodevz_bot — group dispatch + hourly learning tip. Group surface for developer coordination. Phase 3 fold-in to Hermes pending.",
       "founded": "2025",
       "audience": "ZAO dev community",
       "monetization": "Internal tool",
@@ -706,11 +706,11 @@
     {
       "id": "zaocoworkingbot",
       "name": "ZAOcoworkingBot",
-      "tag": "Agent \u00b7 Team Tracker",
+      "tag": "Agent · Team Tracker",
       "tagColor": "orange",
       "status": "building",
       "category": "agents",
-      "blurb": "@ZAOcoworkingBot \u2014 universal team action tracker across all brands (Zaal + Iman + ThyRev + Samantha). Doc 650. Live on VPS. Multi-model + BYOK (Claude / OpenAI / MiniMax).",
+      "blurb": "@ZAOcoworkingBot — universal team action tracker across all brands (Zaal + Iman + ThyRev + Samantha). Doc 650. Live on VPS. Multi-model + BYOK (Claude / OpenAI / MiniMax).",
       "founded": "2026",
       "audience": "ZAO + WaveWarZ + COC Concertz teams",
       "monetization": "Internal team tool",
@@ -735,7 +735,7 @@
     {
       "id": "bonfires-zabal",
       "name": "ZABAL Bonfire",
-      "tag": "Infra \u00b7 Knowledge Graph",
+      "tag": "Infra · Knowledge Graph",
       "tagColor": "gold",
       "status": "building",
       "category": "infra",
@@ -772,7 +772,7 @@
     {
       "id": "poidh-zao",
       "name": "POIDH (ZAO bounties)",
-      "tag": "Infra \u00b7 Bounty Board",
+      "tag": "Infra · Bounty Board",
       "tagColor": "cyan",
       "status": "active",
       "category": "infra",
@@ -805,7 +805,7 @@
     {
       "id": "zabal-games",
       "name": "ZABAL Games",
-      "tag": "Experimenting \u00b7 Empire V3",
+      "tag": "Experimenting · Empire V3",
       "tagColor": "pink",
       "status": "experimenting",
       "category": "infra",
@@ -838,7 +838,7 @@
     {
       "id": "zlank",
       "name": "Zlank",
-      "tag": "Tool \u00b7 No-code Snap Builder",
+      "tag": "Tool · No-code Snap Builder",
       "tagColor": "cyan",
       "status": "building",
       "category": "tools",
@@ -875,11 +875,11 @@
     {
       "id": "zao-101",
       "name": "zao-101",
-      "tag": "Tool \u00b7 Onboarding",
+      "tag": "Tool · Onboarding",
       "tagColor": "muted",
       "status": "active",
       "category": "tools",
-      "blurb": "Learn about The ZAO \u2014 artist org, autonomous org, operating system, open source. Public onboarding microsite.",
+      "blurb": "Learn about The ZAO — artist org, autonomous org, operating system, open source. Public onboarding microsite.",
       "founded": "2026",
       "audience": "Curious newcomers",
       "monetization": "Free; supports member acquisition",
@@ -904,7 +904,7 @@
     {
       "id": "zao-video-editor",
       "name": "ZAOVideoEditor",
-      "tag": "Tool \u00b7 OSS Video",
+      "tag": "Tool · OSS Video",
       "tagColor": "muted",
       "status": "paused",
       "category": "tools",
@@ -929,7 +929,7 @@
     {
       "id": "zao-fractals",
       "name": "ZAO Fractals",
-      "tag": "Governance \u00b7 Respect Game",
+      "tag": "Governance · Respect Game",
       "tagColor": "gold",
       "status": "active",
       "category": "governance",
@@ -974,7 +974,7 @@
     {
       "id": "zao-music",
       "name": "ZAO Music",
-      "tag": "Music Label \u00b7 DBA",
+      "tag": "Music Label · DBA",
       "tagColor": "pink",
       "status": "building",
       "category": "music",
@@ -1003,7 +1003,7 @@
     {
       "id": "zaomusicbot",
       "name": "ZAO Music Bot",
-      "tag": "Agent \u00b7 Music Ops",
+      "tag": "Agent · Music Ops",
       "tagColor": "pink",
       "status": "active",
       "category": "agents",
@@ -1028,7 +1028,7 @@
     {
       "id": "zounz",
       "name": "ZOUNZ",
-      "tag": "Music \u00b7 Farcaster Mini App",
+      "tag": "Music · Farcaster Mini App",
       "tagColor": "cyan",
       "status": "building",
       "category": "music",
@@ -1061,7 +1061,7 @@
     {
       "id": "bcz-journal",
       "name": "BCZ Journal",
-      "tag": "Show \u00b7 Public Journal",
+      "tag": "Show · Public Journal",
       "tagColor": "orange",
       "status": "active",
       "category": "shows",
@@ -1090,7 +1090,7 @@
     {
       "id": "textsplitter",
       "name": "textsplitter",
-      "tag": "Tool \u00b7 Bonfires Feeder",
+      "tag": "Tool · Bonfires Feeder",
       "tagColor": "muted",
       "status": "active",
       "category": "tools",

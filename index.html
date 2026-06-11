@@ -377,6 +377,99 @@
       font-weight: 400;
     }
 
+    /* ─── Problem statement ─── */
+    .problem-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--orange);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      margin: 2.5rem 0;
+      max-width: 680px;
+    }
+    .problem-lede {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--orange);
+      margin-bottom: 0.6rem;
+    }
+    .problem-stat { color: var(--text); font-size: 1rem; margin-bottom: 0.6rem; }
+    .problem-stat b { color: var(--gold); }
+    .problem-kicker { color: var(--text-muted); font-size: 0.9rem; }
+
+    /* ─── Wins strip ─── */
+    .wins-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem 1.75rem;
+      padding: 0.9rem 1.25rem;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .wins-strip .win b { color: var(--gold); font-weight: 500; }
+
+    /* ─── Three doors ─── */
+    .doors { padding: clamp(2.5rem, 6vh, 4rem) 0 0; }
+    .doors-tagline {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: var(--text);
+      margin-bottom: 1.25rem;
+    }
+    .doors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+    .door {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.4rem;
+      color: var(--text);
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .door:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+    .door h3 { font-family: 'Syne', sans-serif; font-size: 1.05rem; margin-bottom: 0.35rem; }
+    .door.door-artists h3 { color: var(--orange); }
+    .door.door-builders h3 { color: var(--cyan); }
+    .door.door-communities h3 { color: var(--gold); }
+    .door p { color: var(--text-muted); font-size: 0.88rem; }
+
+    /* ─── Ecosystem map ─── */
+    .eco-group { margin-bottom: 1.5rem; }
+    .eco-cat {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+    }
+    .eco-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .eco-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.4rem 0.85rem;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: border-color 0.2s;
+    }
+    .eco-pill:hover { border-color: var(--border-hover); }
+    .eco-dot { width: 7px; height: 7px; border-radius: 50%; flex: 0 0 auto; }
+    .eco-pill small { color: var(--text-dim); font-size: 0.72rem; }
+
     /* ─── Timeline ─── */
     .journey-timeline {
       position: relative;
@@ -1349,6 +1442,36 @@
     </div>
   </div>
 
+  <!-- ─── Wins strip (track record) ─── -->
+  <div class="wins-strip fade-in" aria-label="Track record">
+    <span class="win"><b>FarHack 2026</b> Snap winner</span>
+    <span class="win"><b>2 festivals</b> produced</span>
+    <span class="win"><b>Week 100</b> of fractal governance</span>
+    <span class="win"><b>400+</b> daily editions published</span>
+    <span class="win"><b>80+</b> open-source repos</span>
+  </div>
+
+  <!-- ─── Three doors ─── -->
+  <div class="doors fade-in">
+    <div class="container">
+      <p class="doors-tagline">Three doors. All real. Pick yours.</p>
+      <div class="doors-grid">
+        <a class="door door-artists" href="https://thezao.com/community" target="_blank" rel="noopener">
+          <h3>Artists</h3>
+          <p>Join The ZAO. Own your margin, data &amp; IP &mdash; battle on WaveWarZ, play festivals, keep what you earn.</p>
+        </a>
+        <a class="door door-builders" href="/projects/">
+          <h3>Builders</h3>
+          <p>80+ repos, kept MIT and forkable. Adopt a project, join ZABAL Games, or build on the agent stack.</p>
+        </a>
+        <a class="door door-communities" href="#contact">
+          <h3>Communities &amp; Partners</h3>
+          <p>Sponsor a festival, co-build a feature, or get the right introduction. Tell me what you need.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- ─── About ─── -->
   <section class="section" id="about">
     <div class="container">
@@ -1391,6 +1514,12 @@
           <div class="stat-label">newsletter editions published</div>
           <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>paragraph.com/@thezao &middot; build in public</span>
         </a>
+      </div>
+
+      <div class="problem-block fade-in">
+        <p class="problem-lede">The problem I keep pointing everything at</p>
+        <p class="problem-stat">Streaming pays artists <b>$0.003 per play</b>. Labels keep <b>80&ndash;85%</b> of the revenue. Platforms own the audience, the data, and the algorithm &mdash; when one shuts down, artists lose everything.</p>
+        <p class="problem-kicker">The tools to fix this already exist. The gap is distribution + community. That's the work.</p>
       </div>
 
       <div class="journey-timeline">
@@ -1446,7 +1575,7 @@
           <div class="tl-year">2026</div>
           <div class="tl-content">
             <h4>FarHack Snap winner &middot; ZAO Fractal week 100 &middot; ZABAL Games &middot; Maine client work</h4>
-            <p>Won the Snap category at FarHack 2026 with Zlank ($1,000). Fractal governance hits week 100 (May). ZABAL Games June-Aug. Riverside Group + FarmDrop client builds. ZAOstock planned for October.</p>
+            <p>Won the Snap category at FarHack 2026 with Zlank ($1,000). Fractal governance hits week 100 (May). ZABAL Games June-Aug. Riverside Group + FarmDrop client builds. ZAOstock lands Oct 3 in Ellsworth, Maine.</p>
           </div>
         </div>
       </div>
@@ -1494,8 +1623,8 @@
         <a href="/zaostock/" class="portfolio-card fade-in stagger-4">
           <div>
             <h3>ZAOstock</h3>
-            <p>A ZAO festival in early planning. Telegram-first ops; public site coming.</p>
-            <span class="stat-badge">Pre-public</span>
+            <p>Year-1 outdoor community music festival. Independent artists, one stage, all day, free to attend. Part of the 9th Annual Art of Ellsworth.</p>
+            <span class="stat-badge">Oct 3, 2026 &middot; Ellsworth, Maine</span>
           </div>
           <span class="portfolio-link">More <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
@@ -1698,6 +1827,60 @@
       </details>
     </div>
   </section>
+
+  <!-- ─── Ecosystem map ─── -->
+  <section class="section" id="ecosystem" hidden>
+    <div class="container">
+      <p class="section-label fade-in">Ecosystem</p>
+      <h2 class="section-title fade-in">One mission, 31 brands</h2>
+      <p class="section-sub fade-in" style="color: var(--text-muted); font-size: 0.95rem; max-width: 680px; margin-bottom: 2rem;">BetterCallZaal &rarr; The ZAO &rarr; ZABAL. Everything below points at the same problem: artist ownership. Full brand kit at <a href="/kit.html" style="color: var(--orange);">/kit</a> &middot; every link at <a href="/nexus.html" style="color: var(--cyan);">/nexus</a>.</p>
+      <div id="ecoMap" class="fade-in"></div>
+    </div>
+  </section>
+  <script>
+    (function () {
+      fetch('/brands.json')
+        .then(function (r) { if (!r.ok) throw new Error('no brands'); return r.json(); })
+        .then(function (data) {
+          var statusColor = {};
+          (data.statuses || []).forEach(function (s) { statusColor[s.id] = s.color; });
+          var map = document.getElementById('ecoMap');
+          (data.categories || []).forEach(function (cat) {
+            var brands = (data.brands || []).filter(function (b) { return b.category === cat.id; });
+            if (!brands.length) return;
+            var group = document.createElement('div');
+            group.className = 'eco-group';
+            var h = document.createElement('p');
+            h.className = 'eco-cat';
+            h.textContent = cat.label;
+            group.appendChild(h);
+            var grid = document.createElement('div');
+            grid.className = 'eco-grid';
+            brands.forEach(function (b) {
+              var url = (b.links && b.links[0] && b.links[0].url) || '/kit.html';
+              var a = document.createElement('a');
+              a.className = 'eco-pill';
+              a.href = url;
+              if (url.indexOf('http') === 0) { a.target = '_blank'; a.rel = 'noopener'; }
+              var dot = document.createElement('span');
+              dot.className = 'eco-dot';
+              dot.style.background = statusColor[b.status] || '#94a3b8';
+              dot.title = b.status;
+              a.appendChild(dot);
+              a.appendChild(document.createTextNode(b.name + ' '));
+              var tag = document.createElement('small');
+              tag.textContent = b.tag || '';
+              a.appendChild(tag);
+              grid.appendChild(a);
+            });
+            group.appendChild(grid);
+            map.appendChild(group);
+          });
+          document.getElementById('ecosystem').hidden = false;
+        })
+        .catch(function () { /* brands.json unavailable: section stays hidden */ });
+    })();
+  </script>
 
   <!-- ─── Parallax breaker ─── -->
   <div class="parallax-text" aria-hidden="true">
