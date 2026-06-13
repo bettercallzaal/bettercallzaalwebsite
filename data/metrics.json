@@ -10,7 +10,9 @@
     "note": "Testimonial quotes ($60k+) are the speaker's words and are not edited."
   },
   "zao": {
-    "community": "250+ artists + creators",
+    "community_core": "250+ gated core artists + creators",
+    "community_reached": "1,000+ reached (open Farcaster + Discord)",
+    "community_display_rule": "Always show the split: gated core vs total reached. Never collapse to one ambiguous number.",
     "community_source": "https://www.thezao.com/",
     "members_public_phrasing": "100+ gated members",
     "members_rule": "phrases.md bans citing specific holder counts in public copy",
