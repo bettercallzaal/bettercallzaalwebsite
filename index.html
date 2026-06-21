@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BetterCallZaal — Open-Source Infrastructure for Artist Ownership</title>
-  <meta name="description" content="I'm Zaal Panthaki — founder of The ZAO and an open-source builder returning margin, data, and IP to independent artists. Got a problem? BetterCallZaal.">
-  <meta property="og:title" content="BetterCallZaal — Open-Source Infrastructure for Artist Ownership">
-  <meta property="og:description" content="I'm Zaal Panthaki — founder of The ZAO and an open-source builder returning margin, data, and IP to independent artists. Got a problem? BetterCallZaal.">
+  <title>BetterCallZaal - Open-Source AI Agents for Artist Ownership</title>
+  <meta name="description" content="I'm Zaal Panthaki - founder of The ZAO, building open-source AI-agent infrastructure and creator tools in public (80+ repos) that return margin, data, and IP to independent artists. Got a problem? BetterCallZaal.">
+  <meta property="og:title" content="BetterCallZaal - Open-Source AI Agents for Artist Ownership">
+  <meta property="og:description" content="I'm Zaal Panthaki - founder of The ZAO, building open-source AI-agent infrastructure and creator tools in public (80+ repos) that return margin, data, and IP to independent artists. Got a problem? BetterCallZaal.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://bettercallzaal.com/assets/icon.png">
   <meta property="og:url" content="https://bettercallzaal.com">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@bettercallzaal">
-  <meta name="twitter:title" content="BetterCallZaal — Open-Source Infrastructure for Artist Ownership">
-  <meta name="twitter:description" content="I'm Zaal Panthaki — founder of The ZAO and an open-source builder returning margin, data, and IP to independent artists. Got a problem? BetterCallZaal.">
+  <meta name="twitter:title" content="BetterCallZaal - Open-Source AI Agents for Artist Ownership">
+  <meta name="twitter:description" content="I'm Zaal Panthaki - founder of The ZAO, building open-source AI-agent infrastructure and creator tools in public (80+ repos) that return margin, data, and IP to independent artists. Got a problem? BetterCallZaal.">
   <meta name="twitter:image" content="https://bettercallzaal.com/assets/icon.png">
   <meta name="fc:miniapp" content='{"version":"1","imageUrl":"https://bettercallzaal.com/assets/icon.png","button":{"title":"Open BetterCallZaal","action":{"type":"launch_frame","name":"BetterCallZaal","url":"https://bettercallzaal.com","splashImageUrl":"https://bettercallzaal.com/assets/icon.png","splashBackgroundColor":"#0a0a1a"}}}'>
   <link rel="preconnect" href="https://auth.farcaster.xyz">
@@ -36,7 +36,7 @@
         "url": "https://bettercallzaal.com",
         "image": "https://bettercallzaal.com/assets/pfp.jpeg",
         "jobTitle": "Founder of The ZAO",
-        "description": "Open-source builder returning margin, data, and IP to independent artists. Founder of The ZAO, co-founder of WaveWarZ.",
+        "description": "Open-source builder of AI-agent infrastructure and creator tools that return margin, data, and IP to independent artists. Founder of The ZAO, co-founder of WaveWarZ.",
         "knowsAbout": ["Open-source software", "web3", "Farcaster", "Solana", "music technology", "creator infrastructure", "AI agents"],
         "alumniOf": { "@type": "CollegeOrUniversity", "name": "Rochester Institute of Technology" },
         "worksFor": { "@type": "Organization", "name": "The ZAO", "url": "https://www.thezao.com/" },
@@ -377,6 +377,113 @@
       font-weight: 400;
     }
 
+    /* ─── Problem statement ─── */
+    .problem-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--orange);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      margin: 2.5rem 0;
+      max-width: 680px;
+    }
+    .problem-lede {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--orange);
+      margin-bottom: 0.6rem;
+    }
+    .problem-stat { color: var(--text); font-size: 1rem; margin-bottom: 0.6rem; }
+    .problem-stat b { color: var(--gold); }
+    .problem-kicker { color: var(--text-muted); font-size: 0.9rem; }
+
+    /* ─── Brand architecture ─── */
+    .brand-arch {
+      text-align: center;
+      max-width: 660px;
+      margin: 0 auto;
+      padding: 0 1.25rem clamp(1.5rem, 4vh, 2.5rem);
+      color: var(--text-muted);
+      font-size: clamp(0.9rem, 2vw, 1.05rem);
+      line-height: 1.55;
+    }
+    .brand-arch b { color: var(--text); font-weight: 600; }
+    .brand-arch .arch-zao { color: var(--orange); }
+    .brand-arch .arch-zabal { color: var(--zabal, #a78bfa); }
+
+    /* ─── Wins strip ─── */
+    .wins-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem 1.75rem;
+      padding: 0.9rem 1.25rem;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .wins-strip .win b { color: var(--gold); font-weight: 500; }
+
+    /* ─── Three doors ─── */
+    .doors { padding: clamp(2.5rem, 6vh, 4rem) 0 0; }
+    .doors-tagline {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: var(--text);
+      margin-bottom: 1.25rem;
+    }
+    .doors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+    .door {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.4rem;
+      color: var(--text);
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .door:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+    .door h3 { font-family: 'Syne', sans-serif; font-size: 1.05rem; margin-bottom: 0.35rem; }
+    .door.door-artists h3 { color: var(--orange); }
+    .door.door-builders h3 { color: var(--cyan); }
+    .door.door-communities h3 { color: var(--gold); }
+    .door p { color: var(--text-muted); font-size: 0.88rem; }
+
+    /* ─── Ecosystem map ─── */
+    .eco-group { margin-bottom: 1.5rem; }
+    .eco-cat {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+    }
+    .eco-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .eco-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.4rem 0.85rem;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: border-color 0.2s;
+    }
+    .eco-pill:hover { border-color: var(--border-hover); }
+    .eco-dot { width: 7px; height: 7px; border-radius: 50%; flex: 0 0 auto; }
+    .eco-pill small { color: var(--text-dim); font-size: 0.72rem; }
+
     /* ─── Timeline ─── */
     .journey-timeline {
       position: relative;
@@ -716,6 +823,22 @@
       font-weight: 600;
       font-size: 0.9rem;
     }
+
+    .testimonial-avatar {
+      flex: 0 0 auto;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: #0a0a1a;
+      background: var(--gradient-main);
+    }
+    .testimonial-avatar img { width: 100%; height: 100%; object-fit: cover; }
 
     .testimonial-author-link {
       font-size: 0.75rem;
@@ -1146,7 +1269,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ─── Hover — only for pointer devices ─── */
+    /* ─── Hover - only for pointer devices ─── */
     @media (hover: hover) and (pointer: fine) {
       .hero-cta:hover { color: var(--bg); }
       .hero-cta:hover::before { transform: scaleX(1); }
@@ -1293,12 +1416,12 @@
 
   <!-- ─── Hero ─── -->
   <section class="hero">
-    <p class="hero-label">Founder of The ZAO &middot; Building in the open</p>
+    <p class="hero-label">FOSS builder &amp; ecosystem architect &middot; Building in public</p>
     <h1>
-      <span class="line-1">Their margin, data &amp; IP &mdash;</span>
-      <span class="line-2">back where it belongs.</span>
+      <span class="line-1">AI agents, open tools,</span>
+      <span class="line-2">shipped in public.</span>
     </h1>
-    <p class="hero-sub">I'm Zaal. I build open-source infrastructure that returns ownership to independent artists &mdash; and connect the people who make it run. Got a problem? BetterCallZaal.</p>
+    <p class="hero-sub">80+ open-source repos and counting. I'm Zaal - I build the AI-agent infrastructure and creator tools that put margin, data &amp; IP back in independent artists' hands. Got a problem? BetterCallZaal.</p>
     <a href="#contact" class="hero-cta"><span>Let's Talk</span></a>
     <div class="hero-socials">
       <a href="https://x.com/bettercallzaal" target="_blank" rel="noopener" aria-label="X">
@@ -1315,6 +1438,9 @@
       </a>
     </div>
   </section>
+
+  <!-- ─── Brand architecture ─── -->
+  <p class="brand-arch fade-in"><b>BetterCallZaal</b> is Zaal Panthaki: a FOSS builder and ecosystem architect. <b class="arch-zao">The ZAO</b> and <b class="arch-zabal">ZABAL</b> are the proof - 31 brands, 80+ repos, all pointed at artist ownership.</p>
 
   <!-- ─── Logo strip (trust signal) ─── -->
   <div class="logo-strip fade-in">
@@ -1333,6 +1459,36 @@
     </div>
   </div>
 
+  <!-- ─── Wins strip (track record) ─── -->
+  <div class="wins-strip fade-in" aria-label="Track record">
+    <span class="win"><b>FarHack 2026</b> Snap winner</span>
+    <span class="win"><b>2 festivals</b> produced</span>
+    <span class="win"><b>Week 100</b> of fractal governance</span>
+    <span class="win"><b>400+</b> daily editions published</span>
+    <span class="win"><b>80+</b> open-source repos</span>
+  </div>
+
+  <!-- ─── Three doors ─── -->
+  <div class="doors fade-in">
+    <div class="container">
+      <p class="doors-tagline">Three doors. All real. Pick yours.</p>
+      <div class="doors-grid">
+        <a class="door door-communities" href="#contact">
+          <h3>Sponsors &amp; Partners</h3>
+          <p>Reach 1,000+ creators across The ZAO. Sponsor a festival or program, co-build, or get the right introduction. 2 festivals produced, ZAOstock Oct 2026.</p>
+        </a>
+        <a class="door door-artists" href="https://thezao.com/community" target="_blank" rel="noopener">
+          <h3>Artists</h3>
+          <p>Join The ZAO. Own your margin, data and IP: battle on WaveWarZ, play festivals, keep what you earn.</p>
+        </a>
+        <a class="door door-builders" href="/projects/">
+          <h3>Builders</h3>
+          <p>80+ repos, kept MIT and forkable. Adopt a project, join ZABAL Games, or build on the agent stack.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- ─── About ─── -->
   <section class="section" id="about">
     <div class="container">
@@ -1342,9 +1498,9 @@
       <div class="about-header fade-in">
         <img src="assets/pfp.jpeg" alt="Zaal Panthaki" class="about-pfp" width="160" height="160" loading="lazy">
         <div>
-          <p class="about-text">For too long, middlemen have extracted from artists &mdash; their revenue, their data, their audiences. I build the infrastructure that gives it back.</p>
-          <p class="about-text" style="margin-top: 1rem;">I'm Zaal &mdash; a free &amp; open source software (FOSS) builder based in Maine. Electrical engineer by training (BS EE, RIT 2022) &mdash; I led a $1.5M robotics project at PCC Structurals before turning that automation instinct toward shipping open-source software in public. Building automation work at <strong>The Jackson Laboratory</strong>. <strong>Founder of The ZAO</strong>, <strong>co-founder of WaveWarZ</strong>. I build in public &mdash; 73+ open-source repos on <a href="https://github.com/bettercallzaal" target="_blank" rel="noopener" style="color: var(--cyan);">GitHub</a> (<a href="/resume/" style="color: var(--cyan);">full resume</a>).</p>
-          <p class="about-text" style="margin-top: 1rem;">I also connect builders, artists, and communities with the right people to make things happen. Whether you need infrastructure built or the right introduction made &mdash; that's what I do.</p>
+          <p class="about-text">For too long, middlemen have extracted from artists - their revenue, their data, their audiences. I build the infrastructure that gives it back.</p>
+          <p class="about-text" style="margin-top: 1rem;">I'm Zaal - a free &amp; open source software (FOSS) builder based in Maine. Electrical engineer by training (BS EE, RIT 2022) - I led a $1.5M robotics project at PCC Structurals before turning that automation instinct toward shipping open-source software in public, lately AI-agent systems that run an entire creator ecosystem. Building automation work at <strong>The Jackson Laboratory</strong>. <strong>Founder of The ZAO</strong>, <strong>co-founder of WaveWarZ</strong>. I build in public - 80+ open-source repos on <a href="https://github.com/bettercallzaal" target="_blank" rel="noopener" style="color: var(--cyan);">GitHub</a> (<a href="/resume/" style="color: var(--cyan);">full resume</a>).</p>
+          <p class="about-text" style="margin-top: 1rem;">I also connect builders, artists, and communities with the right people to make things happen. Whether you need infrastructure built or the right introduction made - that's what I do.</p>
         </div>
       </div>
 
@@ -1353,15 +1509,15 @@
         <a class="stat-item" href="https://wavewarz-intelligence.vercel.app/" target="_blank" rel="noopener">
           <div class="stat-number">459 SOL</div>
           <div class="stat-label">fan-trading volume on WaveWarZ &middot; artists paid direct, instant &amp; automatic onchain</div>
-          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>wavewarz-intelligence.vercel.app &middot; 950 battles &middot; 7.8 SOL settled straight to artists, no middleman &mdash; live &amp; scaling</span>
+          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>wavewarz-intelligence.vercel.app &middot; 950 battles &middot; 7.8 SOL settled straight to artists, no middleman - live &amp; scaling</span>
         </a>
         <a class="stat-item" href="https://www.thezao.com/" target="_blank" rel="noopener">
           <div class="stat-number">250+</div>
-          <div class="stat-label">artists + creators in The ZAO</div>
-          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>thezao.com &middot; ZAO community roster</span>
+          <div class="stat-label">gated core artists + creators &middot; 1,000+ reached</div>
+          <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>thezao.com &middot; gated roster + open Farcaster/Discord</span>
         </a>
         <a class="stat-item" href="https://github.com/bettercallzaal" target="_blank" rel="noopener">
-          <div class="stat-number">73+</div>
+          <div class="stat-number">80+</div>
           <div class="stat-label">open-source repos shipped</div>
           <span class="stat-source"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>github.com/bettercallzaal &middot; live count</span>
         </a>
@@ -1377,11 +1533,17 @@
         </a>
       </div>
 
+      <div class="problem-block fade-in">
+        <p class="problem-lede">The problem I keep pointing everything at</p>
+        <p class="problem-stat">Streaming pays artists <b>$0.003 per play</b>. Labels keep <b>80-85%</b> of the revenue. Platforms own the audience, the data, and the algorithm - when one shuts down, artists lose everything.</p>
+        <p class="problem-kicker">The tools to fix this already exist. The gap is distribution + community. That's the work.</p>
+      </div>
+
       <div class="journey-timeline">
         <div class="tl-item fade-in stagger-1">
           <div class="tl-year">2014</div>
           <div class="tl-content">
-            <h4>National Ski Patrol &mdash; Blue Hills, MA</h4>
+            <h4>National Ski Patrol - Blue Hills, MA</h4>
             <p>Home patrol started here</p>
           </div>
         </div>
@@ -1409,7 +1571,7 @@
           <div class="tl-year">2023</div>
           <div class="tl-content">
             <h4>Founded The ZAO</h4>
-            <p>Pivoted from ZTalent Agency to the ZAO (ZTalent Artist Organization) &mdash; creator infrastructure for independent artists</p>
+            <p>Pivoted from ZTalent Agency to the ZAO (ZTalent Artist Organization) - creator infrastructure for independent artists</p>
           </div>
         </div>
         <div class="tl-item fade-in stagger-6">
@@ -1430,7 +1592,7 @@
           <div class="tl-year">2026</div>
           <div class="tl-content">
             <h4>FarHack Snap winner &middot; ZAO Fractal week 100 &middot; ZABAL Games &middot; Maine client work</h4>
-            <p>Won the Snap category at FarHack 2026 with Zlank ($1,000). Fractal governance hits week 100 (May). ZABAL Games June-Aug. Riverside Group + FarmDrop client builds. ZAOstock planned for October.</p>
+            <p>Won the Snap category at FarHack 2026 with Zlank ($1,000). Fractal governance hits week 100 (May). ZABAL Games June-Aug. Riverside Group + FarmDrop client builds. ZAOstock lands Oct 3 in Ellsworth, Maine.</p>
           </div>
         </div>
       </div>
@@ -1446,14 +1608,14 @@
       <p class="section-label fade-in">Portfolio</p>
       <h2 class="section-title fade-in">Open Source Work</h2>
 
-      <p class="section-sub fade-in" style="color: var(--text-muted); font-size: 1rem; max-width: 720px; margin-bottom: 2rem;">Curated current work up top. Full project list (everything I am running, advising, or have shipped) lives in the dropdown below &mdash; or browse the full open-source catalog at <a href="/projects/" style="color: var(--orange);">/projects</a>. It's all FOSS: kept MIT and forkable.</p>
+      <p class="section-sub fade-in" style="color: var(--text-muted); font-size: 1rem; max-width: 720px; margin-bottom: 2rem;">Curated current work up top. Full project list (everything I am running, advising, or have shipped) lives in the dropdown below - or browse the full open-source catalog at <a href="/projects/" style="color: var(--orange);">/projects</a>. It's all FOSS: kept MIT and forkable.</p>
 
       <p class="section-label fade-in" style="margin-top: 0.5rem; color: var(--orange);">Tier 1 - Front Line</p>
       <div class="portfolio-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
         <a href="/zao/" class="portfolio-card fade-in stagger-1">
           <div>
             <h3>The ZAO</h3>
-            <p>The umbrella org I founded. Impact community bringing ownership back to independent artists. 250+ participants, 100+ governance meetings, MIT licensed.</p>
+            <p>The umbrella org I founded. Impact community bringing ownership back to independent artists. 250+ gated core (1,000+ reached), 100+ governance meetings, MIT licensed.</p>
             <span class="stat-badge">Founder</span>
           </div>
           <span class="portfolio-link">My pitch &rarr; thezao.com <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
@@ -1478,10 +1640,46 @@
         <a href="/zaostock/" class="portfolio-card fade-in stagger-4">
           <div>
             <h3>ZAOstock</h3>
-            <p>A ZAO festival in early planning. Telegram-first ops; public site coming.</p>
-            <span class="stat-badge">Pre-public</span>
+            <p>Year-1 outdoor community music festival. Independent artists, one stage, all day, free to attend. Part of the 9th Annual Art of Ellsworth.</p>
+            <span class="stat-badge">Oct 3, 2026 &middot; Ellsworth, Maine</span>
           </div>
           <span class="portfolio-link">More <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        </a>
+      </div>
+
+      <p class="section-label fade-in" style="margin: 2.5rem 0 1rem; color: var(--gold);">AI Agent Infrastructure</p>
+      <div class="portfolio-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        <a href="https://github.com/bettercallzaal/hermes-orchestrator" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-1">
+          <div>
+            <h3>Hermes Orchestrator</h3>
+            <p>Supervisor framework for AI agents - classify, spawn, watch, intervene, learn. The pattern behind agents that build agents.</p>
+            <span class="stat-badge">MIT</span>
+          </div>
+          <span class="portfolio-link">GitHub <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        </a>
+
+        <a href="https://github.com/bettercallzaal/zlank" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-2">
+          <div>
+            <h3>Zlank</h3>
+            <p>No-code Farcaster Snap builder. Stack blocks, hit deploy, share to feed. Built on @farcaster/snap + Next.js 16.</p>
+          </div>
+          <span class="portfolio-link">GitHub <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        </a>
+
+        <a href="https://github.com/bettercallzaal/farscout" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-3">
+          <div>
+            <h3>Farscout</h3>
+            <p>Free autonomous Farcaster research scout for the ZAO ecosystem - surfaces signal from the feed, unattended.</p>
+          </div>
+          <span class="portfolio-link">GitHub <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        </a>
+
+        <a href="https://github.com/bettercallzaal/zao-claude-skills" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-4">
+          <div>
+            <h3>ZAO Claude Skills</h3>
+            <p>Hand-written Claude Code skills powering the ZAO bot fleet - meeting capture, research, distribution.</p>
+          </div>
+          <span class="portfolio-link">GitHub <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
       </div>
 
@@ -1598,7 +1796,7 @@
           <a href="/kit.html" class="portfolio-card">
             <div>
               <h3>ZABAL Brand Kit</h3>
-              <p>Every brand in the ZABAL umbrella — what it is, status, audience, monetization, and exactly how to sponsor, collab, customer, or contribute. 25 brands, 8 categories, machine-readable JSON.</p>
+              <p>Every brand in the ZABAL umbrella - what it is, status, audience, monetization, and exactly how to sponsor, collab, customer, or contribute. 25 brands, 8 categories, machine-readable JSON.</p>
             </div>
             <span class="portfolio-link">bettercallzaal.com/kit <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
           </a>
@@ -1647,11 +1845,65 @@
     </div>
   </section>
 
+  <!-- ─── Ecosystem map ─── -->
+  <section class="section" id="ecosystem" hidden>
+    <div class="container">
+      <p class="section-label fade-in">Ecosystem</p>
+      <h2 class="section-title fade-in">One mission, 31 brands</h2>
+      <p class="section-sub fade-in" style="color: var(--text-muted); font-size: 0.95rem; max-width: 680px; margin-bottom: 2rem;">BetterCallZaal &rarr; The ZAO &rarr; ZABAL. Everything below points at the same problem: artist ownership. Full brand kit at <a href="/kit.html" style="color: var(--orange);">/kit</a> &middot; every link at <a href="/nexus.html" style="color: var(--cyan);">/nexus</a>.</p>
+      <div id="ecoMap" class="fade-in"></div>
+    </div>
+  </section>
+  <script>
+    (function () {
+      fetch('/brands.json')
+        .then(function (r) { if (!r.ok) throw new Error('no brands'); return r.json(); })
+        .then(function (data) {
+          var statusColor = {};
+          (data.statuses || []).forEach(function (s) { statusColor[s.id] = s.color; });
+          var map = document.getElementById('ecoMap');
+          (data.categories || []).forEach(function (cat) {
+            var brands = (data.brands || []).filter(function (b) { return b.category === cat.id; });
+            if (!brands.length) return;
+            var group = document.createElement('div');
+            group.className = 'eco-group';
+            var h = document.createElement('p');
+            h.className = 'eco-cat';
+            h.textContent = cat.label;
+            group.appendChild(h);
+            var grid = document.createElement('div');
+            grid.className = 'eco-grid';
+            brands.forEach(function (b) {
+              var url = (b.links && b.links[0] && b.links[0].url) || '/kit.html';
+              var a = document.createElement('a');
+              a.className = 'eco-pill';
+              a.href = url;
+              if (url.indexOf('http') === 0) { a.target = '_blank'; a.rel = 'noopener'; }
+              var dot = document.createElement('span');
+              dot.className = 'eco-dot';
+              dot.style.background = statusColor[b.status] || '#94a3b8';
+              dot.title = b.status;
+              a.appendChild(dot);
+              a.appendChild(document.createTextNode(b.name + ' '));
+              var tag = document.createElement('small');
+              tag.textContent = b.tag || '';
+              a.appendChild(tag);
+              grid.appendChild(a);
+            });
+            group.appendChild(grid);
+            map.appendChild(group);
+          });
+          document.getElementById('ecosystem').hidden = false;
+        })
+        .catch(function () { /* brands.json unavailable: section stays hidden */ });
+    })();
+  </script>
+
   <!-- ─── Parallax breaker ─── -->
   <div class="parallax-text" aria-hidden="true">
     <div class="parallax-text-track">
-      <span><span class="pt-word">Open Source</span><span class="pt-sep">&#9670;</span><span class="pt-word">Artist Ownership</span><span class="pt-sep">&#9670;</span><span class="pt-word">Founder</span><span class="pt-sep">&#9670;</span><span class="pt-word">Connector</span><span class="pt-sep">&#9670;</span><span class="pt-word">Built in Public</span><span class="pt-sep">&#9670;</span></span>
-      <span><span class="pt-word">Open Source</span><span class="pt-sep">&#9670;</span><span class="pt-word">Artist Ownership</span><span class="pt-sep">&#9670;</span><span class="pt-word">Founder</span><span class="pt-sep">&#9670;</span><span class="pt-word">Connector</span><span class="pt-sep">&#9670;</span><span class="pt-word">Built in Public</span><span class="pt-sep">&#9670;</span></span>
+      <span><span class="pt-word">AI Agents</span><span class="pt-sep">&#9670;</span><span class="pt-word">Open Source</span><span class="pt-sep">&#9670;</span><span class="pt-word">Artist Ownership</span><span class="pt-sep">&#9670;</span><span class="pt-word">Shipped in Public</span><span class="pt-sep">&#9670;</span><span class="pt-word">Founder of The ZAO</span><span class="pt-sep">&#9670;</span></span>
+      <span><span class="pt-word">AI Agents</span><span class="pt-sep">&#9670;</span><span class="pt-word">Open Source</span><span class="pt-sep">&#9670;</span><span class="pt-word">Artist Ownership</span><span class="pt-sep">&#9670;</span><span class="pt-word">Shipped in Public</span><span class="pt-sep">&#9670;</span><span class="pt-word">Founder of The ZAO</span><span class="pt-sep">&#9670;</span></span>
     </div>
   </div>
 
@@ -1667,6 +1919,7 @@
           <div class="testimonial-card">
             <p class="testimonial-quote">Zaal helped build and scale WaveWarZ to over $60k+ in volume with a completely new music model, over 1.2k followers on X in a few months, and organized and hosted our first in real life WaveWarZ battle. Without Zaal WaveWarZ would not be dominating Web 3 Music the way it is now. This is your GUY.</p>
             <div class="testimonial-author">
+              <span class="testimonial-avatar" aria-hidden="true">HU</span>
               <span class="testimonial-author-name">Hurric4n3Ike</span>
               <a class="testimonial-author-link" href="https://x.com/hurric4n3ike" target="_blank" rel="noopener">@hurric4n3ike</a>
             </div>
@@ -1674,6 +1927,7 @@
           <div class="testimonial-card">
             <p class="testimonial-quote">I have been connecting with Zaal since 2022 and he has been creating spaces for communications where to coordinate which has helped me to share my journey at the same time I learn from others, which has created positive weekly bridges where to align and give and receive information and opportunities.</p>
             <div class="testimonial-author">
+              <span class="testimonial-avatar" aria-hidden="true">JC</span>
               <span class="testimonial-author-name">Jose Cabrera</span>
               <a class="testimonial-author-link" href="https://x.com/joseacabrerav" target="_blank" rel="noopener">@joseacabrerav</a>
             </div>
@@ -1713,7 +1967,7 @@
     <div class="container">
       <p class="section-label fade-in">Media</p>
       <h2 class="section-title fade-in">Shows &amp; streams</h2>
-      <p class="section-sub fade-in" style="color: var(--text-muted); font-size: 1rem; max-width: 720px; margin-bottom: 2rem;">Where I show up regularly &mdash; hosting, co-hosting, and building in public across the Farcaster + web3-music world.</p>
+      <p class="section-sub fade-in" style="color: var(--text-muted); font-size: 1rem; max-width: 720px; margin-bottom: 2rem;">Where I show up regularly - hosting, co-hosting, and building in public across the Farcaster + web3-music world.</p>
       <div class="portfolio-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
         <a href="https://pods.media/lets-talk-about-web3/" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-1">
           <div>
@@ -1732,7 +1986,7 @@
         <a href="https://twitch.tv/bettercallzaal" target="_blank" rel="noopener" class="portfolio-card fade-in stagger-3">
           <div>
             <h3>Twitch + streaming</h3>
-            <p>Daily Twitch streaming with a co-host &mdash; crypto education for an audience already comfortable with internet money. Interviews + onboarding to Farcaster.</p>
+            <p>Daily Twitch streaming with a co-host - crypto education for an audience already comfortable with internet money. Interviews + onboarding to Farcaster.</p>
           </div>
           <span class="portfolio-link">twitch.tv/bettercallzaal &rarr; <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
         </a>
@@ -1921,7 +2175,7 @@
     try {
       const { sdk } = await import('https://esm.sh/@farcaster/miniapp-sdk');
 
-      // Real detection — sdk.context is a Promise (always truthy), so the old
+      // Real detection - sdk.context is a Promise (always truthy), so the old
       // `!!sdk.context` check ran this branch for every web visitor too.
       const isMiniApp = await sdk.isInMiniApp();
 
