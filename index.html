@@ -121,6 +121,68 @@
       padding: 0 1.5rem;
     }
 
+    /* ─── Nav ─── */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 200;
+      background: var(--orange);
+      color: #0a0a1a;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      border-radius: 0 0 var(--radius) 0;
+    }
+    .skip-link:focus { left: 0; }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 7, 9, 0.72);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .site-nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+    .nav-brand {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+    .nav-brand .accent {
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a.nav-section:hover { color: var(--text); }
+    .nav-links a.nav-cta {
+      color: var(--orange);
+      border: 1px solid var(--border-hover);
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius);
+    }
+    .nav-links a.nav-cta:hover { border-color: var(--orange); }
+    #about, #portfolio, #ecosystem, #testimonials, #appearances, #contact { scroll-margin-top: 72px; }
+    @media (max-width: 600px) { .nav-links a.nav-section { display: none; } }
+
     /* ─── Fade-in animations ─── */
     .fade-in {
       opacity: 0;
@@ -1414,8 +1476,23 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#maincontent">Skip to content</a>
+
+  <!-- ─── Nav ─── -->
+  <nav class="site-nav" aria-label="Primary">
+    <div class="container">
+      <a class="nav-brand" href="#maincontent">BetterCall<span class="accent">Zaal</span></a>
+      <div class="nav-links">
+        <a class="nav-section" href="#about">About</a>
+        <a class="nav-section" href="#portfolio">Work</a>
+        <a class="nav-section" id="navEcosystem" href="#ecosystem" hidden>Ecosystem</a>
+        <a class="nav-cta" href="#contact">Let's Talk</a>
+      </div>
+    </div>
+  </nav>
+
   <!-- ─── Hero ─── -->
-  <section class="hero">
+  <section class="hero" id="maincontent">
     <p class="hero-label">FOSS builder &amp; ecosystem architect &middot; Building in public</p>
     <h1>
       <span class="line-1">AI agents, open tools,</span>
@@ -1894,6 +1971,8 @@
             map.appendChild(group);
           });
           document.getElementById('ecosystem').hidden = false;
+          var navEco = document.getElementById('navEcosystem');
+          if (navEco) navEco.hidden = false;
         })
         .catch(function () { /* brands.json unavailable: section stays hidden */ });
     })();
