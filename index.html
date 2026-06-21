@@ -135,6 +135,18 @@
     }
     .skip-link:focus { left: 0; }
 
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
     .site-nav {
       position: sticky;
       top: 0;
@@ -1491,8 +1503,10 @@
     </div>
   </nav>
 
+  <main id="maincontent">
+
   <!-- ─── Hero ─── -->
-  <section class="hero" id="maincontent">
+  <section class="hero">
     <p class="hero-label">FOSS builder &amp; ecosystem architect &middot; Building in public</p>
     <h1>
       <span class="line-1">AI agents, open tools,</span>
@@ -1548,7 +1562,7 @@
   <!-- ─── Three doors ─── -->
   <div class="doors fade-in">
     <div class="container">
-      <p class="doors-tagline">Three doors. All real. Pick yours.</p>
+      <h2 class="doors-tagline">Three doors. All real. Pick yours.</h2>
       <div class="doors-grid">
         <a class="door door-communities" href="#contact">
           <h3>Sponsors &amp; Partners</h3>
@@ -1616,6 +1630,7 @@
         <p class="problem-kicker">The tools to fix this already exist. The gap is distribution + community. That's the work.</p>
       </div>
 
+      <h3 class="sr-only">Career timeline</h3>
       <div class="journey-timeline">
         <div class="tl-item fade-in stagger-1">
           <div class="tl-year">2014</div>
@@ -2141,6 +2156,8 @@
       Telegram
     </a>
   </div>
+
+  </main>
 
   <!-- ─── Footer ─── -->
   <footer class="footer">
