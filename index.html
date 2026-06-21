@@ -121,6 +121,80 @@
       padding: 0 1.5rem;
     }
 
+    /* ─── Nav ─── */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 200;
+      background: var(--orange);
+      color: #0a0a1a;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      border-radius: 0 0 var(--radius) 0;
+    }
+    .skip-link:focus { left: 0; }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 7, 9, 0.72);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .site-nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+    .nav-brand {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+    .nav-brand .accent {
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a.nav-section:hover { color: var(--text); }
+    .nav-links a.nav-cta {
+      color: var(--orange);
+      border: 1px solid var(--border-hover);
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius);
+    }
+    .nav-links a.nav-cta:hover { border-color: var(--orange); }
+    #about, #portfolio, #ecosystem, #testimonials, #appearances, #contact { scroll-margin-top: 72px; }
+    @media (max-width: 600px) { .nav-links a.nav-section { display: none; } }
+
     /* ─── Fade-in animations ─── */
     .fade-in {
       opacity: 0;
@@ -1414,6 +1488,23 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#maincontent">Skip to content</a>
+
+  <!-- ─── Nav ─── -->
+  <nav class="site-nav" aria-label="Primary">
+    <div class="container">
+      <a class="nav-brand" href="#maincontent">BetterCall<span class="accent">Zaal</span></a>
+      <div class="nav-links">
+        <a class="nav-section" href="#about">About</a>
+        <a class="nav-section" href="#portfolio">Work</a>
+        <a class="nav-section" id="navEcosystem" href="#ecosystem" hidden>Ecosystem</a>
+        <a class="nav-cta" href="#contact">Let's Talk</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="maincontent">
+
   <!-- ─── Hero ─── -->
   <section class="hero">
     <p class="hero-label">FOSS builder &amp; ecosystem architect &middot; Building in public</p>
@@ -1471,7 +1562,7 @@
   <!-- ─── Three doors ─── -->
   <div class="doors fade-in">
     <div class="container">
-      <p class="doors-tagline">Three doors. All real. Pick yours.</p>
+      <h2 class="doors-tagline">Three doors. All real. Pick yours.</h2>
       <div class="doors-grid">
         <a class="door door-communities" href="#contact">
           <h3>Sponsors &amp; Partners</h3>
@@ -1539,6 +1630,7 @@
         <p class="problem-kicker">The tools to fix this already exist. The gap is distribution + community. That's the work.</p>
       </div>
 
+      <h3 class="sr-only">Career timeline</h3>
       <div class="journey-timeline">
         <div class="tl-item fade-in stagger-1">
           <div class="tl-year">2014</div>
@@ -1894,6 +1986,8 @@
             map.appendChild(group);
           });
           document.getElementById('ecosystem').hidden = false;
+          var navEco = document.getElementById('navEcosystem');
+          if (navEco) navEco.hidden = false;
         })
         .catch(function () { /* brands.json unavailable: section stays hidden */ });
     })();
@@ -2062,6 +2156,8 @@
       Telegram
     </a>
   </div>
+
+  </main>
 
   <!-- ─── Footer ─── -->
   <footer class="footer">
