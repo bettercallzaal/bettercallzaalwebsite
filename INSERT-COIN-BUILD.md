@@ -310,4 +310,3 @@ Instead of `/api/pull` doing payment verify, a contract holds the batch and assi
 - "Today" needs a fixed timezone (`DROP_TIMEZONE`) or drops roll over inconsistently.
 - Service-role key and ADMIN_SECRET are server-only. The browser only ever talks to `/api/*`.
 - Vercel: ensure `/api` functions use the Node runtime (they need the service-role key + RPC).
-</content>
