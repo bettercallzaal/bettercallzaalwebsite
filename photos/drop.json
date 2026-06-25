@@ -1,0 +1,17 @@
+{
+  "_comment": "Daily Insert Coin drop. This is the front-end data source (v0). The authoritative shrinking supply + payment verification will be served from /api once the payment layer is wired; this file is the shape that endpoint will return. Mark an item 'claimed' and add image+puller once pulled.",
+  "date": "2026-06-25",
+  "title": "Drop 001",
+  "priceZabal": 100,
+  "priceUsd": "~$1",
+  "token": "$ZABAL",
+  "chain": "Base",
+  "live": false,
+  "items": [
+    { "id": "d001-01", "status": "available" },
+    { "id": "d001-02", "status": "available" },
+    { "id": "d001-03", "status": "available" },
+    { "id": "d001-04", "status": "available" },
+    { "id": "d001-05", "status": "available" }
+  ]
+}
