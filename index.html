@@ -558,6 +558,20 @@
     .eco-dot { width: 7px; height: 7px; border-radius: 50%; flex: 0 0 auto; }
     .eco-pill small { color: var(--text-dim); font-size: 0.72rem; }
 
+    /* ─── Story (progressive disclosure) ─── */
+    .story { margin-top: 2.5rem; border-top: 1px solid var(--border); padding-top: 1.5rem; max-width: 680px; }
+    .story > summary {
+      cursor: pointer; list-style: none;
+      font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem;
+      color: var(--cyan); display: flex; align-items: center; justify-content: space-between;
+    }
+    .story > summary::-webkit-details-marker { display: none; }
+    .story > summary::after { content: '+'; font-family: 'JetBrains Mono', monospace; color: var(--text-muted); display: inline-block; transition: transform 0.2s; }
+    .story[open] > summary::after { transform: rotate(45deg); }
+    .story-body { margin-top: 1.5rem; display: grid; gap: 1.4rem; }
+    .story-chapter .ch-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.4rem; }
+    .story-chapter p:last-child { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
+
     /* ─── Timeline ─── */
     .journey-timeline {
       position: relative;
@@ -1688,6 +1702,32 @@
           </div>
         </div>
       </div>
+
+      <details class="story fade-in">
+        <summary>Read the full story</summary>
+        <div class="story-body">
+          <div class="story-chapter">
+            <p class="ch-label">01 / The Engineer</p>
+            <p>I trained as an electrical engineer (BS EE, RIT, 2022) and went into automation. At PCC Structurals I led a $1.5M robotics project and pushed throughput up 7x. Traditional coding felt rigid to me. Then blockchain showed software could move value directly between people, and that reframed everything.</p>
+          </div>
+          <div class="story-chapter">
+            <p class="ch-label">02 / The Bear-Market Builder</p>
+            <p>I came into web3 during the 2022 to 2023 bear market. The worst possible timing, which turned out to be the best: the people still building were serious, no tourists. I started ZTalent Agency, then pivoted it into The ZAO (ZTalent Artist Organization) in 2023 and turned toward creator infrastructure.</p>
+          </div>
+          <div class="story-chapter">
+            <p class="ch-label">03 / The Problem</p>
+            <p>Streaming pays artists about $0.003 a play. Labels keep 80 to 85% of the revenue. Platforms own the audience, the social graph, and the algorithm, so when a platform shuts down, artists lose everything, because none of it ever belonged to them. The tools to fix this already exist. The gap is distribution and community.</p>
+          </div>
+          <div class="story-chapter">
+            <p class="ch-label">04 / The Builder</p>
+            <p>So I built The ZAO. Not a platform, an ecosystem. WaveWarZ for onchain music battles. Two festivals produced, in NYC and Miami. ZAO OS for the Farcaster client, governance, and a research library. 400+ daily newsletter editions, 80+ open-source repos, and 100+ fractal governance meetings over nearly two years.</p>
+          </div>
+          <div class="story-chapter">
+            <p class="ch-label">05 / The Connector</p>
+            <p>Then I moved to rural Maine: rich arts culture, almost no blockchain exposure. I connected with local musicians who have been building the scene since the 1980s. ZAOstock is the result, a real music festival in Ellsworth this October, not a web3 conference. That is the throughline now: I bring the right people together.</p>
+          </div>
+        </div>
+      </details>
 
     </div>
   </section>
