@@ -124,6 +124,13 @@
     footer { padding: 2.5rem 0; color: var(--text-dim); font-size: 0.85rem; text-align: center; }
     footer a { color: var(--text-muted); text-decoration: none; margin: 0 0.6rem; }
     footer a:hover { color: var(--text); }
+
+    /* Scroll-triggered reveal (added via JS, so no-JS visitors still see everything) */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in { opacity: 1; transform: none; transition: none; }
+    }
   </style>
 </head>
 <body>
@@ -234,5 +241,19 @@
       <a href="https://github.com/bettercallzaal" target="_blank" rel="noopener">GitHub</a>
     </div>
   </footer>
+
+  <script>
+    // Progressive enhancement: only hide-then-reveal when JS + IntersectionObserver exist.
+    if ('IntersectionObserver' in window) {
+      var targets = document.querySelectorAll('body > section > .container');
+      targets.forEach(function (el) { el.classList.add('fade-in'); });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.1 });
+      targets.forEach(function (el) { io.observe(el); });
+    }
+  </script>
 </body>
 </html>
