@@ -530,6 +530,29 @@
     .door.door-communities h3 { color: var(--gold); }
     .door p { color: var(--text-muted); font-size: 0.88rem; }
 
+    /* ─── Build Session (offer) ─── */
+    .offer-lead { max-width: 720px; color: var(--text-muted); font-size: 1rem; line-height: 1.7; }
+    .offer-oneliner { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.15rem; color: var(--text); max-width: 720px; margin: 1.25rem 0 2rem; line-height: 1.5; }
+    .offer-oneliner b { color: var(--orange); }
+    .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; margin-bottom: 1.75rem; }
+    .tier { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem; transition: border-color 0.2s, transform 0.2s; }
+    .tier:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+    .tier-name { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
+    .tier-price { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.5rem; color: var(--text); margin-bottom: 0.15rem; line-height: 1.1; }
+    .tier-price small { font-size: 0.85rem; color: var(--text-muted); font-weight: 400; }
+    .tier-who { color: var(--text-muted); font-size: 0.82rem; margin-bottom: 0.9rem; }
+    .tier-get { color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-top: auto; }
+    .tier-free { border-color: rgba(245, 200, 66, 0.35); }
+    .tier-free .tier-price { color: var(--gold); }
+    .tier-featured { border-color: rgba(255, 107, 53, 0.5); }
+    .tier-featured .tier-price { color: var(--orange); }
+    .offer-note { color: var(--text-dim); font-size: 0.82rem; max-width: 720px; line-height: 1.7; margin-bottom: 1.75rem; }
+    .offer-cta { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+    .btn-book { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--orange); color: #070709; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; padding: 0.8rem 1.5rem; border-radius: var(--radius); text-decoration: none; transition: transform 0.2s, opacity 0.2s; }
+    .btn-book:hover { transform: translateY(-2px); opacity: 0.92; }
+    .btn-book-alt { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--cyan); font-size: 0.9rem; text-decoration: none; }
+    .btn-book-alt:hover { text-decoration: underline; }
+
     /* ─── Ecosystem map ─── */
     .eco-group { margin-bottom: 1.5rem; }
     .eco-cat {
@@ -1512,8 +1535,9 @@
         <a class="nav-section" href="#about">About</a>
         <a class="nav-section" href="/history/">Story</a>
         <a class="nav-section" href="#portfolio">Work</a>
+        <a class="nav-section" href="#build-session">Hire Me</a>
         <a class="nav-section" id="navEcosystem" href="#ecosystem" hidden>Ecosystem</a>
-        <a class="nav-cta" href="#contact">Let's Talk</a>
+        <a class="nav-cta" href="#build-session">Book a Session</a>
       </div>
     </div>
   </nav>
@@ -2169,11 +2193,57 @@
   </div>
 
   <!-- ─── Contact (3-card multi-channel) ─── -->
+  <div class="section-divider"></div>
+
+  <!-- ─── Build Session (work with me) ─── -->
+  <section class="section" id="build-session">
+    <div class="container">
+      <p class="section-label fade-in">Work with me</p>
+      <h2 class="section-title fade-in">The Build Session</h2>
+      <p class="offer-lead fade-in">A working session where I sit with you, find one real problem in your business or your virtual-world presence, and leave you with something working by the end. Not a report. Not advice. A fix you can use tomorrow - shipped open source, while your data stays yours.</p>
+      <p class="offer-oneliner fade-in">Come solve a real problem in your business or your virtual world - and <b>walk away with it working.</b></p>
+
+      <div class="tiers fade-in">
+        <div class="tier tier-free">
+          <p class="tier-name">Community</p>
+          <p class="tier-price">Free</p>
+          <p class="tier-who">ZAO core + active contributors</p>
+          <p class="tier-get">One fix, ~45 min live. The deeper you are in the community, the more this is just what we do.</p>
+        </div>
+        <div class="tier">
+          <p class="tier-name">Neighbor</p>
+          <p class="tier-price">Pay what works</p>
+          <p class="tier-who">Local folks + small business</p>
+          <p class="tier-get">One fix plus a short follow-up. Sliding rate, no shame floor - nobody local gets priced out.</p>
+        </div>
+        <div class="tier">
+          <p class="tier-name">Standard</p>
+          <p class="tier-price">$500<small> / session</small></p>
+          <p class="tier-who">Outside businesses</p>
+          <p class="tier-get">One fix, a written recap, and one follow-up. Priority within the week.</p>
+        </div>
+        <div class="tier tier-featured">
+          <p class="tier-name">Boost</p>
+          <p class="tier-price">$1,500+<small> / session</small></p>
+          <p class="tier-who">Capital-backed builds</p>
+          <p class="tier-get">Two or more fixes or a deeper build, priority scheduling, more of the agent fleet, and an on-ramp to a retainer. The boost rate funds the free community tier.</p>
+        </div>
+      </div>
+
+      <p class="offer-note fade-in">Inclusion at the floor, boost at the ceiling. Everyone gets in; capital accelerates - and pays for the free work. You always leave with something working: I guarantee the deliverable, not a vague outcome.</p>
+
+      <div class="offer-cta fade-in">
+        <a class="btn-book" href="https://cal.com/bettercallzaal" target="_blank" rel="noopener">Book a Build Session <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a class="btn-book-alt" href="#contact">Or just send me the one problem eating your time <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="contact">
     <div class="container">
       <p class="section-label fade-in">Contact</p>
       <h2 class="section-title fade-in">Let's build something.</h2>
-      <p class="contact-sub fade-in" style="max-width: 640px;">Two ways to reach me. Farcaster DMs are fastest. Email for anything that needs a paper trail - drop a Calendly link in the form if you want to book a call and I'll grab a slot.</p>
+      <p class="contact-sub fade-in" style="max-width: 640px;">Two ways to reach me. Farcaster DMs are fastest. Email for anything that needs a paper trail. Ready to book? <a href="https://cal.com/bettercallzaal" target="_blank" rel="noopener" style="color: var(--orange);">Grab a Build Session slot</a> - or just tell me the one problem below.</p>
 
       <div class="contact-channels fade-in">
         <a class="contact-channel" href="https://farcaster.xyz/bettercallzaal" target="_blank" rel="noopener">
@@ -2195,7 +2265,7 @@
           <p><strong style="color: var(--text);">zaalp99@gmail.com</strong> - personal + Maine work.<br><strong style="color: var(--text);">info@thezao.com</strong> - ZAO ecosystem inquiries.</p>
           <form id="contactForm" action="https://formspree.io/f/mjgajyqe" method="POST" class="channel-form">
             <input type="text" id="c-name" name="name" placeholder="Your name" required>
-            <textarea id="c-idea" name="idea" placeholder="What do you want to build? (drop a Calendly link if you want a call)" required></textarea>
+            <textarea id="c-idea" name="idea" placeholder="What's the one problem eating your time or blocking your virtual-world presence?" required></textarea>
             <input type="text" id="c-contact" name="contact" placeholder="Best way to reach you" required>
             <button type="submit" class="btn-submit"><span>Send It</span></button>
           </form>
