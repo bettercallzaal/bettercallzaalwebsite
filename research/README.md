@@ -15,6 +15,8 @@ Research docs supporting the bettercallzaal.com site and Farcaster mini app.
 | [07](./07-bio-expansion/) | Bio Expansion | New citable facts for the bio — WaveWarZ co-founder, build-in-public + résumé, media/shows; plus unverified items to confirm |
 | [08](./08-web-upgrade-playbook/) | Web Upgrade Playbook 2026 | GEO/AI-search tactics, Farcaster mini app distribution (notifications + share-loops), Speculation Rules + View Transitions, sponsor-first conversion — gap-checked against the live site |
 | [09](./09-notifications-entity-drops/) | Notifications, Entity SEO, Drops | Implementation-grade follow-up: Neynar-hosted mini app notifications (no backend needed), Wikidata/sameAs entity anchoring, blind-box psychology applied to Insert Coin |
+| [10](./10-zaostock-sponsorship/) | ZAOstock Sponsorship | Tiers priced for a free first-year small-town festival, deck structure, 7-week outreach plan, onchain-receipts differentiator |
+| [11](./11-audience-growth-loops/) | Audience Growth Loops | Farcaster reply-first playbook (70/20/10), GitHub profile conversion fixes, the site-cast-repo-newsletter loop |
 
 ## How to Add Research
 
