@@ -14,6 +14,7 @@ Research docs supporting the bettercallzaal.com site and Farcaster mini app.
 | [06](./06-zabalgames-foss-projects/) | ZABAL Gamez & FOSS Builder | ZABAL Gamez build-a-thon + the `/projects` catalog of 46 open-source MIT projects — evidence base for the "FOSS Builder" identity |
 | [07](./07-bio-expansion/) | Bio Expansion | New citable facts for the bio — WaveWarZ co-founder, build-in-public + résumé, media/shows; plus unverified items to confirm |
 | [08](./08-web-upgrade-playbook/) | Web Upgrade Playbook 2026 | GEO/AI-search tactics, Farcaster mini app distribution (notifications + share-loops), Speculation Rules + View Transitions, sponsor-first conversion — gap-checked against the live site |
+| [09](./09-notifications-entity-drops/) | Notifications, Entity SEO, Drops | Implementation-grade follow-up: Neynar-hosted mini app notifications (no backend needed), Wikidata/sameAs entity anchoring, blind-box psychology applied to Insert Coin |
 
 ## How to Add Research
 
