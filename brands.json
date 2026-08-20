@@ -776,7 +776,7 @@
       "tagColor": "cyan",
       "status": "active",
       "category": "infra",
-      "blurb": "ZAO uses POIDH for community bounty distribution. First clip-up bounty April 2026. Live ZAO leaderboard at bettercallzaal.com/poidh.html.",
+      "blurb": "ZAO uses POIDH for community bounty distribution. First clip-up bounty April 2026. Round history archived in the zpoidh repo.",
       "founded": "2026",
       "audience": "ZAO community contributors + POIDH user base",
       "monetization": "Pay-to-claim model + sponsorships",
@@ -787,7 +787,7 @@
         },
         {
           "label": "ZAO leaderboard",
-          "url": "https://bettercallzaal.com/poidh.html"
+          "url": "https://github.com/bettercallzaal/zpoidh"
         }
       ],
       "plugIn": {

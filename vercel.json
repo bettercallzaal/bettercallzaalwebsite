@@ -9,6 +9,16 @@
       "source": "/nexus",
       "destination": "https://nexus.thezao.com/",
       "permanent": true
+    },
+    {
+      "source": "/poidh.html",
+      "destination": "https://github.com/bettercallzaal/zpoidh",
+      "permanent": true
+    },
+    {
+      "source": "/poidh-:rest",
+      "destination": "https://github.com/bettercallzaal/zpoidh",
+      "permanent": true
     }
   ]
 }
