@@ -419,35 +419,6 @@
       }
     },
     {
-      "id": "songjam",
-      "name": "SongJam · $SANG",
-      "tag": "Music · Token",
-      "tagColor": "cyan",
-      "status": "active",
-      "category": "music",
-      "blurb": "SongJam's $SANG token + jam tooling. Music + AI + community in one stack. Partner brand to The ZAO.",
-      "founded": "2024",
-      "audience": "Music + crypto community",
-      "monetization": "$SANG token economy + integrations",
-      "links": [
-        {
-          "label": "SongJam",
-          "url": "https://songjam.io"
-        }
-      ],
-      "plugIn": {
-        "customer": {
-          "label": "Hold $SANG",
-          "url": "https://songjam.io"
-        },
-        "collab": {
-          "label": "Partner integrations",
-          "url": "mailto:zaal@thezao.com?subject=SongJam x ZAO"
-        },
-        "contact": "zaal@thezao.com"
-      }
-    },
-    {
       "id": "aurdour",
       "name": "Aurdour",
       "tag": "Music · OSS DJ",
@@ -804,7 +775,7 @@
     },
     {
       "id": "zabal-games",
-      "name": "ZABAL Games",
+      "name": "ZABAL Gamez",
       "tag": "Experimenting · Empire V3",
       "tagColor": "pink",
       "status": "experimenting",
@@ -830,7 +801,7 @@
       "plugIn": {
         "collab": {
           "label": "Co-design a game",
-          "url": "mailto:zaal@thezao.com?subject=ZABAL Games"
+          "url": "mailto:zaal@thezao.com?subject=ZABAL Gamez"
         },
         "contact": "zaal@thezao.com"
       }

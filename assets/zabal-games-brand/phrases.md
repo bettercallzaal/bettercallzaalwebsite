@@ -37,8 +37,7 @@ Mirror of the canonical phrases list from `github.com/ZAODEVZ/zabalgames/docs/br
 | WaveWarZ | **WaveWarZ** | Wave Wars, Wavewars, WaveWarz |
 | COC Concertz | **COC Concertz** | COC Concerts, CocConcertz, Coc Concertz |
 | BetterCallZaal | **BetterCallZaal** | Better Call Zaal, Bettercallzaal |
-| Magnetiq | **Magnetiq** | Magnetic, MagnetIQ |
-| Joseph Goats | **Joseph Goats** | Jose Goats, Jose |
+| Joseph Goats | **Joseph Goats** (artist contexts) | Jose Goats - but "Jose" is his real name; never auto-correct it |
 | Thy Revolution | **Thy Revolution** (or Mickey, Rev) | The Revolution, ThyRev |
 | Iman Afrikah | **Iman Afrikah** | Iman A, just "Iman" if context clear |
 | ZABAL (token) | **$ZABAL** (with $ for token, unstyled for brand) | $Zabal, ZABL |
