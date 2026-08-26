@@ -16,3 +16,4 @@ Maine/Hotels/
 # Private out-of-repo files (PII, credentials, contacts)
 .private/
 .gstack/
+.vercel

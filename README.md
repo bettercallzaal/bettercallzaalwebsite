@@ -1,48 +1,70 @@
 # BetterCallZaal.com
 
-Personal consulting website for Zaal Panthaki (@BetterCallZaal) — FOSS (free & open source software) builder, connector, and ecosystem architect.
+Personal site and Farcaster Mini App for Zaal Panthaki (@BetterCallZaal) - FOSS builder,
+connector, and ecosystem architect. Pure static HTML, no build step, deployed on Vercel.
 
 ## What is this?
 
-A single-page consulting site that positions Zaal as "The Connector" — someone who listens to your challenge, connects you with the right people, and drives toward a real collaboration goal. The ZAO ecosystem serves as proof of network and credibility.
+The public front door for BetterCallZaal: who Zaal is, the body of open-source work behind
+the FOSS-builder title, and the way in for people who want to hire, collaborate, or adopt a
+project. The ZAO ecosystem is the proof of network; the Build Session is the revenue front door.
 
-## Sections
+## Pages
 
-- **Hero** — "Got a problem? BetterCallZaal."
-- **About** — "The Connector" with two paths: Join the ZAO or get the Connector Treatment
-- **Ecosystem** — Cards linking to The ZAO, WaveWarZ, ZAO Festivals, podcast, and newsletter
-- **Testimonials** — Submission form (powered by Formspree) with email approval before display
-- **Contact** — Name, what you want to build, best contact method (powered by Formspree)
-- **Footer** — Socials + email
+| Path | What it is |
+|---|---|
+| `/` | Homepage - story, portfolio, ecosystem, testimonials, contact |
+| `/history/` | Long-form story + timeline |
+| `/resume/` | Full CV, plus an exportable FOSS share card |
+| `/projects/` | Open-source catalog, rendered from `projects/projects.json` |
+| `/photos/` | ZABAL Insert Coin daily drop |
+| `/zao/` `/wavewarz/` `/zaostock/` `/bczyapz/` `/streaming/` | Per-brand pages |
+| `/maine/` `/outdoors/` `/engineering-past/` | Context and background |
+| `/zaostock/sponsors/` | ZAOstock sponsor kit |
+| `/kit.html` | Brand kit (machine-readable at `/brands.json`) |
+| `/privacy.html` `/terms.html` `/refund.html` | Legal |
+
+Redirects live in `vercel.json`: `/nexus*` goes to nexus.thezao.com, `/poidh*` to the zpoidh repo.
 
 ## Tech
 
-- Single `index.html` — no framework, no build step
+- No framework, no build step. Edit HTML, push to `main`, Vercel deploys.
+- Each page carries its own inline `<style>`. There is no shared stylesheet yet.
 - Google Fonts: Syne (display) + Outfit (body)
-- Dark theme with electric orange/cyan gradient accents
-- Scroll-triggered fade-in animations (IntersectionObserver)
-- Mobile-responsive with 3 breakpoints (768px, 480px, 375px)
-- Touch-aware hover/active states
-- WCAG-friendly touch targets (44px minimum)
+- Dark theme, orange / cyan / gold accents on `#0a0a1a`
+- Mobile-first; test at 424px (the Farcaster mini app viewport)
+- Farcaster Mini App via `@farcaster/miniapp-sdk`; manifest at `.well-known/farcaster.json`
 
-## Forms
+## Projects catalog
 
-- **Contact form** → Formspree (`mjgajyqe`)
-- **Testimonial form** → Formspree (`mqeywpvw`)
-- **Book a call** → [Calendly](https://calendly.com/zaalp99/30minmeeting)
+`/projects` renders client-side from `projects/projects.json`. **That file is generated - do
+not hand-edit it.** The source of truth is `data/adoptable-projects.json` in
+`ZAODEVZ/zabalgames`; fix wrong entries there.
 
-## Links
+```
+node scripts/sync-projects.js           # regenerate projects/projects.json
+node scripts/sync-projects.js --check   # dry run; non-zero exit if stale
+```
 
-- [thezao.com](https://www.thezao.com/)
-- [wavewarz.com](https://www.wavewarz.com/)
-- [X: @bettercallzaal](https://x.com/bettercallzaal)
-- [Instagram: @bettercallzaal](https://instagram.com/bettercallzaal)
-- [LinkedIn](https://www.linkedin.com/in/zaalp/)
-- [GitHub](https://github.com/bettercallzaal)
+`scripts/project-overrides.json` (keyed by stable upstream `id`) adds tech `stack` chips and
+cleaner display names. It can override `name` and `stack` only - `repo` always comes from
+upstream. Needs Node 18+.
+
+## Forms and booking
+
+- Contact form -> Formspree `mjgajyqe`
+- Testimonial form -> Formspree `mqeywpvw`
+- Book a Build Session -> `cal.com/bettercallzaal`
+
+## Research
+
+Research docs live in `research/`. See `research/README.md` for the index. The `/bcz-research`
+skill (`.agents/skills/`) covers adding to it. Cross-reference ZAO OS at
+`github.com/bettercallzaal/zaoos` first for Farcaster, web3, music, and AI-agent topics.
 
 ## Deploy
 
-Deployed on Vercel from this repo. Push to `main` to deploy.
+Push to `main`. Vercel builds from this repo. No CI.
 
 ## License
 

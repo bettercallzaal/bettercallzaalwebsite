@@ -129,11 +129,9 @@ Use hyphens (`-`) instead.
 | COC Concertz | COC Concerts, CocConcertz |
 | The ZAO | the Zao, ZAO standalone |
 | BetterCallZaal | Bettercallzaal, Better Call Zaal |
-| Joseph Goats | Jose Goats, Jose |
+| Joseph Goats | Jose Goats (artist name only - "Jose" is his real name, do not correct it) |
 | Huöttöja | Waha, Huottoja |
-| SongJam | Songjam, Song Jam |
 | ZABAL | Zabal, zabal |
-| SANG | Sang, sang |
 | ZOE | Zoe, zoe |
 | ZOLs | Zols, ZOL |
 | FISHBOWLZ | Fishbowlz, FishBowlz |
@@ -190,7 +188,6 @@ These were surfaced during the review loop and have not yet been done:
 
 The PR for that doc had a Next Actions table. These are still open:
 - [ ] Get Empire Builder API key from Jordan (yerbearzerker)
-- [ ] Build Empire Builder API leaderboard for Songjam migration (before June 1)
 - [ ] Add second POIDH bounty contract to existing leaderboard
 - [ ] Record kmac.eth + Zaal session on zlank templates for June bootcamp
 - [ ] Re-ping Jubjub once June calendar is public

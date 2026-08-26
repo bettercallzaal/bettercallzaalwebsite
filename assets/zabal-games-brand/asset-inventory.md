@@ -36,7 +36,6 @@ If the arcade hero looks weird at small size (tiny avatar contexts where the "IN
 | File | Why we need it | Blocker |
 |---|---|---|
 | `b-roll-channel-walkthrough.mp4` | 10-15s screen capture of /zabal Farcaster channel | Self-record; Zaal or Iman |
-| `b-roll-magnetiq-portal.mp4` | 10-15s screen capture of Magnetiq portal | Coordinate with Tyler Stambaugh |
 | `b-roll-workshop-1.mp4` | 10-15s screen capture of a recorded workshop | After first workshop drops on Lu.ma |
 | `prize-card-eth.png` | "0.0125 ETH wins" social card 1080x1080 | Design pass |
 | `prize-card-tracks.png` | "Artist / Builder / Creator - pick your lane" 1080x1080 | Design pass |

@@ -134,7 +134,6 @@ See `phrases.md` for the approved + banned phrase lists.
 
 Pending (TODO):
 - `b-roll-channel-walkthrough.mp4` - 10-15s screen capture of /zabal Farcaster channel
-- `b-roll-magnetiq-portal.mp4` - 10-15s screen capture of Magnetiq portal (coordinate with Tyler)
 - `b-roll-workshop-1.mp4` - 10-15s screen capture of a recorded workshop (after first workshop drops)
 - `prize-card-eth.png` - "0.0125 ETH wins" social card
 - `prize-card-tracks.png` - "Artist / Builder / Creator - pick your lane" social card
@@ -168,6 +167,5 @@ If you build something with this kit, post it in `/zabal` on Farcaster + tag `@b
 - `github.com/ZAODEVZ/zabalgames/docs/brand-context.md` - the 7-brand ZAO ecosystem spine
 - `github.com/ZAODEVZ/zabalgames/docs/logo-brief-2026-05-26.md` - logo design brief
 - `github.com/ZAODEVZ/zabalgames/docs/media-kit-2026-05-26.md` - press / media pull
-- `github.com/ZAODEVZ/zabalgames/docs/magnetiq-mementos-zao-brands-2026-05-28.md` - Magnetiq mementos catalog
 
 This BCZ folder is a working mirror. Update by re-syncing the docs + re-copying the assets when the canonical changes.
