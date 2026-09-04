@@ -14,6 +14,10 @@ Research docs supporting the bettercallzaal.com site and Farcaster mini app.
 | [06](./06-zabalgames-foss-projects/) | ZABAL Gamez & FOSS Builder | ZABAL Gamez build-a-thon + the `/projects` catalog of 46 open-source MIT projects — evidence base for the "FOSS Builder" identity |
 | [07](./07-bio-expansion/) | Bio Expansion | New citable facts for the bio — WaveWarZ co-founder, build-in-public + résumé, media/shows; plus unverified items to confirm |
 | [08](./08-cold-lead-email-flow/) | Cold / Lead Email Flow | Options A/B/C for inbound lead capture + outbound cold email - awaiting Zaal's pick |
+| [09](./09-web-upgrade-playbook/) | Web Upgrade Playbook 2026 | GEO/AI-search tactics, Farcaster mini app distribution (notifications + share-loops), Speculation Rules + View Transitions, sponsor-first conversion — gap-checked against the live site |
+| [10](./10-notifications-entity-drops/) | Notifications, Entity SEO, Drops | Implementation-grade follow-up: Neynar-hosted mini app notifications (no backend needed), Wikidata/sameAs entity anchoring, blind-box psychology applied to Insert Coin |
+| [11](./11-zaostock-sponsorship/) | ZAOstock Sponsorship | Tiers priced for a free first-year small-town festival, deck structure, 7-week outreach plan, onchain-receipts differentiator |
+| [12](./12-audience-growth-loops/) | Audience Growth Loops | Farcaster reply-first playbook (70/20/10), GitHub profile conversion fixes, the site-cast-repo-newsletter loop |
 
 ## How to Add Research
 
