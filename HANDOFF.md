@@ -45,7 +45,7 @@ bettercallzaal.com — Zaal Panthaki's personal site + Farcaster Mini App. Stati
 PR #4 was just merged after a multi-round content review pass with Zaal. The site is now production-ready, and Zaal is testing the live deploy + having Iman walk through it too.
 
 Recent merged PRs in order:
-- **PR #2** — site rebuild: ZABAL Games timeline (June/July/Aug), Tier 1/2 portfolio cards, lermess.pro design patterns (logo strip, parallax text breakers, testimonials carousel, multi-card contact), 6 new sub-pages
+- **PR #2** — site rebuild: ZABAL Gamez timeline (June/July/Aug), Tier 1/2 portfolio cards, lermess.pro design patterns (logo strip, parallax text breakers, testimonials carousel, multi-card contact), 6 new sub-pages
 - **PR #3** — Tier 1 brand landing pages (`/zao/`, `/wavewarz/`, `/bczyapz/`), value-receipts stats row, fabrication audit + mobile fixes for 424px Farcaster mini-app width
 - **PR #4** — content review pass (19 commits): trimmed bio, real WaveWarZ numbers, Maine landscape-design correction, mentor signup form on /zabalgames.html, no-fabrication rewrite of every sub-page
 
@@ -129,11 +129,9 @@ Use hyphens (`-`) instead.
 | COC Concertz | COC Concerts, CocConcertz |
 | The ZAO | the Zao, ZAO standalone |
 | BetterCallZaal | Bettercallzaal, Better Call Zaal |
-| Joseph Goats | Jose Goats, Jose |
+| Joseph Goats | Jose Goats (artist name only - "Jose" is his real name, do not correct it) |
 | Huöttöja | Waha, Huottoja |
-| SongJam | Songjam, Song Jam |
 | ZABAL | Zabal, zabal |
-| SANG | Sang, sang |
 | ZOE | Zoe, zoe |
 | ZOLs | Zols, ZOL |
 | FISHBOWLZ | Fishbowlz, FishBowlz |
@@ -186,11 +184,10 @@ These were surfaced during the review loop and have not yet been done:
 - [ ] **Zlank cap on Tier 2** — Tier 2 is now 4 cards (Streaming, Maine, Engineering, Zlank). On desktop this might wrap weirdly. Test at 1280px+ and adjust if needed.
 - [ ] **Stats row at 5 tiles** — `.stats-row` uses `repeat(3, 1fr)` default. 5 tiles wraps to 3+2 on desktop. Confirm this looks intentional, not broken.
 
-### From the ZABAL Games doc 654 (in zaoos repo)
+### From the ZABAL Gamez doc 654 (in zaoos repo)
 
 The PR for that doc had a Next Actions table. These are still open:
 - [ ] Get Empire Builder API key from Jordan (yerbearzerker)
-- [ ] Build Empire Builder API leaderboard for Songjam migration (before June 1)
 - [ ] Add second POIDH bounty contract to existing leaderboard
 - [ ] Record kmac.eth + Zaal session on zlank templates for June bootcamp
 - [ ] Re-ping Jubjub once June calendar is public
@@ -230,7 +227,7 @@ On Zaal's primary laptop, key paths:
 - **Contact form** — Formspree `mjgajyqe` (zaalp99@gmail.com personal + info@thezao.com ZAO)
 - **Testimonial form** — Formspree `mqeywpvw`
 - **Mentor/speaker signup** (on /zabalgames.html) — Formspree `mjgajyqe` (same as contact, with hidden `form_source=zabal-games-mentor-signup` discriminator)
-- **ZABAL Games application form** — Supabase-backed (separate from Formspree), currently in placeholder state per script
+- **ZABAL Gamez application form** — Supabase-backed (separate from Formspree), currently in placeholder state per script
 
 ## Common commands
 

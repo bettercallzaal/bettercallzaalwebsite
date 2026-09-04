@@ -7,7 +7,7 @@ Personal site and Farcaster Mini App for Zaal (FID: 19640) — FOSS (free & open
 ## Project Structure
 
 ```
-index.html                        # The entire site — HTML + embedded CSS + JS
+index.html                        # Homepage - HTML + embedded CSS + JS (13 more pages in subdirs)
 assets/                           # Images (icon.png = Z logo)
 .well-known/farcaster.json        # Farcaster Mini App domain manifest
 projects/                         # FOSS catalog — index.html renders from projects.json
@@ -41,7 +41,7 @@ research/                         # Research docs (see research/README.md)
 
 ## Projects Catalog (`/projects`)
 
-The `/projects` page renders client-side from `projects/projects.json` (single source of truth — edit it to change the catalog, no rebuild). To resync from the canonical ZABAL Gamez list:
+The `/projects` page renders client-side from `projects/projects.json`. **That file is GENERATED - never hand-edit it.** The source of truth is `data/adoptable-projects.json` in `ZAODEVZ/zabalgames`; wrong entries (dead repo links, bad names) must be fixed there. To resync:
 
 ```
 node scripts/sync-projects.js          # rewrites projects/projects.json
@@ -52,7 +52,7 @@ The sync pulls the GitHub raw URL (zabalgames.com itself is Cloudflare-blocked).
 
 ## Research Library
 
-3 research docs in `research/`. See `research/README.md` for the index.
+9 research topics in `research/`. See `research/README.md` for the index.
 
 Use the `/bcz-research` skill for researching new topics or adding to the library.
 

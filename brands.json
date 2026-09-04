@@ -1,6 +1,6 @@
 {
-  "version": "1.1.0",
-  "generated": "2026-05-17",
+  "version": "1.2.0",
+  "generated": "2026-08-28",
   "title": "ZABAL Brand Kit",
   "subtitle": "Every brand under the ZABAL umbrella, what it is, and how to plug in.",
   "categories": [
@@ -88,6 +88,10 @@
         {
           "label": "App",
           "url": "https://zaoos.com"
+        },
+        {
+          "label": "Papers",
+          "url": "https://www.thezao.xyz/papers"
         },
         {
           "label": "Newsletter",
@@ -180,10 +184,6 @@
           "url": "https://www.empirebuilder.world/"
         },
         {
-          "label": "ZABAL Live Hub",
-          "url": "https://thezao.com/zabal"
-        },
-        {
           "label": "Clanker",
           "url": "https://clanker.world/"
         }
@@ -214,7 +214,7 @@
       "links": [
         {
           "label": "ZAO Festivals overview",
-          "url": "https://thezao.com/festivals"
+          "url": "https://zaostock.com/festivals"
         }
       ],
       "plugIn": {
@@ -247,7 +247,7 @@
         },
         {
           "label": "Repo",
-          "url": "https://github.com/bettercallzaal/zaostock"
+          "url": "https://github.com/ZAODEVZ/ZAOstock"
         },
         {
           "label": "Pro Ticket",
@@ -419,35 +419,6 @@
       }
     },
     {
-      "id": "songjam",
-      "name": "SongJam · $SANG",
-      "tag": "Music · Token",
-      "tagColor": "cyan",
-      "status": "active",
-      "category": "music",
-      "blurb": "SongJam's $SANG token + jam tooling. Music + AI + community in one stack. Partner brand to The ZAO.",
-      "founded": "2024",
-      "audience": "Music + crypto community",
-      "monetization": "$SANG token economy + integrations",
-      "links": [
-        {
-          "label": "SongJam",
-          "url": "https://songjam.io"
-        }
-      ],
-      "plugIn": {
-        "customer": {
-          "label": "Hold $SANG",
-          "url": "https://songjam.io"
-        },
-        "collab": {
-          "label": "Partner integrations",
-          "url": "mailto:zaal@thezao.com?subject=SongJam x ZAO"
-        },
-        "contact": "zaal@thezao.com"
-      }
-    },
-    {
       "id": "aurdour",
       "name": "Aurdour",
       "tag": "Music · OSS DJ",
@@ -571,10 +542,6 @@
       "monetization": "Pods.media + episode sponsorships",
       "links": [
         {
-          "label": "Pods.media",
-          "url": "https://pods.media/lets-talk-about-web3/"
-        },
-        {
           "label": "B-ZBUILD2 repo",
           "url": "https://github.com/bettercallzaal/B-ZBUILD2"
         }
@@ -612,6 +579,31 @@
         "customer": {
           "label": "Subscribe",
           "url": "https://paragraph.com/@thezao"
+        },
+        "contact": "zaal@thezao.com"
+      }
+    },
+    {
+      "id": "daily-doots",
+      "name": "Daily Doots",
+      "tag": "Show · Episodes",
+      "tagColor": "cyan",
+      "status": "active",
+      "category": "shows",
+      "blurb": "Episode archive of Zaal's daily Doot posts. Public repository with episode 157 page.",
+      "founded": "2025",
+      "audience": "ZAO community + daily content followers",
+      "monetization": "Free; OSS community asset",
+      "links": [
+        {
+          "label": "Repo",
+          "url": "https://github.com/bettercallzaal/zao-doots"
+        }
+      ],
+      "plugIn": {
+        "contributor": {
+          "label": "PR an episode",
+          "url": "https://github.com/bettercallzaal/zao-doots/pulls"
         },
         "contact": "zaal@thezao.com"
       }
@@ -745,10 +737,6 @@
       "monetization": "0.1 ETH per bonfire mint; $KNOW token economy",
       "links": [
         {
-          "label": "ZABAL bonfire",
-          "url": "https://zabal.bonfires.ai"
-        },
-        {
           "label": "Bonfires platform",
           "url": "https://bonfires.ai"
         },
@@ -776,7 +764,7 @@
       "tagColor": "cyan",
       "status": "active",
       "category": "infra",
-      "blurb": "ZAO uses POIDH for community bounty distribution. First clip-up bounty April 2026. Live ZAO leaderboard at bettercallzaal.com/poidh.html.",
+      "blurb": "ZAO uses POIDH for community bounty distribution. First clip-up bounty April 2026. Round history archived in the zpoidh repo.",
       "founded": "2026",
       "audience": "ZAO community contributors + POIDH user base",
       "monetization": "Pay-to-claim model + sponsorships",
@@ -787,7 +775,7 @@
         },
         {
           "label": "ZAO leaderboard",
-          "url": "https://bettercallzaal.com/poidh.html"
+          "url": "https://github.com/bettercallzaal/zpoidh"
         }
       ],
       "plugIn": {
@@ -804,7 +792,7 @@
     },
     {
       "id": "zabal-games",
-      "name": "ZABAL Games",
+      "name": "ZABAL Gamez",
       "tag": "Experimenting · Empire V3",
       "tagColor": "pink",
       "status": "experimenting",
@@ -815,6 +803,10 @@
       "monetization": "On-chain game fees + token incentives",
       "links": [
         {
+          "label": "Site",
+          "url": "https://zabalgamez.com"
+        },
+        {
           "label": "Landing",
           "url": "https://bettercallzaal.com/zabalgames.html"
         },
@@ -824,13 +816,13 @@
         },
         {
           "label": "Notes (Doc 654)",
-          "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/research/events/654-zabal-games-empire-v3-yerbearzerker"
+          "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/research/events/654-zabal-games-empire-v3-yerbearzerker-meeting"
         }
       ],
       "plugIn": {
         "collab": {
           "label": "Co-design a game",
-          "url": "mailto:zaal@thezao.com?subject=ZABAL Games"
+          "url": "mailto:zaal@thezao.com?subject=ZABAL Gamez"
         },
         "contact": "zaal@thezao.com"
       }
@@ -943,10 +935,6 @@
           "url": "https://zao.frapps.xyz/submitBreakout"
         },
         {
-          "label": "ZAO Fractal app",
-          "url": "https://zao-fractal.vercel.app"
-        },
-        {
           "label": "Discord bot (April)",
           "url": "https://github.com/bettercallzaal/fractalbotapril2026"
         },
@@ -985,7 +973,7 @@
       "links": [
         {
           "label": "Music entity overview (Doc 475)",
-          "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/research/business/475-zao-music-entity"
+          "url": "https://github.com/bettercallzaal/ZAOOS/tree/main/research/music/475-zao-music-entity"
         }
       ],
       "plugIn": {

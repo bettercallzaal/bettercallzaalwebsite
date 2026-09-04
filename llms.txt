@@ -1,6 +1,6 @@
 # BetterCallZaal
 
-> Personal site of Zaal Panthaki (BetterCallZaal) — founder of The ZAO, co-founder of WaveWarZ. Open-source builder of AI-agent infrastructure and creator tools that return margin, data & IP to independent artists. 80+ public repos, built in public from Maine, USA.
+> Personal site of Zaal Panthaki (BetterCallZaal) — founder of The ZAO, co-founder of WaveWarZ. Open-source builder of AI-agent infrastructure and creator tools that return margin, data & IP to independent artists. 110+ public repos, built in public from Maine, USA.
 
 The brand constellation: BetterCallZaal (personal brand + consulting) -> The ZAO (parent artist organization, 250+ artists and creators, weekly fractal governance since Aug 2024) -> ZABAL (product layer: games, AI agents, $ZABAL token on Base).
 
@@ -10,8 +10,8 @@ The mission: streaming pays artists ~$0.003 per play and labels keep 80-85% of r
 
 - [Home](https://bettercallzaal.com/): who Zaal is, portfolio, testimonials, contact
 - [Resume](https://bettercallzaal.com/resume/): full CV — BS EE (RIT 2022), $1.5M robotics at PCC Structurals, The Jackson Laboratory, founder history
-- [Projects catalog](https://bettercallzaal.com/projects/): 46 open-source projects, all MIT
-- [Brand kit](https://bettercallzaal.com/kit.html): 31 brands across the ecosystem (machine-readable at /brands.json)
+- [Projects catalog](https://bettercallzaal.com/projects/): 60 open-source projects
+- [Brand kit](https://bettercallzaal.com/kit.html): 30 brands across the ecosystem (machine-readable at /brands.json)
 - [Nexus](https://nexus.thezao.com/): every public link across the ecosystem (~200 links)
 
 ## Key projects
