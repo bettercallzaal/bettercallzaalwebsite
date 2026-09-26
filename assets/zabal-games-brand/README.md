@@ -166,6 +166,6 @@ If you build something with this kit, post it in `/zabal` on Farcaster + tag `@b
 - `github.com/ZAODEVZ/zabalgames/docs/brand-kit-2026-05-28.md` - the canonical Season 1 brand spec
 - `github.com/ZAODEVZ/zabalgames/docs/brand-context.md` - the 7-brand ZAO ecosystem spine
 - `github.com/ZAODEVZ/zabalgames/docs/logo-brief-2026-05-26.md` - logo design brief
-- `github.com/ZAODEVZ/zabalgames/docs/media-kit-2026-05-26.md` - press / media pull
+- `github.com/ZAODEVZ/zabalgames/docs/media-kit.md` - press / media pull
 
 This BCZ folder is a working mirror. Update by re-syncing the docs + re-copying the assets when the canonical changes.
