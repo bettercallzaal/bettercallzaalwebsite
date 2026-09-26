@@ -125,7 +125,7 @@
           "type": "extend",
           "desc": "The dashboard and public site for ZAOstock 2026, an artist-built festival in Ellsworth, Maine - team login, volunteer signup, working circles, and the day-of schedule.",
           "stack": "Next.js · Supabase",
-          "repo": "bettercallzaal/zaostock"
+          "repo": "ZAODEVZ/ZAOstock"
         },
         {
           "name": "ZAOfractal",
@@ -139,7 +139,7 @@
           "type": "fork",
           "desc": "The Fractal Respect Game bot - voting flows, onchain Respect token submission to Optimism, and Snapshot integration.",
           "stack": "Node.js · Snapshot · Optimism",
-          "repo": "bettercallzaal/fractalbotapril2026"
+          "repo": "bettercallzaal/zao-fractal-bot"
         },
         {
           "name": "/zabal mini app",
@@ -284,7 +284,7 @@
           "type": "fork",
           "desc": "A static onboarding guide to The ZAO (home, pillars, join, FAQ) - scaffolded with placeholder copy, the smallest scope on this list.",
           "stack": "Astro / Next.js",
-          "repo": "bettercallzaal/zao-101"
+          "repo": "ZAODEVZ/ZAO101"
         },
         {
           "name": "ZOUNZ",

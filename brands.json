@@ -878,17 +878,17 @@
       "links": [
         {
           "label": "Repo",
-          "url": "https://github.com/bettercallzaal/zao-101"
+          "url": "https://github.com/ZAODEVZ/ZAO101"
         }
       ],
       "plugIn": {
         "customer": {
           "label": "Read + onboard",
-          "url": "https://github.com/bettercallzaal/zao-101"
+          "url": "https://github.com/ZAODEVZ/ZAO101"
         },
         "contributor": {
           "label": "PR improvements",
-          "url": "https://github.com/bettercallzaal/zao-101/pulls"
+          "url": "https://github.com/ZAODEVZ/ZAO101/pulls"
         },
         "contact": "zaal@thezao.com"
       }
@@ -936,7 +936,7 @@
         },
         {
           "label": "Discord bot (April)",
-          "url": "https://github.com/bettercallzaal/fractalbotapril2026"
+          "url": "https://github.com/bettercallzaal/zao-fractal-bot"
         },
         {
           "label": "ORDAO (partner)",
