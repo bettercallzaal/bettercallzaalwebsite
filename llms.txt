@@ -1,6 +1,6 @@
 # BetterCallZaal
 
-> Personal site of Zaal Panthaki (BetterCallZaal) — founder of The ZAO, co-founder of WaveWarZ. Open-source builder of AI-agent infrastructure and creator tools that return margin, data & IP to independent artists. 130+ public repos, built in public from Maine, USA.
+> Personal site of Zaal Panthaki (BetterCallZaal)  -  founder of The ZAO, co-founder of WaveWarZ. Open-source builder of AI-agent infrastructure and creator tools that return margin, data & IP to independent artists. 130+ public repos, built in public from Maine, USA.
 
 The brand constellation: BetterCallZaal (personal brand + consulting) -> The ZAO (parent artist organization, 250+ artists and creators, weekly fractal governance since Aug 2024) -> ZABAL (product layer: games, AI agents, $ZABAL token on Base).
 
@@ -9,19 +9,19 @@ The mission: streaming pays artists ~$0.003 per play and labels keep 80-85% of r
 ## Main pages
 
 - [Home](https://bettercallzaal.com/): who Zaal is, portfolio, testimonials, contact
-- [Resume](https://bettercallzaal.com/resume/): full CV — BS EE (RIT 2022), $1.5M robotics at PCC Structurals, The Jackson Laboratory, founder history
+- [Resume](https://bettercallzaal.com/resume/): full CV  -  BS EE (RIT 2022), $1.5M robotics at PCC Structurals, The Jackson Laboratory, founder history
 - [Projects catalog](https://bettercallzaal.com/projects/): 60 open-source projects
-- [Brand kit](https://bettercallzaal.com/kit.html): 30 brands across the ecosystem (machine-readable at /brands.json)
-- [Nexus](https://nexus.thezao.com/): every public link across the ecosystem (~200 links)
+- [Brand kit](https://bettercallzaal.com/kit.html): 31 brands across the ecosystem (machine-readable at /brands.json)
+- [Nexus](https://nexus.thezao.com/): every public link across the ecosystem (479 links)
 
 ## Key projects
 
 - [The ZAO](https://thezao.com): parent artist organization and impact network
-- [WaveWarZ](https://wavewarz.com): agentic music battles on Solana — 950+ battles, 459 SOL traded, instant onchain artist payouts
-- [ZAOstock](https://bettercallzaal.com/zaostock/): year-1 community music festival — Oct 3, 2026, Ellsworth, Maine, free to attend
+- [WaveWarZ](https://wavewarz.com): agentic music battles on Solana  -  1,581 battles, 959.08 SOL traded, instant onchain artist payouts
+- [ZAOstock](https://bettercallzaal.com/zaostock/): year-1 community music festival  -  Oct 3, 2026, Ellsworth, Maine, free to attend
 - [Hermes Orchestrator](https://github.com/bettercallzaal/hermes-orchestrator): supervisor framework for AI agents (MIT)
-- [Zlank](https://github.com/bettercallzaal/zlank): no-code Farcaster Snap builder — won the Snap category at FarHack 2026
-- [Daily newsletter](https://paragraph.com/@thezao): 400+ editions, building in public
+- [Zlank](https://github.com/bettercallzaal/zlank): no-code Farcaster Snap builder  -  won the Snap category at FarHack 2026
+- [Daily newsletter](https://paragraph.com/@thezao): 386 editions, building in public
 
 ## Contact
 
