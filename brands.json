@@ -339,7 +339,7 @@
       "tagColor": "cyan",
       "status": "active",
       "category": "music",
-      "blurb": "Agentic music battles on Solana mainnet. 950+ battles + 459 SOL traded (live dashboard). Cofounders Hurric4n3Ike (lead dev) + candytoybox / Samantha. Becoming WaveWarZ LabZ LLC Texas.",
+      "blurb": "Agentic music battles on Solana mainnet. 1,585 battles + 959 SOL traded (live dashboard). Cofounders Hurric4n3Ike (lead dev) + candytoybox / Samantha. Becoming WaveWarZ LabZ LLC Texas.",
       "founded": "2024",
       "audience": "Solana music + crypto audience",
       "monetization": "On-chain battle fees + sponsorships + token economy",
@@ -615,7 +615,7 @@
       "tagColor": "cyan",
       "status": "active",
       "category": "agents",
-      "blurb": "@zaoclaw_bot — single concierge for tasks, captures, brief/reflect, recall. ZAO's primary agent surface. Hermes-brain pattern. Runs on VPS + uses Claude Max subscription.",
+      "blurb": "@zaoclaw_bot  -  single concierge for tasks, captures, brief/reflect, recall. ZAO's primary agent surface. Hermes-brain pattern. Runs on VPS + uses Claude Max subscription.",
       "founded": "2025",
       "audience": "Zaal + ZAO team",
       "monetization": "Internal tool; no direct revenue",
@@ -644,7 +644,7 @@
       "tagColor": "orange",
       "status": "active",
       "category": "agents",
-      "blurb": "@zoe_hermes_bot — autonomous fix-PR pipeline. Coder + critic + auto-PR. The agent that ships code. Coordinates with ZAO Devz on group dispatch.",
+      "blurb": "@zoe_hermes_bot  -  autonomous fix-PR pipeline. Coder + critic + auto-PR. The agent that ships code. Coordinates with ZAO Devz on group dispatch.",
       "founded": "2025",
       "audience": "Zaal + dev contributors",
       "monetization": "Internal tool",
@@ -673,7 +673,7 @@
       "tagColor": "cyan",
       "status": "active",
       "category": "agents",
-      "blurb": "@zaodevz_bot — group dispatch + hourly learning tip. Group surface for developer coordination. Phase 3 fold-in to Hermes pending.",
+      "blurb": "@zaodevz_bot  -  group dispatch + hourly learning tip. Group surface for developer coordination. Phase 3 fold-in to Hermes pending.",
       "founded": "2025",
       "audience": "ZAO dev community",
       "monetization": "Internal tool",
@@ -702,7 +702,7 @@
       "tagColor": "orange",
       "status": "building",
       "category": "agents",
-      "blurb": "@ZAOcoworkingBot — universal team action tracker across all brands (Zaal + Iman + ThyRev + Samantha). Doc 650. Live on VPS. Multi-model + BYOK (Claude / OpenAI / MiniMax).",
+      "blurb": "@ZAOcoworkingBot  -  universal team action tracker across all brands (Zaal + Iman + ThyRev + Samantha). Doc 650. Live on VPS. Multi-model + BYOK (Claude / OpenAI / MiniMax).",
       "founded": "2026",
       "audience": "ZAO + WaveWarZ + COC Concertz teams",
       "monetization": "Internal team tool",
@@ -841,7 +841,7 @@
       "links": [
         {
           "label": "Site",
-          "url": "https://zlank.online"
+          "url": "https://bettercallzaal.com/streaming/"
         },
         {
           "label": "Repo",
@@ -855,7 +855,7 @@
       "plugIn": {
         "customer": {
           "label": "Use Zlank (ZAO members)",
-          "url": "https://zlank.online"
+          "url": "https://bettercallzaal.com/streaming/"
         },
         "contributor": {
           "label": "Fork the template",
@@ -871,7 +871,7 @@
       "tagColor": "muted",
       "status": "active",
       "category": "tools",
-      "blurb": "Learn about The ZAO — artist org, autonomous org, operating system, open source. Public onboarding microsite.",
+      "blurb": "Learn about The ZAO  -  artist org, autonomous org, operating system, open source. Public onboarding microsite.",
       "founded": "2026",
       "audience": "Curious newcomers",
       "monetization": "Free; supports member acquisition",
