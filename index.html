@@ -340,6 +340,104 @@
       fill: currentColor;
     }
 
+    /* ─── In-person intro (today banner) ─── */
+    .intro-today {
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+      padding: clamp(1.25rem, 4vh, 2rem) 1.25rem;
+    }
+
+    .intro-today-inner {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .intro-today-kicker {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.4rem, 6vw, 1.9rem);
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .intro-today-line {
+      color: var(--text-muted);
+      font-size: clamp(0.92rem, 2.2vw, 1.05rem);
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+
+    .intro-today-card {
+      background: var(--surface-raised);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .intro-today-badge {
+      display: block;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .intro-today-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .intro-btn {
+      flex: 1 1 140px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0.7rem 1.1rem;
+      border-radius: var(--radius);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-align: center;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .intro-btn:hover { transform: translateY(-2px); opacity: 0.92; }
+
+    .intro-btn-primary { background: var(--orange); color: #070709; }
+    .intro-btn-secondary { border: 1.5px solid var(--cyan); color: var(--cyan); }
+
+    .intro-today-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .intro-link-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0 1.1rem;
+      border: 1px solid var(--border-hover);
+      border-radius: 999px;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .intro-link-pill:hover { border-color: var(--orange); color: var(--orange); }
+
+    @media (max-width: 480px) {
+      .intro-today { padding: 1.1rem 1rem; }
+      .intro-btn { flex: 1 1 100%; }
+    }
+
     /* ─── Section shared ─── */
     .section {
       padding: clamp(4rem, 8vh, 7rem) 1.5rem;
@@ -1524,6 +1622,28 @@
   </style>
 </head>
 <body>
+
+  <!-- ─── In-person intro (today banner) ─── -->
+  <section class="intro-today" aria-label="Meet Zaal">
+    <div class="intro-today-inner">
+      <p class="intro-today-kicker">Hi, I'm Zaal.</p>
+      <p class="intro-today-line">I build The ZAO music community and ZAO Festivals - open-source tools that return ownership to independent artists.</p>
+      <div class="intro-today-card">
+        <span class="intro-today-badge">Today: ZAOstock &middot; Ellsworth, Maine</span>
+        <div class="intro-today-actions">
+          <a class="intro-btn intro-btn-primary" href="https://zaostock.com/live" target="_blank" rel="noopener">Watch live</a>
+          <a class="intro-btn intro-btn-secondary" href="https://zaostock.com/program" target="_blank" rel="noopener">Set times</a>
+        </div>
+      </div>
+      <div class="intro-today-links">
+        <a class="intro-link-pill" href="https://farcaster.xyz/bettercallzaal" target="_blank" rel="noopener">Farcaster</a>
+        <a class="intro-link-pill" href="https://x.com/bettercallzaal" target="_blank" rel="noopener">X</a>
+        <a class="intro-link-pill" href="https://instagram.com/bettercallzaal" target="_blank" rel="noopener">Instagram</a>
+        <a class="intro-link-pill" href="https://www.linkedin.com/in/zaalp/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="intro-link-pill" href="https://github.com/bettercallzaal" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
 
   <a class="skip-link" href="#maincontent">Skip to content</a>
 
