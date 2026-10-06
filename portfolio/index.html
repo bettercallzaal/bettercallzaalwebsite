@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Zaal Panthaki · Remote Community and Events Lead</title>
+  <meta name="description" content="Four case studies from Zaal Panthaki: ZAOstock, WaveWarZ, ZABAL Gamez and The ZAO. Community, live events, onchain coordination and AI-agent operations. Open to salaried, fully remote roles.">
+  <link rel="canonical" href="https://bettercallzaal.com/portfolio/">
+  <meta property="og:title" content="Portfolio - Zaal Panthaki · Remote Community and Events Lead">
+  <meta property="og:description" content="Four case studies: a free festival, an onchain battle platform, a build event and a creator community. Open to salaried, fully remote roles.">
+  <meta property="og:url" content="https://bettercallzaal.com/portfolio/">
+  <meta property="og:image" content="https://bettercallzaal.com/assets/icon.png">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/png" href="/assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070709;
+      --surface: #12121f;
+      --border: #2a2a3a;
+      --border-hover: #3a3a4a;
+      --text: #e8e8f0;
+      --text-muted: #9999aa;
+      --text-dim: #6a6a7a;
+      --orange: #ff6b35;
+      --cyan: #4ec3e0;
+      --gold: #ffb347;
+      --accent: var(--orange);
+      --radius: 0.5rem;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Outfit', sans-serif; font-weight: 300; line-height: 1.6; min-height: 100vh; }
+    body::before {
+      content: ''; position: fixed; inset: 0; pointer-events: none; z-index: -1;
+      background:
+        radial-gradient(ellipse 800px 600px at 12% -8%, rgba(255,107,53,0.10), transparent 60%),
+        radial-gradient(ellipse 700px 500px at 92% 8%, rgba(78,195,224,0.08), transparent 60%);
+    }
+    .container { max-width: 820px; margin: 0 auto; padding: 0 1.25rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav { position: sticky; top: 0; background: rgba(10,10,26,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); z-index: 50; }
+    nav .container { display: flex; justify-content: space-between; align-items: center; padding-top: 0.85rem; padding-bottom: 0.85rem; }
+    nav a { color: var(--text-muted); font-size: 0.9rem; }
+    nav a:hover { color: var(--text); text-decoration: none; }
+    nav .brand { font-family: 'Syne', sans-serif; font-weight: 800; color: var(--text); letter-spacing: 0.02em; }
+    nav .brand .accent { color: var(--accent); }
+
+    header.hero { padding: 3.5rem 0 2rem; border-bottom: 1px solid var(--border); }
+    .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--accent); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.85rem; }
+    h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.1rem, 5vw, 3rem); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+    .title { font-family: 'JetBrains Mono', monospace; color: var(--text-muted); font-size: 0.95rem; letter-spacing: 0.02em; margin-bottom: 1rem; }
+    .summary { font-size: 1.02rem; color: var(--text-muted); max-width: 660px; }
+    .summary strong { color: var(--text); font-weight: 500; }
+    .links { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; }
+    .links a { padding: 0.4rem 0.8rem; border: 1px solid var(--border); border-radius: 6px; color: var(--cyan); }
+    .links a:hover { border-color: var(--cyan); text-decoration: none; }
+
+    section { padding: 2.25rem 0; border-bottom: 1px solid var(--border); }
+    h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.35rem; margin-bottom: 1.25rem; }
+    h2 .accent { color: var(--accent); }
+
+    .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem; }
+    .metric { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.9rem 1rem; }
+    .metric b { display: block; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--text); }
+    .metric span { font-size: 0.8rem; color: var(--text-muted); }
+
+    .row { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; display: grid; grid-template-columns: 150px 1fr; gap: 1rem; align-items: start; margin-bottom: 0.75rem; transition: border-color 0.2s; }
+    .row:hover { border-color: var(--accent); }
+    .row .when { font-family: 'JetBrains Mono', monospace; font-size: 0.76rem; color: var(--accent); letter-spacing: 0.04em; padding-top: 0.15rem; }
+    .row .what strong { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--text); display: block; margin-bottom: 0.15rem; }
+    .row .what .org { color: var(--text-muted); font-size: 0.9rem; }
+    .row .what p { color: var(--text-muted); font-size: 0.92rem; margin-top: 0.4rem; }
+    @media (max-width: 600px) { .row { grid-template-columns: 1fr; gap: 0.3rem; } }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .chip { font-family: 'JetBrains Mono', monospace; font-size: 0.76rem; color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 0.3rem 0.7rem; }
+    p.lead { color: var(--text-muted); margin-bottom: 1rem; }
+    p.lead a { color: var(--accent); }
+
+    footer { padding: 2.5rem 0 3.5rem; color: var(--text-dim); font-size: 0.85rem; text-align: center; }
+    footer a { color: var(--text-muted); margin: 0 0.6rem; }
+    footer a:hover { color: var(--text); }
+    .print-link { cursor: pointer; }
+    .open-to { display: inline-block; margin-top: 1.25rem; padding: 0.5rem 0.9rem; border: 1px solid var(--accent); border-radius: 6px; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: var(--text); }
+    .open-to b { color: var(--accent); font-weight: 500; }
+    .row .what ul { color: var(--text-muted); font-size: 0.92rem; margin: 0.4rem 0 0 1.1rem; }
+    .row .what li { margin-bottom: 0.2rem; }
+    .row .what li a, .row .what .src a { color: var(--cyan); }
+    .row .what .src { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-dim); margin-top: 0.4rem; }
+    @media print { nav, footer, body::before, .print-link { display: none; } body { background: #fff; color: #111; } .row, .metric { border-color: #ccc; } }
+  
+    .case { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 1rem; transition: border-color 0.2s; }
+    .case:hover, .case[open] { border-color: var(--accent); }
+    .case > summary { list-style: none; cursor: pointer; padding: 1.1rem 1.25rem; display: block; position: relative; padding-right: 3rem; }
+    .case > summary::-webkit-details-marker { display: none; }
+    .case > summary::after { content: '+'; position: absolute; right: 1.25rem; top: 1rem; font-family: 'JetBrains Mono', monospace; font-size: 1.3rem; color: var(--accent); }
+    .case[open] > summary::after { content: '-'; }
+    .case > summary:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; border-radius: var(--radius); }
+    .case .kicker { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; }
+    .case h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.2rem; margin: 0.25rem 0 0.4rem; color: var(--text); }
+    .case .blurb { color: var(--text-muted); font-size: 0.95rem; }
+    .case .body { padding: 0 1.25rem 1.25rem; border-top: 1px solid var(--border); }
+    .case h4 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; margin: 1.25rem 0 0.4rem; color: var(--text); }
+    .case .body p, .case .body li { color: var(--text-muted); font-size: 0.95rem; }
+    .case .body ul { margin: 0 0 0 1.1rem; }
+    .case .body li { margin-bottom: 0.3rem; }
+    .case .body a { color: var(--cyan); overflow-wrap: anywhere; }
+    .case .chips { margin-top: 0.2rem; }
+    .jump { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; }
+    .jump a { padding: 0.35rem 0.75rem; border: 1px solid var(--border); border-radius: 999px; color: var(--text-muted); }
+    .jump a:hover { border-color: var(--accent); color: var(--text); text-decoration: none; }
+    @media (max-width: 600px) { .container { padding: 0 1rem; } .case > summary { padding: 1rem 2.75rem 1rem 1rem; } .case .body { padding: 0 1rem 1rem; } }
+    @media print { .case { border-color: #ccc; } .case .body { display: block; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a class="brand" href="/">BetterCall<span class="accent">Zaal</span></a>
+      <a href="/resume/">Resume</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="eyebrow">Portfolio</div>
+      <h1>Zaal Panthaki</h1>
+      <p class="title">Community, events and creator-economy operator - Maine, USA - remote</p>
+      <p class="summary">Four things I have built and run: a <strong>free music festival</strong>, an <strong>onchain battle platform</strong>, a <strong>build event for creators</strong>, and the <strong>community</strong> behind all of them. Each one is below with the problem, my role, what I did and what came of it. For the short version, read my <a href="/resume/">resume</a>.</p>
+      <p class="open-to"><b>Open to:</b> salaried, fully remote roles</p>
+      <div class="jump">
+        <a href="#zaostock">ZAOstock</a>
+        <a href="#wavewarz">WaveWarZ</a>
+        <a href="#zabal-gamez">ZABAL Gamez</a>
+        <a href="#the-zao">The ZAO</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>Case studies</h2>
+      <p class="lead">Tap a card to read it. Where I directed agent lanes instead of writing the code myself, I say so.</p>
+      
+      <details class="case" id="zaostock">
+        <summary>
+          <div class="kicker">Events</div>
+          <h3>ZAOstock</h3>
+          <p class="blurb">I organized and ran a free, one-day music festival on the Franklin Street Parklet in Ellsworth, Maine, on Saturday 3 October 2026, livestreamed on Twitch.</p>
+        </summary>
+        <div class="body">
+          <!-- [ZAAL: which partners did you personally bring in (City of Ellsworth, Heart of Ellsworth, Black Moon, Star 97.7, Wallace Events), and who made first contact in each case? Page lists partners as partners, not as personally recruited.] -->
+          <!-- [ZAAL: a sourced attendance figure, Twitch viewer total, or Star 97.7 reach? None used on the page; no outcome sentence leans on one.] -->
+          <!-- [ZAAL: what did you write or build yourself versus direct agent lanes to do? Role bullet says "under my direction".] -->
+          <!-- [ZAAL: add one or two lessons in your own words. Lessons sections were left out of the page for now.] -->
+          <!-- [ZAAL: 2027 date was cut from Outcomes because the answer on mentioning it was not typed by you.] -->
+          <!-- [ZAAL: name two or three references (Heart of Ellsworth, the city, Black Moon, an artist, a ZAO co-lead). Not on the page.] -->
+          <h4>Problem</h4>
+          <p>The ZAO is a music community that mostly lives online, and I live in Ellsworth. ZAOstock was the attempt to put that community on a real stage in a small Maine city, for free, with independent artists, inside an existing local weekend. A free festival has no ticket revenue, so it depends on partners and voluntary support. The venue was public space, so it depended on the City of Ellsworth and Heart of Ellsworth. Most of the community is remote, so it needed a good stream as well as a good stage. The team was small and spread across time zones, so coordination had to be written down.</p>
+          <h4>My role</h4>
+          <ul><li>Organizer and founder of the event, under ZAO Festivals, the events arm of The ZAO.</li><li>Master of ceremonies and stage manager on the day.</li><li>On-air guest on Star 97.7 ahead of the festival.</li><li>Made the calls that shaped the event and wrote each one down as a dated decision: who holds the mic, the reveal date, the soundcheck block, what counts as success.</li><li>Named a virtual co-organizer and an owner for daily posting, and gave each real scope.</li><li>Set up the card payment links for the support page.</li><li>The festival site and stream tooling were built by my team and agent lanes under my direction.</li></ul>
+          <h4>What I built and ran</h4>
+          <ul><li>A one-stage running order with soundcheck the evening before, a full lineup of independent artists, and an after-party at Black Moon.</li><li>Partners across the city, the main street organization, radio, the venue next door, equipment and capture, with a named owner on the ZAO team for each.</li><li>A radio campaign on Star 97.7: a spot on air in the run-up and two on-air sessions.</li><li>A per-artist ops page behind a code, with the artist form left open so the gate never blocked what artists needed to do.</li><li>The festival site at zaostock.com: program, artist pages, after-party, live page, volunteer, sponsor, media, press and partner pages.</li><li>A live page with a stream player, a day-of banner and a chat fallback, merged before the event rather than the morning of.</li><li>Support by card with no ticket gate.</li><li>A readiness checklist written as code that fetched the live site and failed when an artist page was missing, a personal email was public, or the days-to-go counter was wrong.</li><li>The whole day livestreamed on Twitch.</li></ul>
+          <h4>Outcome</h4>
+          <ul><li>The festival happened as planned on 3 October, outdoors and free, with a full lineup.</li><li>The full day is available as Twitch replays.</li><li>Local radio, the city, a main street organization and the venue next door all took part, so the event sat inside the town rather than next to it.</li><li>Every artist has a permanent page on the festival site.</li></ul>
+          <h4>Skills shown</h4>
+          <div class="chips"><span class="chip">Events</span><span class="chip">Partnerships</span><span class="chip">Community</span><span class="chip">Creator economy</span><span class="chip">Livestream</span><span class="chip">AI-agent ops</span><span class="chip">Decision discipline</span></div>
+          <h4>Links</h4>
+          <ul><li><a href="https://zaostock.com" target="_blank" rel="noopener">zaostock.com</a></li><li><a href="https://zaostock.com/program" target="_blank" rel="noopener">Program</a></li><li><a href="https://zaostock.com/live" target="_blank" rel="noopener">Live page</a></li><li><a href="https://zaostock.com/press" target="_blank" rel="noopener">Press page</a></li><li><a href="https://www.twitch.tv/zaofestivals/videos" target="_blank" rel="noopener">Twitch replays</a></li><li><a href="https://github.com/ZAODEVZ/ZAOstock" target="_blank" rel="noopener">Code (public)</a></li></ul>
+        </div>
+      </details>
+      
+      <details class="case" id="wavewarz">
+        <summary>
+          <div class="kicker">Onchain</div>
+          <h3>WaveWarZ</h3>
+          <p class="blurb">An onchain music-battle platform on Solana where two songs go head to head, listeners back one, and the losing artist is still paid. I am a co-founder on the ZAO side and built the analytics layer that explains its money.</p>
+        </summary>
+        <div class="body">
+          <!-- [ZAAL: exact title and stake in WaveWarZ, and is "co-founder" the right public word? One doc calls Hurricane the founder, another co-founder. Founding dates differ across sources, so no founding year is on the page.] -->
+          <!-- [ZAAL: how much of wwtracker did you write by hand versus direct? Role bullet says "directed agent lanes".] -->
+          <!-- [ZAAL: did you run or co-run the July 2026 AI Artist Tournament? Sentence cut.] -->
+          <!-- [ZAAL: what would you change about the product or go-to-market, in your words? Section left out.] -->
+          <!-- Note: the resume PR says "built the backend" for WaveWarZ; this page says analytics layer, which is what the sources show. Reconcile one way or the other. -->
+          <h4>Problem</h4>
+          <p>Independent artists mostly compete for exposure and get nothing if they lose, and streaming pays fractions of a cent per play. WaveWarZ is built around a different structure: every battle pays both artists, and listeners who read the music well can earn from it. A platform that handles money has to be explainable. Press, grant reviewers and artists outside crypto need a plain account of where each unit of SOL goes, and that account has to match the chain. The platform also needed an audience and a supply of artists, and I had a community to offer both.</p>
+          <h4>My role</h4>
+          <ul><li>Co-founder of WaveWarZ on the ZAO side, alongside the platform developer and the design and marketing lead.</li><li>Owner of wwtracker, the public analytics repo that reads the program and treasury on Solana mainnet and decodes it instruction by instruction.</li><li>Owner of the ZAO-side connection: ZAO members and events feed the platform, and the platform's battles feed ZAO programs.</li><li>I directed agent lanes to do much of the repository work, under a rule that held: pull requests only, and I merge.</li></ul>
+          <h4>What I built and ran</h4>
+          <ul><li>wwtracker, a Next.js dashboard showing the treasury, the fee model, a business ledger and the decoded program.</li><li>A check of the whitepaper's fee claim against onchain instruction data from Dune, written up in plain words with what it covers and what it does not.</li><li>A published finding that platform revenue ran higher than artist payouts, and that the gap came from battle-launch fees rather than trading fees. I put that tension on the page instead of hiding it.</li><li>A stats API contract so partner sites can embed platform data.</li><li>A staleness gate that warns and then fails when data gets old, and a rule for corrections: a retired figure goes into a superseded-figures test so a fix cannot reach one page and miss another.</li><li>Weekly battle programming, an artist onboarding guide, a clippers guide, a press kit, and a platform explainer written as the link to send to press and grant reviewers.</li><li>WaveWarZ as the settlement venue for the ZABAL Gamez finals.</li></ul>
+          <h4>Outcome</h4>
+          <ul><li>A public explanation of the economics that can be handed to a skeptical reader, awkward part included.</li><li>A deployed analytics layer on top of the program.</li><li>The pays-both-artists mechanic has been tested in public with real battles on Solana mainnet, starting with a live battle at ZAO-CHELLA in December 2024.</li><li>The platform has served as the settlement venue for a second ZAO program.</li></ul>
+          <h4>Skills shown</h4>
+          <div class="chips"><span class="chip">Onchain coordination</span><span class="chip">Creator economy</span><span class="chip">Community</span><span class="chip">DevRel</span><span class="chip">Data quality</span><span class="chip">AI-agent ops</span></div>
+          <h4>Links</h4>
+          <ul><li><a href="https://wavewarz.info" target="_blank" rel="noopener">wavewarz.info</a></li><li><a href="https://wwtracker.vercel.app" target="_blank" rel="noopener">Live analytics</a></li><li><a href="https://github.com/bettercallzaal/wwtracker" target="_blank" rel="noopener">wwtracker (public repo)</a></li><li><a href="/wavewarz/" target="_blank" rel="noopener">WaveWarZ on this site</a></li><li><a href="https://zabalgamez.com/results" target="_blank" rel="noopener">ZABAL Gamez finals record</a></li></ul>
+        </div>
+      </details>
+      
+      <details class="case" id="zabal-gamez">
+        <summary>
+          <div class="kicker">Developer relations</div>
+          <h3>ZABAL Gamez, Season 1</h3>
+          <p class="blurb">A free, three-month build event for Farcaster creators, run by The ZAO from June to August 2026: recorded workshops, an open build month, and finals decided in head-to-head battles on WaveWarZ.</p>
+        </summary>
+        <div class="body">
+          <!-- [ZAAL: which parts did you personally host or present on screen, and which workshops did you teach? Hosting and teaching claims were cut.] -->
+          <!-- [ZAAL: did it achieve its aim of onboarding Farcaster builders into The ZAO? Any evidence finalists or participants joined, stayed or came back? No sentence on page claims it did.] -->
+          <!-- [ZAAL: public repo says all finalists were paid from the prize pool; vault says part of the pool was disbursed and a volume award went unpaid. Page says only "every finalist was paid" with no amounts. Confirm.] -->
+          <!-- [ZAAL: was the champions collectible minted? Line cut.] -->
+          <!-- [ZAAL: what one change would most improve Season 2? Section left out.] -->
+          <!-- [ZAAL: Season 1 close date differs between sources (end of August in the repo, 8 Sep in your brief). Page gives no close date.] -->
+          <!-- Note: the resume PR describes Season 1 as "workshops and pitch week" and links zabalgames.com, which now redirects. This page uses zabalgamez.com. -->
+          <h4>Problem</h4>
+          <p>The ZAO wanted to bring Farcaster-active builders and creators into its community by having them ship something real, in public, instead of asking them to join. It had to be free and open with no token to buy, so the first version led with a public leaderboard and recognition and left token mechanics for later. It had to be more than a weekend hackathon: built for a community that needs the tools, with the repository kept afterward. And it needed a way to pick winners fairly without one central judge. Three tracks, artist, builder and creator, meant nobody needed to be a developer.</p>
+          <h4>My role</h4>
+          <ul><li>Owner of the program with Iman.</li><li>Locked the format, the prize structure and the dates that the public copy used, including the newsletter edition that announced the finals.</li><li>Made the calls on how the season closed, in my own words, including ruling that the unpaid volume award was not to be promised.</li><li>Directed the agent lanes that built and maintained the site and its tooling.</li></ul>
+          <h4>What I built and ran</h4>
+          <ul><li>June: workshops. Builders across the ecosystem each recorded a session on tools they had made, collected as a library on the site.</li><li>July: an open build month where the build itself was the application and partial work counted.</li><li>August: the finals. Two finalists per track, decided in head-to-head battles on WaveWarZ. Finalists were people, not projects.</li><li>Settlement from three signals: an open poll on X, the charts from live trading on WaveWarZ, and a judges panel.</li><li>The program's home at zabalgamez.com: results, recordings, finals, projects and standings, also running as a Farcaster Mini App.</li><li>A submission and review flow with scripted guards, and a public repository that keeps dated records separate from current state so a stranger can see what is true and what was superseded.</li><li>Workshop booking through Cal.com with a Restream-based stream.</li><li>The newsletter edition announcing the finals, assembled end to end with every fact traced to a locked list.</li><li>Prize payments to the finalists.</li></ul>
+          <h4>Outcome</h4>
+          <ul><li>Each track crowned a champion, and every finalist was paid.</li><li>A permanent library of recorded workshops and the projects people built.</li><li>A season that closed cleanly: results published, the site and booking path set to "Season 1 is closed," and a repository with no open pull requests.</li><li>A results page that is honest about its limits: trading volume was light, per-signal numbers were never recorded, and the artist battle ran without a judges panel.</li><li>WaveWarZ was used as a settlement venue for a second program, which is an outside test of the battle mechanic.</li></ul>
+          <h4>Skills shown</h4>
+          <div class="chips"><span class="chip">DevRel</span><span class="chip">Community</span><span class="chip">Events</span><span class="chip">Creator economy</span><span class="chip">Onchain coordination</span><span class="chip">Communication</span><span class="chip">AI-agent ops</span></div>
+          <h4>Links</h4>
+          <ul><li><a href="https://zabalgamez.com" target="_blank" rel="noopener">zabalgamez.com</a></li><li><a href="https://zabalgamez.com/results" target="_blank" rel="noopener">Season 1 results</a></li><li><a href="https://zabalgamez.com/recordings" target="_blank" rel="noopener">Recordings</a></li><li><a href="https://zabalgamez.com/finals" target="_blank" rel="noopener">Finals</a></li><li><a href="https://github.com/ZAODEVZ/zabalgames" target="_blank" rel="noopener">Repo (public)</a></li><li><a href="https://paragraph.com/@thezao" target="_blank" rel="noopener">Newsletter on Paragraph</a></li></ul>
+        </div>
+      </details>
+      
+      <details class="case" id="the-zao">
+        <summary>
+          <div class="kicker">Community and operations</div>
+          <h3>The ZAO</h3>
+          <p class="blurb">The independent music and creator community behind the rest of this work: governance, live shows, battles, festivals, a daily newsletter, and operations run with Claude Code agents under written rules and a human merge.</p>
+        </summary>
+        <div class="body">
+          <!-- [ZAAL: confirm "founder" for public use. The January 2024 launch date was cut because the history doc flags founding facts as needing your confirmation.] -->
+          <!-- [ZAAL: is Fractal Monday still running weekly today? Page uses past tense and no present-tense cadence claim.] -->
+          <!-- [ZAAL: paid supporter base and revenue/runway were cut. Confirm whether either belongs on a portfolio page.] -->
+          <!-- [ZAAL: what do you want to be known for, and which retro lessons go on the page? Section left out.] -->
+          <!-- [ZAAL: publish a redacted AGENTS.md and lane-tier decision? Vault, dotfiles and desk repos are private and are not linked.] -->
+          <!-- [ZAAL: authorship split (what you wrote versus directed) is still open for all four cards.] -->
+          <h4>Problem</h4>
+          <p>The ZAO grew out of an earlier talent-agency model that proved insufficient, and became a collective in which independent artists keep their margin, data and rights. A community like that has to solve a few things. Participation has to last without an employer or a paycheck holding people, so governance has to be light, regular and fair. There are many projects and few hands. The story has to be told every day, in public, without making it up. And AI agents can take on the repetitive work only if you can still tell what is true, what is decided, and who approved it.</p>
+          <h4>My role</h4>
+          <ul><li>Founder. Members become cofounders of specific projects once they commit.</li><li>Host and coordinator of the live-show series COC Concertz, which has since spun out as its own brand and co-presented ZAOstock.</li><li>Writer and publisher of the daily newsletter, with a co-reviewer for drafts.</li><li>Final authority on every outbound or irreversible action: sends, posts, merges, spending and anything touching identity stop at me, and rulings are recorded as dated files in my own words.</li><li>Designer of the agent operating model: a primary lane that is my assistant, a second tier that oversees state and operations without merge rights, and single-purpose lanes that work from one brief to one done criterion.</li></ul>
+          <h4>What I built and ran</h4>
+          <ul><li>Fractal Monday, a governance meeting started in 2024 where members rank each other's contributions and results are settled onchain.</li><li>Events including ZAO-PALOOZA at NFT NYC, ZAO-CHELLA at Miami Art Basel with a live WaveWarZ battle, the COC Concertz livestreams, and ZAOstock.</li><li>ZABAL Gamez and the WaveWarZ integration, covered in the cards above.</li><li>A POIDH bounty board run as a code project, with judging rounds and a leaderboard.</li><li>The newsletter: a daily "Year of the ZABAL" log on Paragraph, with a repository for craft and checks: a voice guide, scripts that check voice and links on a draft, and a worked case study of one edition built from a locked list of facts after a research sub-agent invented a start date.</li><li>A shared reality for agents: a vault with a live state file, an operating-rules file and registry, a map of what exists and a decisions file, with the rule that every agent reads them before work.</li><li>Write-back by hook, not by discipline, because honor-system rules measured far worse than rules enforced by structure.</li><li>A decision record with one dated file per ruling, and a mistakes log where a failure shape that keeps recurring triggers a mechanism instead of another note. The main recurring shape is tools that report empty or green when the source could not be read, so the response was a checking tool that exits with a "could not run" code.</li><li>A research library in the open ZAO OS repository, used as long-term memory for products, events and strategy.</li></ul>
+          <h4>Outcome</h4>
+          <ul><li>A community with a multi-year record of governance, live events and shipped projects.</li><li>A daily public newsletter, continuous into October 2026, with a written method for keeping it factual.</li><li>Three projects launched from the community that stand on their own: a festival, a builder event, and a battle platform's ZAO integration.</li><li>An operating model for working with agents that has written rules, an audit trail, human merge authority and a way of catching its own mistakes.</li></ul>
+          <h4>Skills shown</h4>
+          <div class="chips"><span class="chip">Community</span><span class="chip">Governance design</span><span class="chip">Creator economy</span><span class="chip">Events</span><span class="chip">Content</span><span class="chip">Onchain coordination</span><span class="chip">AI-agent ops</span></div>
+          <h4>Links</h4>
+          <ul><li><a href="https://thezao.com" target="_blank" rel="noopener">thezao.com</a></li><li><a href="https://paragraph.com/@thezao" target="_blank" rel="noopener">Newsletter</a></li><li><a href="https://github.com/bettercallzaal/zaoonparagraph" target="_blank" rel="noopener">Newsletter repo (public)</a></li><li><a href="https://github.com/bettercallzaal/ZAOOS" target="_blank" rel="noopener">Research library and app (public)</a></li><li><a href="https://github.com/bettercallzaal/poidhz" target="_blank" rel="noopener">Bounty board (public)</a></li><li><a href="/zao/" target="_blank" rel="noopener">The ZAO on this site</a></li></ul>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="lead"><strong>Open to: salaried, fully remote roles.</strong> Email <a href="mailto:zaalp99@gmail.com">zaalp99@gmail.com</a>, message on <a href="https://www.linkedin.com/in/zaalp/" target="_blank" rel="noopener">LinkedIn</a>, or <a href="https://cal.com/bettercallzaal" target="_blank" rel="noopener">book a call</a>. Also on <a href="https://farcaster.xyz/bettercallzaal" target="_blank" rel="noopener">Farcaster</a>, <a href="https://x.com/bettercallzaal" target="_blank" rel="noopener">X</a> and <a href="https://github.com/bettercallzaal" target="_blank" rel="noopener">GitHub</a>.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p><a href="/">BetterCallZaal.com</a> &middot; <a href="/resume/">Resume</a> &middot; <a href="/projects/">Projects</a> &middot; <a href="mailto:zaalp99@gmail.com">zaalp99@gmail.com</a></p>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      function openHash() {
+        var id = location.hash.slice(1);
+        if (!id) return;
+        var el = document.getElementById(id);
+        if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView(); }
+      }
+      window.addEventListener('hashchange', openHash);
+      openHash();
+    })();
+  </script>
+</body>
+</html>
