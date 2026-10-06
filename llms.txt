@@ -26,6 +26,6 @@ The mission: streaming pays artists ~$0.003 per play and labels keep 80-85% of r
 ## Contact
 
 - Email via https://bettercallzaal.com/#contact
-- Farcaster: https://farcaster.xyz/bettercallzaal (FID 19640)
+- Farcaster: https://farcaster.xyz/zaal (FID 19640)
 - GitHub: https://github.com/bettercallzaal
 - X: https://x.com/bettercallzaal
