@@ -61,7 +61,7 @@ The live test plan Zaal is walking through right now is in `/tmp/bcz-test-plan.m
 /streaming/             Twitch streaming setup + ZAO ecosystem hook (cyan accent)
 /Maine/                 Local Maine client work (green accent) — case-insensitive on Vercel
 /outdoors/              Eagle Scout + ski patrol (gold accent)
-/engineering-past/      RIT + PCC + JAX + Riverside engineering record (cyan accent)
+/engineering-past/      RIT + PCC + day job + Riverside engineering record (cyan accent)
 /zaostock/              Pre-public Oct 2026 ZAO festival in Ellsworth, Maine (orange accent)
 /zabalgames.html        Farcaster Vibe-Coding Challenge (June prep / July ship / Aug finals)
 /nexus.html             Existing canonical link-inventory hub (redirects to nexus.thezao.com per vercel.json)
@@ -274,7 +274,7 @@ gh pr merge --squash
 | Mistake | What happened |
 |---------|---------------|
 | Hallucinated specific facts | Made up Eagle Scout merit-badge list, invented patrol stories, fabricated WaveWarZ contract components. Zaal called it out hard. See "Hard Rule 1." |
-| Wrote bio details without source | Said "Building Automation Technician at JAX by day" — Zaal is moving to Riverside soon, wanted tense-neutral framing. Always confirm employment status. |
+| Wrote bio details without source | Said "Building Automation Technician at [his employer] by day" — Zaal is moving to Riverside soon, wanted tense-neutral framing. Always confirm employment status. |
 | Used 1000+ in two places, then 250+ in one without matching the other | Stats row + Tier 1 card both showed "1,000+ artists" — Zaal changed Tier 1 to 250+ but stats stayed 1,000+. Always sync numbers across surfaces. |
 | Inline CSS overrode media query | Contact 2-card section had `style="grid-template-columns: 1fr 1fr"` inline, which beat the `@media (max-width: 880px) { grid-template-columns: 1fr }` rule. Don't use inline style for grids that need responsive behavior. |
 | Committed embedded git repos | `Maine/Cameron/riverside-site/` was a submodule that snuck into git. Always check `git status -s` before committing batched changes; use `.gitignore` for embedded working dirs. |
