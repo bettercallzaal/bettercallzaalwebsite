@@ -9,7 +9,7 @@ The mission: streaming pays artists ~$0.003 per play and labels keep 80-85% of r
 ## Main pages
 
 - [Home](https://bettercallzaal.com/): who Zaal is, portfolio, testimonials, contact
-- [Resume](https://bettercallzaal.com/resume/): full CV  -  BS EE (RIT 2022), $1.5M robotics at PCC Structurals, The Jackson Laboratory, founder history
+- [Resume](https://bettercallzaal.com/resume/): full CV  -  BS EE (RIT 2022), $1.5M robotics at PCC Structurals, building automation work, founder history
 - [Projects catalog](https://bettercallzaal.com/projects/): 60 open-source projects
 - [Brand kit](https://bettercallzaal.com/kit.html): 31 brands across the ecosystem (machine-readable at /brands.json)
 - [Nexus](https://nexus.thezao.com/): every public link across the ecosystem (479 links)
