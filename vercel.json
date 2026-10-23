@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/dev-hub",
+      "destination": "https://github.com/bettercallzaal/zao-dev-hub",
+      "permanent": false
+    },
+    {
       "source": "/nexus.html",
       "destination": "https://nexus.thezao.com/",
       "permanent": true
