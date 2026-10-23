@@ -62,6 +62,10 @@ Research docs live in `research/`. See `research/README.md` for the index. The `
 skill (`.agents/skills/`) covers adding to it. Cross-reference ZAO OS at
 `github.com/bettercallzaal/zaoos` first for Farcaster, web3, music, and AI-agent topics.
 
+## Project hub links
+
+The homepage, `/projects/`, and `/portfolio/` link to the ZAO Dev Hub and the public repository dashboard. `/dev-hub` is a temporary redirect to `https://github.com/bettercallzaal/zao-dev-hub` while the new hub deployment is pending. Once its public URL is verified, update that redirect in `vercel.json` and change the source-only wording on those pages. Do not point visitors at the disabled legacy Vercel deployment.
+
 ## Deploy
 
 Push to `main`. Vercel builds from this repo. No CI.
