@@ -122,7 +122,8 @@ async function main() {
       `[check] upstream: ${total} projects across ${next.groups.length} groups · ${stacksKept} stack chips preserved`
     );
     console.log(same ? '[check] projects.json is up to date.' : '[check] projects.json WOULD change — run without --check to write.');
-    process.exit(same ? 0 : 1);
+    process.exitCode = same ? 0 : 1;
+    return;
   }
 
   fs.writeFileSync(OUT, nextStr);
@@ -133,5 +134,5 @@ async function main() {
 
 main().catch((err) => {
   console.error('sync-projects failed:', err.message);
-  process.exit(1);
+  process.exitCode = 1;
 });
