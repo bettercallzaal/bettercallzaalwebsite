@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/dev-hub",
-      "destination": "https://github.com/bettercallzaal/zao-dev-hub",
+      "destination": "https://zao-dev-hub.vercel.app/projects",
       "permanent": false
     },
     {
