@@ -18,6 +18,7 @@ Research docs supporting the bettercallzaal.com site and Farcaster mini app.
 | [10](./10-notifications-entity-drops/) | Notifications, Entity SEO, Drops | Implementation-grade follow-up: Neynar-hosted mini app notifications (no backend needed), Wikidata/sameAs entity anchoring, blind-box psychology applied to Insert Coin |
 | [11](./11-zaostock-sponsorship/) | ZAOstock Sponsorship | Tiers priced for a free first-year small-town festival, deck structure, 7-week outreach plan, onchain-receipts differentiator |
 | [12](./12-audience-growth-loops/) | Audience Growth Loops | Farcaster reply-first playbook (70/20/10), GitHub profile conversion fixes, the site-cast-repo-newsletter loop |
+| [13](./13-merch-printify-stripe/) | Merch: Printify + Stripe | Pop-Up Store vs API + Stripe Checkout vs Shopify, fees on a $25 shirt, recommends Pop-Up linked from `/merch` |
 
 ## How to Add Research
 
