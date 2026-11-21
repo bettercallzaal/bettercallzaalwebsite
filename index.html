@@ -316,6 +316,15 @@
 
     .hero-cta span { position: relative; z-index: 1; }
 
+    .hero-timeline {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards 0.72s;
+    }
+    .hero-timeline a { color: var(--cyan); font-weight: 500; }
+    .hero-timeline a:hover { color: var(--text); }
+
     .hero-socials {
       display: flex;
       gap: 0.5rem;
@@ -1614,6 +1623,7 @@
       .hero h1,
       .hero-sub,
       .hero-cta,
+      .hero-timeline,
       .hero-socials {
         opacity: 1;
         animation: none;
@@ -1654,6 +1664,7 @@
       <div class="nav-links">
         <a class="nav-section" href="#about">About</a>
         <a class="nav-section" href="/history/">Story</a>
+        <a class="nav-section" href="https://timeline.bettercallzaal.com/">Timeline</a>
         <a class="nav-section" href="#portfolio">Work</a>
         <a class="nav-section" href="/portfolio/">Portfolio</a>
         <a class="nav-section" href="/projects/">Projects</a>
@@ -1675,6 +1686,7 @@
     </h1>
     <p class="hero-sub">130+ open-source repos and counting. I'm Zaal - I build the AI-agent infrastructure and creator tools that put margin, data &amp; IP back in independent artists' hands. Got a problem? BetterCallZaal.</p>
     <a href="#contact" class="hero-cta"><span>Let's Talk</span></a>
+    <p class="hero-timeline"><a href="https://timeline.bettercallzaal.com/">See the photo timeline &rarr;</a></p>
     <div class="hero-socials">
       <a href="https://x.com/bettercallzaal" target="_blank" rel="noopener" aria-label="X">
         <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -2450,6 +2462,8 @@
     <a href="mailto:zaalp99@gmail.com" class="footer-email">zaalp99@gmail.com</a>
     <div class="footer-legal">
       <a href="/projects/">Projects</a>
+      <span>&middot;</span>
+      <a href="https://timeline.bettercallzaal.com/">Timeline</a>
       <span>&middot;</span>
       <a href="https://nexus.thezao.com/">Nexus</a>
       <span>&middot;</span>
